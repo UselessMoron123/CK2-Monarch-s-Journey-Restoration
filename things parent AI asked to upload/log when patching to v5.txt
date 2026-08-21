@@ -1,0 +1,31 @@
+Saved and verified current-state backup: C:\Users\UZWERG\Desktop\SteamCrusader\CK2game.exe.before_mj_v5_20260820_232126.bak
+Created exact hash-verified original backup: C:\Users\UZWERG\Desktop\SteamCrusader\CK2game.exe.verified_may333_original.bak
+Set 0x00d73d02: 74 2b -> eb 2b (force local/null implementation)
+Set 0x00d73e1a: ba 23 36 00 -> 21 fc 32 00 (redirect only the local loader from gfx/test.dds to gfx/monarchs)
+Set 0x007bd64e: 75 04 -> 90 90 (enable Play when the local ruler is otherwise ready)
+Set 0x007beacb: 74 19 -> eb 19 (use normal Play tooltip instead of login tooltip)
+Set 0x007beea2: 74 0c -> eb 0c (use normal Continue tooltip instead of login tooltip)
+Set 0x007befaf: 74 2d -> eb 2d (use normal Restart path instead of login tooltip)
+Set 0x007c0d18: 74 0b -> 74 0b (keep the offline reward-container branch (undo v3 empty-reward exposure))
+Set 0x007c0d23: eb 5c -> 90 90 (hide both the unpopulated reward container and obsolete login text offline)
+Set 0x000aeb83: 80 7f 61 00 74 0c 80 7f 63 00 74 06 80 7f 62 00 74 02 33 f6 40 0f b6 c6 -> 31 c0 66 83 7f 61 01 75 0f 80 7f 63 00 75 06 80 7f 65 00 75 03 ff c0 90 (ignore the stock-checksum prerequisite only while Steam is inactive)
+Set 0x00732b03: 74 16 -> 90 90 (bypass retired Steam-active gate for challenge-mode Start button)
+Set 0x007336b0: 74 1d -> 90 90 (bypass retired Steam-active gate in challenge-enabled predicate)
+Set 0x007337e1: 74 1d -> 90 90 (bypass retired Steam-active gate in Start warning predicate)
+Set 0x00737262: 74 1b -> 90 90 (bypass retired Steam-active gate in challenge tooltip heading)
+Set 0x007b78eb: 75 0c -> eb 0c (bypass retired Steam-active gate in in-game feat tracking)
+Set 0x009e3d4c: 74 0b -> eb 0b (allow otherwise-valid Featured Ruler saves through shared Load and Continue validation)
+Set 0x009e1c2d: 74 49 -> eb 49 (use normal save tooltip instead of retired Monarch login requirement)
+RESULT: V5 OFFLINE LOAD PATCH APPLIED AND FULLY VERIFIED
+SHA-256: 29556549fb5fc657f2966949b6a5b59c9b89b707f954adca4868cfd3d90b1535
+Required payload: <game folder>\gfx\monarchs
+Payload SHA-256: fc6ec025b782c811636a0efb65a7b3f192f09fffd0ff6ca8051ef8bc6113db4e
+
+============================================================
+V5 OFFLINE LOAD PATCH AND PAYLOAD INSTALLATION COMPLETE
+Executable: C:\Users\UZWERG\Desktop\SteamCrusader\CK2game.exe
+Payload:    C:\Users\UZWERG\Desktop\SteamCrusader\gfx\monarchs
+Start this exact executable directly.
+Expected EXE SHA-256:
+29556549fb5fc657f2966949b6a5b59c9b89b707f954adca4868cfd3d90b1535
+============================================================
