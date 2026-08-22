@@ -1,0 +1,1298 @@
+[internationalizedtext.cpp:1829]: Empty key "string_DE_der" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Der" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_die" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Die" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_das" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Das" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_den" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Den" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ein" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Ein" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_eine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Eine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_des" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Des" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_derdie" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_DerDie" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_DerDas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_derdas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_dendie" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_DenDie" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_DesDer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_unseres" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Unseres" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_unserer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Unserer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_unser" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Unser" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_unsere" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Unsere" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_unserem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Unserem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_eines" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Eines" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Eures" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Eurer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_einer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Einer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_einem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Einem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_einen" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Einen" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_EuresEurer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_EinenEinen" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_unseresunserer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_UnseresUnserer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_unserunsere" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_UnserUnsere" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_unseremunserer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_UnseremUnserer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_eineseiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_EinesEiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_EinemEiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_kein" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Kein" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_keine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Keine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_irgendein" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Irgendein" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_irgendeine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Irgendeine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_keinem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Keinem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_keiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Keiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_keinkeine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_KeinKeine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_irgendeinirgendeine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_IrgendeinIrgendeine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_keinemkeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_KeinemKeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_dieser" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Dieser" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_diese" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Diese" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_dieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Dieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_diesem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Diesem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_dieserdiese" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_DieserDiese" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_diesesdieser" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_DiesesDieser" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_diesemdieser" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_DiesemDieser" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihm" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Ihm" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihr" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Ihr" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihmihr" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_IhmIhr" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_dem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Dem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_DemDer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_meinem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Meinem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_meiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Meiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_meinemmeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_MeinemMeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_euer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Euer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_eure" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Eure" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_euereure" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_EuerEure" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_eurem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Eurem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_eurer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_euremeurer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_EuremEurer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihn" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Ihn" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_sie" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Sie" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihnsie" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_IhnSie" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_euren" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Euren" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_eureneure" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_EurenEure" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_zum" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_zur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_vom" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_vonder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_EureEuren" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihres" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihrer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihresihrer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihrem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihremihrer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_dessen" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_deren" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_dessenderen" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_endingS" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_endingS" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_endingE" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_endingE" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_endingN" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_endingN" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_endingR" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_endingR" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_endingIN" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_endingIN" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_endingEM" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_endingEM" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_endingER" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_endingER" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_endinga" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_endinga" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_endingEN" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_endingEN" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Arzt" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Ärztin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Kannibale" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Kannibalin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Propheten" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Prophetin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Missgestalteter" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Missgestalt" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Folterer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Folterin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Feigling" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Memme" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Narr" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Närrin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Krüppel" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Behinderte" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Esel" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Ziege" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Strohmann" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Vogelscheuche" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Dschungelbewohner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Dschungelnatter" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Bücherwurm" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Leseratte" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Bengel" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Göre" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Blutsauger" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Zecke" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Wurm" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Made" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Wüstenkäfer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Wüstenratte" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Fiesling" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Vettel" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Zuchtstute" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Strohkopf" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Hohlbirne" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Gesichtskrapfen" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Hackfresse" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Überflieger" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Koriphäe" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Hohlkopf" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Pflaume" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_bewohner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_natter" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Zimmerer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Zimmerin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Bluthund" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Bluthündin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Eroberer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Eroberin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Bote" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Botin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Barde" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Bardin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Beichtvater" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Beichtmutter" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Turm" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Mauer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Sklave" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Sklavin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Gemahlen" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Gemahlin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Eber" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Sau" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Prinzen" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Prinzessin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Mannes" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Frau" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Schwachling" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Kruke" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Leichnam" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Leiche" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Christian_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Muslim_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Pagan_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Zoroastrian_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jewish_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Hindu_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Buddhist_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jain_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Taoist_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHouseOfWorshipeineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Christian_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Muslim_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Pagan_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Zoroastrian_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jewish_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Hindu_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Buddhist_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jain_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Taoist_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHouseOfWorshipEinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Christian_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Muslim_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Pagan_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Zoroastrian_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jewish_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Hindu_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Buddhist_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jain_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Taoist_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHouseOfWorshipeineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Christian_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Muslim_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Pagan_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Zoroastrian_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jewish_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Hindu_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Buddhist_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jain_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Taoist_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHouseOfWorshipeinemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Christian_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Muslim_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Pagan_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Zoroastrian_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jewish_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Hindu_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Buddhist_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jain_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Taoist_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHouseOfWorshipzumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Christian_iminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Muslim_iminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Pagan_iminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Zoroastrian_iminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jewish_iminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Hindu_iminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Buddhist_iminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jain_iminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Taoist_iminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHouseOfWorshipiminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Christian_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Muslim_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Pagan_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Zoroastrian_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jewish_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Hindu_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Buddhist_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jain_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Taoist_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHouseOfWorshipdesder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Benedict_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Augustine_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Basil_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Abraham_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Anthony_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Noble_Eightfold_Path_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_four_Purusartha_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Anuvrata_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetMOCode_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Benedict_dieden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Augustine_dieden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Basil_dieden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Abraham_dieden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Anthony_dieden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Noble_Eightfold_Path_dieden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_four_Purusartha_dieden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Anuvrata_dieden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetMOCode_dieden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Castle_1_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Castle_2_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Castle_3_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Temple_1_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Nomad_1_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Nomad_2_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Nomad_3_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Tribal_1_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Tribal_2_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Tribal_3_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_City_1_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_City_2_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_City_3_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_settlement_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHolding_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Castle_1_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Castle_2_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Castle_3_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Temple_1_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Nomad_1_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Nomad_2_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Nomad_3_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Tribal_1_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Tribal_2_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Tribal_3_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_City_1_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_City_2_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_City_3_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_settlement_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHolding_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Castle_1_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Castle_2_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Castle_3_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Temple_1_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Nomad_1_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Nomad_2_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Nomad_3_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Tribal_1_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Tribal_2_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Tribal_3_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_City_1_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_City_2_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_City_3_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_settlement_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHolding_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_town_diedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_camp_diedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_DWSettlement_diedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_town_jedejedes" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_camp_jedejedes" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_DWSettlement_jedejedes" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_WeaponAdjEnding_male" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_WeaponAdjEnding_female" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_WeaponAdjEnding_neutral" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_dragon" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_giant_snail" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_hydra" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_gorgon" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_harpy" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_siren" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_giant" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_kraken" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_griffin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_basilisk" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_manticore" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_cyclops" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_sleipnir" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_fenrir" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_jormungandr" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_nidhogg" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_chimera" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_dryad" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_draugr" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_moved_suddenly" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_moved_carefully" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_moved_aggressively" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_moved_gracefully" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_moved_purposefully" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Wonder_die" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Wonder_das" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Wonder_der" found.
+[internationalizedtext.cpp:1829]: Empty key "GetGenericNature" found.
+[internationalizedtext.cpp:1829]: Empty key "tooltip_religion_feature_default_fallback" found.
+[internationalizedtext.cpp:1805]: Duplicate text-key "String_library".
+[internationalizedtext.cpp:1805]: Duplicate text-key "String_great".
+[internationalizedtext.cpp:1805]: Duplicate text-key "String_magnificent".
+[internationalizedtext.cpp:1805]: Duplicate text-key "String_exalted".
+[internationalizedtext.cpp:1805]: Duplicate text-key "String_looming".
+[internationalizedtext.cpp:1805]: Duplicate text-key "String_old".
+[internationalizedtext.cpp:1805]: Duplicate text-key "String_looming".
+[internationalizedtext.cpp:1805]: Duplicate text-key "String_Old".
+[internationalizedtext.cpp:1805]: Duplicate text-key "CHAR_COURTIER_FEMALE".
+[internationalizedtext.cpp:1805]: Duplicate text-key "CHAR_COURTIER_MALE".
+[internationalizedtext.cpp:1805]: Duplicate text-key "WONDER_STAGE_PAUSE_TT_DELAYED".
+[internationalizedtext.cpp:1805]: Duplicate text-key "upgrade_throne_fancy_desc".
+[internationalizedtext.cpp:1805]: Duplicate text-key "b_edfu".
+[internationalizedtext.cpp:1805]: Duplicate text-key "IS_LOCAL_HUMAN_OBSERVER".
+[internationalizedtext.cpp:1805]: Duplicate text-key "IS_NOT_LOCAL_HUMAN_OBSERVER".
+[internationalizedtext.cpp:1805]: Duplicate text-key "DESTROY_WONDER_EFFECT".
+[internationalizedtext.cpp:1805]: Duplicate text-key "OTTO_THE_FIRST_ERA".
+[internationalizedtext.cpp:1805]: Duplicate text-key "OTTO_THE_FIRST_ERA_INFO".
+[internationalizedtext.cpp:1805]: Duplicate text-key "ARLES".
+[internationalizedtext.cpp:1805]: Duplicate text-key "ARLES_ADJ".
+[internationalizedtext.cpp:1805]: Duplicate text-key "e_bulgaria".
+[internationalizedtext.cpp:1805]: Duplicate text-key "e_bulgaria_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "k_liao".
+[internationalizedtext.cpp:1805]: Duplicate text-key "k_liao_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "d_qarmatian".
+[internationalizedtext.cpp:1805]: Duplicate text-key "d_qarmatian_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "d_guiyi".
+[internationalizedtext.cpp:1805]: Duplicate text-key "d_guiyi_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "HAMALAND".
+[internationalizedtext.cpp:1805]: Duplicate text-key "HAMALAND_ADJ".
+[internationalizedtext.cpp:1805]: Duplicate text-key "TEISTERBANT".
+[internationalizedtext.cpp:1805]: Duplicate text-key "TEISTERBANT_ADJ".
+[internationalizedtext.cpp:1805]: Duplicate text-key "KENNEMERLAND".
+[internationalizedtext.cpp:1805]: Duplicate text-key "KENNEMERLAND_ADJ".
+[internationalizedtext.cpp:1805]: Duplicate text-key "WEST_FRISIA".
+[internationalizedtext.cpp:1805]: Duplicate text-key "WEST_FRISIA_ADJ".
+[internationalizedtext.cpp:1805]: Duplicate text-key "d_scholae_palatinae".
+[internationalizedtext.cpp:1805]: Duplicate text-key "domestic".
+[internationalizedtext.cpp:1805]: Duplicate text-key "domestic_female".
+[internationalizedtext.cpp:1805]: Duplicate text-key "domestic_byzantine".
+[internationalizedtext.cpp:1805]: Duplicate text-key "domestic_latin".
+[internationalizedtext.cpp:1805]: Duplicate text-key "domestic_FOA".
+[internationalizedtext.cpp:1805]: Duplicate text-key "d_pechina".
+[internationalizedtext.cpp:1805]: Duplicate text-key "d_pechina_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "b_al_gassani".
+[internationalizedtext.cpp:1805]: Duplicate text-key "b_ruayn".
+[internationalizedtext.cpp:1805]: Duplicate text-key "b_banu_sarray".
+[internationalizedtext.cpp:1805]: Duplicate text-key "b_aswadid".
+[internationalizedtext.cpp:1805]: Duplicate text-key "b_yeshayahu".
+[internationalizedtext.cpp:1805]: Duplicate text-key "e_cordoba".
+[internationalizedtext.cpp:1805]: Duplicate text-key "e_cordoba_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "k_franconia_otto".
+[internationalizedtext.cpp:1805]: Duplicate text-key "k_franconia_otto_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "k_thuringia_otto".
+[internationalizedtext.cpp:1805]: Duplicate text-key "k_thuringia_otto_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "k_swabia_otto".
+[internationalizedtext.cpp:1805]: Duplicate text-key "k_swabia_otto_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "title_hypatos_female".
+[internationalizedtext.cpp:1805]: Duplicate text-key "title_hypatos_desc".
+[internationalizedtext.cpp:1805]: Duplicate text-key "title_patrikios".
+[internationalizedtext.cpp:1805]: Duplicate text-key "title_patrikios_female".
+[internationalizedtext.cpp:1805]: Duplicate text-key "title_patrikios_desc".
+[internationalizedtext.cpp:1805]: Duplicate text-key "title_sebastos".
+[internationalizedtext.cpp:1805]: Duplicate text-key "title_sebastos_female".
+[internationalizedtext.cpp:1805]: Duplicate text-key "title_sebastos_desc".
+[internationalizedtext.cpp:1805]: Duplicate text-key "title_augusta_desc".
+[internationalizedtext.cpp:1805]: Duplicate text-key "sardinian".
+[internationalizedtext.cpp:1805]: Duplicate text-key "emperor_bulgarian".
+[internationalizedtext.cpp:1805]: Duplicate text-key "emperor_female_bulgarian".
+[internationalizedtext.cpp:1805]: Duplicate text-key "qarmatian".
+[internationalizedtext.cpp:1805]: Duplicate text-key "qarmatian_DESC".
+[internationalizedtext.cpp:1805]: Duplicate text-key "athelstan".
+[internationalizedtext.cpp:1805]: Duplicate text-key "athelstan_desc".
+[internationalizedtext.cpp:1805]: Duplicate text-key "rudolph".
+[internationalizedtext.cpp:1805]: Duplicate text-key "rudolph_desc".
+[internationalizedtext.cpp:1805]: Duplicate text-key "fatimid".
+[internationalizedtext.cpp:1805]: Duplicate text-key "fatimid_desc".
+[internationalizedtext.cpp:1805]: Duplicate text-key "otto".
+[internationalizedtext.cpp:1805]: Duplicate text-key "otto_desc".
+[internationalizedtext.cpp:1805]: Duplicate text-key "jannabid".
+[internationalizedtext.cpp:1805]: Duplicate text-key "jannabid_desc".
+[internationalizedtext.cpp:1805]: Duplicate text-key "mardavij".
+[internationalizedtext.cpp:1805]: Duplicate text-key "mardavij_desc".
+[internationalizedtext.cpp:1805]: Duplicate text-key "bloodline_effect_princely_elective_boon".
+[internationalizedtext.cpp:1805]: Duplicate text-key "bloodline_effect_shiite_leader".
+[internationalizedtext.cpp:1805]: Duplicate text-key "bloodline_effect_qarmatian_leader".
+[internationalizedtext.cpp:1805]: Duplicate text-key "shiite_opinion".
+[internationalizedtext.cpp:1805]: Duplicate text-key "qarmatian_opinion".
+[internationalizedtext.cpp:1805]: Duplicate text-key "vushmgir_brothers_legacy".
+[internationalizedtext.cpp:1805]: Duplicate text-key "vushmgir_brothers_legacy_desc".
+[internationalizedtext.cpp:1805]: Duplicate text-key "kievan_rus_local_traditions_desc".
+[internationalizedtext.cpp:1805]: Duplicate text-key "empire_of_bulgaria_decision".
+[internationalizedtext.cpp:1805]: Duplicate text-key "empire_of_bulgaria_decision_desc".
+[internationalizedtext.cpp:1805]: Duplicate text-key "shiite_caliphate_cairo_decision".
+[internationalizedtext.cpp:1805]: Duplicate text-key "shiite_caliphate_cairo_decision_desc".
+[internationalizedtext.cpp:1805]: Duplicate text-key "cairo_decision_TT".
+[internationalizedtext.cpp:1805]: Duplicate text-key "establishing_habsburg".
+[internationalizedtext.cpp:1805]: Duplicate text-key "establishing_habsburg_desc".
+[internationalizedtext.cpp:1805]: Duplicate text-key "establishing_habsburg_family".
+[internationalizedtext.cpp:1805]: Duplicate text-key "nick_the_dane".
+[internationalizedtext.cpp:1805]: Duplicate text-key "nick_longsword".
+[internationalizedtext.cpp:1805]: Duplicate text-key "era_char_name_1282".
+[internationalizedtext.cpp:1805]: Duplicate text-key "ERA_CHAR_INFO_1282".
+[internationalizedtext.cpp:1805]: Duplicate text-key "era_char_name_32901".
+[internationalizedtext.cpp:1805]: Duplicate text-key "ERA_CHAR_INFO_32901".
+[internationalizedtext.cpp:1805]: Duplicate text-key "era_char_name_33350".
+[internationalizedtext.cpp:1805]: Duplicate text-key "ERA_CHAR_INFO_33350".
+[internationalizedtext.cpp:1805]: Duplicate text-key "era_char_name_260976".
+[internationalizedtext.cpp:1805]: Duplicate text-key "ERA_CHAR_INFO_260976".
+[internationalizedtext.cpp:1805]: Duplicate text-key "era_char_name_159135".
+[internationalizedtext.cpp:1805]: Duplicate text-key "ERA_CHAR_INFO_159135".
+[internationalizedtext.cpp:1805]: Duplicate text-key "era_char_name_144001".
+[internationalizedtext.cpp:1805]: Duplicate text-key "ERA_CHAR_INFO_144001".
+[internationalizedtext.cpp:1805]: Duplicate text-key "RETTYPE_CUL_SAR".
+[internationalizedtext.cpp:1805]: Duplicate text-key "ca_culture_sardinian_1".
+[internationalizedtext.cpp:1805]: Duplicate text-key "ca_culture_sardinian_2".
+[internationalizedtext.cpp:1805]: Duplicate text-key "ca_culture_sardinian_3".
+[internationalizedtext.cpp:1805]: Duplicate text-key "ca_culture_sardinian_4".
+[internationalizedtext.cpp:1805]: Duplicate text-key "tb_culture_sardinian_1".
+[internationalizedtext.cpp:1805]: Duplicate text-key "tb_culture_sardinian_2".
+[internationalizedtext.cpp:1805]: Duplicate text-key "tb_culture_sardinian_3".
+[internationalizedtext.cpp:1805]: Duplicate text-key "tb_culture_sardinian_4".
+[internationalizedtext.cpp:1805]: Duplicate text-key "ca_culture_sardinian_1_desc".
+[internationalizedtext.cpp:1805]: Duplicate text-key "CB_NAME_THANKMARS_REBELLION".
+[internationalizedtext.cpp:1805]: Duplicate text-key "WAR_NAME_THANKMARS_REBELLION".
+[internationalizedtext.cpp:1805]: Duplicate text-key "THANKMARS_REBELLION_VICTORY_TT".
+[internationalizedtext.cpp:1805]: Duplicate text-key "RULE_OTTO_STORY".
+[internationalizedtext.cpp:1805]: Duplicate text-key "RULE_OTTO_STORY_ON_DESC".
+[internationalizedtext.cpp:1805]: Duplicate text-key "RULE_OTTO_STORY_OFF_DESC".
+[internationalizedtext.cpp:1805]: Duplicate text-key "tooltip_feudal_elector_vote_bloodline".
+[internationalizedtext.cpp:1805]: Duplicate text-key "shiite_bloodline_TT".
+[internationalizedtext.cpp:1805]: Duplicate text-key "qarmatian_bloodline_TT".
+[internationalizedtext.cpp:1805]: Duplicate text-key "shia_creation_independent".
+[internationalizedtext.cpp:1805]: Duplicate text-key "sunni_creation_independent".
+[internationalizedtext.cpp:1805]: Duplicate text-key "not_shia_caliphate_revolt_ongoing".
+[internationalizedtext.cpp:1805]: Duplicate text-key "empire_bulgaria_TT".
+[internationalizedtext.cpp:1805]: Duplicate text-key "THANKMAR_REBELLION_01_TT".
+[internationalizedtext.cpp:1805]: Duplicate text-key "THANKMAR_REBELLION_02_TT".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTTITLE_LT_40003".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_40003".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_40003".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTB_LT_40003".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_40004_TT".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTTITLE_LT_40004".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_40004".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_40004".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTTITLE_LT_40005".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_40005".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_40005".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTB_LT_40005".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTTITLE_LT_40006".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_40006".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_40006".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTB_LT_40006".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTTITLE_LT_40007".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_40007".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_40007".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTTITLE_LT_40009".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_40009".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_40009".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTB_LT_40009".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTB_LT_40009_TT".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTTITLE_LT_40010".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_40010".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_40010".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTTITLE_LT_40011".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_40011".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_40011".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTTITLE_LT_40012".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_40012".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_40012".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTB_LT_40012".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTTITLE_LT_40013".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_40013".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_40013".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTB_LT_40013".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTTITLE_LT_40014".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_40014".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_40014".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTB_LT_40014".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTTITLE_LT_40015".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_40015".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_40015".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTB_LT_40015".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTTITLE_LT_40016".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_40016".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_40016".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTB_LT_40016".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_41000".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_41000".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTB_LT_41000".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTTITLE_LT_41001".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_41001".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_41001".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTB_LT_41001".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTC_LT_41001".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTD_LT_41001".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_41002".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_41002".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTB_LT_41002".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_41003".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_41003".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTB_LT_41003".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTC_LT_41003".
+[internationalizedtext.cpp:1805]: Duplicate text-key "DUCHY_CHAMAVIA".
+[internationalizedtext.cpp:1805]: Duplicate text-key "DUCHY_CHAMAVIA_ADJ".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_41004".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_41004".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTB_LT_41004".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_41005".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_41005".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTB_LT_41005".
+[internationalizedtext.cpp:1805]: Duplicate text-key "burghers_appeased".
+[internationalizedtext.cpp:1805]: Duplicate text-key "burghers_appeased_desc".
+[internationalizedtext.cpp:1805]: Duplicate text-key "TOXANDRIA".
+[internationalizedtext.cpp:1805]: Duplicate text-key "TOXANDRIA_ADJ".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_41006".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_41006".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTB_LT_41006".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTDESC_LT_41007".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTA_LT_41007".
+[internationalizedtext.cpp:1805]: Duplicate text-key "EVTOPTB_LT_41007".
+[internationalizedtext.cpp:1805]: Duplicate text-key "HATTUARIA".
+[internationalizedtext.cpp:1805]: Duplicate text-key "HATTUARIA_ADJ".
+[internationalizedtext.cpp:1805]: Duplicate text-key "d_faiyum".
+[internationalizedtext.cpp:1805]: Duplicate text-key "d_asyut".
+[internationalizedtext.cpp:1805]: Duplicate text-key "d_paraetonium".
+[internationalizedtext.cpp:1805]: Duplicate text-key "d_balata".
+[internationalizedtext.cpp:1805]: Duplicate text-key "d_faiyum_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "d_asyut_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "d_paraetonium_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "d_balata_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "c_faiyum_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "c_akhmim_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "c_esna_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "c_paraetonium_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "c_kharibta_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "c_kolzum_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "c_sarqihya_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "c_gabiyaha_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "c_manupura_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "c_pelusia_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "c_al_alamayn_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "c_farama_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "c_bahariya_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "c_castelo_branco_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "c_almada_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "tribal_king_hungarian".
+[internationalizedtext.cpp:1805]: Duplicate text-key "tribal_kingdom_of_hungarian".
+[internationalizedtext.cpp:1805]: Duplicate text-key "tribal_king_female_hungarian".
+[internationalizedtext.cpp:1805]: Duplicate text-key "SAVEGAME_ERROR_WRITING_INVALID".
+[internationalizedtext.cpp:1805]: Duplicate text-key "SAVEGAME_ERROR_WRITING_NOSPACE".
+[internationalizedtext.cpp:1805]: Duplicate text-key "SAVEGAME_ERROR_WRITING_TOOBIG".
+[internationalizedtext.cpp:1805]: Duplicate text-key "String_temple".
+[internationalizedtext.cpp:1805]: Duplicate text-key "COMPLETED".
+[internationalizedtext.cpp:1805]: Duplicate text-key "CLOUD_SAVE".
+[internationalizedtext.cpp:1805]: Duplicate text-key "secret_religions_personally_adopt_secret_religion_desc".
+[internationalizedtext.cpp:1805]: Duplicate text-key "FEAT_HIGHSCORE_TT".
+[internationalizedtext.cpp:1805]: Duplicate text-key "FEAT_CURRENT_TT".
+[internationalizedtext.cpp:1829]: Empty key "String_ES_Culture_khazar_Mas" found.
+[internationalizedtext.cpp:1829]: Empty key "String_ES_Religion_aztec_Femen" found.
+[internationalizedtext.cpp:1805]: Duplicate text-key " String_ES_GetEvilGodDelaDelos_THE_DARK_SPIRITS".
+[internationalizedtext.cpp:1805]: Duplicate text-key " String_ES_GetEvilGodDelaDelos_THE_DARK_SPIRITS".
+[internationalizedtext.cpp:1805]: Duplicate text-key " String_ES_GetEvilGodDelaDelos_THE_DARK_SPIRITS".
+[internationalizedtext.cpp:1805]: Duplicate text-key " String_ES_GetEvilGodDelaDelos_THE_DARKNESS".
+[internationalizedtext.cpp:1805]: Duplicate text-key "b_habsburg".
+[internationalizedtext.cpp:1805]: Duplicate text-key "PROV525".
+[internationalizedtext.cpp:1805]: Duplicate text-key "c_orava_adj".
+[internationalizedtext.cpp:1805]: Duplicate text-key "String_garden".
+[internationalizedtext.cpp:1805]: Duplicate text-key "String_Iron".
+[internationalizedtext.cpp:1921]: 'Next' not defined!
+[internationalizedtext.cpp:1921]: 'BROWSER_BACK' not defined!
+[internationalizedtext.cpp:1921]: 'BROWSER_FORWARD' not defined!
+[internationalizedtext.cpp:1921]: 'BROWSER_RELOAD' not defined!
+[internationalizedtext.cpp:1829]: Empty key "EVTTOOLTIP100481" found.
+[internationalizedtext.cpp:1829]: Empty key "GetGenericNature" found.
+[internationalizedtext.cpp:1829]: Empty key "tooltip_religion_feature_default_fallback" found.
+[internationalizedtext.cpp:1829]: Empty key "FEMALE_ENDING_E" found.
+[internationalizedtext.cpp:1829]: Empty key "MALE_ENDING_E" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_der" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Der" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_die" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Die" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_das" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Das" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_den" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Den" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ein" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Ein" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_eine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Eine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_des" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Des" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_derdie" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_DerDie" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_DerDas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_derdas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_dendie" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_DenDie" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_DesDer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_unseres" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Unseres" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_unserer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Unserer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_unser" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Unser" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_unsere" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Unsere" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_unserem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Unserem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_unseren" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Unseren" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_eines" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Eines" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_eures" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Eures" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_eurer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Eurer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_einer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Einer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_einem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Einem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_einen" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Einen" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_EuresEurer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_EinenEinen" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_unseresunserer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_UnseresUnserer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_unserunsere" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_UnserUnsere" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_unseremunserer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_UnseremUnserer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_unserenunsere" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_UnserenUnsere" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_eineseiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_EinesEiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_EinemEiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_kein" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Kein" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_keine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Keine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_irgendein" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Irgendein" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_irgendeine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Irgendeine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_keinem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Keinem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_keiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Keiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_keinkeine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_KeinKeine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_irgendeinirgendeine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_IrgendeinIrgendeine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_keinemkeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_KeinemKeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_dieser" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Dieser" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_diese" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Diese" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_dieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Dieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_diesem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Diesem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_dieserdiese" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_DieserDiese" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_diesesdieser" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_DiesesDieser" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_diesemdieser" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_DiesemDieser" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihm" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Ihm" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihr" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Ihr" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihre" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Ihre" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihren" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Ihren" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihrenihre" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_IhrenIhre" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihmihr" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_IhmIhr" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_dem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Dem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_DemDer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_meinem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Meinem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_meiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Meiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_meinemmeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_MeinemMeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_euer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Euer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_eure" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Eure" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_euereure" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_EuerEure" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_eurem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Eurem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_euremeurer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_EuremEurer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihn" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Ihn" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_sie" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Sie" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihnsie" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_IhnSie" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_euren" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Euren" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_eureneure" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_EurenEure" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_zum" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_zur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_vom" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_vonder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_EureEuren" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihres" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihrer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihresihrer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Ihres" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Ihrer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_IhresIhrer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihrem" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_ihremihrer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_dessen" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_deren" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_dessenderen" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_endingS" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_endingS" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_endingE" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_endingE" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_endingN" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_endingN" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_endingR" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_endingR" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_endingIN" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_endingIN" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_endingEM" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_endingEM" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_endingER" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_endingER" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_endinga" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_endinga" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_endingEN" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_endingEN" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Arzt" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Ärztin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Kannibale" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Kannibalin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Propheten" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Prophetin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Missgestalteter" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Missgestalt" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Folterer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Folterin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Feigling" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Memme" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Narr" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Närrin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Krüppel" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Behinderte" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Esel" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Ziege" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Strohmann" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Vogelscheuche" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Dschungelbewohner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Dschungelnatter" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Bücherwurm" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Leseratte" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Bengel" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Göre" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Blutsauger" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Zecke" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Wurm" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Made" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Wüstenkäfer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Wüstenratte" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Fiesling" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Vettel" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Zuchtstute" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Strohkopf" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Hohlbirne" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Gesichtskrapfen" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Hackfresse" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Überflieger" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Koriphäe" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Hohlkopf" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Pflaume" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_bewohner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_natter" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Zimmerer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Zimmerin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Bluthund" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Bluthündin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Eroberer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Eroberin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Bote" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Botin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Barde" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Bardin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Beichtvater" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Beichtmutter" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Turm" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Mauer" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Sklave" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Sklavin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Gemahlen" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Gemahlin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Eber" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Sau" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Prinzen" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Prinzessin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Mannes" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Frau" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Schwachling" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Kruke" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Leichnam" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Leiche" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Bären" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Löwen" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Rabe" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Räbin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Christian_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Muslim_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Pagan_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Zoroastrian_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jewish_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Hindu_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Buddhist_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jain_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Taoist_eineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHouseOfWorshipeineine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Christian_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Muslim_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Pagan_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Zoroastrian_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jewish_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Hindu_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Buddhist_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jain_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Taoist_EinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHouseOfWorshipEinEine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Christian_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Muslim_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Pagan_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Zoroastrian_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jewish_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Hindu_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Buddhist_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jain_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Taoist_eineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHouseOfWorshipeineneine" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Christian_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Muslim_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Pagan_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Zoroastrian_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jewish_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Hindu_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Buddhist_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jain_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Taoist_einemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHouseOfWorshipeinemeiner" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Christian_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Muslim_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Pagan_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Zoroastrian_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jewish_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Hindu_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Buddhist_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jain_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Taoist_zumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHouseOfWorshipzumzur" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Christian_iminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Muslim_iminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Pagan_iminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Zoroastrian_iminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jewish_iminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Hindu_iminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Buddhist_iminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jain_iminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Taoist_iminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHouseOfWorshipiminder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Christian_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Muslim_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Pagan_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Zoroastrian_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jewish_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Hindu_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Buddhist_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Jain_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHouseOfWorship_Taoist_desder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHouseOfWorshipdesder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Benedict_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Augustine_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Basil_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Abraham_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Anthony_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Noble_Eightfold_Path_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_four_Purusartha_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Anuvrata_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetMOCode_demder" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Benedict_dieden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Augustine_dieden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Basil_dieden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Abraham_dieden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Rule_of_Saint_Anthony_dieden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Noble_Eightfold_Path_dieden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_four_Purusartha_dieden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_the_Anuvrata_dieden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetMOCode_dieden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Castle_1_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Castle_2_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Castle_3_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Temple_1_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Nomad_1_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Nomad_2_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Nomad_3_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Tribal_1_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Tribal_2_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Tribal_3_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_City_1_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_City_2_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_City_3_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_settlement_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHolding_diedasden" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Castle_1_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Castle_2_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Castle_3_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Temple_1_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Nomad_1_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Nomad_2_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Nomad_3_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Tribal_1_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Tribal_2_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Tribal_3_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_City_1_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_City_2_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_City_3_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_settlement_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHolding_dieserdieses" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Castle_1_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Castle_2_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Castle_3_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Temple_1_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Nomad_1_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Nomad_2_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Nomad_3_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Tribal_1_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Tribal_2_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_Tribal_3_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_City_1_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_City_2_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_GetHolding_City_3_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_settlement_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_GetHolding_derdiedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_town_diedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_camp_diedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_DWSettlement_diedas" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_town_jedejedes" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_camp_jedejedes" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_FB_DWSettlement_jedejedes" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_WeaponAdjEnding_male" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_WeaponAdjEnding_female" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_WeaponAdjEnding_neutral" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_dragon" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_giant_snail" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_hydra" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_gorgon" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_harpy" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_siren" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_giant" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_kraken" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_griffin" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_basilisk" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_manticore" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_cyclops" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_sleipnir" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_fenrir" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_jormungandr" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_nidhogg" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_chimera" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_dryad" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_random_mythological_creature_draugr" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_moved_suddenly" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_moved_carefully" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_moved_aggressively" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_moved_gracefully" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_moved_purposefully" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Wonder_die" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Wonder_das" found.
+[internationalizedtext.cpp:1829]: Empty key "string_DE_Wonder_der" found.
+[internationalizedtext.cpp:1829]: Empty key "String_ES_GetXA_male" found.
+[internationalizedtext.cpp:1829]: Empty key "String_ES_GetXAOpp_female" found.
+[internationalizedtext.cpp:1829]: Empty key "String_ES_GetXTa_male" found.
+[internationalizedtext.cpp:1921]: 'SLIDER_EXAMPLE' not defined!
+[internationalizedtext.cpp:1921]: 'DOUBLESLIDER_EXAMPLE' not defined!
+[internationalizedtext.cpp:1921]: 'CHECKBOX_EXAMPLE' not defined!
+[internationalizedtext.cpp:1921]: 'OPTION_EXAMPLE' not defined!
+[internationalizedtext.cpp:1921]: 'CRUSADE_BENEFICIARY_NAME' not defined!
+[internationalizedtext.cpp:1921]: 'CRUSADE_HEADER' not defined!
+[internationalizedtext.cpp:1921]: 'CRUSADE_START_DATE' not defined!
+[internationalizedtext.cpp:1921]: 'CRUSADE_REMAINING_DAYS' not defined!
+[internationalizedtext.cpp:1921]: 'Reload Script' not defined!
+[internationalizedtext.cpp:1921]: 'NUMBER' not defined!
+[internationalizedtext.cpp:1921]: 'OFFMAP_RULER_NAME' not defined!
+[internationalizedtext.cpp:1921]: '-' not defined!
+[internationalizedtext.cpp:1921]: 'FE_CONTENT_SETTINGS' not defined!
+[internationalizedtext.cpp:1921]: 'Print randomlog' not defined!
+[internationalizedtext.cpp:1921]: 'Test' not defined!
+[internationalizedtext.cpp:1921]: 'Content Settings' not defined!
+[internationalizedtext.cpp:1921]: '?? / ??' not defined!
+[internationalizedtext.cpp:1921]: '?' not defined!
+[opinion_modifier.cpp:534]: Reference to undefined loc key 'antagonize_stop_cooldown'  file: common/opinion_modifiers/00_opinion_modifiers.txt line: 4451
+[internationalizedtext.cpp:1921]: 'the_satanists_currency' not defined!
+[internationalizedtext.cpp:1921]: 'the_trollcrafters_currency' not defined!
+[internationalizedtext.cpp:1921]: 'the_cult_of_kali_currency' not defined!
+[internationalizedtext.cpp:1921]: 'the_cold_ones_currency' not defined!
+[internationalizedtext.cpp:1921]: 'the_plaguebringers_currency' not defined!
+[internationalizedtext.cpp:1921]: 'the_vodouns_currency' not defined!
+[internationalizedtext.cpp:1921]: 'the_bacchants_currency' not defined!
+[internationalizedtext.cpp:1921]: 'monastic_order_benedictine_currency' not defined!
+[internationalizedtext.cpp:1921]: 'monastic_order_dominican_currency' not defined!
+[internationalizedtext.cpp:1921]: 'monastic_order_orthodox_currency' not defined!
+[internationalizedtext.cpp:1921]: 'monastic_order_nestorian_currency' not defined!
+[internationalizedtext.cpp:1921]: 'monastic_order_monophysite_currency' not defined!
+[internationalizedtext.cpp:1921]: 'monastic_order_hindu_currency' not defined!
+[internationalizedtext.cpp:1921]: 'monastic_order_buddhist_currency' not defined!
+[internationalizedtext.cpp:1921]: 'monastic_order_jain_currency' not defined!
+[internationalizedtext.cpp:1921]: 'monastic_order_stoics_currency' not defined!
+[internationalizedtext.cpp:1921]: 'hermetics_currency' not defined!
+[internationalizedtext.cpp:1921]: 'the_assassins_currency' not defined!
+[internationalizedtext.cpp:1921]: 'secret_religious_society_template_currency' not defined!
+[internationalizedtext.cpp:1921]: 'secret_religious_society_template_rank_1_male' not defined!
+[internationalizedtext.cpp:1921]: 'secret_religious_society_template_rank_2_male' not defined!
+[internationalizedtext.cpp:1921]: 'secret_religious_society_template_rank_3_male' not defined!
+[internationalizedtext.cpp:1921]: 'secret_religious_society_template_rank_4_male' not defined!
+[internationalizedtext.cpp:1921]: 'warrior_lodge_norse_currency' not defined!
+[internationalizedtext.cpp:1921]: 'warrior_lodge_tengri_currency' not defined!
+[internationalizedtext.cpp:1921]: 'warrior_lodge_baltic_currency' not defined!
+[internationalizedtext.cpp:1921]: 'warrior_lodge_finnish_currency' not defined!
+[internationalizedtext.cpp:1921]: 'warrior_lodge_slavic_currency' not defined!
+[internationalizedtext.cpp:1921]: 'warrior_lodge_west_african_currency' not defined!
+[internationalizedtext.cpp:1921]: 'warrior_lodge_zun_currency' not defined!
+[internationalizedtext.cpp:1921]: 'warrior_lodge_bon_currency' not defined!
+[internationalizedtext.cpp:1921]: 'warrior_lodge_hellenic_currency' not defined!
+[internationalizedtext.cpp:1921]: 'Ternyllwg' not defined!
+[effectimplementation.cpp:616]: custom_tooltip missing text key or localisation does not exist at:  file:  line: -1
+[effectimplementation.cpp:616]: custom_tooltip missing text key or localisation does not exist at:  file:  line: -1
+[internationalizedtext.cpp:1829]: Empty key " * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt" found.
+[internationalizedtext.cpp:1829]: Empty key " * El progreso continuará mientras juegues con la dinastía del gobernante presentado" found.
+[internationalizedtext.cpp:1829]: Empty key " * Diese Herausforderung ist nur mit dem vorgestellten Herrscher zu Lebzeiten erreichbar" found.
+[internationalizedtext.cpp:1829]: Empty key " * Logro solo realizable en vida del gobernante presentado." found.
+[internationalizedtext.cpp:1829]: Empty key " * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt" found.
+[internationalizedtext.cpp:1829]: Empty key " * El progreso continuará mientras juegues con la dinastía del gobernante presentado" found.
+[table.cpp:84]: Failed localization for key:  * Hold the Sultanate of Yemen and completely control its de jure provinces for 100 years
+ * Progress continues for as long as you play the featured ruler's dynasty
+[table.cpp:84]: Failed localization for key:  * Vous devez détenir le titre de Sultanat du Yémen et devez assumer le contrôle de tous les comtés de jure du Yémen.
+ * L'avancement progresse tant que vous jouez la dynastie du dirigeant mis en avant.
+[table.cpp:84]: Failed localization for key:  * Herrscht über das Sultanat von Yemen, und habt komplette Kontrolle über alle De-Jure Grafschaften Yemens.
+ * Der Fortschritt geht weiter so lange Ihr in der Dynastie des vorgestellten Herrschers spielt.
+[table.cpp:84]: Failed localization for key:  * Mantén el título de Sultanato de Yemen y controla por completo todos los condados de jure de Yemen.
+ El progreso continúa mientras juegues en la Dinastía del gobernante.
+[internationalizedtext.cpp:1829]: Empty key " * Hold the Sultanate of Yemen and completely control its de jure provinces for 100 years
+ * Progress continues for as long as you play the featured ruler's dynasty" found.
+[internationalizedtext.cpp:1829]: Empty key " * Vous devez détenir le titre de Sultanat du Yémen et devez assumer le contrôle de tous les comtés de jure du Yémen.
+ * L'avancement progresse tant que vous jouez la dynastie du dirigeant mis en avant." found.
+[internationalizedtext.cpp:1829]: Empty key " * Herrscht über das Sultanat von Yemen, und habt komplette Kontrolle über alle De-Jure Grafschaften Yemens.
+ * Der Fortschritt geht weiter so lange Ihr in der Dynastie des vorgestellten Herrschers spielt." found.
+[internationalizedtext.cpp:1829]: Empty key " * Mantén el título de Sultanato de Yemen y controla por completo todos los condados de jure de Yemen.
+ El progreso continúa mientras juegues en la Dinastía del gobernante." found.
+[internationalizedtext.cpp:1829]: Empty key " El progreso continúa mientras juegues en la Dinastía del gobernante." found.
+[internationalizedtext.cpp:1829]: Empty key " * Diese Herausforderung ist nur mit dem vorgestellten Herrscher zu Lebzeiten erreichbar" found.
+[internationalizedtext.cpp:1829]: Empty key " * Logro solo realizable en vida del gobernante presentado." found.
+[internationalizedtext.cpp:1829]: Empty key " * Diese Herausforderung ist nur mit dem vorgestellten Herrscher zu Lebzeiten erreichbar" found.
+[internationalizedtext.cpp:1829]: Empty key " * Logro solo realizable en vida del gobernante presentado." found.
+[internationalizedtext.cpp:1829]: Empty key "* Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt" found.
+[internationalizedtext.cpp:1829]: Empty key "* El progreso continuará mientras juegues con la dinastía del gobernante presentado" found.
+[table.cpp:84]: Failed localization for key: * Deaths caused by other members of your dynasty also count! 
+* Progress continues for as long as you play the featured ruler's dynasty
+[table.cpp:84]: Failed localization for key: * Les décès causés par d'autres membres de votre dynastie comptent également !
+* La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant.
+[table.cpp:84]: Failed localization for key: * Tode, die durch andere Mitglieder Eurer Dynastie erzielt werden, zählen ebenfalls!
+* Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt
+[table.cpp:84]: Failed localization for key: * ¡También cuentan las muertes causadas por otros miembros de tu dinastía! 
+* El progreso continuará mientras juegues con la dinastía del gobernante presentado
+[internationalizedtext.cpp:1829]: Empty key "* Deaths caused by other members of your dynasty also count! 
+* Progress continues for as long as you play the featured ruler's dynasty" found.
+[internationalizedtext.cpp:1829]: Empty key "* Les décès causés par d'autres membres de votre dynastie comptent également !
+* La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant." found.
+[internationalizedtext.cpp:1829]: Empty key "* Tode, die durch andere Mitglieder Eurer Dynastie erzielt werden, zählen ebenfalls!
+* Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt" found.
+[internationalizedtext.cpp:1829]: Empty key "* Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt" found.
+[internationalizedtext.cpp:1829]: Empty key "* ¡También cuentan las muertes causadas por otros miembros de tu dinastía! 
+* El progreso continuará mientras juegues con la dinastía del gobernante presentado" found.
+[internationalizedtext.cpp:1829]: Empty key "* El progreso continuará mientras juegues con la dinastía del gobernante presentado" found.
+[internationalizedtext.cpp:1829]: Empty key "* Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt" found.
+[internationalizedtext.cpp:1829]: Empty key "* El progreso continuará mientras juegues con la dinastía del gobernante presentado" found.
+[table.cpp:84]: Failed localization for key: Can you change that? Double the size of the kingdom!
+ * Progress continues for as long as you play the featured ruler's dynasty
+[table.cpp:84]: Failed localization for key: Könnt Ihr das ändern? Verdoppelt die Größe des Königreichs Armenien
+ * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt
+[table.cpp:84]: Failed localization for key:  ¿Podrás cambiarlo? ¡Dobla el tamaño del Reino de Armenia! 
+ * El progreso continuará mientras juegues con la dinastía del gobernante presentado
+[internationalizedtext.cpp:1829]: Empty key "Can you change that? Double the size of the kingdom!
+ * Progress continues for as long as you play the featured ruler's dynasty" found.
+[internationalizedtext.cpp:1829]: Empty key "Könnt Ihr das ändern? Verdoppelt die Größe des Königreichs Armenien
+ * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt" found.
+[internationalizedtext.cpp:1829]: Empty key " * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt" found.
+[internationalizedtext.cpp:1829]: Empty key " ¿Podrás cambiarlo? ¡Dobla el tamaño del Reino de Armenia! 
+ * El progreso continuará mientras juegues con la dinastía del gobernante presentado" found.
+[internationalizedtext.cpp:1829]: Empty key " * El progreso continuará mientras juegues con la dinastía del gobernante presentado" found.
+[internationalizedtext.cpp:1829]: Empty key " * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt" found.
+[internationalizedtext.cpp:1829]: Empty key " * El progreso continuará mientras juegues con la dinastía del gobernante presentado" found.
+[table.cpp:84]: Failed localization for key: Rule for as many years as possible as an independent kingdom, without becoming a tributary.
+ * Progress continues for as long as you play the featured ruler's dynasty
+[table.cpp:84]: Failed localization for key: Régnez le plus longtemps possible sur un royaume indépendant, sans devenir un tributaire.
+ * La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant.
+[table.cpp:84]: Failed localization for key: Beherrscht für so viele Jahre wie möglich ein unabhängiges Königreich, ohne dabei ein Tributstaat zu werden
+ * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt
+[table.cpp:84]: Failed localization for key: Gobierna como reino independiente todos los años que puedas, sin convertirte en tributario.
+ * El progreso continuará mientras juegues con la dinastía del gobernante presentado
+[internationalizedtext.cpp:1829]: Empty key "Rule for as many years as possible as an independent kingdom, without becoming a tributary.
+ * Progress continues for as long as you play the featured ruler's dynasty" found.
+[internationalizedtext.cpp:1829]: Empty key "Régnez le plus longtemps possible sur un royaume indépendant, sans devenir un tributaire.
+ * La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant." found.
+[internationalizedtext.cpp:1829]: Empty key "Beherrscht für so viele Jahre wie möglich ein unabhängiges Königreich, ohne dabei ein Tributstaat zu werden
+ * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt" found.
+[internationalizedtext.cpp:1829]: Empty key " * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt" found.
+[internationalizedtext.cpp:1829]: Empty key "Gobierna como reino independiente todos los años que puedas, sin convertirte en tributario.
+ * El progreso continuará mientras juegues con la dinastía del gobernante presentado" found.
+[internationalizedtext.cpp:1829]: Empty key " * El progreso continuará mientras juegues con la dinastía del gobernante presentado" found.
+[table.cpp:84]: Failed localization for key: * Hold the Kingdom of Bosnia
+* Completely control all its de jure provinces
+* Be independent 
+* Progress continues for as long as you play the featured ruler's dynasty
+[table.cpp:84]: Failed localization for key: * Completely control all its de jure provinces
+* Be independent 
+* Progress continues for as long as you play the featured ruler's dynasty
+[table.cpp:84]: Failed localization for key: * Be independent 
+* Progress continues for as long as you play the featured ruler's dynasty
+[table.cpp:84]: Failed localization for key: * Vous devez détenir le titre de roi de Bosnie et être indépendant.
+* La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant.
+[table.cpp:84]: Failed localization for key: * Ihr müsst den Titel des Königs von Bosnien tragen und unabhängig sein.
+* Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt
+[table.cpp:84]: Failed localization for key: * Debes poseer el título de Rey de Bosnia y ser independiente. 
+* El progreso continuará mientras juegues con la dinastía del gobernante presentado
+[internationalizedtext.cpp:1829]: Empty key "* Hold the Kingdom of Bosnia
+* Completely control all its de jure provinces
+* Be independent 
+* Progress continues for as long as you play the featured ruler's dynasty" found.
+[internationalizedtext.cpp:1829]: Empty key "* Completely control all its de jure provinces
+* Be independent 
+* Progress continues for as long as you play the featured ruler's dynasty" found.
+[internationalizedtext.cpp:1829]: Empty key "* Be independent 
+* Progress continues for as long as you play the featured ruler's dynasty" found.
+[internationalizedtext.cpp:1829]: Empty key "* Vous devez détenir le titre de roi de Bosnie et être indépendant.
+* La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant." found.
+[internationalizedtext.cpp:1829]: Empty key "* Ihr müsst den Titel des Königs von Bosnien tragen und unabhängig sein.
+* Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt" found.
+[internationalizedtext.cpp:1829]: Empty key "* Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt" found.
+[internationalizedtext.cpp:1829]: Empty key "* Debes poseer el título de Rey de Bosnia y ser independiente. 
+* El progreso continuará mientras juegues con la dinastía del gobernante presentado" found.
+[internationalizedtext.cpp:1829]: Empty key "* El progreso continuará mientras juegues con la dinastía del gobernante presentado" found.
+[table.cpp:84]: Failed localization for key: * Prisoners don't count! 
+* Progress continues for as long as you play the featured ruler's dynasty
+[table.cpp:84]: Failed localization for key: * Les prisonniers ne comptent pas !
+* La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant.
+[table.cpp:84]: Failed localization for key: * Gefangene zählen nicht!
+* Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt
+[table.cpp:84]: Failed localization for key: * ¡Los prisioneros no cuentan! 
+* El progreso continuará mientras juegues con la dinastía del gobernante presentado
+[internationalizedtext.cpp:1829]: Empty key "* Prisoners don't count! 
+* Progress continues for as long as you play the featured ruler's dynasty" found.
+[internationalizedtext.cpp:1829]: Empty key "* Les prisonniers ne comptent pas !
+* La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant." found.
+[internationalizedtext.cpp:1829]: Empty key "* Gefangene zählen nicht!
+* Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt" found.
+[internationalizedtext.cpp:1829]: Empty key "* Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt" found.
+[internationalizedtext.cpp:1829]: Empty key "* ¡Los prisioneros no cuentan! 
+* El progreso continuará mientras juegues con la dinastía del gobernante presentado" found.
+[internationalizedtext.cpp:1829]: Empty key "* El progreso continuará mientras juegues con la dinastía del gobernante presentado" found.
+[table.cpp:84]: Failed localization for key: * Progress resets on character death and when entering a war
+* Progress continues for as long as you play the featured ruler's dynasty
+[table.cpp:84]: Failed localization for key: * Le progrès est réinitialisé à la mort du personnage et lorsqu'il entre en guerre
+* La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant.
+[internationalizedtext.cpp:1829]: Empty key "* Progress resets on character death and when entering a war
+* Progress continues for as long as you play the featured ruler's dynasty" found.
+[internationalizedtext.cpp:1829]: Empty key "* Le progrès est réinitialisé à la mort du personnage et lorsqu'il entre en guerre
+* La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant." found.
+[internationalizedtext.cpp:1829]: Empty key "* El progreso continuará mientras juegues con la dinastía del gobernante presentado" found.
