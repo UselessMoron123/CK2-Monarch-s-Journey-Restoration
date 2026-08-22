@@ -58,6 +58,7 @@ to decide a continuable save exists (see handoff callers `0x1407bffa1`, `0x14081
 | `analysis/V6_RUNTIME_RESULTS.md` | Full evidence chain for the V6 verdict |
 | `analysis/EXECUTABLE_IDENTITIES.md` | All four GitHub executables verified byte-exact + payload/save/cache hashes |
 | `analysis/WINDOWS_333_PATCH_MAP.md` + `.csv` | Machine-readable cumulative V2→V6 patch table for May-2020 Win 3.3.3 |
+| `analysis/WINDOWS_3351_PORT_ASSESSMENT.md` | Cross-version comparison, 3.3.5.1 port verdict (not feasible), recovered component map, V7 breadcrumbs |
 | `things parent AI asked to upload/CK2_MJ_ULTIMATE_HANDOFF.md` | Deep background, dead ends, constraints |
 
 ## Environment constants (unchanged)
@@ -68,16 +69,16 @@ to decide a continuable save exists (see handoff callers `0x1407bffa1`, `0x14081
   redistribute complete stock or patched CK2 executables — keep everything as
   guarded patch scripts on the user’s own verified binary.
 
-## Next actions, in order (user-chosen focus 2026-08-22)
+## Next actions, in order (updated 2026-08-22 after cross-version analysis)
 
-1. **Cross-version executable comparison** (user request): compare all four verified
-   binaries, focusing on what was cut or kept around the *featured ruler* base feature,
-   `CNullGameSpark`, feat/bronzeman serialization, and MJ UI across
-   3.3.2 → 3.3.3 → 3.3.5.1. Output: `analysis/WINDOWS_3351_PORT_ASSESSMENT.md`.
-2. **If the 3.3.5.1 code is intact enough**: build a hash-guarded 3.3.5.1 patcher
-   (user wants the newest version — “it lags less”). Match functions by
-   constants/strings/control flow, never by copying May offsets.
-3. **V7 (Continue enable fix)** for May 3.3.3 — the Continue control is *grayed out*;
-   find the enable predicate/flag (not the patched inline account branch).
-4. Later, separate projects: local score/reward gallery reconstruction; recovering the
-   five missing rulers.
+1. ~~Cross-version executable comparison~~ **DONE** → `analysis/WINDOWS_3351_PORT_ASSESSMENT.md`.
+   Verdict: **3.3.5.1 byte-patch port is not feasible** (payload parser + `gs_virtual/feat_script`
+   loader + GameSparks SDK removed; downstream Bronzeman/feat machinery survives but has no data
+   source). May 3.3.3 stays the restoration target; hybrid usage recommended for performance.
+2. **V7 (Continue enable fix)** for May 3.3.3 — the Continue control is *grayed out* (enable
+   predicate). Start from `analysis/WINDOWS_3351_PORT_ASSESSMENT.md` §7 breadcrumbs:
+   Linux `CIronmanSaveSelect::GetContinueSave` @ 0x121ac3a ↔ win333 `0x1409e5500` region and
+   caller `0x1408145ec`.
+3. Later, separate projects: local score/reward gallery reconstruction (Linux
+   `CRoadToTitusProgression::SetupRewards` @ 0x1444e92 has the local reward table —
+   see assessment §6); recovering the five missing rulers.
