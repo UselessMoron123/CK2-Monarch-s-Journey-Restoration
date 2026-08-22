@@ -77,13 +77,18 @@ conquerer_from_bribir=1
 
 Progress survives outside the saves — the retired Titus backend is not involved.
 
-## 6. Still failing: Continue
+## 6. Still failing: Continue — CONFIRMED grayed-out (not a no-op)
 
-From the user’s annotated screenshot names in `log playing with new v6 patch/`:
+User-confirmed 2026-08-22, in addition to the annotated screenshot names in
+`log playing with new v6 patch/`:
 
 - (1) “still cant click continue”
 - (2) “cant continue from main menu”
 - (4) “cant continue from there too”
+- **Exact mode: the Continue control is grayed out / not clickable at all** (main menu and
+  MJ panel). The failure is therefore in the button’s *enable predicate*, i.e. whatever
+  flag the frontend reads to decide “a valid continuable save exists” — not in the click
+  handler and not a wrong-state load.
 
 Classification per the handoff §12 matrix: **outcome D** — the manual load path is
 unblocked (V6’s five save-list gates), but Continue still refuses. V6 already patched the
@@ -109,9 +114,15 @@ frontend Continue), `0x140a0ba62`. That analysis is the V7 target.
   model; current payload’s 2030-01-01 end dates remain the correct approach.
 - `flickering….mp4`: known portrait-tooltip flicker (handoff §15), secondary.
 
-## 8. Open items needing a one-question user confirmation
+## 8. User-confirmed outcomes (2026-08-22)
 
-1. Was the old `Bosnia1173_03_03.ck2` ever manually loaded under V6, and did it show
-   **3 March 1173** with **Heretical Company 1/6**? (The user’s testing pivoted to a new
-   Pavao campaign; this specific datum was not captured in the uploaded evidence.)
-2. Exact failure mode of main-menu Continue: permanently grayed, or clickable-but-no-op?
+1. **`Bosnia1173_03_03.ck2` manual Load under V6: WORKED** — loaded **3 March 1173**
+   with **Heretical Company 1/6**. The original handoff test passed, including feat-global
+   deserialization from an old V4-era save.
+2. **Pavao campaign resume after full game restart: WORKED** via Single Player →
+   Load Game.
+3. **Continue is grayed out** (enable-state failure, see §6).
+
+Open items reduced to: none blocking. Manual load + persistence = complete;
+Continue enable-logic = V7 target; user’s chosen next focus = cross-version exe
+comparison (featured-ruler base feature) and a 3.3.5.1 port if feasible.

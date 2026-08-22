@@ -3,14 +3,22 @@
 Last updated: 2026-08-22 (session branch). Read this file first, then
 `things parent AI asked to upload/CK2_MJ_ULTIMATE_HANDOFF.md` for deep background.
 
-## Bottom line (V6 verdict)
+## Bottom line (V6 verdict — user-confirmed)
 
 V6 (Windows May-2020 3.3.3, SHA-256 `f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0`)
-is **runtime-proven for the core loop** — starting Bronzeman campaigns, live challenge
-evaluation, tier granting, save writing, and persistent local progress. What still fails
-is the **Continue button** (both normal main-menu Continue and the Monarch’s Journey panel
-Continue) and a set of secondary UI glitches. This corresponds to **outcome D** in the
-handoff’s V6 interpretation matrix (manual load path OK, Continue path still rejected).
+is **runtime-proven for the core restoration loop**, including full save loading and
+persistence of challenge progress:
+
+- old V4-era save `Bosnia1173_03_03.ck2` loaded via Single Player → Load Game and showed
+  **3 March 1173** + **Heretical Company 1/6** (feat globals deserialize correctly);
+- new Bronzeman campaign as Pavao of Croatia: live evaluation, **Bronze tier granted**
+  at the exact payload threshold, resume-after-restart via Load Game works;
+- local persistent feat cache (`cache/q847rsja8ndx`) stores peak progress.
+
+**Only remaining functional gap: the Continue button stays grayed out** (enable-state
+predicate, not a click handler issue) → V7 target: the flag/predicate the frontend reads
+to decide a continuable save exists (see handoff callers `0x1407bffa1`, `0x1408145ec`,
+`0x140a0ba62`).
 
 ### Proven working (evidence in `analysis/V6_RUNTIME_RESULTS.md`)
 
@@ -60,14 +68,16 @@ handoff’s V6 interpretation matrix (manual load path OK, Continue path still r
   redistribute complete stock or patched CK2 executables — keep everything as
   guarded patch scripts on the user’s own verified binary.
 
-## Next actions, in order
+## Next actions, in order (user-chosen focus 2026-08-22)
 
-1. **V7 (Continue fix)** — static analysis of the three Continue callers in the verified
-   stock May Win 3.3.3 (`analysis` note: binaries reconstructible from the four
-   `*_upload_chunks` folders; see EXECUTABLE_IDENTITIES.md for the exact recipe).
-   Find the non-account predicate that still rejects Featured-Ruler/Bronzeman saves;
-   produce a hash-guarded V6→V7 patcher set like the V6 one.
-2. Confirm (or have the user confirm) the one missing runtime datum: manual
-   `Load Game` of the old `Bosnia1173_03_03.ck2` showing 1173.3.3 + Heretical Company 1/6.
-3. Later, separate projects: local score/reward gallery reconstruction; recovering the
-   five missing rulers; 3.3.5.1 port assessment (binaries now all verified).
+1. **Cross-version executable comparison** (user request): compare all four verified
+   binaries, focusing on what was cut or kept around the *featured ruler* base feature,
+   `CNullGameSpark`, feat/bronzeman serialization, and MJ UI across
+   3.3.2 → 3.3.3 → 3.3.5.1. Output: `analysis/WINDOWS_3351_PORT_ASSESSMENT.md`.
+2. **If the 3.3.5.1 code is intact enough**: build a hash-guarded 3.3.5.1 patcher
+   (user wants the newest version — “it lags less”). Match functions by
+   constants/strings/control flow, never by copying May offsets.
+3. **V7 (Continue enable fix)** for May 3.3.3 — the Continue control is *grayed out*;
+   find the enable predicate/flag (not the patched inline account branch).
+4. Later, separate projects: local score/reward gallery reconstruction; recovering the
+   five missing rulers.
