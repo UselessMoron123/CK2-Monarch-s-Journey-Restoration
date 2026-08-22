@@ -1,0 +1,31 @@
+[history.cpp:212]: Executing History from -1.1.1 to  2.1.1
+[history.cpp:212]: Executing History from 2.1.1 to  1066.9.15
+[ck_application.cpp:803]: After first history execution
+[history.cpp:212]: Executing History from 1066.9.15 to  1278.1.1
+[frontend.cpp:1328]: 
+
+		[[ Launching SINGLEPLAYER-game ]]
+	Start-date: 1278.1.1
+	Country: No Character
+
+
+[characterinteraction.cpp:4648]: Pellegrino chosen to be Cardinal
+[characterinteraction.cpp:4648]: Nestore chosen to be Cardinal
+[characterinteraction.cpp:4648]: Aurelio chosen to be Cardinal
+[characterinteraction.cpp:4648]: Bonaventura chosen to be Cardinal
+[characterinteraction.cpp:4648]: Simone chosen to be Cardinal
+[characterinteraction.cpp:4648]: Anselmo chosen to be Cardinal
+[characterinteraction.cpp:4648]: Giacomo chosen to be Cardinal
+[characterinteraction.cpp:4648]: Torgodorio chosen to be Cardinal
+[characterinteraction.cpp:4648]: Paolo chosen to be Cardinal
+[controlcommands.cpp:50]: Human MrHuman unset as primary local
+[controlcommands.cpp:58]: Human MrHuman set as primary local
+[messagehandler.cpp:623]: §YMladen Subic§! has become Count of Imotski.
+[messagehandler.cpp:623]: §YIvan Subic§! has become Count of Zachlumia.
+[messagehandler.cpp:623]: 
+Congratulations!
+Word has spread far and wide of your achievements.
+You earned the rank of Bronze in the "Established" challenge.
+[messagehandler.cpp:623]: §YCount Mladen of Imotski§W made §YMayor Ivanis of Imotski§W Chancellor
+[messagehandler.cpp:623]: §YCount Ivan of Zachlumia§W made §YMayor Zvonimir of Ston§W Chancellor
+[messagehandler.cpp:623]: §YCount Ivan of Zachlumia§W made §YBishop Dujam of Korcula§W Marshal
