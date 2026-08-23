@@ -55,6 +55,7 @@ to decide a continuable save exists (see handoff callers `0x1407bffa1`, `0x14081
 | File | Content |
 |---|---|
 | `STATUS.md` (this file) | One-page current state — read first |
+| `analysis/debug2611/` | **2.6.1.1 debug-PDB analysis** (2026-08-23): the `debug files/` drop decoded — `ck2game.pdb` **exact-matches** the supplied `CK2game.exe` (GUID `DC5E6265-72D6-44D9-B181-5EFB6CDCA6E6`, age 1, 2016-08-30). Full 2.6.1.1 Continue/save-select semantic model: `CIronmanSaveSelect::GetContinueSave`/`UpdateContinueData` → `_bIsContinueSaveValid` → `RefreshContinueButton` pushes `CButton::Enable/Disable` (vtbl +0xDC/+0xE0) on widget `"continue"`. No account/online check exists in the 2.6.1.1 Continue path — any 3.3.x equivalent failure is therefore a *newer* predicate. See `IDENTITY.md`, `TYPE_AND_VTABLE_NOTES.md` (esp. §2 semantic checklist for V7), `SEARCH_RESULTS.md`, `SYMBOLS_FILTERED.csv`. |
 | `analysis/V6_RUNTIME_RESULTS.md` | Full evidence chain for the V6 verdict |
 | `analysis/EXECUTABLE_IDENTITIES.md` | All four GitHub executables verified byte-exact + payload/save/cache hashes |
 | `analysis/WINDOWS_333_PATCH_MAP.md` + `.csv` | Machine-readable cumulative V2→V6 patch table for May-2020 Win 3.3.3 |
