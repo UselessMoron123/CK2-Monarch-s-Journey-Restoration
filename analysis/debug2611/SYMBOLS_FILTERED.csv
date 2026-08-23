@@ -467,7 +467,7 @@ frontend_gui,CGuiObject::AttachTo,,GPROC32,graphicaltableledger.obj,0x00B384F0,p
 frontend_gui,CGuiObject::GetPosition,,GPROC32,graphicaltableledger.obj,0x00D38DB0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=14
 frontend_gui,CHintWindow::IsDisabled,,GPROC32,hint_manager.obj,0x0095C9D0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=21
 save_load,`anonymous namespace'::GetContinueSave,,GPROC32,main.obj,0x0099F540,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=328
-serialization,c:\jenkins\workspace\CK2-Live-R-Steam-Windows\ck2\CMAKE_BUILD_VS10\source\CK2.dir\Release\metaserver.obj,,OBJNAME,metaserver.obj,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
+serialization,<buildroot>\ck2\CMAKE_BUILD_VS10\source\CK2.dir\Release\metaserver.obj,,OBJNAME,metaserver.obj,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
 serialization,CButtonObserverGlue<CMetaserverInterface>::OnRightClick,,GPROC32,metaserver.obj,0x006CFDE0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=25
 serialization,CButtonObserverGlue<CMetaserverInterface>::OnClick,,GPROC32,metaserver.obj,0x006C91D0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=25
 serialization,CButtonObserverGlue<CMetaserverInterface>::OnDblClick,,GPROC32,metaserver.obj,0x00933DE0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=25
@@ -506,7 +506,7 @@ serialization,CMetaserverInterface::OnGameStart,,GPROC32,metaserver.obj,0x009C1B
 serialization,CMetaserverInterface::OnLoginCompleted,,GPROC32,metaserver.obj,0x009C13A0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=1873
 serialization,CMetaserverInterface::CMetaserverInterface,,GPROC32,metaserver.obj,0x009BFB70,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=2424
 serialization,CMetaserverInterface::Show,,GPROC32,metaserver.obj,0x009C2BB0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=527
-serialization,c:\jenkins\workspace\CK2-Live-R-Steam-Windows\ck2\CMAKE_BUILD_VS10\source\CK2.dir\Release\metaserveradmin.obj,,OBJNAME,metaserveradmin.obj,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
+serialization,<buildroot>\ck2\CMAKE_BUILD_VS10\source\CK2.dir\Release\metaserveradmin.obj,,OBJNAME,metaserveradmin.obj,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
 serialization,CArray<CMetaserverUserInfo>::~CArray<CMetaserverUserInfo>,,GPROC32,metaserveradmin.obj,0x009C2DF0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=7
 save_load,CCheckBoxObserverGlue<CIronmanSaveSelect>::OnUpOrDown,,GPROC32,savegameinterfaces.obj,0x00997A60,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=20
 save_load,CCheckBoxObserverGlue<CIronmanSaveSelect>::OnRightClick,,GPROC32,savegameinterfaces.obj,0x005782E0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=20
@@ -665,7 +665,7 @@ frontend_gui,TButton::~TButton,,GPROC32,ClausewitzII.lib,0x00CFC920,pdb=ck2game.
 frontend_gui,CButton::~CButton,,GPROC32,ClausewitzII.lib,0x00CFC9E0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=18
 frontend_gui,TButton::`scalar deleting destructor',,GPROC32,ClausewitzII.lib,0x00CFC9B0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=33
 frontend_gui,CButton::`scalar deleting destructor',,GPROC32,ClausewitzII.lib,0x00CFCA00,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=46
-serialization,c:\jenkins\workspace\CK2-Live-R-Steam-Windows\ck2\CMAKE_BUILD_VS10\source\clausewitzII\clausewitzlib\ClausewitzII.dir\Release\metaservercommands.obj,,OBJNAME,ClausewitzII.lib,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
+serialization,<buildroot>\ck2\CMAKE_BUILD_VS10\source\clausewitzII\clausewitzlib\ClausewitzII.dir\Release\metaservercommands.obj,,OBJNAME,ClausewitzII.lib,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
 serialization,CMetaserverCommand::IsValid,,GPROC32,ClausewitzII.lib,0x00590780,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=3
 serialization,CMetaserverCommand::MustSynch,,GPROC32,ClausewitzII.lib,0x00590780,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=3
 serialization,CMetaserverUserInfo::`scalar deleting destructor',,GPROC32,ClausewitzII.lib,0x00D156B0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=67
@@ -680,7 +680,7 @@ serialization,CMetaserverCommand::ReadMember,,GPROC32,ClausewitzII.lib,0x00D135F
 serialization,CMetaserverCommand::CMetaserverCommand,,GPROC32,ClausewitzII.lib,0x00D03CC0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=462
 serialization,CWriter::Write<CMetaserverUserInfo>,,GPROC32,ClausewitzII.lib,0x00D1C100,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=176
 serialization,CMetaserverCommand::WriteMembers,,GPROC32,ClausewitzII.lib,0x00D13590,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=90
-serialization,c:\jenkins\workspace\CK2-Live-R-Steam-Windows\ck2\CMAKE_BUILD_VS10\source\clausewitzII\clausewitzlib\ClausewitzII.dir\Release\metaserverchannel.obj,,OBJNAME,ClausewitzII.lib,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
+serialization,<buildroot>\ck2\CMAKE_BUILD_VS10\source\clausewitzII\clausewitzlib\ClausewitzII.dir\Release\metaserverchannel.obj,,OBJNAME,ClausewitzII.lib,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
 serialization,CList<CMetaserverUser *>::Append,,GPROC32,ClausewitzII.lib,0x00567570,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=81
 serialization,CList<CMetaserverUser *>::~CList<CMetaserverUser *>,,GPROC32,ClausewitzII.lib,0x00D2A350,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=47
 frontend_gui,CList<CButton *>::RemoveTail,,GPROC32,ClausewitzII.lib,0x00726010,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=76
@@ -821,9 +821,9 @@ frontend_gui,TButton::TButton,,GPROC32,ClausewitzII.lib,0x00D790A0,pdb=ck2game.p
 frontend_gui,CButton::CButton,,GPROC32,ClausewitzII.lib,0x00D79150,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=97
 frontend_gui,`dynamic initializer for 'TButton::_Empty'',,LPROC32,ClausewitzII.lib,0x01108160,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=29
 frontend_gui,`dynamic atexit destructor for 'TButton::_Empty'',,LPROC32,ClausewitzII.lib,0x01110F80,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=46
-serialization,c:\jenkins\workspace\CK2-Live-R-Steam-Windows\ck2\CMAKE_BUILD_VS10\source\clausewitzII\clausewitzlib\ClausewitzII.dir\Release\metaservergame.obj,,OBJNAME,ClausewitzII.lib,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
+serialization,<buildroot>\ck2\CMAKE_BUILD_VS10\source\clausewitzII\clausewitzlib\ClausewitzII.dir\Release\metaservergame.obj,,OBJNAME,ClausewitzII.lib,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
 serialization,CMetaserverDate::GetString,,GPROC32,ClausewitzII.lib,0x00D85640,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=1960
-serialization,c:\jenkins\workspace\CK2-Live-R-Steam-Windows\ck2\CMAKE_BUILD_VS10\source\clausewitzII\clausewitzlib\ClausewitzII.dir\Release\metaserveruser.obj,,OBJNAME,ClausewitzII.lib,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
+serialization,<buildroot>\ck2\CMAKE_BUILD_VS10\source\clausewitzII\clausewitzlib\ClausewitzII.dir\Release\metaserveruser.obj,,OBJNAME,ClausewitzII.lib,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
 serialization,CMetaserverUserInfo::~CMetaserverUserInfo,,GPROC32,ClausewitzII.lib,0x00D898C0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=40
 serialization,CMetaserverUser::CMetaserverUser,,GPROC32,ClausewitzII.lib,0x00D89C80,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=256
 serialization,CMetaserverUserInfo::CMetaserverUserInfo,,GPROC32,ClausewitzII.lib,0x00D89840,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=125
@@ -836,7 +836,7 @@ serialization,CMetaserverUser::JoinChannel,,GPROC32,ClausewitzII.lib,0x00D89E60,
 serialization,CMetaserverUser::~CMetaserverUser,,GPROC32,ClausewitzII.lib,0x00D89D80,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=210
 serialization,CMetaserverUser::PostChatMessage,,GPROC32,ClausewitzII.lib,0x00D89FE0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=1735
 frontend_gui,"CTernary<CCheckBox *,STernaryTrait<CCheckBox *> >::ForEach<MemberFunction<CRadioButtonGroup,CCheckBox *> >",,GPROC32,ClausewitzII.lib,0x00D8BA60,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=149
-serialization,c:\jenkins\workspace\CK2-Live-R-Steam-Windows\ck2\CMAKE_BUILD_VS10\source\clausewitzII\clausewitzlib\ClausewitzII.dir\Release\metaserverapplication.obj,,OBJNAME,ClausewitzII.lib,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
+serialization,<buildroot>\ck2\CMAKE_BUILD_VS10\source\clausewitzII\clausewitzlib\ClausewitzII.dir\Release\metaserverapplication.obj,,OBJNAME,ClausewitzII.lib,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
 serialization,CMetaServerApplication::_Config$initializer$,,LDATA32,ClausewitzII.lib,0x011213D0,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
 serialization,CMetaServerApplication::AddCalculation,,GPROC32,ClausewitzII.lib,0x00DAC7D0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=90
 serialization,"CHashTable<CString,CMetaserverUser,ClassicHashKeyTraits<CString,CMetaserverUser> >::Remove",,GPROC32,ClausewitzII.lib,0x00DACC20,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=142
@@ -854,13 +854,13 @@ serialization,CMetaServerApplication::SetUserLoggedOut,,GPROC32,ClausewitzII.lib
 serialization,CMetaServerApplication::LogoutUser,,GPROC32,ClausewitzII.lib,0x00DABDF0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=1027
 serialization,`dynamic initializer for 'CMetaServerApplication::_Config'',,LPROC32,ClausewitzII.lib,0x01108660,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=17
 serialization,`dynamic atexit destructor for 'CMetaServerApplication::_Config'',,LPROC32,ClausewitzII.lib,0x01111AA0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=13
-serialization,c:\jenkins\workspace\CK2-Live-R-Steam-Windows\ck2\CMAKE_BUILD_VS10\source\clausewitzII\clausewitzlib\ClausewitzII.dir\Release\metaserverconfiguration.obj,,OBJNAME,ClausewitzII.lib,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
+serialization,<buildroot>\ck2\CMAKE_BUILD_VS10\source\clausewitzII\clausewitzlib\ClausewitzII.dir\Release\metaserverconfiguration.obj,,OBJNAME,ClausewitzII.lib,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
 serialization,CMetaserverConfiguration::~CMetaserverConfiguration,,GPROC32,ClausewitzII.lib,0x00DAD030,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=283
 serialization,CMetaserverConfiguration::`scalar deleting destructor',,GPROC32,ClausewitzII.lib,0x00DAD000,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=33
 serialization,CMetaserverConfiguration::CMetaserverConfiguration,,GPROC32,ClausewitzII.lib,0x00DACE00,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=506
 serialization,CMetaserverConfiguration::ReadMember,,GPROC32,ClausewitzII.lib,0x00DAD150,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=1616
 serialization,CMetaserverConfiguration::WriteMembers,,GPROC32,ClausewitzII.lib,0x00DAD7A0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=249
-serialization,c:\jenkins\workspace\CK2-Live-R-Steam-Windows\ck2\CMAKE_BUILD_VS10\source\clausewitzII\clausewitzlib\ClausewitzII.dir\Release\metaservermessagehandler.obj,,OBJNAME,ClausewitzII.lib,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
+serialization,<buildroot>\ck2\CMAKE_BUILD_VS10\source\clausewitzII\clausewitzlib\ClausewitzII.dir\Release\metaservermessagehandler.obj,,OBJNAME,ClausewitzII.lib,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
 frontend_gui,C3dGuiObject::Disable,,GPROC32,ClausewitzII.lib,0x00DC2340,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=10
 frontend_gui,C3dGuiObject::Enable,,GPROC32,ClausewitzII.lib,0x00DC2330,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=10
 serialization,MetaserverRelease$initializer$,,LDATA32,pdx_core.lib,0x01121484,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
@@ -930,7 +930,7 @@ save_load,CPdxLauncherGUI::UpdateContinueSaveName,,GPROC32,pdx_launcher.lib,0x00
 frontend_gui,CPdxLauncherGUI::Idle,,GPROC32,pdx_launcher.lib,0x00DE61D0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=2545
 frontend_gui,CPdxLauncherGUI::CPdxLauncherGUI,,GPROC32,pdx_launcher.lib,0x00DE4FF0,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=4236
 frontend_gui,AnimSetEnabled,,GPROC32,pdx_anim.lib,0x00DEAC70,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=178
-save_load,c:\jenkins\workspace\CK2-Live-R-Steam-Windows\ck2\CMAKE_BUILD_VS10\source\clausewitzII\pdx_cloudstorage\pdx_cloudstorage.dir\Release\pdx_cloudstorage.obj,,OBJNAME,pdx_cloudstorage.lib,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
+save_load,<buildroot>\ck2\CMAKE_BUILD_VS10\source\clausewitzII\pdx_cloudstorage\pdx_cloudstorage.dir\Release\pdx_cloudstorage.obj,,OBJNAME,pdx_cloudstorage.lib,,pdb=ck2game.pdb (2.6.1.1; EXE-matched)
 save_load,"CCallResult<SCloudContent,RemoteStorageDownloadUGCResult_t>::Cancel",,GPROC32,pdx_cloudstorage.lib,0x00DF8C70,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=42
 save_load,"CCallResult<SCloudContent,RemoteStorageGetPublishedFileDetailsResult_t>::Cancel",,GPROC32,pdx_cloudstorage.lib,0x00DF8C70,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=42
 save_load,"CCallResult<SCloudContent,RemoteStorageUpdatePublishedFileResult_t>::Cancel",,GPROC32,pdx_cloudstorage.lib,0x00DF8C70,pdb=ck2game.pdb (2.6.1.1; EXE-matched);len=42

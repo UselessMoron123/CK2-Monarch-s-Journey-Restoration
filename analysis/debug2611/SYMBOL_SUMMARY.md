@@ -68,7 +68,7 @@ normalised; builder prefix replaced by `<buildroot>`):
   7,477 file refs under `graphics\` alone), `pdx_core` (fixed point, strings,
   VFS/files), `pdx_gfx`, `pdx_achievements`, `pdx_cloudstorage`
   (Steam Remote Storage wrapper), `pdx_math`, etc.
-- **Third-party**: `c:\jenkins\libs\external_libs\*` (~158k refs: boost, Lua,
+- **Third-party**: `<buildroot-libs>\external_libs\*` (a builder-machine library root) (~158k refs: boost, Lua,
   luabind, SDL, EMotionFX, PhysFS, curl, libzip, miniz, ogre?, Eigen, etc.),
   MSVC10 CRT/SDK (`dd\vctools\crt_bld`, `program files (x86)\microsoft sdks\*`).
 - One personal dev path appears: `c:\users\henrik\documents\...` (~2k file refs;

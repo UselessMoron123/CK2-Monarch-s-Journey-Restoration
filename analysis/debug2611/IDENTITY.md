@@ -40,7 +40,9 @@ files were included in the drop.
   `.rsrc` 0x1A71000; `.reloc` 0x1A78000), image base 0x400000.
 - PE timestamp **0x57C53AC6 = 2016-08-30 07:50:30 UTC**.
 - Debug directory: one **CodeView RSDS** entry:
-  - PDB path: `C:\jenkins\workspace\CK2-Live-R-Steam-Windows\ck2\game\CK2game.pdb`
+  - PDB path: `<buildroot>\ck2\game\CK2game.pdb`
+    (builder prefix redacted; it names a Jenkins
+    `CK2-Live-R-Steam-Windows` workspace job)
   - GUID **DC5E6265-72D6-44D9-B181-5EFB6CDCA6E6**, age **1**
 - Game version string **"2.6.1.1"** is embedded in the binary (in the
   version-block region used by save files), and
@@ -70,7 +72,7 @@ files were included in the drop.
 | toolchain (compilands) | Microsoft C/C++ Optimizing Compiler **cl 16.00.40219.1 (VS2010 SP1)** — 539 C++ TUs; a few 16.00.30319.1 (VS2010 RTM) modules; built under `CMAKE_BUILD_VS10` | same |
 
 Both PDBs reference object paths under
-`c:\jenkins\workspace\CK2-Live-R-Steam-Windows\ck2\CMAKE_BUILD_VS10\source\...`
+`<buildroot>\ck2\CMAKE_BUILD_VS10\source\...`
 (i.e. the same CMake/VS2010 build tree; normalised to `<buildroot>` in all
 reports here).
 
