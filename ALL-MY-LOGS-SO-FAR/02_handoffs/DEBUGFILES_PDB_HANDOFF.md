@@ -1,5 +1,16 @@
 # CK2 2.6.1.1 debug-files investigation — standalone handoff
 
+> **Status: ✅ COMPLETED (2026-08-23).** This is the mission brief for the
+> finished 2.6.1.1 PDB investigation, kept for provenance. Results live in
+> `03_analysis/`: `IDENTITY.md` (exact-match verdict, GUID
+> `DC5E6265-72D6-44D9-B181-5EFB6CDCA6E6`, age 1), `SYMBOL_SUMMARY.md`,
+> `SEARCH_RESULTS.md`, `TYPE_AND_VTABLE_NOTES.md`, `SYMBOLS_FILTERED.csv`, and
+> `DEBUG_INVESTIGATION_TOOLS.md`; the semantic Continue model is distilled in
+> `03_analysis/CONTINUE_SEMANTIC_REFERENCE.md` (the V7 knowledge base). The
+> deliverables requested below are the files listed above — nothing further is
+> needed from the user. (2026-08-26: kept as the only non-current item in
+> `02_handoffs/` besides the single consolidated handoff.)
+
 ## Mission
 
 Investigate the supplied **Crusader Kings II 2.6.1.1 debug-symbol files** as a

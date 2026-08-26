@@ -7,9 +7,12 @@ known win333 anchor points to map it onto. The 2.6.1.1 material is a **semantic
 checklist only** — its 32-bit VAs do not transfer; the win333 facts are the
 patch target.
 
-Primary sources: `02_handoffs/V7_CONTINUE_INITIAL_TRIAGE.md`,
-`TYPE_AND_VTABLE_NOTES.md` §2, `SEARCH_RESULTS.md` group 1,
-`WINDOWS_3351_PORT_ASSESSMENT.md` §7, the Part 1–3 archives.
+Primary sources: `TYPE_AND_VTABLE_NOTES.md` §2, `SEARCH_RESULTS.md` group 1,
+`WINDOWS_3351_PORT_ASSESSMENT.md` §7, the Part 1–3 archives. The two earlier V7
+notes — `02_handoffs/V7_CONTINUE_INITIAL_TRIAGE.md` (initial triage, 2026-08-23)
+and `03_analysis/V7_CONTINUE_CFG.md` (first-pass CFG, recovered from a lost
+commit `3218e77`) — were **merged into this file on 2026-08-26** (sections B5, C,
+D) and the originals deleted; this file is now the single V7 knowledge base.
 
 ---
 
@@ -114,6 +117,44 @@ align it against is the `0x1409e5500` area (main save-list scan/selection) and
 the shared helper `0x1409e4970`; caller `0x1408145ec` is the normal frontend
 Continue path.
 
+### B5. First-pass CFG correction — Continue has multiple independent layers
+
+From `V7_CONTINUE_CFG.md` (recovered from lost commit `3218e77`; merged here 2026-08-26).
+First-pass disassembly clarified the original triage assumption:
+
+| Range (VA) | Role |
+|---|---|
+| `0x1409e4970–0x1409e5342` | **One save-candidate construction/selection helper** — builds save-related strings, obtains the candidate collection, iterates, compares metadata, checks validity, selects/rejects, produces the object consumed by the frontend |
+| `0x1409e5500–0x1409e66f6` | **Separate, larger save-selection routine** — scans `save games/*.ck2`, builds the `alternate_start` exclusion, newest-first sort, etc. |
+| `0x1409e671f` | Call site where the second routine is invoked — **not called by the first helper** (the earlier assumption that the first calls the second was wrong) |
+
+So Continue is a **pipeline of independent layers**, not one helper:
+
+```text
+save enumeration
+→ metadata/status checks
+→ candidate validity
+→ newest/current-save comparison
+→ candidate installation (writes selected save name +0x368, record pointer +0x3a8, …)
+→ frontend enable-state (RefreshContinueButton → CButton::Enable/Disable)
+```
+
+**Rejection-path breadcrumbs (stock May 2020 3.3.3, from the CFG log):**
+
+- `0x1409e4f35`, `0x1409e4f42`, `0x1409e4fba` — rejection branches inside the
+  `0x1409e4970` region.
+- `0x1409e4900` — distinct validity helper (performs another validity check on the
+  save-related object), already carrying the V5/V6 edits (`0x009e3d4c` / VA `0x1409e494c`).
+- **`0x1409e4dc1` / `0x1409e5a71` — signed status/compatibility result checks (the
+  strongest current candidates for the remaining blocker, per the CFG log).**
+
+When labelling the `0x1409e4970` CFG, classify every branch as one of: ordinary invalid
+save (broken, missing Version/Player/Date); unsupported version (`SAVE_GAME_VERSION_TOO_OLD`
+etc., `+0xbc` VersionStatus length); alternate-start exclusion (`alternate_start` token);
+DLC/checksum condition (Conclave gate `+0xcd`, DLC manager); Featured-Ruler/account
+condition already handled by V5/V6 (account status == 3); empty candidate result (no
+valid save found); final Continue-specific rejection (the enable predicate).
+
 ## C. Ordered V7 analysis steps (from the triage handoff)
 
 1. Recover function bounds and build a **labelled CFG** of `0x1409e4970` using
@@ -148,6 +189,23 @@ Continue path.
 - Never call `0x1409e8200` (vector append) from any read/load path.
 - The win333 Continue helper is 64-bit; the 2.6.1.1 PDB is 32-bit — port logic,
   not offsets.
+
+## D1. Current confidence (from the initial triage, 2026-08-23 — unchanged)
+
+- **High:** the three reported UI paths converge at `0x1409e4970`.
+- **High:** V7 should begin in the shared selection helper, not with separate
+  caller patches.
+- **Medium:** the helper's returned candidate/empty result drives the disabled state.
+- **Unproven:** the specific remaining predicate and any safe patch bytes.
+
+## D2. Preservation note
+
+This consolidation absorbed `V7_CONTINUE_CFG.md`, which was itself rebuilt from the
+`logs to dissect.../Новый текстовый документ (5).txt` transcript because its original
+commit `3218e77 Document first-pass Continue control-flow analysis` (branch
+`arena/01a02609…`) was lost in the squashed main `cad3e23`. The two-helper correction
+(§B5) remains its most valuable contribution; the rest of the CFG's analysis is the
+content of this file.
 
 ## E. Raw-fragment cross-reference (dissected 2026-08-26)
 

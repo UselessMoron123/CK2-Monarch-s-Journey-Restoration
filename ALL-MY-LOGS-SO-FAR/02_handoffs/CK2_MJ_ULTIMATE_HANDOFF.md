@@ -1,42 +1,88 @@
-# Crusader Kings II Monarch’s Journey restoration — ultimate handoff
+# Crusader Kings II Monarch's Journey restoration — the single handoff
+
+> **Status banner (2026-08-26):** The core restoration loop is **runtime-proven on
+> Windows May-2020 3.3.3** (V6, SHA-256 `f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0`):
+> payload load, Bronzeman start, live challenge evaluation, Bronze tier grant, save
+> write, manual Load with feat-globals restore (3 March 1173 + Heretical Company 1/6),
+> and persistent local feat cache. **The only remaining functional gap is the greyed-out
+> Continue button** → V7 target (enable predicate, not click handler). Read
+> `00_START_HERE/STATUS.md` first (authoritative state); this file is the deep background:
+> exact identities, patch tables, dead ends, safety rules, and where everything lives in
+> the repo. **All artifacts are already in the connected repository** — do not ask the
+> user to upload anything listed in §0.
 
 ## Instructions to the next Arena.ai Agent Mode session
 
-Continue this reverse-engineering/restoration project from the state documented here. Do **not** restart the investigation, ask the user to repeat old tests, or request broad collections of files already stored in the connected GitHub repository.
+Continue this reverse-engineering/restoration project from the state documented here.
+Do **not** restart the investigation, ask the user to repeat old tests, or request
+collections of files already stored in this repository. Everything is reachable from
+`ALL-MY-LOGS-SO-FAR/` (§0 maps every artifact class to its folder).
 
-The user has connected the next session to a GitHub repository containing Base64 text encodings of these stock CK2 executables:
+The immediate pending task is **V7: make the Continue button work** on exact May 2020
+Windows 3.3.3 — analysis knowledge base is ready in `03_analysis/CONTINUE_SEMANTIC_REFERENCE.md`
+(2.6.1.1 semantic model → win333 anchors → ordered steps). Finish save/Continue before
+attempting a port to 3.3.5.1 or reconstructing the cosmetic reward gallery.
 
-- native Linux CK2 3.3.3 from May 2020;
-- Windows CK2 3.3.2;
-- Windows CK2 3.3.3 from May 2020, immediately before Monarch’s Journey was retired;
-- Windows CK2 3.3.5.1/post-removal.
+This work is for personal restoration/interoperability of a retired game feature. Do not
+redistribute any complete original or modified CK2 executable. Produce guarded patch
+scripts that operate on the user's own verified executable.
 
-Locate each manifest, concatenate its numbered parts in order, Base64-decode it, and verify size/SHA-256 before analysis. Do not ask the user to upload those executables again through chat.
+---
 
-The immediate pending task is the **Windows V6 runtime test described below**. Finish save loading and persistence on exact May 2020 Windows 3.3.3 before attempting a port to 3.3.5.1 or reconstructing the cosmetic reward gallery.
+# 0. Where everything lives (repo map — replaces all old "files to provide" lists)
 
-This work is for personal restoration/interoperability of a retired game feature. Do not redistribute any complete original or modified CK2 executable. Produce guarded patch scripts that operate on the user’s own verified executable.
+| What you need | Where it is in this repo |
+|---|---|
+| Authoritative current state (read first) | `ALL-MY-LOGS-SO-FAR/00_START_HERE/STATUS.md` |
+| Cases solved/unsolved map | `ALL-MY-LOGS-SO-FAR/00_START_HERE/CASES_AND_FINDINGS.md` |
+| Screenshot catalogue (text, canonical) | `ALL-MY-LOGS-SO-FAR/00_START_HERE/SCREENSHOTS_CATALOG.md` |
+| Phase plan / checkboxes | `ALL-MY-LOGS-SO-FAR/PLAN.md` |
+| Research archives Parts 1–3 (session-by-session record) | `ALL-MY-LOGS-SO-FAR/01_research_archives/` |
+| **Windows May-2020 3.3.3 exe (patch target, SHA `656f4f48…`)** | `ALL-MY-LOGS-SO-FAR/10_binary_artifacts/executables/windows/CK2game333.exe` |
+| Windows 3.3.2 / 3.3.5.1 exes, Linux 3.3.3 exe | `ALL-MY-LOGS-SO-FAR/10_binary_artifacts/executables/` |
+| 2.6.1.1 debug drop (exe, dbghelp, extracted PDBs, RARs) | `ALL-MY-LOGS-SO-FAR/10_binary_artifacts/debug_files/` |
+| Upload manifests (identity records) | `ALL-MY-LOGS-SO-FAR/10_binary_artifacts/upload_manifests/` |
+| **Payload `monarchs`** (SHA `fc6ec025…`, 11 rulers / 33 challenges) | `ALL-MY-LOGS-SO-FAR/06_game_data/monarchs` (variants alongside) |
+| Guarded patchers v2–v6 + check/revert/prepare helpers | `ALL-MY-LOGS-SO-FAR/05_patches_and_scripts/{bat,ps1,py}` |
+| Cumulative patch map (offsets/bytes/purpose) | `ALL-MY-LOGS-SO-FAR/03_analysis/WINDOWS_333_PATCH_MAP.md` + `.csv` |
+| **Evidence saves** `Bosnia1173_03_03.ck2`, `Bronzeman_kulin_bosnia.ck2`, Pavao/Croatia saves, `.meta` | `ALL-MY-LOGS-SO-FAR/13_save_and_cache/` (+ `saves/` subfolder) |
+| Feat-progress cache `q847rsja8ndx` (both states) | `ALL-MY-LOGS-SO-FAR/13_save_and_cache/` |
+| Runtime logs (incl. v6 second-look boots, Bronze popup) | `ALL-MY-LOGS-SO-FAR/07_runtime_logs/` |
+| Canonical artifact registry (every size/SHA) | `ALL-MY-LOGS-SO-FAR/03_analysis/MASTER_ARTIFACT_TABLE.md` |
+| **V7 knowledge base (2.6.1.1 model → win333 anchors → ordered steps)** | `ALL-MY-LOGS-SO-FAR/03_analysis/CONTINUE_SEMANTIC_REFERENCE.md` |
+| Banned builds/helpers/approaches | `ALL-MY-LOGS-SO-FAR/03_analysis/BANNED_ARTIFACTS.md` |
+| 3.3.5.1 port assessment (verdict: not feasible) | `ALL-MY-LOGS-SO-FAR/03_analysis/WINDOWS_3351_PORT_ASSESSMENT.md` |
+| Contradictions register | `ALL-MY-LOGS-SO-FAR/03_analysis/CONTRADICTIONS.md` |
+| 2.6.1.1 PDB analysis (IDENTITY, SYMBOLS, SEARCH, TYPES) | `ALL-MY-LOGS-SO-FAR/03_analysis/` |
+| Raw-log tear-down ledger (what was deleted → where content lives) | `ALL-MY-LOGS-SO-FAR/12_raw_chat_logs/INDEX.md` |
+| Organization-pass audit trail | `RECON_NOTES_2026-08-26.md` (repo root) |
+
+Every size/SHA in this handoff is also in `MASTER_ARTIFACT_TABLE.md` (the canonical
+registry — check it first; it includes the V2–V6 patcher tool hashes).
 
 ---
 
 # 1. User goal
 
-Restore the retired Crusader Kings II Monarch’s Journey mode locally on Windows, including as much as possible of:
+Restore the retired Crusader Kings II Monarch's Journey mode locally on Windows, including
+as much as possible of:
 
-1. the Monarch’s Journey arrow and ruler panel;
+1. the Monarch's Journey arrow and ruler panel;
 2. all locally available rulers and their challenge definitions;
 3. Bronzeman campaign creation;
 4. live challenge evaluation and tier progress;
 5. save/load/Continue and persistent progress;
 6. eventually, a local total-score and historical reward gallery.
 
-The retired Paradox/Titus backend cannot grant CK3 cosmetics. Any reward-gallery restoration would be a local historical/cosmetic reconstruction only.
+The retired Paradox/Titus backend cannot grant CK3 cosmetics. Any reward-gallery
+restoration would be a local historical/cosmetic reconstruction only.
 
 ---
 
 # 2. User constraints and environment
 
-- The user is on Windows and is not comfortable with technical PC procedures. Give literal, short, beginner-level steps.
+- The user is on Windows and is not comfortable with technical PC procedures. Give
+  literal, short, beginner-level steps.
 - Verified working test root:
 
   ```text
@@ -50,13 +96,15 @@ The retired Paradox/Titus backend cannot grant CK3 cosmetics. Any reward-gallery
   ```
 
   The filename is extensionless.
-
-- The user has no functioning Paradox login for this build. Keep Internet disconnected during tests: enabling it makes the obsolete client enter a different “Not Logged In” state and can interfere with controlled offline behavior.
-- The chat uploader rejects EXE/DLL/SO/ZIP/RAR. GitHub or Base64 `.txt` parts are used instead.
+- The user has no functioning Paradox login for this build. Keep Internet disconnected
+  during tests: enabling it makes the obsolete client enter a different "Not Logged In"
+  state and can interfere with controlled offline behavior.
+- The chat uploader rejects EXE/DLL/SO/ZIP/RAR. GitHub (this repo) or Base64 `.txt`
+  parts are used instead; prefer the repo — nothing common needs re-uploading.
 - Minimize uploads, logs, and large generated files.
 - The Bronzeman console being unavailable is normal, as in Ironman.
 - Never tell the user to run `wipe_feats`; it irreversibly erases Featured Ruler progress.
-- `feat_log` was useful in a normal game but is not necessary for the current load test.
+- Do not require Linux/WSL unless there is no simple alternative.
 - There is a separate newer/post-removal game installation. Do not apply May 2020 offsets to it.
 
 ---
@@ -72,7 +120,7 @@ Architecture: PE32+ x86-64
 Image base: 0x140000000
 .text VMA: 0x140001000
 .text raw offset: 0x00000400
-Linker timestamp: 2020-05-06 12:25:12
+Linker timestamp: 2020-05-06 12:25:12 (build string 3.3.3, 2020-05-06 12:57:06 +0200)
 File size: 24,753,368 bytes
 ```
 
@@ -82,7 +130,7 @@ For raw offsets in `.text` used below:
 VA = raw_file_offset + 0x140000c00
 ```
 
-Exact hashes:
+Exact hashes (also in `MASTER_ARTIFACT_TABLE.md`):
 
 | State | SHA-256 |
 |---|---|
@@ -92,9 +140,13 @@ Exact hashes:
 | V3 | `e91a5f4693ca3b747d7340fda71ed66b3593e2f98af14c37e6086b0d76fb13ca` |
 | V4 | `f2967f6f2c5b8b7d49dec2f7066139ace321cca19480f5c57d3ca8d576259b30` |
 | V5 | `29556549fb5fc657f2966949b6a5b59c9b89b707f954adca4868cfd3d90b1535` |
-| **V6 candidate** | **`f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0`** |
+| **V6 (current baseline)** | **`f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0`** |
+| ⛔ "V6" trampoline (Part 2) | `a6cb92b8eda36c775751eb2af8c27a2509c5b9cee84872ef9e5fd6afd3cb18ff` — **BANNED** |
+| ⚠️ "V7" feat-update candidate | `0074af707665bb152d3592d8ba9320ea81e79e6f58edc218e22aa069b353aeb8` — abandoned |
 
-The V5 executable uploaded to the most recent session was reconstructed and independently verified against its exact expected hash. Restoring every known patch byte reproduced the exact stock-May hash.
+The V5 executable uploaded to the most recent session was reconstructed and independently
+verified against its exact expected hash. Restoring every known patch byte reproduced the
+exact stock-May hash.
 
 ## Native Linux May 2020 CK2 3.3.3
 
@@ -108,18 +160,20 @@ Format: ELF 64-bit x86-64
 Version/build string: CK2 3.3.3, 2020-05-06
 ```
 
-The GitHub copy should be checked against this identity.
-
 ## Windows 3.3.2 and 3.3.5.1
 
 Prior string analysis established:
 
-- genuine Windows 3.3.2 build date: 2020-02-06;
-- 3.3.2 contains the original remote GameSparks highlighted-ruler controller but not the static `common/monarchs_journey` local path;
-- current/post-removal 3.3.5.1 identifies itself with build string `2021-09-21 16:13:22 +0200`;
-- 3.3.5.1 retains many lower-level Bronzeman/feat/reward strings but lost or disabled higher-level initialization.
+- genuine Windows 3.3.2 build date: 2020-02-06 (SHA `83ba6a68…`, 24,727,272 B);
+- 3.3.2 contains the original remote GameSparks highlighted-ruler controller but not the
+  static `common/monarchs_journey` local path;
+- current/post-removal 3.3.5.1 identifies itself with build string `2021-09-21 16:13:22 +0200`
+  (SHA `a0cc8e92…`, 24,236,024 B, −517 KiB vs May);
+- 3.3.5.1 retains many lower-level Bronzeman/feat/reward strings but lost or disabled
+  higher-level initialization.
 
-The next session should reconstruct these GitHub binaries and record their exact sizes/hashes in the repository’s analysis report, but this is lower priority than the V6 runtime test.
+Both are materialized under `10_binary_artifacts/executables/`; full analysis in
+`03_analysis/EXECUTABLE_IDENTITIES.md` and `03_analysis/WINDOWS_3351_PORT_ASSESSMENT.md`.
 
 ## Steam manifests for the last pre-retirement May build
 
@@ -146,9 +200,7 @@ Windows V2+ destination:
 <game root>\gfx\monarchs
 ```
 
-The filename has no extension.
-
-The payload is ordinary plaintext JSON and contains:
+The filename has no extension. The payload is ordinary plaintext JSON:
 
 ```json
 {
@@ -161,7 +213,7 @@ It has eleven rulers and 33 challenge definitions:
 
 1. Konan of Brittany
 2. Llywelyn of Gwynedd
-3. Sa’ad Mordechai
+3. Sa'ad Mordechai
 4. Konstantinos of Samos
 5. Louis the Stammerer
 6. Shajar al-Durr
@@ -179,7 +231,7 @@ The final five official rulers are absent:
 - Grand Mayor Botstain
 - Stefan the First-Crowned
 
-The payload’s eleven `event_time_end` fields use:
+The payload's eleven `event_time_end` fields use:
 
 ```text
 1893499200 = 2030-01-01 12:00 UTC
@@ -191,7 +243,9 @@ Do not replace this with `2147483647`. The game calculates approximately:
 signed_32bit(event_time_end + 172800)
 ```
 
-INT_MAX therefore overflows to a 1901-era signed value and hides the panel. This was the reason the earliest “reactivated” payload failed.
+INT_MAX therefore overflows to a 1901-era signed value and hides the panel. This was the
+reason the earliest "reactivated" payload failed. (Payload expiry 2030-01-03 visible
+window; ceiling 2147310847; hard wall 2038-01-17/19.)
 
 ---
 
@@ -232,13 +286,15 @@ Exact behavior:
 - `can_see_highlighted_rulers: 1` fills GUI-version integer slot 14 (`highlighted_ruler_version`).
 - Initial panel creation has no POPS, Titus, Paradox-login, or account gate on Linux.
 
-`FEATURED_RULER_NOT_SUPPORTED_LINUX` is only referenced in an old launcher Continue tooltip and is not a global Linux disable.
+`FEATURED_RULER_NOT_SUPPORTED_LINUX` is only referenced in an old launcher Continue tooltip
+and is not a global Linux disable.
 
 ---
 
 # 6. Windows local-loader root cause and V2
 
-Windows May 3.3.3 contains `CNullGameSpark`, but the factory normally selects the dead online GameSparks implementation.
+Windows May 3.3.3 contains `CNullGameSpark`, but the factory normally selects the dead
+online GameSparks implementation.
 
 The Windows null loader originally requests:
 
@@ -248,7 +304,10 @@ The Windows null loader originally requests:
 
 Storage location 0 maps to original-directory index 2, which is `gfx` in this Windows build.
 
-There is a collision: the startup username-cache routine also uses `gfx\test.dds` before Monarch’s Journey initializes and may rewrite it. A JSON payload at that path is therefore unsafe. Globally renaming the shared string would rename both users and would not solve the collision.
+There is a collision: the startup username-cache routine also uses `gfx\test.dds` before
+Monarch's Journey initializes and may rewrite it. A JSON payload at that path is therefore
+unsafe. Globally renaming the shared string would rename both users and would not solve
+the collision.
 
 V2 made two changes:
 
@@ -264,7 +323,8 @@ V2 runtime result:
 - all three challenge rows per ruler rendered;
 - obsolete account UI still blocked Play/rewards.
 
-Do not return to `common\monarchs_journey\test.dds`, `gfx\test.dds`, or any global string replacement. The proven Windows path is `gfx\monarchs`.
+Do not return to `common\monarchs_journey\test.dds`, `gfx\test.dds`, or any global string
+replacement. The proven Windows path is `gfx\monarchs`.
 
 ---
 
@@ -280,32 +340,42 @@ V3 retained V2 and added:
 | `0x007befaf` | `74 2d` | `eb 2d` | Normal Restart path |
 | `0x007c0d18` | `74 0b` | `eb 0b` | Forced online reward-container branch; later reverted because it exposed empty controls |
 
-Runtime result:
+V3 observed runtime result (user transcript, hashes verified):
 
-- login prompt disappeared;
-- Play became clickable;
-- Play reached historical Game Rules;
-- Bronzeman was requested/enabled;
-- Challenges remained Disabled;
-- Start was blocked due offline Steam/checksum eligibility;
-- forced reward container showed `UI Missing Text` because the local payload contains no account reward catalogue.
+- login prompt gone;
+- current ruler and all three challenge rows populated;
+- Play enabled; Play opens historical Game Rules;
+- Bronzeman enabled;
+- **Challenges: Disabled**;
+- Start blocked with `Challenges must be enabled`;
+- actual checksum/modified-data and Steam-active requirements are red;
+- main-menu checksum is `EDJH`, while setup identifies stock version `3.3.3 (SOHY)`;
+- no crash or relevant fatal loader error.
+
+V3 therefore proved the start route but did not create the internal challenge-enabled state.
+V3 also exposed an unpopulated reward control showing `UI Missing Text`; `text2.log`
+confirms the typo key `UI_ MISSING_TEXT` is undefined — default GUI content, not payload
+decode failure.
 
 ---
 
 # 8. V4: offline Bronzeman challenge mode and live progress
 
+## 8.1 Edits
+
 V4 retained the useful V2/V3 UI changes, restored `0x007c0d18` to stock, and added:
 
-| Raw offset | Stock | V4/V5/V6 | Purpose |
-|---|---|---|---|
-| `0x007c0d23` | `eb 5c` | `90 90` | Hide both empty reward controls and obsolete login text offline |
-| `0x00732b03` | `74 16` | `90 90` | Bypass retired Steam-active gate for challenge Start state |
-| `0x007336b0` | `74 1d` | `90 90` | Challenge-enabled predicate |
-| `0x007337e1` | `74 1d` | `90 90` | Start-warning predicate |
-| `0x00737262` | `74 1b` | `90 90` | Challenge-tooltip heading |
-| `0x007b78eb` | `75 0c` | `eb 0c` | In-game feat tracking |
+| Raw offset | VA | Stock | V4/V5/V6 | Purpose |
+|---|---|---|---|---|
+| `0x007c0d23` | `0x1407c1923` | `eb 5c` | `90 90` | Hide both empty reward controls and obsolete login text offline |
+| `0x00732b03` | `0x140733703` | `74 16` | `90 90` | Bypass retired Steam-active gate for challenge Start state |
+| `0x007336b0` | `0x1407342b0` | `74 1d` | `90 90` | Challenge-enabled predicate |
+| `0x007337e1` | `0x1407343e1` | `74 1d` | `90 90` | Start-warning predicate |
+| `0x00737262` | `0x140737e62` | `74 1b` | `90 90` | Challenge-tooltip heading |
+| `0x007b78eb` | `0x1407b84eb` | `75 0c` | `eb 0c` | In-game feat tracking |
 
-The shared eligibility helper’s 24-byte Boolean tail at raw offset `0x000aeb83` was changed from:
+The shared eligibility helper's 24-byte Boolean tail at raw offset `0x000aeb83` was
+changed from:
 
 ```text
 80 7f 61 00 74 0c 80 7f 63 00 74 06 80 7f 62 00 74 02 33 f6 40 0f b6 c6
@@ -329,25 +399,67 @@ to:
 save_ok && !ruler_designer && (stock_checksum || !steam_active)
 ```
 
-All earlier rule checks remained intact. The stock checksum is still required when Steam is genuinely active. Normal achievement/Steam branches were not globally patched.
+All earlier rule checks remained intact. The stock checksum is still required when Steam
+is genuinely active. Normal achievement/Steam branches were not globally patched. This is
+VA `0x1400af783`.
 
-V4 runtime proof:
+## 8.2 The Game Rules / challenge-eligibility trace (why those five call sites)
 
-- Bronzeman Mode: Enabled;
-- Challenges: Enabled;
-- Start worked;
-- the selected campaign loaded;
-- the in-game Monarch’s Journey panel displayed all three challenges;
-- live evaluation worked: `Heretical Company` reached `1/6`;
-- `feat_log` showed `heretical_company=1` in memory.
+The Monarch Play event already sets the true Bronzeman request flag. The remaining
+failure was the challenge eligibility chain. Important functions:
 
-The user later proved that save loading/persistence was still blocked, so V4 was a core live-tracking success but not a complete restoration.
+- `0x1407341b0` — returns requested Bronzeman state, including frontend global `+0x2f9`.
+- `0x140734290` — challenge-enabled predicate.
+- `0x140733630` — Game Rules refresh/start-button enabled state.
+- `0x1400af690` — shared rules/save/checksum/Ruler Designer eligibility helper.
+- `0x14072d540` — evaluates the active rule set; called inside the helper and left intact.
+- `0x1407b8450` — in-game feat tracking eligibility.
+
+The challenge predicate requires:
+
+1. Ironman or the real Bronzeman context;
+2. active game rules that permit feats;
+3. service byte `+0x61` true: save is valid;
+4. service byte `+0x63` true: stock checksum/no user modification;
+5. service byte `+0x62` false: no Ruler Designer;
+6. service byte `+0x65` true: Steam active.
+
+The V3 screenshot exactly matches failures 4 and 6. The in-game tracker additionally
+retains checks for a current ruler, non-expired ruler, actual Ironman/Bronzeman mode
+(`+0x500/+0x501`), and service byte `+0x60` clear.
+
+V4 does **not** force only the final Start button; it patches the challenge-enabled
+predicate, button state, warning state, tooltip heading, and in-game feat tracker
+consistently, preserving real Bronzeman/Ironman context, active game-rule evaluation,
+valid-save requirement, no-Ruler-Designer requirement, selected-ruler and expiry checks,
+in-game mode checks, and in-game feat progress code.
+
+## 8.3 V4 runtime result — successful challenge restoration
+
+- Game Rules allowed the campaign to start.
+- The campaign loaded as Kulin of Bosnia in Bronzeman mode.
+- The in-game pause-menu Monarch's Journey panel displays all three Kulin challenges.
+- Progress is genuinely updating: the row shows `Heretical Courtiers: 1/6`, and its
+  tooltip shows `Current Progress: 1` with Bronze/Silver/Gold thresholds `6/9/12`.
+- The supplied local progress dump `/home/user/uploads/q847rsja8ndx.txt` (now
+  `13_save_and_cache/q847rsja8ndx.txt`) independently records `heretical_company=1`
+  while the other feat counters remain zero.
+- No crash or Monarch/feat fatal error appears in the logs.
+
+This proves V4 restored genuine in-session challenge evaluation, not merely an enabled
+Start button. It does **not** prove durable storage (that came in V6).
+The screenshot's absence of an individual progress bar is normal:
+`highlighted_ruler_feat_window` contains textual progress and tooltip controls, not a bar.
+The only bar in the stock GUI belongs to the separate account-level reward panel.
 
 ---
 
 # 9. Uploaded saves — exact proof
 
-Two raw compressed CK2 saves were uploaded under `.txt` names because of uploader restrictions. They are ordinary ZIP-format `.ck2` files and can be read directly by Python `zipfile`.
+Two raw compressed CK2 saves were uploaded under `.txt` names because of uploader
+restrictions. They are ordinary ZIP-format `.ck2` files and can be read directly by
+Python `zipfile`. Both now live in `13_save_and_cache/` (raw `.txt` names) with copies in
+`13_save_and_cache/saves/` under their real names.
 
 ## March save
 
@@ -381,22 +493,36 @@ ironman="save games/Bronzeman_kulin_bosnia.ck2"
 global_heretical_company=1.000
 ```
 
-Both archives and both `meta` entries are structurally valid. Their internal states are different.
-
-After V5, selecting either save led to a fresh-looking 1 January campaign displaying `Heretical Company: 0/6`. Therefore neither archive was actually deserialized. If the March file had loaded, the date would be 3 March; if either save’s variables had loaded, progress would be 1/6.
-
-The later “Game State is corrupted” menu tooltip is a secondary state after the failed/fallback transition. It does not mean the two save archives are corrupt.
+Both archives and both `meta` entries are structurally valid. Their internal states are
+different. Later V6-era saves (Pavao of Croatia / Croatia 1278) are in
+`13_save_and_cache/saves/` too — see `MASTER_ARTIFACT_TABLE.md` §4 for all hashes.
 
 ---
 
 # 10. V5: generic load validator — partial only
 
-V5 added:
+## 10.1 Fresh-process loading result (the decisive clean test, Internet disabled)
 
-| Raw offset | Stock | V5 | Purpose |
-|---|---|---|---|
-| `0x009e3d4c` | `74 0b` | `eb 0b` | Generic valid-save predicate: skip the retired account check for a save containing Featured Ruler metadata |
-| `0x009e1c2d` | `74 49` | `eb 49` | Normal save tooltip instead of `MONARCHS_JOURNEY_REQUIRES_LOGIN` |
+There were no older saves and no intervening online login attempt.
+
+- Outer launcher Continue is gray.
+- In-game Single Player Continue is gray.
+- Load Game lists and permits selection of both Kulin saves.
+- Both show the bronze-hand/crown icons and say they were created while playing a
+  Featured Ruler.
+- Selecting either save disables Load with: `Monarch's Journey requires you to be logged
+  in to a Paradox account.`
+- `%APPDATA%\GameSparks\E349414h9BDm` exists but is empty.
+
+Therefore the dirty-process warning was not the blocker, and save corruption is ruled out.
+V4's highlighted-ruler account edits do not cover the generic saved-game selector.
+
+## 10.2 V5 edits
+
+| Raw offset | VA | Stock | V5 | Purpose |
+|---|---|---|---|---|
+| `0x009e3d4c` | `0x1409e494c` | `74 0b` | `eb 0b` | Generic valid-save predicate: skip the retired account check for a save containing Featured Ruler metadata |
+| `0x009e1c2d` | `0x1409e282d` | `74 49` | `eb 49` | Normal save tooltip instead of `MONARCHS_JOURNEY_REQUIRES_LOGIN` |
 
 Relevant function:
 
@@ -405,7 +531,9 @@ Generic save predicate: VA 0x1409e4900–0x1409e4967
 Patched branch: VA 0x1409e494c, raw 0x009e3d4c
 ```
 
-Original logic near the patch:
+Original logic near the patch (the exact May Linux binary's exported symbols exposed
+`CIronmanSaveSelect::RefreshLoadButton()` calling a shared saved-game validator; mapping
+that logic to the exact Windows executable identified this helper):
 
 ```asm
 cmp qword ptr [rcx+0x128], 0  ; Featured Ruler/special-event field
@@ -417,22 +545,35 @@ valid:
 mov al, 1
 ```
 
-V5 correctly removed the visible login restriction and enabled the Load control, but runtime showed that it did not install the selected save as the active deserialize target.
+V5 changes only the first conditional branch to an unconditional jump, so a save that has
+already passed every earlier validation check no longer calls the retired account service
+merely because its Featured Ruler identifier is nonempty. The first edit is referenced by
+both continue-save parsing and `RefreshLoadButton`, so it was expected to cover manual
+Load, in-game Continue, and startup Continue without globally changing account status.
+The second edit is UI consistency only. OnAccept contains no additional account check.
+
+V5 differs from V4 by exactly these two one-byte branch opcode changes. Applying all 16
+recognized patch entries to the exact original produces the V5 SHA in §3. V5 correctly
+removed the visible login restriction and enabled the Load control, but runtime showed
+that it did not install the selected save as the active deserialize target (V5 result:
+fresh-looking 1 January campaign with `Heretical Company: 0/6` — the "Game State is
+corrupted" menu tooltip after the failed/fallback transition is secondary, the archives
+are not corrupt).
 
 ---
 
-# 11. New independent V5 disassembly and V6 root cause
+# 11. V6: new independent disassembly and root cause
 
-The most recent session reconstructed the user’s exact tested V5 binary and independently disassembled every account-status xref in the save subsystem.
+## 11.1 Critical discovery
 
-## Critical discovery
+The generic predicate is not the only account check. The code duplicates the same check
+inside:
 
-The generic predicate is not the only account check. The code duplicates the same check inside:
-
-1. Continue’s candidate-selection loop; and
+1. Continue's candidate-selection loop; and
 2. four paths in the main save-list scanning/selection routine.
 
-Thus V5 allowed a save row and button to look valid, but the higher-level routine refused to write the Featured Ruler save record into the actual selection fields.
+Thus V5 allowed a save row and button to look valid, but the higher-level routine refused
+to write the Featured Ruler save record into the actual selection fields.
 
 The save-list object later expects:
 
@@ -441,9 +582,11 @@ object + 0x368: selected save name
 object + 0x3a8: selected save record pointer
 ```
 
-The unpatched account branches prevented these from being set for `special_event="kulin_bosnia"`. That explains the fallback to the January historical setup exactly.
+The unpatched account branches prevented these from being set for
+`special_event="kulin_bosnia"`. That explains the fallback to the January historical
+setup exactly.
 
-## Relevant functions
+## 11.2 Relevant functions
 
 ```text
 Continue candidate selection:
@@ -467,7 +610,7 @@ The Continue helper is called from at least:
 0x140a0ba62  another Continue caller
 ```
 
-## V6’s five new edits
+## 11.3 V6's five new edits
 
 V6 retains all V5 edits and adds:
 
@@ -479,9 +622,12 @@ V6 retains all V5 edits and adds:
 | `0x009e5377` | `0x1409e5f77` | `0f 84 63 01 00 00` | `e9 64 01 00 00 90` | Named-save path: accepted-save target `0x1409e60e0` |
 | `0x009e5452` | `0x1409e6052` | `74 0b` | `eb 0b` | Latest-save path: accepted-save target `0x1409e605f` |
 
-Every edit is instruction-length preserving. The two six-byte conditional jumps become five-byte unconditional jumps plus one NOP. Static disassembly confirmed every boundary and target.
+Every edit is instruction-length preserving. The two six-byte conditional jumps become
+five-byte unconditional jumps plus one NOP. Static disassembly confirmed every boundary
+and target.
 
-The V6 candidate was generated independently from the exact V5 binary and source-parsed back to verify apply/revert hashes:
+The V6 candidate was generated independently from the exact V5 binary and source-parsed
+back to verify apply/revert hashes:
 
 ```text
 V5 input SHA-256:
@@ -494,7 +640,8 @@ V6 reverse-normalized SHA-256:
 29556549fb5fc657f2966949b6a5b59c9b89b707f954adca4868cfd3d90b1535
 ```
 
-Prepared V6 deliverables from the latest session:
+Prepared V6 deliverables (now in `05_patches_and_scripts/`, hashes in
+`MASTER_ARTIFACT_TABLE.md` §6):
 
 ```text
 patch_ck2_mj_v6.ps1
@@ -504,102 +651,82 @@ REVERT_CK2_MJ_V6_TO_V5.bat
 CK2_MJ_V6_TEST_GUIDE.md
 ```
 
-Tool hashes:
+The V6 patcher intentionally accepts only exact V5 or exact V6, creates a timestamped
+verified V5 backup, patches only the five new branches, verifies the full final SHA-256,
+and can revert exactly to V5.
 
-```text
-patch_ck2_mj_v6.ps1
-995ee9aa9db75d13a1374cfe4a6b575893d262acfd763032060d3b87fd956e3b
+## 11.4 V6 runtime result — CONFIRMED (2026-08-26, user-tested)
 
-APPLY_CK2_MJ_V6.bat
-f92ed979ede2d5bf25179ba89e494b28da41cb2285dea7a1cd527f68c7f4a4cc
+The planned outcome matrix (A: March 3 + 1/6; B: March 3 but 0/6; C: still January 1;
+D: Load works but Continue fails) resolved as **case A, plus more**:
 
-CHECK_CK2_MJ_V6.bat
-607e4f6c8a2cf3ddf82f9497187a7fce0cc014c9d1e3e216482dad034ec34013
+- Old V4-era save `Bosnia1173_03_03.ck2` loaded via Single Player → Load Game: **3 March
+  1173** and **Heretical Company 1/6** — feat globals (`global_heretical_company`) really
+  deserialize; interface persists.
+- A new Bronzeman campaign as a *different* featured ruler (Pavao of Croatia, 1278.1.1):
+  live evaluation (`global_established` 2 → 4 across the first days), **Bronze tier
+  granted** at the exact payload threshold (established levels {4 6 8} → Bronze at 4),
+  save writing works (`bronzeman=yes`, `special_event="pavao_croatia"`, feat globals
+  serialized), resume-after-restart via Load Game works.
+- Persistent local feat cache: `cache/q847rsja8ndx` (`feat_progress_storage`) stores peak
+  values (`established=4`, `conquerer_from_bribir=1`) across sessions.
+- Full evidence chain: `03_analysis/V6_RUNTIME_RESULTS.md`; Bronze popup in
+  `07_runtime_logs/game_v6sl.log`; screenshots catalogued (catalog **A** section).
 
-REVERT_CK2_MJ_V6_TO_V5.bat
-6ac6c9d846928f9c999f18640c2dda4a34e43979a882978307785d9295abf8c7
-
-CK2_MJ_V6_TEST_GUIDE.md
-0d4d3d21f0f000210cbfaa1a30b5afb2f89311babee6e2996a2985ecded8ab87
-```
-
-The V6 patcher intentionally accepts only exact V5 or exact V6, creates a timestamped verified V5 backup, patches only the five new branches, verifies the full final SHA-256, and can revert exactly to V5.
+**Still broken:** the **Continue button stays grayed out** — from the main menu and from
+the MJ panel. V6 patched the inline account branch inside the Continue candidate-selection
+helper `0x1409e4970`, so a *different, non-account* predicate is rejecting Continue. This
+is the V7 target (next section).
 
 ---
 
-# 12. Immediate pending V6 runtime test
+# 12. V7 — the current open task: the greyed-out Continue button
 
-Do this before any new binary work unless the user has already provided the result.
+## 12.1 State of knowledge (consolidated)
 
-1. Keep Internet disconnected.
-2. Close CK2 fully.
-3. Put together:
+The complete V7 knowledge base is `03_analysis/CONTINUE_SEMANTIC_REFERENCE.md` (built
+2026-08-23/26 from the 2.6.1.1 exact-match PDB model, the win333 disassembly, and the
+Linux 3.3.3 semantic reference). The two earlier V7 notes (`02_handoffs/V7_CONTINUE_INITIAL_TRIAGE.md`
+and `03_analysis/V7_CONTINUE_CFG.md`) were merged into it on 2026-08-26; start there, not
+with new exploration.
 
-   ```text
-   APPLY_CK2_MJ_V6.bat
-   patch_ck2_mj_v6.ps1
-   ```
+Summary:
 
-4. Drag the current exact V5 file onto the Apply BAT:
+- The three Continue UI paths (`0x1407bffa1` MJ, `0x1408145ec` normal frontend,
+  `0x140a0ba62`) converge on shared helper `0x1409e4970`, but Continue has **multiple
+  independent layers** (enumeration → metadata/status checks → candidate validity →
+  newest/current comparison → candidate installation `+0x368`/`+0x3a8` → frontend
+  enable-state). The first-pass correction: `0x1409e4970–0x1409e5342` (candidate
+  construction/selection) and `0x1409e5500–0x1409e66f6` (separate larger scan/selection
+  routine, invoked at `0x1409e671f`) are **not** one calling the other.
+- 2.6.1.1 PDB proves the old Continue path had **no account/online check**; the win333
+  failure is a newer predicate. Manual Load and Continue legitimately diverge.
+- Rejection-path breadcrumbs inside the shared region: `0x1409e4f35`, `0x1409e4f42`,
+  `0x1409e4fba` (rejection branches in the `0x1409e4970` region); `0x1409e4900` (distinct
+  validity helper, has the V5/V6 edits); **`0x1409e4dc1` / `0x1409e5a71` — signed
+  status/compatibility result checks (strongest current candidates for the remaining
+  blocker)**.
+- Ordered analysis steps, hypotheses to test in order, and guardrails: see
+  `CONTINUE_SEMANTIC_REFERENCE.md` §C/§D. Do **not** re-patch the V5/V6 branches; do not
+  globally force the button enabled or fabricate account state.
 
-   ```text
-   C:\Users\UZWERG\Desktop\SteamCrusader\CK2game.exe
-   ```
+## 12.2 What to build next (when the remaining predicate is found)
 
-5. Require final hash:
-
-   ```text
-   f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0
-   ```
-
-6. Start that exact executable directly.
-7. Use **Single Player → Load Game** first, not Continue.
-8. Select `Bosnia1173_03_03.ck2`.
-9. Load it without overwriting either evidence save.
-10. Confirm both:
-
-    ```text
-    date = 3 March 1173
-    Heretical Company = 1/6
-    ```
-
-11. If manual Load succeeds, fully restart CK2 and separately test:
-    - normal Single Player Continue;
-    - Monarch’s Journey panel Continue.
-
-The user should return one screenshot showing the March date and 1/6 progress if successful.
-
-If V6 still fails, request only:
-
-- patch-window text;
-- screenshot immediately after selecting the March save but before pressing Load/Play;
-- screenshot of the immediate result/error.
-
-Do not request another broad log archive yet.
-
-## Interpretation of possible V6 outcomes
-
-### A. March 3 and 1/6 appear
-
-Core save loading and variable restoration work. Then test save → full exit → Continue and verify 1/6 remains.
-
-### B. March 3 appears but progress is 0/6
-
-Actual deserialization works, but the feat reload/initialization path resets or ignores serialized global variables. Investigate Featured Ruler/feat initialization after load, not generic save validity. The save definitely contains `global_heretical_company=1.000`.
-
-### C. The UI still shows January 1
-
-The selected save record is still not reaching the deserialize call. Trace writes/reads of object fields `+0x368` and `+0x3a8`, the caller at `0x1409e6700`, and the actual load transition. Use Process Monitor only if path access remains uncertain; static analysis should remain primary.
-
-### D. Manual Load works but normal Continue fails
-
-Inspect callers of `0x1409e4970`, especially `0x1408145ec`, and the failure path at `0x1407bffa1`. V6 already patches the inline account branch inside `0x1409e4970`, so determine which other non-account predicate rejects Continue.
+1. Guarded `05_patches_and_scripts/ps1/patch_ck2_mj_v7.ps1` + apply/check/revert bats,
+   hash-guarded from exact V6 SHA `f5b7dfd6…` (stock `656f4f48…` accepted too),
+   length-preserving, byte-verified, revertible.
+2. Short test guide; user test offline: boot → main menu / MJ panel → is Continue
+   clickable? → does it load the Bronzeman save with `1/6`+ progress? (Two yes/no results.)
+3. Evidence screenshots: catalog **A** — (1)(2)(4)(5)(217)(219)(226); drop into
+   `14_screenshots_and_media/`.
 
 ---
 
 # 13. Reward gallery and score — separate later project
 
-V4 intentionally hides both the obsolete login message and the empty reward container. The local ruler snapshot contains feat definitions/localisation but not the retired account reward catalogue/progression state.
+V4 intentionally hides both the obsolete login message and the empty reward container.
+The local ruler snapshot contains feat definitions/localisation but not the retired
+account reward catalogue/progression state.
 
 Historical reward order and score thresholds shown in screenshots/localisation:
 
@@ -614,7 +741,12 @@ Historical reward order and score thresholds shown in screenshots/localisation:
 | 90 | The Miller |
 | 110 | The Joan of Arc |
 
-Associated descriptions exist in `LT.csv`. Assets appear to remain in the game data.
+Further disassembly showed the May executable itself hardcodes eight reward entries
+(`REWARD_NAME_1..8`, `REWARD_DESC_1..8`) and their sprites (male/female hair, beard, hat,
+chest, veil, etc.), plus local-storage keys `RTT_Rewards` and `ck2_rtt_reward_score`
+(also present in the string dumps under `06_game_data/`). This makes a later local display
+plausible, but persistence/load had to be solved first (it now is, via V6). Do not claim
+CK3 cosmetic rewards are locally restored.
 
 A later local cosmetic reconstruction could:
 
@@ -631,35 +763,33 @@ Prior logs consistently contain:
 [road_to_titus_progression.cpp:301]: FAILED TO FETCH FROM TITUS
 ```
 
-That is expected and separate from local challenge tracking.
-
-Do not start this work until V6 save persistence is resolved.
+That is expected and separate from local challenge tracking. Do not start this work
+until V7 Continue is resolved.
 
 ---
 
 # 14. Porting to CK2 3.3.5.1 — later project
 
-The user asked whether the restoration could be moved to the newest version with all DLC/Steam files. Do not apply May offsets to 3.3.5.1.
-
-The GitHub repository now contains Base64 copies of 3.3.2, 3.3.3, and 3.3.5.1, enabling a proper cross-version analysis later.
+The user asked whether the restoration could be moved to the newest version with all
+DLC/Steam files. Do not apply May offsets to 3.3.5.1. The full assessment is
+`03_analysis/WINDOWS_3351_PORT_ASSESSMENT.md` — verdict: **byte-patch port not feasible**
+(payload parser + `gs_virtual/feat_script` loader + GameSparks SDK removed; downstream
+Bronzeman/feat machinery survives but has no data source). May 3.3.3 stays the
+restoration target; hybrid usage recommended for performance.
 
 Recommended later approach:
 
-1. Reconstruct and verify all binaries.
-2. Create binary-diff/function-matching reports for:
-   - 3.3.2 remote-only GameSparks implementation;
-   - May 3.3.3 Windows local/null implementation;
-   - May 3.3.3 Linux symbol-rich null implementation;
-   - 3.3.5.1 post-removal.
-3. Match functions by constants, strings, control-flow shape, vtables, and call neighborhoods rather than copying raw offsets.
-4. Determine whether 3.3.5.1 still has:
-   - `CNullGameSpark` parser;
-   - highlighted-ruler databases/view classes;
-   - Bronzeman save serialization;
-   - feat progress evaluation;
-   - start/load handlers.
-5. If code exists but initialization is disabled, write a separate hash-guarded 3.3.5.1 patcher.
-6. If large controller portions were removed, prefer keeping the proven May 3.3.3 build rather than unsafe code injection.
+1. Reconstruct and verify all binaries (already done — `10_binary_artifacts/`).
+2. Create binary-diff/function-matching reports for the four builds.
+3. Match functions by constants, strings, control-flow shape, vtables, and call
+   neighborhoods rather than copying raw offsets.
+4. Determine whether 3.3.5.1 still has `CNullGameSpark` parser, highlighted-ruler
+   databases/view classes, Bronzeman save serialization, feat progress evaluation,
+   start/load handlers.
+5. If code exists but initialization is disabled, write a separate hash-guarded 3.3.5.1
+   patcher.
+6. If large controller portions were removed, prefer keeping the proven May 3.3.3 build
+   rather than unsafe code injection.
 
 Known 3.3.5.1 retained strings/components include:
 
@@ -678,17 +808,27 @@ ck2\source\feat_progress_storage.cpp
 ck2\source\road_to_titus_progression.cpp
 ```
 
-The September 2020 retirement build reduced `CK2game.exe` by roughly 775 KiB, so some high-level component was removed or stripped. Do not assume the current build can be restored with the May two-byte factory patch.
+The September 2020 retirement build reduced `CK2game.exe` by roughly 775 KiB, so some
+high-level component was removed or stripped.
 
 ---
 
 # 15. Secondary known UI issues
 
-- The ruler portrait tooltip can flicker because of overlapping/small GUI hit regions. This is secondary and does not indicate payload failure.
-- The selection map being mostly gray is not a decisive failure. The meaningful tests are populated challenge rows, enabled mode, actual start/load, and live progress.
-- Exposing the online reward container under V3 caused `UI Missing Text`; this was the unpopulated default control, not JSON corruption.
-- Internet-enabled tests trigger obsolete account-state behavior. Use offline tests for consistency.
-- An empty GameSparks folder named approximately `E349414h9BDm` was observed in AppData/Roaming; it has not provided useful cached property data.
+- The ruler portrait tooltip can flicker because of overlapping/small GUI hit regions
+  (`v6 second look/flickering….mp4`). Secondary; does not indicate payload failure.
+- The selection map being mostly gray is not a decisive failure. The meaningful tests are
+  populated challenge rows, enabled mode, actual start/load, and live progress.
+- Exposing the online reward container under V3 caused `UI Missing Text`; this was the
+  unpopulated default control, not JSON corruption.
+- Internet-enabled tests trigger obsolete account-state behavior. Use offline tests for
+  consistency.
+- An empty GameSparks folder named approximately `E349414h9BDm` was observed in
+  AppData/Roaming; it has not provided useful cached property data.
+- Other cosmetic/flow items to revisit after V7: MP button breaks on second boot /
+  after resign-to-menu; gray map on first boot; MJ arrow absent in some boots; MJ
+  interface disappears if a Bronzeman save is entered via the random-ruler path; no
+  featured-ruler crown in Bronzeman. (Cases C09–C12/C13/C17 in `CASES_AND_FINDINGS.md`.)
 
 ---
 
@@ -708,161 +848,127 @@ global replacement of test.dds
 INT_MAX expiration timestamps
 ```
 
-`LT_featured_ruler.txt` only supplies helper events for Arwa’s conversion challenge.
+`LT_featured_ruler.txt` only supplies helper events for Arwa's conversion challenge.
 
 Do not:
 
 - patch the no-ruler fallback at `0x140727acc`;
 - globally force account status to 3, because related pointers remain null;
-- restore V3’s forced online reward-container branch;
+- restore V3's forced online reward-container branch;
 - force only the final Start control;
+- return to V3's reward-exposure branch;
+- use `INT_MAX` timestamps; adding two days overflows signed 32-bit arithmetic;
+- use the returned unsafe global-string patchers;
+- put JSON at `gfx\test.dds`; username caching can overwrite it;
 - use `wipe_feats`;
 - apply May offsets to an unknown or newer executable;
+- call `0x1409e8200` (vector-append helper) from any read/load path — write-direction;
 - ask for broad DLL/SO sets unless a critical function is proved to reside there;
-- upload or expose `pdx_login.txt`, credentials, passwords, or tokens.
+- upload or expose `pdx_login.txt`, credentials, passwords, or tokens;
+- ask the user to re-upload anything already in the repo (§0).
 
 ---
 
 # 17. Repository hygiene and expected deliverables
 
-Because the connected GitHub repository contains Base64 game executables, treat it carefully:
+The repo holds real game executables (materialized under `10_binary_artifacts/`):
 
-- verify every manifest and hash before disassembly;
-- do not commit decoded executables if the repository is public;
-- never commit a complete modified CK2 executable;
+- verify every manifest/hash before disassembly;
+- do not commit decoded executables if the repository is public; never commit a complete
+  modified CK2 executable;
 - distribute only patch scripts, analysis reports, hashes, and user-created/test data;
 - delete reproducible giant disassembly dumps after extracting concise findings;
-- keep a machine-readable patch table with raw offsets, VAs, original bytes, patched bytes, purpose, and expected hashes.
+- keep the machine-readable patch table (`03_analysis/WINDOWS_333_PATCH_MAP.md` + `.csv`)
+  with raw offsets, VAs, original bytes, patched bytes, purpose, and expected hashes.
 
-Recommended repository deliverables:
+Current deliverable layout (matches the organized tree):
 
 ```text
-analysis/EXECUTABLE_IDENTITIES.md
-analysis/LINUX_NULL_GAMESPARK.md
-analysis/WINDOWS_333_PATCH_MAP.md
-analysis/WINDOWS_3351_PORT_ASSESSMENT.md       # later
-patchers/v6/patch_ck2_mj_v6.ps1
-patchers/v6/APPLY_CK2_MJ_V6.bat
-patchers/v6/CHECK_CK2_MJ_V6.bat
-patchers/v6/REVERT_CK2_MJ_V6_TO_V5.bat
-tests/V6_RUNTIME_RESULTS.md
-payload/monarchs                            # only if appropriate for the repo
+03_analysis/           identity, patch map, banned register, Continue semantics, V6 results, 3.3.5.1 assessment
+04_test_guides_and_reports/   in-game click-path guides (V5, V6, + per-version notes)
+05_patches_and_scripts/       guarded bat/ps1/py patchers v2–v6 (only things that touch the exe)
+06_game_data/          monarchs payload + variants, loc CSVs, GUI/GFX, string dumps
+07_runtime_logs/       game/error/system logs from test boots
+10_binary_artifacts/   materialized executables + debug drop + upload manifests
+13_save_and_cache/     evidence saves + feat cache
+14_screenshots_and_media/  image drop zone (catalog is the canonical text record)
 ```
 
-After the V6 runtime result, update a concise authoritative status file rather than creating contradictory duplicate reports.
+After any new runtime result, update the concise authoritative status file
+(`00_START_HERE/STATUS.md`) rather than creating contradictory duplicate reports.
 
 ---
 
-# 18. Files the user should additionally provide to the next session/repository
+# 18. Suggested first message to the next session
 
-The executable Base64 parts alone are not sufficient context. The user should also place these small/current files in the connected repository or attach them to the next session:
+The user can paste this (everything needed is already in the repo):
 
-## Required now
-
-1. **This handoff**:
-
-   ```text
-   CK2_MJ_ULTIMATE_HANDOFF.md
-   ```
-
-2. **Current V6 tools**:
-
-   ```text
-   patch_ck2_mj_v6.ps1
-   APPLY_CK2_MJ_V6.bat
-   CHECK_CK2_MJ_V6.bat
-   REVERT_CK2_MJ_V6_TO_V5.bat
-   CK2_MJ_V6_TEST_GUIDE.md
-   ```
-
-3. **Verified payload**:
-
-   ```text
-   monarchs
-   ```
-
-   It must have SHA-256:
-
-   ```text
-   fc6ec025b782c811636a0efb65a7b3f192f09fffd0ff6ca8051ef8bc6113db4e
-   ```
-
-4. **Both evidence saves**, preferably under their real names because GitHub accepts binary files:
-
-   ```text
-   Bosnia1173_03_03.ck2
-   Bronzeman_kulin_bosnia.ck2
-   ```
-
-   If the repository policy requires text, preserve the existing raw `.txt` versions and document that they are ZIP binaries, or Base64-encode them with manifests.
-
-5. **The V6 runtime result**, once tested:
-
-   - full text from the V6 patch window;
-   - screenshot showing March 3 and 1/6 if successful;
-   - otherwise the two narrowly requested screenshots described in section 12.
-
-## Useful supporting evidence
-
-6. Screenshots 224–229 from the V5 failure, especially:
-
-   - Continue failure;
-   - January 1 fallback;
-   - 0/6 challenge panel;
-   - save-selection screen.
-
-7. The V5 patch transcript and current V5 patcher source, for provenance:
-
-   ```text
-   log when patching to v5.txt
-   patch_ck2_mj_v5.ps1
-   ```
-
-8. Historical reward screenshots and `LT.csv`, only when the reward-gallery project begins.
-
-## Not needed now
-
-Do not additionally provide:
-
-- old broad CK2 log collections;
-- generic GUI/GFX files already understood;
-- Steam runtime DLLs;
-- POPS/online DLL/SO files;
-- another copy of the same executable chunks;
-- personal account/cache/token files.
+> Read `ALL-MY-LOGS-SO-FAR/00_START_HERE/STATUS.md` first and treat it as the
+> authoritative project state; then read `ALL-MY-LOGS-SO-FAR/02_handoffs/CK2_MJ_ULTIMATE_HANDOFF.md`
+> for deep background, and `ALL-MY-LOGS-SO-FAR/03_analysis/CONTINUE_SEMANTIC_REFERENCE.md`
+> as the V7 Continue knowledge base. All executables, payload, saves, cache, logs, and
+> patch tooling are already in the repo (handoff §0 maps them). Do not restart the
+> investigation, do not ask me to re-upload artifacts, and never tell me to run
+> `wipe_feats`. The immediate task is V7: find the remaining non-account predicate that
+> keeps the Continue button greyed out on the exact May-2020 3.3.3 build, then produce a
+> guarded, hash-verified V7 patcher and a two-question offline test for me. Do not
+> redistribute a modified executable.
 
 ---
 
-# 19. Suggested first message to the next session
+# 19. Handoff lineage (what was merged 2026-08-26)
 
-The user can paste this after attaching/committing the handoff:
+This file is the **single** handoff. Older handoffs were consolidated so a new session
+reads exactly one document:
 
-> Read `CK2_MJ_ULTIMATE_HANDOFF.md` first and treat it as the authoritative project state. The GitHub repository contains Base64 manifests/parts for Linux May 3.3.3 and Windows 3.3.2, May 3.3.3, and 3.3.5.1. Do not restart the investigation or ask me to re-upload those binaries. The immediate pending task is the V6 runtime save-loading test. Help me perform or interpret that test first, then update the repository’s concise status report. Do not redistribute a modified executable and never tell me to run `wipe_feats`.
+- `CK2_Monarchs_Journey_next_session_handoff.md` (V5-era, 303 lines) — superseded by this
+  file; its unique facts (Game-Rules eligibility trace §8.2, clean-process V5 test §10.1,
+  V4 runtime details §8.3, hardcoded reward keys §13, V4/V5 tool hashes → now
+  `MASTER_ARTIFACT_TABLE.md` §6) were merged here. **Deleted** (recoverable from git
+  history).
+- `02_handoffs/V7_CONTINUE_INITIAL_TRIAGE.md` and `03_analysis/V7_CONTINUE_CFG.md` — their
+  content (caller table, two-helper correction, rejection-path breadcrumbs, confidence
+  levels) was merged into `03_analysis/CONTINUE_SEMANTIC_REFERENCE.md`. **Deleted**.
+- `02_handoffs/DEBUGFILES_PDB_HANDOFF.md` — retained with a "completed" banner: it is the
+  mission brief for the finished 2.6.1.1 PDB investigation (results live in
+  `03_analysis/IDENTITY.md`, `SYMBOL_SUMMARY.md`, `SEARCH_RESULTS.md`,
+  `TYPE_AND_VTABLE_NOTES.md`, `SYMBOLS_FILTERED.csv`).
+
+Flagged discrepancy recorded during the merge: the V4 test-guide SHA-256 claimed in the
+old handoff (`3177eaef5298482de564278b1d79006a28f73ea9bb64ce84c5483505947c3234`) does
+not match the file now at
+`04_test_guides_and_reports/CK2_MJ_windows_v4_test_guide.md` (`9e7664a5…`) — the file was
+edited at some point after that hash was recorded; harmless (V4 is superseded by V5/V6)
+but kept on record. All other V4/V5 tool hashes were recomputed against the files in
+`05_patches_and_scripts/` and **match byte-for-byte**.
 
 ---
 
 # 20. Current bottom line
 
-Already working on exact May Windows 3.3.3:
+Already working on exact May Windows 3.3.3 (V6, SHA `f5b7dfd6…`):
 
 - local eleven-ruler payload;
-- Monarch’s Journey arrow/panel;
+- Monarch's Journey arrow/panel;
 - challenge names/descriptions;
 - Play and Bronzeman start;
 - Challenges: Enabled;
 - campaign start;
-- live in-game challenge evaluation and 1/6 progress.
+- live in-game challenge evaluation and tier progress (Bronze grant proven);
+- save writing with `bronzeman=yes` + `special_event` + feat globals;
+- manual Load with full deserialization (3 March 1173, Heretical Company 1/6);
+- persistent local feat-progress cache across sessions.
 
-Not yet runtime-proved:
+Not yet working:
 
-- actual deserialization of the selected Featured Ruler save;
-- Continue after restart;
-- persistent challenge progress across reload.
-
-The strongest current static conclusion is that V5 patched only the generic save predicate while five duplicated account gates prevented the selected record from becoming the active load target. V6 patches exactly those five gates and is fully hash-verified, but awaits the user’s Windows runtime result.
+- **Continue** (main menu and MJ panel) — the V7 target; enable predicate, not click
+  handler. Knowledge base consolidated in `03_analysis/CONTINUE_SEMANTIC_REFERENCE.md`.
 
 Later, separate projects are:
 
-- local score/reward-gallery reconstruction;
+- local score/reward-gallery reconstruction (hardcoded rewards + `RTT_Rewards`/
+  `ck2_rtt_reward_score` keys found; Linux `CRoadToTitusProgression::SetupRewards` @
+  `0x1444e92` has the local reward table);
 - completing the missing five rulers if a late payload can be recovered;
-- assessing a safe 3.3.5.1 port using the newly available cross-version GitHub binaries.
+- assessing a safe 3.3.5.1 port using the materialized cross-version binaries (current
+  verdict: not feasible).

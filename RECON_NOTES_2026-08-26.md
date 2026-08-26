@@ -334,3 +334,82 @@ reproducible intermediates and are no longer needed now that the exact output
 files are present. The RAR volumes were retained because they are the original
 multi-volume debug archives. See `RECONSTRUCTED_ARTIFACTS.md` and
 `10_binary_artifacts/README.md` for the current map.
+
+## 12. Turn 7 — organization prompts review + handoff consolidation (2026-08-26)
+
+Scope requested: (a) review the organization prompts (`PROMPT_organize_research_log_v1–v4`)
+for anything else that can be done — are the sorting/organizing instructions still
+relevant or improvable? (b) review the four handoffs for merge/organize opportunities,
+since any session can now reach the repo directly.
+
+### (a) Prompts — verdict and action
+
+The v1–v4 prompts were written for the **big-sort / raw-log-ingestion** phase, which is
+**finished** (flat dump sorted, all raw exports torn apart, binaries materialized). As
+operative instructions they were obsolete — the remaining task is *ingestion &
+maintenance* of a complete archive. **Action: wrote `PROMPT_organize_research_log_v5.md`**
+(operative; v1–v4 stay as history). v5 adds: sort-complete declaration (do not re-sort);
+artifact-class → folder map (all 15 subfolders); SHA-256 dedup vs `MASTER_ARTIFACT_TABLE.md`
+(no `(1)` copies); the screenshot policy (catalog is canonical; binaries optional in
+`14_screenshots_and_media/` A–H); the "living documents" rule (update STATUS /
+CASES_AND_FINDINGS / MASTER table / PLAN / README / INDEX after every ingestion); and
+"the repo is the handoff" (no new per-session handoff files). README read-order updated
+to name v5 as operative.
+
+### (b) Handoffs — overlap found and consolidation executed
+
+Four handoffs (~1,555 lines) overlapped heavily; only `CK2_MJ_ULTIMATE_HANDOFF.md` was
+current. Executed:
+
+1. **`CK2_MJ_ULTIMATE_HANDOFF.md` rewritten as THE single handoff** — status banner moved
+   to current state (V6 runtime-proven; V7 Continue open); new §0 repo map replaces the
+   old "files the user should provide" lists (everything is in the repo now); V6 test
+   outcome updated from "pending" to "confirmed (case A + Pavao Bronze)"; new §12 V7
+   section; suggested-first-message rewritten repo-style; new §19 handoff lineage.
+2. **`CK2_Monarchs_Journey_next_session_handoff.md` (V5-era) deleted** after its unique
+   facts were merged: Game-Rules/challenge-eligibility trace (functions `0x1407341b0`,
+   `0x140734290`, `0x140733630`, `0x1400af690`, `0x14072d540`, `0x1407b8450`; service
+   bytes `+0x61/63/62/65`, in-game `+0x60` + `+0x500/+0x501` checks; `EDJH` vs `3.3.3
+   (SOHY)`), V4 runtime details (Kulin 1/6, thresholds 6/9/12, `q847rsja8ndx` dump), the
+   clean-process V5 test narrative, hardcoded reward keys (`RTT_Rewards`,
+   `ck2_rtt_reward_score`, `REWARD_NAME_1..8`), extra dead-end bullets, and V4/V5 tool
+   hashes (→ `MASTER_ARTIFACT_TABLE.md` §6, verified byte-for-byte). Recoverable from git
+   history.
+3. **`V7_CONTINUE_INITIAL_TRIAGE.md` + `V7_CONTINUE_CFG.md` deleted** after merging into
+   `CONTINUE_SEMANTIC_REFERENCE.md` (new §B5 two-helper CFG correction, rejection-path
+   breadcrumbs `0x1409e4dc1`/`0x1409e5a71`, branch-label taxonomy, §D1 confidence levels,
+   §D2 preservation note). `CONTINUE_SEMANTIC_REFERENCE.md` is now the single V7
+   knowledge base.
+4. **`DEBUGFILES_PDB_HANDOFF.md` retained** with a ✅ COMPLETED banner (it is the mission
+   brief for the finished 2.6.1.1 PDB investigation; results in `03_analysis/`).
+5. Cross-references updated: `ALL-MY-LOGS-SO-FAR/README.md` (v5 operative; `02_handoffs/`
+   description), `PLAN.md` (Phase 2 → semantic reference), `UPLOAD_GUIDE.md`, `12_raw_chat_logs/INDEX.md`.
+6. **`03_analysis/CK2_MJ_windows_v4_test_guide.md` moved** (git mv) to
+   `04_test_guides_and_reports/` — it was the only per-version test guide sitting in the
+   analysis folder against the convention.
+
+### Verification performed during the merge
+
+- All V4/V5 patcher tool hashes recomputed against the files in `05_patches_and_scripts/`
+  — **match byte-for-byte**; added to `MASTER_ARTIFACT_TABLE.md` §6 (previously only V6
+  was there).
+- ⚠️ **Flagged discrepancy:** the V4 test-guide SHA claimed in the old handoff
+  (`3177eaef…`) does **not** match the current file (`9e7664a5…` — edited after that hash
+  was recorded; harmless, V4 superseded by V5/V6). Recorded in `MASTER_ARTIFACT_TABLE.md`
+  §6 and the handoff §19.
+- No remaining non-historical references to deleted files (checked by grep; remaining
+  mentions are in Part 1/2/3 archives and DISSECTION_REPORT, which document the state at
+  the time, plus the merge-notes themselves).
+
+### Still-open suggestions (not executed — user's call)
+
+- `03_analysis/` per-version findings docs (`CK2_MJ_WINDOWS_ANALYSIS_RESULTS.md`,
+  `CK2_MJ_windows_patch_review_and_test.md`, `CK2_MJ_windows_v2/v3_findings.md`,
+  `CK2_MJ_V5_RESULT_AND_V6_PLAN.md`, `CK2_MJ_V6_FAILED_ROADCAUSE.md`) overlap with the
+  cumulative patch map + Parts 1–3; a later pass could fold them into
+  `WINDOWS_333_PATCH_MAP.md`/Part sections. Left intact because they are the primary
+  per-version records and the user did not ask to touch them.
+- `03_analysis/SYMBOLS_FILTERED.csv` (873 KB) and `v3_01.csv` (119 KB) could be trimmed
+  or moved under `10_binary_artifacts/` if the workspace budget ever matters.
+- `14_screenshots_and_media/` drop zone is still empty (catalog is canonical; binaries
+  optional).

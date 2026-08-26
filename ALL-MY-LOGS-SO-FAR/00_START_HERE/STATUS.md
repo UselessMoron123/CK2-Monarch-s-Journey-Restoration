@@ -68,7 +68,7 @@ to decide a continuable save exists (see handoff callers `0x1407bffa1`, `0x14081
 | `03_analysis/CONTINUE_SEMANTIC_REFERENCE.md` | 2.6.1.1 Continue model mapped to win333 anchor points + ordered V7 steps |
 | `03_analysis/CONTRADICTIONS.md` | Both-sides-and-verdict register for every documented disagreement |
 | `03_analysis/WINDOWS_3351_PORT_ASSESSMENT.md` | Cross-version comparison, 3.3.5.1 port verdict (not feasible), recovered component map, V7 breadcrumbs |
-| `02_handoffs/CK2_MJ_ULTIMATE_HANDOFF.md` | Deep background, dead ends, constraints |
+| `02_handoffs/CK2_MJ_ULTIMATE_HANDOFF.md` | The **single** handoff — repo map, deep background, dead ends, constraints (older handoffs merged into it 2026-08-26; see its §19 lineage) |
 
 ## Environment constants (unchanged)
 

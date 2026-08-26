@@ -9,7 +9,7 @@
 >
 > **Migration rule:** copy the organized tree only. Do NOT copy raw staging
 > files. If the restoration project repo already has logs dissected here, key
-> by SHA (see naming-collision table in Part 3 and `PROMPT_organize_research_log_v4.md` A0).
+> by SHA (see naming-collision table in Part 3 and `PROMPT_organize_research_log_v5.md` Step 0).
 
 ## How to trace any raw fact
 1. The **research archives** are the self-sufficient record of every session:
