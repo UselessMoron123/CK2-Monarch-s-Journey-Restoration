@@ -67,8 +67,11 @@ CHECK_CK2_MJ_V6.bat            607e4f6c8a2cf3ddf82f9497187a7fce0cc014c9d1e3e2164
 REVERT_CK2_MJ_V6_TO_V5.bat     6ac6c9d846928f9c999f18640c2dda4a34e43979a882978307785d9295abf8c7
 ```
 
-## Safety
+## Provenance and safety
 
-Decoded executables are analysis scratch only — never commit them to this repository
-and never redistribute stock or patched CK2 binaries. The chunks + manifests in this repo
-exist so agent sessions can reconstruct the exact bytes locally for offset-accurate work.
+The Base64 chunks and manifests remain the byte-level source of truth. At the user's
+request, the stock files have also been materialized in the checkout as
+`CK2game332.exe`, `CK2game333.exe`, `CK2game3351.exe`, and `ck2`; their hashes are
+unchanged and are recorded above and in `RECONSTRUCTED_ARTIFACTS.md`. No patched
+executable was created. Keep the chunk sources when moving these files so their
+identities can be rechecked after copying.

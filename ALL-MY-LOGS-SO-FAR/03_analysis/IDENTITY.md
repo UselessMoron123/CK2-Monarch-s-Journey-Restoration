@@ -28,6 +28,9 @@ files were included in the drop.
 
 ### Extracted archive contents (CRC-verified by UnRAR during extraction)
 
+The extracted members are now materialized beside the source volumes in
+`debug files/`; the original RAR parts are retained for provenance.
+
 | archive | member | size | SHA-256 |
 |---|---|---|---|
 | `ck2.part1-3.rar` | `ck2.pdb` | 64,770,048 | `ffe81233234846861733c8ffe04010553ca1c0b69c7eeb9246f03cd02c5206a9` |
