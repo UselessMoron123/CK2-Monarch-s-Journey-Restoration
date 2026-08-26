@@ -17,7 +17,7 @@ follow-on (see `00_START_HERE/FEATURED_RULERS.md`).
    - **`FR_MJ_COMPLETE_ROSTER.md`** — every FR+MJ ruler, bio, B/S/G challenge (text-only)
    - **`FEATURED_RULERS.md`** — FR UI/timeline/assets/restore checklist
    - **`SCREENSHOTS_CATALOG.md`** — image intents (optional; roster is complete without pics)
-   - original prompt + organize-prompt templates
+   - original prompt + organize-prompt templates (**v4** is the operative one; v1–v3 kept as history)
 2. **`01_research_archives/`** — Parts 1–3 structured archives
 3. **`02_handoffs/`** — incl. `V7_CONTINUE_INITIAL_TRIAGE.md`
 4. **`03_analysis/`** — binary analysis, patch maps, banned artifacts, Continue semantics
@@ -29,7 +29,7 @@ follow-on (see `00_START_HERE/FEATURED_RULERS.md`).
 10. **`09_web_captures/`** — GitHub / SteamDB HTML
 11. **`10_binary_placeholders/`** — `test_versioned.dds` (loader redirect name)
 12. **`11_git_patch/`** — Arena branch patch
-13. **`12_raw_chat_logs/`** — raw exports + `INDEX.md`
+13. **`12_raw_chat_logs/`** — `INDEX.md` only (all raw exports were torn apart & deleted; their info lives in Parts 1–3 + `03_analysis/RAWLOG_NETNEW_EXTRACTS.md`)
 14. **`13_save_and_cache/`** — `*.meta` + feat cache `q847rsja8ndx`
 15. **`14_screenshots_and_media/`** — **drop zone for image binaries** (catalog is text-only until you upload)
 

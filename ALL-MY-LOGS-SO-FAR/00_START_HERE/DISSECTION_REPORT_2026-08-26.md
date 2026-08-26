@@ -188,3 +188,107 @@ All are referenced in `MASTER_ARTIFACT_TABLE.md`.
 - **All important information from those logs is preserved in main** — either as organized files, or intentionally as documented exclusions (banned/abandoned) with hashes and roadcause reports.
 - **No info loss** detected except minor git history squash (content intact) and one small CFG note not merged (easily fixable).
 - Ready to merge PROMPT v3 and proceed to V7 Continue enable fix (Phase 2).
+
+---
+
+## 9. Turn 4 — re-dissect the raw chat fragments + tooling integrity (2026-08-26)
+
+Scope: dissect the raw session logs still flagged 🟡 in `12_raw_chat_logs/INDEX.md`
+(`chat_fragment_may333_v1v2_continue_greyed.txt`, `chat_fragment_disasm_v4v5_continue_offsets.txt`,
+plus the two command/report fragments), confirm whether anything is genuinely net-new, and
+re-verify all runnable bats/ps1/py are intact. Also reviewed the original prompt and the
+PROMPT organisation lineage (v1→v2→v3) to decide whether a newer prompt version is warranted.
+
+### Coverage result
+The two 🟡 fragments are **already ~fully distilled** into `01_research_archives/` (Parts 1–3)
+and `03_analysis/`:
+- V4/V5 patch offsets (`0x009e3d4c`, `0x009e1c2d`, the 24-byte `0x000aeb83` eligibility rewrite,
+  all `0x007…` gates, the V5 15-group/46-byte diff) → already in `WINDOWS_333_PATCH_MAP.md`.
+- Linux `nm -C` symbol list, dirty-session theory, Featured-Ruler account check → Parts 1/3 +
+  `CONTINUE_SEMANTIC_REFERENCE.md`.
+- The two command/report fragments (`command_sha256sum_v5_tooling.txt`,
+  `report_fragment_v5_ready.txt`) → already captured (V5 hashes + offsets in Part 2).
+
+### Net-new facts rescued (only exist in the raw fragments)
+A cross-reference sweep (grep every VA/string/symbol against archives + analysis) found three
+facts present **nowhere but the raw files**; recorded in `CONTINUE_SEMANTIC_REFERENCE.md` §E:
+1. Raw Continue/Load **frontend xref disassembly set** at VA `0x1407bf650`, `0x1407bfa20`,
+   `0x1407bfb20`, `0x1407bd550`, `0x1407be200` (each ~0x1c0 B window).
+2. **`load_button` string VA** `0x141078318`.
+3. The broader **Linux save/load `nm` symbol list** (beyond the curated Part 3 C2 tracker table).
+
+These are raw evidence pointers, not new conclusions; the two fragment files remain in
+`12_raw_chat_logs/` as the byte-level source. `INDEX.md` flags for both updated 🟡 → ✅.
+
+### Tooling integrity check (bats/ps1/py)
+Verified all runnable artifacts are intact under `05_patches_and_scripts/`:
+- **19 `.bat`** (APPLY v2–v6, CHECK v1/v3/v4/v5/v6 + SAVES, REVERT v3/v4/v5/v6, PREPARE v5-EXE,
+  `dump_ck2_strings`, `prepare_linux_ck2_upload`, `prepare_windows_may333_upload`) — all non-empty.
+- **9 `.ps1`** (`check_ck2_mj`, `check_ck2_mj_saves`, `patch_ck2_mj`, `patch_ck2_mj_minimal`,
+  `patch_ck2_mj_v2`–`v6`) — all non-empty.
+- **3 `.py`** (`build_v6`, `patch_ck2_mj`, `patch_ck2_mj_minimal`) — all non-empty.
+- No `.bat`/`.ps1`/`.py` anywhere else in the repo; no leftover `*_bat.txt` / `*_ps1.txt` / `*_py.txt`
+  mirror copies. The only patcher still missing is the **V7 Continue** one (not yet built — correct).
+
+### Prompt lineage → produced v4
+Reviewed original prompt (`11first111myoriginal prompt.txt`: preserve evolution/attempts/dead ends/
+results/future directions/interesting findings, produce a reusable instruction for the next AI,
+list personal-storage files) and the PROMPT organisation v1→v3 evolution. Produced
+**`PROMPT_organize_research_log_v4.md`** (operative; v1–v3 kept as history per the established
+convention). v4 adds lessons from this pass: (1) **dissect-or-verify-first** — cross-reference a
+fragment's VAs/strings/symbols before declaring it "already sorted"; (2) **tool-output fragments are
+first-class evidence**, not noise; (3) **living INDEX** updates per fragment; (4) **runnable tooling
+integrity check** as an explicit completion rule. README updated to point at v4 as operative.
+
+### Conclusion
+All raw session logs are now dissected; net-new facts preserved with cross-references; all
+bats/ps1/py intact; prompt upgraded to v4. No further dissection needed on the current archive.
+
+---
+
+## 10. Turn 5 — raw logs torn apart & deleted; net-new facts preserved (2026-08-26)
+
+Scope requested: re-check for anything "present only in raw logs", then tear the
+raw logs, sort those bits, and clean the repo. Done.
+
+### Comprehensive net-new sweep
+Every raw export was scanned for `0x…` addresses, long hex tokens, and mangled
+symbols, and each was tested against the whole archive/analysis/handoff corpus.
+Results:
+- **0 net-new** in: `command_sha256sum_v5_tooling`, `report_fragment_v5_ready`,
+  `new text doc(first/third/fourth/5)`, `session_father_monarchs_expiry`,
+  `session_v2_v5_recap_upload_checklist`, `session_featV7_test_plan`,
+  `session_v6_runtime_crossversion_secondlook` — fully covered by Parts 1–3.
+- The two disassembly-heavy fragments' ~3,000 hex "tokens" were **per-instruction
+  byte addresses** (reproducible from the EXE) — discarded as tool-output noise,
+  not facts.
+- **Genuinely net-new content** (only-in-raw) was consolidated into the new
+  **`03_analysis/RAWLOG_NETNEW_EXTRACTS.md`**:
+  1. feat_progress reader/writer **case-entry VAs** (`0x140782404`, `0x1409df80a`,
+     `0x1407824eb/4ff`, `0x14078252a`, `0x1409df974`, `0x1409e825f`) — Part 2 had
+     only the helper funcs.
+  2. Windows 3.3.5.1 **full function-address lists** (`extend_featured_ruler`
+     4 funcs both builds; `test.dds` xref func `0x14077bdc0`).
+  3. Linux **`.rodata` string addresses** (`0x1869814 red_king/ruler_feats`,
+     `0x186984f common/monarchs_journey`, `0x18b4f27 gs_virtual/feat_script`).
+  4. Linux `GetContinueSave` breadcrumbs (`0x121ac3a`, size, string consts,
+     "save games/*.ck2" + `alternate_start` behavior).
+  5. Linux feat-DB **load machinery addresses** (`0xff800c`, `0xff8912`, `0xff82d4`,
+     `0xff8748`, `0xff8b2a`, `0x17ed028`, `0x17f5990`, …).
+  6. `.pdata` function-count reconciliation (**48,666 vs 46,753 ≈ 1,913 fewer**).
+  7. feat-V7 offset→VA mapping (`0x00666546→0x140667146`, `0x007856e8→0x1407862e8`).
+  8. Full May-3.3.3 **string→VA map** (`load_button`…`CORRUPT`).
+  9. Continue-frontend xref disassembly set (`0x1407bf650`…`0x1407be200`).
+
+### Raw logs torn & deleted
+All 17 raw exports in `12_raw_chat_logs/` were `git rm`'d. `INDEX.md` rewritten
+as a **tear-down ledger** mapping every deleted file → the archive section (or
+`RAWLOG_NETNEW_EXTRACTS.md` section) that holds its content. `CONTINUE_SEMANTIC_REFERENCE.md`
+§E updated to point at the extraction doc. Raw wording remains recoverable from
+git history if ever needed.
+
+### Net result
+The repo is now fully self-contained in structured docs: Parts 1–3 archives +
+`03_analysis/` + `02_handoffs/` + `RAWLOG_NETNEW_EXTRACTS.md`. No raw log
+retention needed; nothing lost (byte-level extras preserved; tool dumps
+reproducible from the EXEs).

@@ -238,3 +238,68 @@ reference the OLD "logs to dissect" `Новый текстовый докуме�
 
 ### Staged (not committed)
 242 deletions (186 flat-dump + 56 images), 14 renames, 3 doc edits.
+
+---
+
+## 9. Turn 4 — session folders + "things parent AI asked to upload" dissected & sorted (2026-08-26)
+
+Scope requested: dissect `1st/2d/3d/4th session/` and `things parent AI asked to
+upload/`, sort their files, and review what else can be organized. Executed now
+(via byte-for-byte `md5` comparison against `ALL-MY-LOGS-SO-FAR/`).
+
+### Verdict: session folders were ~100% redundant
+Every file in `1st session/` (143), `2d session/` (33), `3d session/` (23),
+`4th session/` (1) and the remaining `things parent AI asked to upload/` was a
+**byte-for-byte duplicate** of an already-organized file — except the 96-byte
+base64 "chunk" placeholders, which are junk (`"there were symbols. not gonna
+repeat them…"`). The only unique-by-hash content was rescued before deleting:
+
+### Rescued into the organized archive
+- **`13_save_and_cache/saves/`** (new subfolder) — 5 real `.ck2` saves:
+  `Bosnia1173_03_03.ck2`, `Bronzeman_kulin_bosnia.ck2` (from `things parent…`),
+  `Bronzeman_pavao_croatia.ck2`, `Croatia1278_01_02.ck2`, `Croatia1278_01_10.ck2`
+  (from `v6 second look/save games/`). Pairs with the two `.txt.meta` already there.
+- **`13_save_and_cache/q847rsja8ndx_v6_secondlook.txt`** — the *second* distinct
+  cache state (`user_id=84696387`, `established=4`, `conquerer_from_bribir=1`)
+  vs the existing `q847rsja8ndx.txt`. Added `13_save_and_cache/README.md` table.
+- **`07_runtime_logs/`** — 10 net-new logs, all collision-free:
+  the 8 v6 "second look" boots (`ai_v6sl.log`, `error_v6sl.log`,
+  `game_v6sl.log` [contains the **Bronze popup** evidence], `setup_v6sl.log`,
+  `system_v6sl.log`, `system_interface_v6sl.log`, `text_v6sl.log`,
+  `historical_setup_errors_v6sl.log`) + 2 small fragments
+  (`ai1.log`, `game2.log`).
+
+### Moved into the archive
+- `12_raw_chat_logs/` — the 6 `session_*` transcripts moved out of the loose
+  `adding just to make sure/` folder (their proper home; INDEX.md section updated).
+  `adding just to make sure/` deleted.
+
+### Deleted (all content preserved in organized archive)
+- `1st session/`, `2d session/`, `3d session/`, `4th session/`, `things parent
+  AI asked to upload/`, `v6 second look/`, `More things/`, `analysis/`
+  (all byte-dups of `03_analysis/`), root `new text doc(first/2/3/4/5).txt`,
+  stale root `STATUS.md` (superseded by the 97-line organized copy), and root
+  `DEBUGFILES_PDB_HANDOFF.md` (dup of `02_handoffs/`).
+
+### Root README rewritten
+`README.md` now points into `ALL-MY-LOGS-SO-FAR/` and lists the still-loose
+binaries (exes, base64 chunk folders, `debug files/`).
+
+### Still loose (deliberately kept; candidates for a future pass)
+- `CK2game_win332/333/3351_upload_chunks/` + `ck2_linux_upload_chunks/` — base64
+  upload parts + manifests (~160 MB). **Reproducible intermediates**; the 3.3.3
+  chunks are redundant with `CK2game333.exe` at root. Safe-to-delete if space is
+  an issue; hashes already recorded in `MASTER_ARTIFACT_TABLE.md`.
+- `CK2game333.exe`, `CK2game3351.exe` — the real executables (keep; hashes recorded).
+- `debug files/` — 2.6.1.1 `CK2game.exe` + `ck2*.rar` + `dbghelp.dll` (143 MB).
+  Binaries deliberately not committed to the text archive; hashes in the artifact table.
+
+## 10. Turn 5 — raw logs torn apart & deleted; net-new facts preserved (2026-08-26)
+
+Following the Turn 4 fragment dissection, the whole `12_raw_chat_logs/` folder was
+torn: all 17 raw exports deleted after a full net-new sweep. Everything only-in-
+raw was consolidated into `03_analysis/RAWLOG_NETNEW_EXTRACTS.md` (9 sections:
+feat reader/writer case VAs, 3.3.5.1 function lists, Linux .rodata string
+addresses, GetContinueSave breadcrumbs, feat-DB load machinery, .pdata count
+reconciliation, feat-V7 offset→VA map, string→VA map, Continue-xref disasm set).
+INDEX.md rewritten as a tear-down ledger. See DISSECTION_REPORT Turn 5 for detail.
