@@ -1,0 +1,467 @@
+Featured Rulers
+
+Some rulers have been marked by Paradox itself as characters of special interest. These rulers are highlighted in the main menu with a custom description about the character's goals or traits, and are eventually replaced by another character of note after a certain period of time.
+
+These must be played in Bronzeman mode, which is started the same way as Ironman Ironman enabled.png.
+
+From the oldest character to the most recent:
+Religion 	Character 	Starting Year 	Description 	Challenges
+Catholic.png 	Hugues de Lusignan, Count of Lusignan 	1066 	Join the Crusades as The Devil of Lusignan![2] 	None
+Catholic.png 	Johann the Blind, King of Bohemia 	1337 	Become the Blind Warrior of Bohemia![3] 	None
+Shia.png 	Arwa Sulayhid, Sultana of Yemen 	1074 	Discover God's Will in her lifetime![4] 	None
+Romuva.png 	Mindaugas of Lithuania, High Chief of Lithuania 	1236 	Unravel the mystery of this King![5] 	None
+Catholic.png 	Charles de Anjou, King of Hungary 	1307 	Bring prosperity to the Kingdom of Hungary![6] 	None
+Catholic.png 	Mauregato of Asturias, Count of Astorga 	769 	Secure the title of King and prevent the Kingdom from falling into noble hands![7] 	None
+Catholic.png 	Bohemond d'Hauteville, Prince of Antioch 	1098 	Opportunities fall upon this ruler like autumn rains![8] 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+Bye, Zantium! 	Member of your dynasty becomes emperor of Byzantine Empire! 	- 	- 	Hold the title Emperor of Byzantine
+Blood, sweat & tears 	Bohemond participates personally in as many wars as possible. Crusade counts as two wars. Simultaneous wars do not count. 	Participate in 6 wars 	Participate in 10 wars 	Participate in 15 wars
+Vassaline! 	Have as many landed vassals of your dynasty as possible. Progress continues for as long as you play the featured ruler's Dynasty. 	Have 10 landed vassals of your dynasty 	Have 20 landed vassals of your dynasty 	Have 30 landed vassals of your dynasty.
+Catholic.png 	Petronilla Jimena, Queen of Aragon 	1157 	Ruler as a child, last of a dynasty, can it be prolonged?[9] 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+Arastrong! 	Have the Jimena dynasty as large as 75 living members. Progress continues for as long as you play the featured ruler's Dynasty. 	- 	- 	Have 75 living members of your dynasty
+Arastay! 	Have as many kings titles as possible. Any additional king of the Jimena dynasty adds 1 point, regardless of the number of titles they have. Progress continues for as long as you play the featured ruler's Dynasty 	Have 3 king titles and Jimena kings. 	Have 4 king titles and Jimena kings 	Have 5 king titles and Jimena kings
+Aragonastop? 	Petronilla must have as many children as possible born to the Jimena dynasty! Both live and dead children count. Children conceived out of wedlock do not count - legitimate bastard or not. Feat only accomplishable with the featured ruler during their lifetime. 	Have 2 children 	Have 4 children 	Have 6 children
+Catholic.png 	Llywelyn the Great, King of Gwynedd 	1195 	Develop an Independent Wales and take it further![10] 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+Dragon's Fire 	Conquer Wales and control these provinces: Anglesey, Rhos, Perfeddwlad, Powys, Ceredigion, Builth, Dyfed, Gwyr, Breconshire, Glywysing, and Gwent. Progress continues for as long as you play the featured ruler's dynasty. 	- 	- 	Control all provinces
+Princes of Wales 	While holding the Kingdom of Wales, you must have as many vassals as possible be of the same dynasty as yours. Have them retain the title Duke or higher. Bastard members do not count unless legitimized. Your character must be an independent ruler. The ruler and vassal must also be of Welsh culture. Progress continues for as long as you play the featured ruler's dynasty. 	Have 3 vassals of your dynasty 	Have 6 vassals of your dynasty 	Have 9 vassals of your dynasty
+Love Spoons 	Marry as many of Llywelyn's children to those of English culture. Only the English spouses with titles or claims count toward this feat. The married children and their spouses must be alive to count toward this feat. Feat is only accomplishable with the featured ruler during their lifetime. 	Have 2 English spouses married to your children 	Have 3 English spouses married to your children 	Have 4 English spouses married to your children
+Orthodox.png 	Tamari, Queen of Georgia 	1184 	Recreate the Golden Age of Georgia![11] 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+Megaloscheme 	Tamari must become Megaloscheme, the highest rank of Saint Basil community. Feat only accomplishable with the featured ruler during their lifetime. 	- 	- 	Reach Rank IV in Society
+Hot Tamari 	Secure as many marriages with foreign realms as possible using your dynasty's children. The children must be married to a person of King or Emperor tier, or the child of a King or Emperor tier ruler. Progress continues for as long as you play the featured ruler's Dynasty. 	Have 2 children married to foreigners 	Have 4 children married to foreigners 	Have 6 children married to foreigners
+Golden Girls 	Have your dynasty acquire as many artifacts as possible! Since you can't have duplicates in your treasury, give them to your family. Only live dynasty members count, no bastards unless legitimized. Alchemy ingredients do not count towards this feat. Progress continues for as long as you play the featured ruler's Dynasty. 	Have 10 artifacts 	Have 30 artifacts 	Have 50 artifacts
+Catholic.png 	Nuno, Duke of Porto 	1066 	Become King... just try not to die on the way![12] 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+King of Portugal 	Form Portugal and become a King! You must also have at least 3 duchies in your realm. Feat only accomplishable with the featured ruler during their lifetime. 	- 	- 	Become King of Portugal
+Money Order! 	Have as many simultaneously prosperous counties as possible. Only directly owned prosperous provinces count towards the feat. Progress continues for as long as you play the featured ruler's Dynasty. 	Have 2 prosperous counties 	Have 4 prosperous counties 	Have 6 prosperous counties
+Ahead of their time 	European colonization brought new diseases to continents, which killed millions of indigenous people. The colonization process didn't begin until centuries later, but can you create and manage "colonies" of your own? Provinces must be disconnected from the capital and a minimum of 400 in distance away. Progress continues for as long as you play the featured ruler's Dynasty. 	Have 3 "colonies" 	Have 7 "colonies" 	Have 13 "colonies"
+Catholic.png 	Mihajlo, King of Serbia 	1066 	Unite his nations and become the true King of the Slavs![13] 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+A Serbian Dream 	Ensure that you don't lose the title King of Serbia and that it never falls into the hands of someone who's not of Serbian Culture. Additionally, have a Serbian ruler in at least one of these Kingdoms: Croatia, Hungary or Poland. Progress continues for as long as you play the featured ruler's Dynasty and the title holder of Serbia is of Serbian Culture. 	- 	- 	Fulfil conditions
+With or Without Me? 	Have as many Serbian Dukes as possible! Progress continues for as long as you play the featured ruler's Dynasty. 	Have 4 Serbian Dukes 	Have 8 Serbian Dukes 	Have 12 Serbian Dukes
+Papal Support 	As a Catholic ruler of Serbia, ensure you are on good terms with your Catholic bishops (Opinion at least 60). In addition, if the pope likes you (Opinion 60+), you get 2 points. You must be a Catholic to complete this feat. Progress continues for as long as you play the featured ruler's Dynasty 	Have 4 Catholic bishops liking King Mihajlo 	Have 6 Catholic bishops liking King Mihajlo 	Have 8 Catholic bishops liking King Mihajlo
+Monarch's Journey
+
+On October 20th, 2019, as part of patch 3.3, Monarch's Journey was released which uses the previous "Featured Rulers" system as its base.
+
+A new ruler is added biweekly, but previous rulers can still be played (via top-right arrow). These must be played in Bronzeman Bronzeman.png mode, which is started the same way as Ironman Ironman.png.
+
+By completing the challenges, players may unlock cosmetics in Crusader Kings III:[14]
+
+    Ck3 reward beard.png Wizards Beards, 10 score points
+    Ck3 reward hair male.png The Pageboy, 20 score points
+    Ck3 reward hat.png Chaperon, 30 score points
+    Ck3 reward chest.png Jesters Hat, 40 score points
+    Ck3 reward veil.png Cone Shaped Hennin, 55 score points
+    Ck3 reward hair male.png Medieval Mullet, 70 score points
+    Ck3 reward hair female.png The Miller, 90 score points
+    Ck3 reward hair female.png The Joan of Arc, 110 score points
+
+Most challenges have 3 levels: Bronze, Silver and Gold, each worth 2 score.
+
+From oldest to the most recent:
+Religion 	Character 	Starting Year 	Description 	Challenges
+Catholic.png 	Konan II de Rennes, Duke of Brittany 	1066 	Konan II, Duke of Brittany would find himself in an uphill struggle to ensure his rule over Brittany. Having lost his father as a child, he faced many challenges to his rule from within and outside of his family. His uncle usurped his inheritance, and was later chained and imprisoned for his efforts. After becoming enthroned, he would face threats from William the Conqueror, later dying to suspectedly poisoned gloves while attempting to invade Anjou.[15] 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+Time Bending 	Try to recreate Breton by controlling as many of these provinces as possible: Cornwall, Devon, Anjou, Maine, Mortain, Caen, Leon, Kernev (Cornouaille), Poher, Tregor, Domnoea (Penthievr), Broerec (Vannes), Roazhon (Rennes), Naoned (Nantes), and Retz. Progress continues for as long as you play the featured ruler's dynasty. 	Own 10 of the listed provinces 	Own 12 of the listed provinces 	Own all of the listed provinces
+Gloves Come Off! 	Historically, King Konan is said to have died due to poisoned gloves. Ensure that King Konan has a male heir and a few to spare! Non-legitimized sons do not count. May only be accomplished within the featured ruler's lifetime. 	Have 2 sons alive 	Have 3 sons alive 	Have 5 sons alive
+Pre-Emptive Self-Defence 	Have you and your dynasty kill as many of William de Normandie's dynasty members as possible. Killing William himself gives 2 points! Progress continues for as long as you play the featured ruler's dynasty. 	Kill 3 members of the de Normandie dynasty 	Kill 5 members of the de Normandie dynasty 	Kill 7 member of the de Normandie dynasty
+Catholic.png 	Llywelyn the Great, Duke of Gwynedd 	1195 	King of Gwynedd, Llywelyn ap Iorwerth, would unify Wales through great war strategy and diplomacy with the kings of England and the princes of Wales. He had troubles with marcher lords, often finding himself fighting in border disputes, while also forming many alliances with rulers in the Marches. In 1234, he brought peace to Wales which remained until his death in 1240.[16] 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+Dragon's Fire 	Conquer Wales and completely control the following provinces: Anglesey, Rhos, Perfeddwlad, Powys, Ceredigion, Builth, Dyfed, Gwyr, Breconshire, Glywysing, and Gwent. Progress continues for as long as you play the featured ruler's dynasty. 			Own all provinces. This challenge doesn't allow partial completion.
+Princes of Wales 	While holding the Kingdom of Wales, you must have as many vassals as possible be of your own dynasty. Have them retain the title duke or higher. Bastard members do not count unless legitimized. Your character must be an independent ruler. The ruler and vassal must also be of Welsh culture. Progress continues for as long as you play the featured ruler's dynasty. (NOTE: even though not specified in game, female vassals do not count for Prince of Wales, even with full status of women and absolute cognatic succession.) 	Have 3 qualifying vassals of your dynasty 	Have 6 qualifying vassals of your dynasty. 	Have 9 qualifying vassals of your dynasty.
+Love Spoons 	Marry as many of Llywelyn's children to those of English culture as you can. Only the English spouses with titles or claims count toward this challenge. The married children and their spouses must be alive to count toward this challenge. This challenge is only accomplish-able with the featured ruler during their lifetime. 	Have 2 children with qualifying spouses 	Have 3 children with qualifying spouses 	Have 4 children with qualifying spouses
+Sunni.png 	Saad Mordechai, High Chief of Baghdad 	1289 	During his lifetime, Sa'ad al-Dawla would be the bridge that supported Jewish peace and prosperity in Baghdad. His reputation and knowledge as a physician would give him the chance to cure Arghun Khan of an aliment, forming a great trusting friendship and allowing Sa'ad to secure a safe haven for Jews to live. His position and relationships with Arghun, and the fact that he was Jewish would cause much hatred from Mongolians who wanted to corrupt the flow of finances, and Muslims who did not enjoy the idea of having a Jew in a position of power over them. 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+One of Us! 	While not practising Judaism yourself, have your council consist of openly Jewish people. They must also be capable at their job, with a minimum of 10 in the attribute related to their position. Those practising Judaism in secrecy do not count. Progress continues for as long as you play the featured ruler's dynasty. 	2 Jewish councillors 	3 Jewish councillors 	4 Jewish councillors
+Peace! 	Be on good terms (60+ opinion) with those of your vassals who are openly worshipping another religion than your own. Secret religions are disregarded for this challenge. Progress continues for as long as you play the featured ruler's dynasty. 	5 vassals 	8 vassals 	12 vassals
+Secret stays with Me 	Sa'ad al-Dawla was murdered by his enemies who disagreed with his religion. let's turn the tables! Playing as the featured ruler, continue to practice Judaism in secrecy while pretending to be a Sunni Muslim. Kill as many Muslim (religion) and Mongol (culture) characters as possible: Duel, assassinate, or execute them. Yes, Mongol Muslims are worth two points. Kills where your complicity is hidden is worth another 1 point! Progress for this challenge stops if you should change religion. This challenge is only accomplish-able with the featured ruler during their lifetime. 	6 kill points 	10 kill points 	16 kill points
+Orthodox.png 	Konstantinos II, Doux of Samos 	1108 	Konstantinos Angelos was a man of exceeding beauty and bravery, who came from a small aristocratic family. He would marry Theodora Komnene, daughter of Emperor Alexios I Komnenos and be granted the title of sebastohypertatos, a high Byzantine dignity. He would start the Angelos dynasty, which would disastrously rule the Byzantine Empire in 1185-1204, crippling the empire and eventually leading to its deconstruction. 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+Moving Up 	Rise from a life of obscure nobility! Have your dynasty obtain as many king titles as possible. Progress continues for as long as you play the featured ruler's dynasty. 	2 king titles 	3 king titles 	4 king titles
+Lovely Rule! 	Change the course of history and ensure the Angelos dynasty becomes a grand one! Acquire the highest game score you can. Progress continues for as long as you play the featured ruler's dynasty. 	Score: 5000 	Score: 10000 	Score: 15000
+Kon Once, Kon Twice... 	As Konstantinos, have the largest family you can. Your children must be alive and of your dynasty to count. This challenge is only accomplish-able with the featured ruler during their lifetime. 	3 children 	7 children 	10 children
+Catholic.png 	Louis II the Stammerer, King of Aquitaine 	867 	Louis II of Aquitaine was a ruler famous, and named so, for his physical weaknessess. He was crowned twice, the second time by Pope John VIII, after succeeding his father's rule of West Francia. Three of his sons would become kings of West Francia, the last of which would be known as Charles III the Simple, with a reputation of being straightforward. 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+French Toast! 	Hold the Kingdoms of France and Aquitaine, completely controlling their de jure provinces, and form the Empire of Francia. Progress continues for as long as you play the featured ruler's dynasty. 			Fulfil conditions. This challenge doesn't allow partial completion.
+His Unfulfilled Dream 	King Louis passed away before he could see through his dream of a northern crusade. Kill as many characters of the Germanic faith as possible! Reformed Germanic pagans also count. Norse characters with ONE OF these traits count as two points: Viking, Ravager, Seaking, Sea queen, Berserker, Shieldmaiden. The challenge is only accomplishable with the featured ruler during their lifetime. 	4 kill points 	7 kill points 	10 kill points
+Why Don't You like Me? 	Make those vassal dukes like you! Get as many with +65 opinion as possible! The challenge is only accomplishable with the featured ruler during their lifetime. 	4 vassals 	6 vassals 	8 vassals
+Sunni.png 	Shajar al-Durr, Queen of Egypt 	1250 	The second Muslim woman in history to become a monarch. Queen Shajar al-Durr of Egypt would enjoy only a short time as ruler. She would be the first of the Mamluk Sultanate, a realm that would last until 1517. There would be a brutal end to her reign, being captured for her involvement in the murder of Sultan Aybak and later beaten to death by the bondmaids of Al-Mansur Ali. 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+Heiroglyphics! 	Make sure your bloodline lives on by expanding your dynasty to a size of 80 members. Progress continues for as long as you play the featured ruler's dynasty. 			Have 80 members of your dynasty. This challenge doesn't allow partial completion.
+Tutan-Kha-Doom! 	Kill as many landed characters of other dynasties as possible. The challenge is only accomplishable with the featured ruler during their lifetime. 	3 kills 	4 kills 	5 kills
+Don't Stop Me Now! 	Hold as many queen titles as possible. Progress continues for as long as you play a female character of the featured ruler's dynasty. 	2 queen titles 	3 queen titles 	4 queen titles
+Catholic.png 	Paul (Pavao) I Subic, Duke of Croatia 	1278 	Duke Pavao of Croatia, the most impressive member of the Subic house conquered Bosnia and declared himself overlord, rulling over Croatia and Dalmatia and parts of Serbia. He declared peace with Venice and his political actions would later see Charles I become the king of Hungary. 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+Conquerer from Bribir! 	Ban of Croatia, lord of all of Bosnia, and uniter of Dalmatia, finish what Paul never could and conquer Serbia as well! Hold the Kingdom of Serbia and duchies of Bosnia, Croatia and Hum and completely control all their de jure provinces. Progress continues for as long as you play the featured ruler's dynasty. 			Control all 4 titles. This challenge doesn't allow partial completion.
+Established 	Paul appointed his brothers and sons to many positions of power throughout his realm. Continue this tradition and make sure that the dynasty has a strong grasp on the land. The challenge is only accomplishable with the featured ruler during their lifetime. 	4 landed dynasty members 	6 landed dynasty members 	8 landed dynasty members
+Subic-Stantial Legacy 	Paul built multiple monasteries, a church, a fort, and relations with Venice. Can you leave an even grander legacy behind? Progress continues for as long as you play the featured ruler's dynasty. 	1 great works built 	2 great works built 	3 great works built
+Shia.png 	Arwa Sulayhid, Sultana of Yemen 	1074 	Arwa al-Sulayhi, Sultana of the Sulayhid Sultanate referred to as the Noble Lady, was the first woman to be given the title of hujja, the closest living image of God's will in her lifetime. She reigned over Yemen for 68 years, improving economy, building schools and mosques. 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+Long Live the Queen! 	Under Arwa's rule Yemen prospered. Hold the Sultanate of Yemen and completely control its de jure provinces for 100 years. Progress continues for as long as you play the featured ruler's dynasty. 			Rule the Yemen for 100 years. This challenge doesn't allow partial completion.
+God's Will Be Done 	Build as many temples in your realm as you can. The challenge is only accomplishable with the featured ruler during their lifetime. 	5 temples in realm 	8 temples in realm 	12 temples in realm
+Dawn of a New Da'is! 	Convert as many Hindus to Shia as possible. Only characters converted through character interaction count toward the challenge! The challenge is only accomplishable with the featured ruler during their lifetime. 	2 Hindus converted to Shia 	4 Hindus converted to Shia 	6 Hindus converted to Shia
+Catholic.png 	Harald IV Hardrade, King of Norway 	1066 	Harald Hardrade, King of Norway spent a great period of his life fighting battles, joining his first in 1030, the Battle of Stiklestad at the age of 15. Exiled for the loss, he was sent to Kievan Rus where he eventually became captain in the army of Yaroslav the Wise and later commander of the Byzantine Varangian Guard. He would eventually claim England but lose his life in battle of Stamford Bridge, starting the end of the Viking Age. 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+Harder Than Steel 	Hold the kingdoms of Norway & England and completely control their de jure provinces. Progress continues for as long as you play the featured ruler's dynasty. 			Hold the Kingdoms of Norway and England. This challenge doesn't allow partial completion.
+Hide the Pain, Harold... 	Kill as many members of King Harold II of England's dynasty, the Godwins, as possible. Deaths caused by other members of your dynasty also count! Progress continues for as long as you play the featured ruler's dynasty. 	Kill 5 members of Godwin dynasty 	Kill 10 members of Godwin dynasty 	Kill 15 members of Godwin dynasty
+With an Iron Fist 	Crush as many revolts as possible. Crush those who rise up to oppose your rule! Progress continues for as long as you play the featured ruler's dynasty. 	4 revolts crushed 	8 revolts crushed 	12 revolts crushed
+Miaphysite.png 	Hethum I, King of Armenia 	1226 	In marrying Isabella of Armenia, Hethum I would become king of Armenia in 1226. He founded the Hethumids, the last native Armenian dynasty. Hethum is famous for his relations with the Mongols in which he travelled great distances to offer gifts in the face of the rapidly expanding Mongol Empire. 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+Not-So-Little Armenia 	A sobriquet of the Kingdom of Armenia at the time was Little Armenia. Can you change that? Double the size of the kingdom! Progress continues for as long as you play the featured ruler's dynasty. 			Have 8 provinces. This challenge doesn't allow partial completion.
+Keep Your Friends Close... 	Have good relations with Mongols (60+ opinion). Rulers, their vassals, and their courtiers with Mongol culture count. Progress continues for as long as you play the featured ruler's dynasty. 	3 Mongols with 60+ opinion 	6 Mongols with 60+ opinion 	9 Mongols with 60+ opinion
+We Will Not Submit 	Hethum I decided to submit to Mongol suzerainty as their rapid expansion were of great concern. Can you keep the Armenian kingdom independent? Rule for as many years as possible as an independent kingdom, without becoming a tributary. Progress continues for as long as you play the featured ruler's dynasty. 	25 years independent 	50 years independent 	75 years independent
+Catholic.png 	Kulin Kulinic, Doux of Bosnia 	1173 	Kulin of Bosnia was the man who would lead Bosnia through the Bosnian Age of Peace and Prosperity, responsible for creating a de facto independent state. Often regarded as a hero of Bosnia, his leadership was not without difficulty, with Kulin often having to find political balance between the powers of Hungary, Serbia and the Pope. 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+Not-So Landlocked 	Rule an independent Kingdom of Bosnia! You must hold the Kingdom of Bosnia, completely control all its de jure provinces and be independent. Progress continues for as long as you play the featured ruler's dynasty. 			Fulfil conditions. This challenge doesn't allow partial completion.
+Heretical Company 	Have as many courtiers as possible who openly practise a heretical belief. Prisoners don't count. Progress continues for as long as you play the featured ruler's dynasty. 	6 heretical courtiers 	9 heretical courtiers 	12 heretical courtiers
+Celebrating Our Indepedence Day! 	As an independent realm, remain at peace and independence for as long as possible! Progress resets on character death and when entering a war. Progress continues for as long as you play the featured ruler's dynasty. 	4 years of peace and independence 	8 years of peace and independence 	12 years of peace and independence
+Buddhist.png 	Liao Hongji, Khagan of the Liao Khaganate 	1066 	Emperor Daozong would be remembered as the emperor who ignored the corruption that would destroy his empire. Rejecting the advice of his wife, Xiao Guanyin, to end the corruption and paying little respect to the role he had as emperor, he would allow his officials to fool him into executing the empress, after being convinced she had written a love poem about an affair. He would also execute the crown prince as well as various other officials following the advice of Yelu Yixin. He would realise his mistakes later, however the corruption in Liao was beyond repair. 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+Lavish Spending 	Have as many temples in your realm managed by a Buddhist as you can. Progress continues for as long as you play the featured ruler's dynasty. 	4 temples managed by Buddhists 	8 temples managed by Buddhists 	12 temples managed by Buddhists
+Land Mass! 	As a nomadic tribe, have as many provinces in your realm as possible! Progress continues tor as long as you play the featured ruler's dynasty. 	100 provinces 	150 provinces 	200 provinces
+Clanky! 	Get along with other clans! Ensure clans have an opinion of you higher than 60. Progress continues for as long as you play the featured ruler's dynasty. 	2 clans liking yours 	3 clans liking yours 	4 clans liking yours
+Orthodox.png 	Basarab I, King of Wallachia 	1310 	Basarab I of Wallachia was the first independent ruler of Wallachia, becoming so after becoming disloyal to the Holy Crown of Hungary in 1325. He founded the House of Basarab in 1310 which would later provide a line of princes that would include Vlad III the Impaler. 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+Voivodes of Wallachia 	Basarab was the Voivode of Wallachia before he became an independent ruler of the kingdom. Have as many dukes in your realm of your dynasty as you can! Bastards do not count towards this challenge unless legitimized. Progress continues for as long as you play the featured ruler's dynasty. 	Have 3 vassal dukes of your dynasty 	Have 6 vassal dukes of your dynasty 	Have 9 vassal dukes of your dynasty
+So Much at Stake 	With a character that has the impaler trait, kill as many people as you can! Progress continues for as long as you play the featured ruler's dynasty. 	3 kills 	6 kills 	10 kills
+Castle Mania 	Have as many castles and royal palaces in your realm as possible! Each stage of a royal palace is worth 3 points. The royal palace must be active to count. Progress continues for as long as you play the featured ruler's dynasty. 	4 castles and royal palaces 	8 castles and royal palaces 	12 castles and royal palaces
+Romuva.png 	Mindaugas, High Chief of Lithuania 	1236 	The only King of Lithuania, King Mindaugas had a history shrouded in mystery. It is believed that he was a young duke that had inherited power, using such power to eventually found the Lithuanian state. He converted to Catholicism, becoming baptised and exchanging some lands for acknowledgment of King by Pope Innocent IV. 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+A Christian King 	Be crowned the King of Lithuania! You must: hold the Kingdom of Lithuania, completely control all of Lithuanias de jure provinces, be Catholic and be crowned by the Pope. Progress continues for as long as you play the featured ruler's dynasty. 			Fulfil conditions. This challenge doesn't allow partial completion.
+True Faith 	Convert provinces in your realm to Catholicism. Progress continues for as long as you play the featured ruler's dynasty. 	4 Catholic provinces 	6 Catholic provinces 	8 Catholic provinces
+Writing History 	While historic records of the only Christian king of Lithuania are scarce, ensure that this isn't the case this time around! Construct a Great Library and fill it with book collections. Progress continues for as long as you play the featured ruler's dynasty. 	2 book collections built 	3 book collections built 	4 book collections built
+Catholic.png 	Botstain Stenkyrka, Grand Mayor of Gotland 	1066 	Gotland, famous for its numerous medieval churches and many runic stones, was also an important and powerful centre of world trade for Sweden during the age of Vikings. The island was home to over 50 trading centres and harbours, with a great deal of the population contributing to the dealings of the republic. The island was incredibly prosperous in 1066 and during this time Botstain was elected as the young grand mayor of the Gotland republic. With a keen eye for commerce, setting up networks of trade posts was key to his success. 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+Aegir's Island! 	Successfully make Gotland an independent kingdom by becoming king and appointing Gotland your capital! You must: completely control the Duchy of Gotland, have a minimum of 20 cities in your realm, have a fully upgraded Family Palace and have the province of Gotland as your capital. Progress continues for as long as you play the featured ruler's dynasty. 			Fulfil conditions. This challenge doesn't allow partial completion.
+Embargo! 	Own as many trade posts as possible! You can either construct or seize control of them. The trade posts needs to have at minimum the second tier upgrade on all their buildings to count towards the score. The challenge is only accomplishable with the featured ruler during their lifetime. 	3 upgraded trade posts 	4 upgraded trade posts 	5 upgraded trade posts
+Trading Cities 	Make Gotland a grand republic, with as many trade posts as possible! Progress continues for as long as you play the featured ruler's dynasty. 	20 trade posts 	40 trade posts 	60 trade posts
+Orthodox.png 	Stefan Nemanjic, King of Serbia 	1196 	King Stefan the First-Crowned, so called for becoming the first Rascian king, did so by promoting Serbia as a kingdom in its own right. He would help his brother, Saint Sava The Enlightener, found the Serbian Orthodox Church to secure his title. 	
+Challenge 	Description 	Bronze 	Silver 	Gold
+Saint-King 	Create a saintly bloodline! Either a godly or a wicked saint bloodline counts. Progress continues for as long as you play the featured ruler's dynasty. 			Create a saintly bloodline. This challenge doesn't allow partial completion.
+The First of Many 	Hold as many king titles as possible! Progress continues for as long as you play the featured ruler's dynasty. 	2 king titles 	4 king titles 	6 king titles
+God is Good to Me 	Have as many dynasty members as possible beatified or declared saints! Progress continues for as long as you play the featured ruler's dynasty. 	2 beatified dynasty members 	3 beatified dynasty members 	4 beatified dynasty members 
+
+
+
+
+
+
+also this is all info from screenshot 1,2,3
+
+---
+
+### **Overview and Mechanics**
+*   **Release Date:** October 20th, 2019, as part of patch 3.3.
+*   **System:** Replaced the previous "Featured Rulers" system. A new ruler was added biweekly.
+*   **Game Mode:** Must be played in **Bronzeman** mode (similar to Ironman, but allowing ruler switching via the menu).
+*   **Goal:** Complete challenges to unlock cosmetic rewards for *Crusader Kings III*.
+*   **Scoring:** Challenges have three tiers: Bronze, Silver, and Gold. Each tier achieved is worth 2 points.
+
+---
+
+### **Rewards (Cosmetics for Crusader Kings III)**
+The following items are unlocked by accumulating points from ruler challenges:
+*   **Wizards Beards:** 10 points
+*   **The Pageboy (Hair):** 20 points
+*   **Chaperon (Hat):** 30 points
+*   **Jesters Hat:** 40 points
+*   **Cone Shaped Hennin (Hat):** 55 points
+*   **Medieval Mullet (Hair):** 70 points
+*   **The Miller (Hat):** 90 points
+*   **The Joan of Arc (Hair):** 110 points
+
+---
+
+### **Featured Rulers and Challenges**
+
+#### **1. Konan II de Rennes (Duke of Brittany)**
+*   **Start Year:** 1066
+*   **Religion:** Christian
+*   **Context:** Struggling to maintain rule against his family, rivals in Anjou, and William the Conqueror.
+*   **Challenges:**
+    *   **Time Bending:** Recreate Breton control by owning specific provinces (Cornwall, Devon, Anjou, etc.). (Gold: Own all listed).
+    *   **Gloves Come Off!:** Have a specific number of legitimate sons alive. (Gold: 5 sons).
+    *   **Pre-Emptive Self-Defence:** Kill members of the de Normandie dynasty. (Gold: 7 members).
+
+#### **2. Llywelyn the Great (Duke of Gwynedd)**
+*   **Start Year:** 1195
+*   **Religion:** Christian
+*   **Context:** Aims to unify Wales through strategy and diplomacy while dealing with English Marcher lords.
+*   **Challenges:**
+    *   **Dragon's Fire:** Completely control listed Welsh provinces (Anglesey, Rhos, etc.). (Gold: All provinces).
+    *   **Princes of Wales:** Have dynasty members as vassals while holding the Kingdom of Wales. (Gold: 9 vassals).
+    *   **Love Spoons:** Marry children to English spouses (only counts for the featured ruler). (Gold: 4 children).
+
+#### **3. Saad Mordechai (High Chief of Baghdad)**
+*   **Start Year:** 1289
+*   **Religion:** Muslim (History: Jewish physician)
+*   **Context:** A Jewish official in Baghdad who faced religious tension and was eventually murdered by his enemies.
+*   **Challenges:**
+    *   **One of Us!:** While not Jewish, have openly Jewish councilors with a skill of 10+ in their role. (Gold: 4 councilors).
+    *   **Peace!:** Be on good terms (60+ opinion) with vassals of a different religion. (Gold: 12 vassals).
+    *   **Secret stays with Me:** (As the ruler's successor) Kill Muslim and Mongol characters. (Gold: 16 kill points).
+
+#### **4. Konstantinos II (Doux of Samos)**
+*   **Start Year:** 1108
+*   **Religion:** Christian
+*   **Context:** Founder of the Angelos dynasty, whose eventual rule would lead the Byzantine Empire toward decline.
+*   **Challenges:**
+    *   **Moving Up:** Gain as many King titles as possible. (Gold: 4 king titles).
+    *   **Lovely Rule!:** Achieve a high game score. (Gold: 15,000 score).
+    *   **Kon Once, Kon Twice...:** Have a large family (alive) of your dynasty. (Gold: 10 children).
+
+#### **5. Louis II the Stammerer (King of Aquitaine)**
+*   **Start Year:** 867
+*   **Religion:** Christian
+*   **Context:** Son of Charles the Bald, ruled West Francia briefly and was known for being straightforward.
+*   **Challenges:**
+    *   **French Toast!:** Control France and Aquitaine and form the Empire of Francia. (Gold: Complete).
+    *   **His Unfulfilled Dream:** Kill Germanic Pagans (bonus points for Norse traits like Viking or Berserker). (Gold: 10 kill points).
+    *   **Why Don't You like Me?:** Have vassals of different cultures with +65 opinion. (Gold: 8 vassals).
+
+#### **6. Shajar al-Durr (Queen of Egypt)**
+*   **Start Year:** 1250
+*   **Religion:** Muslim
+*   **Context:** The second Muslim woman in history to become a monarch, ruling during the Mamluk Sultanate.
+*   **Challenges:**
+    *   **Heiroglyphics!:** Expand the total size of your dynasty. (Gold: 80 members).
+    *   **Tutan-Kha-Doom!:** Kill landed characters of other dynasties. (Gold: 5 kills).
+    *   **Don't Stop Me Now!:** Hold multiple Queen titles simultaneously. (Gold: 4 titles).
+
+#### **7. Paul (Pavao) I Subic (Duke of Croatia)**
+*   **Start Year:** 1278
+*   **Religion:** Christian
+*   **Context:** Unified Bosnia and Dalmatia, brought peace with Venice, and expanded the influence of the Subic family.
+*   **Challenges:**
+    *   **Conqueror from Bribir!:** Control the titles of Serbia, Bosnia, Croatia, and Hum. (Gold: All 4 titles).
+    *   **Established:** Grant land to members of your dynasty. (Gold: 8 landed members).
+    *   **Subic-Stantial Legacy:** Build great works during the ruler's lifetime. (Gold: 3 great works).
+	
+	
+Continuing in the same organized manner, here are the remaining rulers and challenges listed in the provided images:
+
+---
+
+### **Featured Rulers (Summarized or Without Visible Full Challenges)**
+*   **Hugues de Lusignan (Count of Lusignan):** 1066 (Christian) – Join the Crusades as The Devil of Lusignan.
+*   **Johann the Blind (King of Bohemia):** 1337 (Christian) – Become the Blind Warrior of Bohemia.
+*   **Charles de Anjou (King of Hungary):** 1307 (Christian) – Bring prosperity to the Kingdom of Hungary.
+*   **Mauregato of Asturias (Count of Astorga):** 769 (Christian) – Secure the title of King and prevent the kingdom from falling into noble hands.
+
+---
+
+### **Rulers with Detailed Challenges (Image 2)**
+
+#### **1. Bohemond d'Hauteville (Prince of Antioch)**
+*   **Start Year:** 1098
+*   **Religion:** Christian
+*   **Context:** Seizing the opportunities presented by the Crusades in the Holy Land.
+*   **Challenges:**
+    *   **Bye, Zantium!:** A member of your dynasty becomes the Emperor of the Byzantine Empire. (Gold: Hold the title).
+    *   **Blood, sweat & tears:** Personally participate in as many wars as possible (Crusades don't count). (Gold: 15 wars).
+    *   **Vassaline!:** Have as many landed vassals of your dynasty as possible. (Gold: 30 landed vassals).
+
+#### **2. Petronilla Jimena (Queen of Aragon)**
+*   **Start Year:** 1157
+*   **Religion:** Christian
+*   **Context:** A child ruler who represents the potential end of a dynasty; focuses on preservation and expansion.
+*   **Challenges:**
+    *   **Arastrong!:** Grow the Jimena dynasty to a large size. (Gold: 75 living members).
+    *   **Arastay!:** Ensure the Jimena dynasty holds as many king titles as possible. (Gold: 5 king titles).
+    *   **Aragonastop?:** Have as many children as possible born to the Jimena dynasty during her lifetime. (Gold: 6 children).
+
+#### **3. Tamari (Queen of Georgia)**
+*   **Start Year:** 1184
+*   **Religion:** Christian (Orthodox)
+*   **Context:** Tasked with recreating the Golden Age of Georgia.
+*   **Challenges:**
+    *   **Megaloscheme:** Tamari must reach the highest rank of the Saint Basil monastic society. (Gold: Rank IV).
+    *   **Hot Tamari:** Secure marriages for dynasty children to foreign Kings or Emperors (or their children). (Gold: 6 children).
+    *   **Golden Girls:** Acquire and pass down as many artifacts as possible to your family. (Gold: 50 artifacts).
+
+#### **4. Nuno (Duke of Porto)**
+*   **Start Year:** 1066
+*   **Religion:** Christian
+*   **Context:** Aims to become a King while surviving the dangerous early political landscape.
+*   **Challenges:**
+    *   **King of Portugal:** Form the Kingdom of Portugal and hold at least 3 duchies. (Gold: Become King of Portugal).
+    *   **Money Order!:** Have multiple prosperous counties simultaneously in your realm. (Gold: 6 prosperous counties).
+    *   **Ahead of their time:** Create and manage overseas "colonies" (provinces disconnected from the capital by at least 400 distance). (Gold: 13 "colonies").
+
+#### **5. Mihajlo (King of Serbia)**
+*   **Start Year:** 1066
+*   **Religion:** Christian (Catholic)
+*   **Context:** Seeking to unite the Balkan nations and become the true King of the Slavs.
+*   **Challenges:**
+    *   **A Serbian Dream:** Ensure Serbia remains Serbian-ruled, and have Serbian rulers in Croatia, Hungary, or Poland. (Gold: Fulfill conditions).
+    *   **With or Without Me?:** Have as many Serbian Duke-tier vassals as possible. (Gold: 12 Serbian Dukes).
+    *   **Papal Support:** Maintain high opinion with Catholic bishops and the Pope. (Gold: 8 Catholic bishops with +60 opinion).
+
+---
+
+### **Rulers with Detailed Challenges (Image 3)**
+
+#### **6. Arwa Sulayhid (Sultana of Yemen)**
+*   **Start Year:** 1074
+*   **Religion:** Muslim (Shia)
+*   **Context:** The first woman to be given the title of *hujja*, she ruled for 68 years, improving Yemen's infrastructure and education.
+*   **Challenges:**
+    *   **Long Live the Queen!:** Rule the Sultanate of Yemen for 100 years while maintaining complete de jure control. (Gold: 100 years).
+    *   **God's Will Be Done:** Build as many temples in your realm as possible. (Gold: 12 temples).
+    *   **Dawn of a New Da'is!:** Convert Hindus to Shia Islam through character interactions. (Gold: 6 Hindus converted).
+
+#### **7. Harald IV Hardrade (King of Norway)**
+*   **Start Year:** 1066
+*   **Religion:** Christian
+*   **Context:** A legendary warrior who served in the Varangian Guard before attempting to claim the English throne.
+*   **Challenges:**
+    *   **Harder Than Steel:** Completely control the Kingdoms of Norway and England. (Gold: Hold both kingdoms).
+    *   **Hide the Pain, Harold...:** Kill as many members of the rival Godwin dynasty as possible. (Gold: 15 members).
+    *   **With an Iron Fist:** Crush as many internal revolts as possible. (Gold: 12 revolts).
+
+#### **8. Hethum I (King of Armenia)**
+*   **Start Year:** 1226
+*   **Religion:** Christian
+*   **Context:** Ruled during the Mongol expansion, known for his diplomatic travels and maintaining Armenian sovereignty.
+*   **Challenges:**
+    *   **Not-So-Little Armenia:** Expand the size of the kingdom to at least 8 provinces. (Gold: 8 provinces).
+    *   **Keep Your Friends Close...:** Maintain high opinion (60+) with Mongol characters. (Gold: 9 Mongols).
+    *   **We Will Not Submit:** Rule as an independent kingdom for as long as possible without becoming a tributary. (Gold: 75 years).
+
+#### **9. Kulin Kulinic (Doux of Bosnia)**
+*   **Start Year:** 1173
+*   **Religion:** Christian
+*   **Context:** Known for bringing peace and prosperity to Bosnia while balancing the interests of neighboring powers.
+*   **Challenges:**
+    *   **Not-So-Landlocked:** Rule an independent Kingdom of Bosnia with full de jure control. (Gold: Fulfill conditions).
+    *   **Heretical Company:** Have as many courtiers as possible who openly practice heretical beliefs. (Gold: 12 heretical courtiers).
+    *   **Celebrating Our Independence Day!:** Maintain peace and independence for long stretches of time. (Gold: 12 years).
+
+#### **10. Liao Hongji (Khagan of the Liao Khaganate)**
+*   **Start Year:** 1066
+*   **Religion:** Buddhist
+*   **Context:** An emperor whose reign was marked by corruption and personal tragedy, leading to the decline of his empire.
+*   **Challenges:**
+    *   **Lavish Spending:** Ensure many temples in the realm are managed by Buddhist characters. (Gold: 12 temples).
+    *   **Land Mass!:** As a nomadic tribe, control a vast number of provinces. (Gold: 200 provinces).
+    *   **Clanky!:** Maintain high opinion (60+) with other nomadic clans. (Gold: 4 clans).
+
+#### **11. Basarab I (High Chief of Wallachia)**
+*   **Start Year:** 1310
+*   **Religion:** Christian (Orthodox)
+*   **Context:** The founder of independent Wallachia and the House of Basarab.
+*   **Challenges:**
+    *   **Voivodes of Wallachia:** Have as many Duke-tier vassals of your own dynasty as possible. (Gold: 9 dukal vassals).
+    *   **So Much at Stake:** With the Impaler trait, execute or kill as many people as possible. (Gold: 10 kills).
+    *   **Castle Mania:** Build and maintain as many castles and royal palaces as possible in the realm. (Gold: 12 castles/palaces).
+
+#### **12. Mindaugas (High Chief of Lithuania)**
+*   **Start Year:** 1236
+*   **Religion:** Romuva (Historical: Converted to Catholic)
+*   **Context:** The first and only King of Lithuania, who navigated the shift from paganism to Christianity.
+*   **Challenges:**
+    *   **A Christian King:** Become King of Lithuania, control all de jure provinces, be Catholic, and be crowned by the Pope. (Gold: Fulfill conditions).
+    *   **True Faith:** Convert many provinces in the realm to Catholicism. (Gold: 8 provinces).
+    *   **Writing History:** Construct Great Library stages and fill them with book collections. (Gold: 4 book collections).
+
+#### **13. Botstain Stenkyrka (Grand Mayor of Gotland)**
+*   **Start Year:** 1066
+*   **Religion:** Christian
+*   **Context:** Leader of a highly prosperous trade republic on the island of Gotland.
+*   **Challenges:**
+    *   **Aegir's Island!:** Achieve independence, control the duchy, have 20 cities in the realm, and a fully upgraded Family Palace. (Gold: Fulfill conditions).
+    *   **Embargo!:** Own and fully upgrade trade posts. (Gold: 5 upgraded trade posts).
+    *   **Trading Cities:** Build a massive network of trade posts as a grand republic. (Gold: 60 trade posts).
+
+#### **14. Stefan Nemanjic (King of Serbia)**
+*   **Start Year:** 1196
+*   **Religion:** Christian (Orthodox)
+*   **Context:** Known as "The First-Crowned," he secured Serbia's independence and kingly status.
+*   **Challenges:**
+    *   **Saint-King:** Create a saintly or wicked bloodline through your actions. (Gold: Create a bloodline).
+    *   **The First of Many:** Hold as many King-tier titles as possible simultaneously. (Gold: 6 king titles).
+    *   **God is Good to Me:** Have members of your dynasty be beatified or declared saints. (Gold: 4 beatified members).
+
+
+
+
+
+Here are the full narrative descriptions (context) for each ruler as they appear in the images:
+From the Monarch’s Journey (Image 1)
+
+    Konan II de Rennes (Duke of Brittany, 1066):
+    "Konan II, Duke of Brittany would find himself in an uphill struggle to ensure his rule over Brittany. Having lost his father as a child, he faced many challenges to his rule from within and outside of his family. His uncle usurped his inheritance, and was later chained and imprisoned for his efforts. After becoming enthroned, he would face threats from William the Conqueror, later dying to suspected poisoned gloves while attempting to invade Anjou."
+
+    Llywelyn the Great (Duke of Gwynedd, 1195):
+    "King of Gwynedd, Llywelyn ap Iorwerth, would unify Wales through great war strategy and diplomacy with the kings of England and the princes of Wales. He had troubles with marcher lords, often finding himself fighting in border disputes, while also making alliances with rulers in the Marches. In 1234, he brought peace to Wales which remained until his death in 1240."
+
+    Saad Mordechai (High Chief of Baghdad, 1289):
+    "During his lifetime, Sa'ad al-Dawla would be the bridge that supported Jewish peace and prosperity in Baghdad. His reputation and knowledge as a physician would give him the chance to cure Arghun Khan of an ailment, forming a great trusting friendship and allowing Sa'ad to secure a safe haven for Jews to live. His position and relationships with Arghun, and the fact that he was Jewish would cause much hatred from Mongolians who wanted to corrupt the flow of finances, and Muslims who did not enjoy the idea of having a Jew in a position of power over them."
+
+    Konstantinos II (Doux of Samos, 1108):
+    "Konstantinos Angelos was a man of exceeding beauty and bravery, who came from a small aristocratic family. He would marry Theodora Komnene, daughter of Emperor Alexios I Komnenos and be granted the title of sebastohypertatos, a high Byzantine dignity. He would start the Angelos dynasty, which would disastrously rule the Byzantine Empire in 1185-1204, crippling the empire and eventually leading to its deconstruction."
+
+    Louis II the Stammerer (King of Aquitaine, 867):
+    "Louis II of Aquitaine was a ruler famous, and named so, for his physical weakness. He was crowned twice, the second time by Pope John VIII, after succeeding his father's rule of West Francia. Three of his sons would become kings of West Francia, the last of which would be known as Charles III the Simple, with a reputation of being straightforward."
+
+    Shajar al-Durr (Queen of Egypt, 1250):
+    "The second Muslim woman in history to become a monarch. Queen Shajar al-Durr of Egypt would enjoy only a short time as ruler. She would be the first of the Mamluk Sultanate, a realm that would last until 1517. There would be a brutal end to her reign, being captured for her involvement in the murder of Sultan Aybak and later beaten to death by the bondmaids of Al-Mansur Ali."
+
+    Paul (Pavao) I Subic (Duke of Croatia, 1278):
+    "Duke Pavao of Croatia, the most impressive member of the Subic house conquered Bosnia and declared himself overlord, ruling over Croatia and Dalmatia and parts of Serbia. He declared peace with Venice and his political actions would later see Charles I become the king of Hungary."
+
+From the Featured Rulers (Images 2 & 3)
+
+    Hugues de Lusignan (1066): "Join the Crusades as The Devil of Lusignan!"
+
+    Johann the Blind (1337): "Become the Blind Warrior of Bohemia!"
+
+    Arwa Sulayhid (1074): "Discover God's Will in her lifetime!"
+
+    Mindaugas of Lithuania (1236): "Unravel the mystery of this King!"
+
+    Charles de Anjou (1307): "Bring prosperity to the Kingdom of Hungary!"
+
+    Mauregato of Asturias (769): "Secure the title of King and prevent the kingdom from falling into noble hands!"
+
+    Bohemond d'Hauteville (Prince of Antioch, 1098): "Opportunities fall upon this ruler like autumn rains!"
+
+    Petronilla Jimena (Queen of Aragon, 1157): "Ruler as a child, last of a dynasty, can it be prolonged?"
+
+    Llywelyn the Great (1195): "Develop an Independent Wales and take it further!"
+
+    Tamari (Queen of Georgia, 1184): "Recreate the Golden Age of Georgia!"
+
+    Nuno (Duke of Porto, 1066): "Become King... just try not to die on the way!"
+
+    Mihajlo (King of Serbia, 1066): "Unite his nations and become the true King of the Slavs!"
+
+    Arwa Sulayhid (Sultana of Yemen, 1074 - Full Bio):
+    "Arwa al-Sulayhi, Sultana of the Sulayhid Sultanate referred to as the Noble Lady, was the first woman to be given the title of hujja, the closest living image of God's will in her lifetime. She reigned over Yemen for 68 years, improving economy, building schools and mosques."
+
+    Harald IV Hardrade (King of Norway, 1066):
+    "Harald Hardrade, King of Norway spent a great period of his life fighting battles, joining his first in 1030, the Battle of Stiklestad at the age of 15. Exiled for the loss, he was sent to Kievan Rus where he eventually became captain in the army of Yaroslav the Wise and later commander of the Byzantine Varangian Guard. He would eventually claim England but lose his life in battle of Stamford Bridge, starting the end of the Viking Age."
+
+    Hethum I (King of Armenia, 1226):
+    "In marrying Isabella of Armenia, Hethum I would become king of Armenia in 1226. He founded the Hethumids, the last native Armenian dynasty. Hethum is famous for his relations with the Mongols in which he travelled great distances to offer gifts in the face of the rapidly expanding Mongol Empire."
+
+    Kulin Kulinic (Doux of Bosnia, 1173):
+    "Kulin of Bosnia was the man who would lead Bosnia through the Bosnian Age of Peace and Prosperity, responsible for creating a de facto independent state. Often regarded as a hero of Bosnia, his leadership was not without difficulty, with Kulin often having to find political balance between the powers of Hungary, Serbia and the Pope."
+
+    Liao Hongji (Khagan of the Liao Khaganate, 1066):
+    "Emperor Daozong would be remembered as the emperor who ignored the corruption that would destroy his empire. Rejecting the advice of his wife, Xiao Guanyin, to end the corruption and paying little respect to the role he had as emperor, he would allow his officials to fool him into executing the empress, after being convinced she had written a love poem about an affair. He would also execute the crown prince as well as various other officials following the advice of Yelu Yixin. He would realise his mistakes later, however the corruption in Liao was beyond repair."
+
+    Basarab I (High Chief of Wallachia, 1310):
+    "Basarab I of Wallachia was the first independent ruler of Wallachia, becoming so after becoming disloyal to the Holy Crown of Hungary in 1325. He founded the House of Basarab in 1310 which would later provide a line of princes that would include Vlad III the Impaler."
+
+    Mindaugas (High Chief of Lithuania, 1236 - Full Bio):
+    "The only King of Lithuania, King Mindaugas had a history shrouded in mystery. It is believed that he was a young duke that had inherited power, using such power to eventually found the Lithuanian state. He converted to Catholicism, becoming baptised and exchanging some lands for acknowledgment of King by Pope Innocent IV."
+
+    Botstain Stenkyrka (Grand Mayor of Gotland, 1066):
+    "Gotland, famous for its numerous medieval churches and many runic stones, was also an important and powerful centre of world trade for Sweden during the age of Vikings. The island was home to over 50 trading centres and harbours, with a great deal of the population contributing to the dealings of the island. The island was incredibly prosperous in 1066 and this time Botstain was elected as the young grand mayor of the Gotland republic. With a keen eye for commerce, setting up networks of trade posts was key to his success."
+
+    Stefan Nemanjic (King of Serbia, 1196):
+    "King Stefan the First-Crowned, so called for becoming the first Rascian king, did so by promoting Serbia as a kingdom in its own right. He would help his brother, Saint Sava The Enlightener, found the Serbian Orthodox Church to secure his title."
