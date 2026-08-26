@@ -1,0 +1,97 @@
+
+
+[2026-08-18 10:32:53] Startup - updater built Dec 13 2017 05:27:43
+[2026-08-18 10:32:53] Checking for update on startup
+[2026-08-18 10:32:53] Checking for available update...
+[2026-08-18 10:32:53] Download failed: http error 0 (client-download.steampowered.com/client/steam_cmd_linux)
+[2026-08-18 10:32:53] Package file steamcmd_public_all.zip.9acb456879ee932518117972e2b09b938f19063b missing or incorrect size
+[2026-08-18 10:32:53] Package file steamcmd_bins_linux.zip.vz.471ef87a00820adc7f90e89d72394c54189c9944_24474903 missing or incorrect size
+[2026-08-18 10:32:53] Package file steamcmd_siteserverui_linux.zip.vz.226fa334252b13e8f2ce24d90514409aee5a6f9d_10912069 missing or incorrect size
+[2026-08-18 10:32:53] Package file steamcmd_linux.zip.vz.9a7da6eded22c21007207a77aec7084ecc552242_5842357 missing or incorrect size
+[2026-08-18 10:32:53] Downloading update (0 of 40321 KB)...
+[2026-08-18 10:32:54] Error: Download of package (steamcmd_linux) failed after 0 bytes (0).
+[2026-08-18 10:32:54] Error: Download of package (steamcmd_siteserverui_linux) failed after 0 bytes (0).
+[2026-08-18 10:32:54] Error: Download of package (steamcmd_bins_linux) failed after 0 bytes (0).
+[2026-08-18 10:32:54] Error: Download of package (steamcmd_public_all) failed after 0 bytes (0).
+[2026-08-18 10:32:54] Package file steamcmd_public_all.zip.9acb456879ee932518117972e2b09b938f19063b missing or incorrect size
+[2026-08-18 10:32:54] Package file steamcmd_bins_linux.zip.vz.471ef87a00820adc7f90e89d72394c54189c9944_24474903 missing or incorrect size
+[2026-08-18 10:32:54] Package file steamcmd_siteserverui_linux.zip.vz.226fa334252b13e8f2ce24d90514409aee5a6f9d_10912069 missing or incorrect size
+[2026-08-18 10:32:54] Package file steamcmd_linux.zip.vz.9a7da6eded22c21007207a77aec7084ecc552242_5842357 missing or incorrect size
+[2026-08-18 10:32:54] Downloading update (9293 of 40321 KB)...
+[2026-08-18 10:32:54] Downloading update (17287 of 40321 KB)...
+[2026-08-18 10:32:54] Downloading update (32819 of 40321 KB)...
+[2026-08-18 10:32:55] Downloading update (40172 of 40321 KB)...
+[2026-08-18 10:32:55] Downloading update (40321 of 40321 KB)...
+[2026-08-18 10:32:55] Download Complete.
+[2026-08-18 10:32:55] uninstalled manifest found in /tmp/libc32/usr/package/steam_cmd_linux (1).
+[2026-08-18 10:32:55] Found pending update
+[2026-08-18 10:32:55] Applying update...
+[2026-08-18 10:32:55] Extracting package...
+[2026-08-18 10:32:59] Installing update...
+[2026-08-18 10:32:59] Cleaning up...
+[2026-08-18 10:32:59] Update complete, launching...
+[2026-08-18 10:32:59] Shutdown
+
+
+[2026-08-18 10:33:08] Startup - updater built Dec 13 2017 05:27:43
+[2026-08-18 10:33:08] Checking for update on startup
+[2026-08-18 10:33:08] Checking for available updates...
+[2026-08-18 10:33:08] Download failed: http error 0 (client-download.steampowered.com/client/steam_cmd_linux)
+[2026-08-18 10:33:08] Download skipped: /client/steam_cmd_linux version 1785799152, installed version 1785799152
+[2026-08-18 10:33:08] Nothing to do
+[2026-08-18 10:33:08] Verifying installation...
+[2026-08-18 10:33:08] Performing checksum verification of executable files
+[2026-08-18 10:33:09] Verification complete
+[2026-08-18 10:33:09] Shutdown
+
+
+[2026-08-18 10:33:41] Startup - updater built Aug  3 2026 19:40:59
+[2026-08-18 10:33:41] Startup - Steam Client launched with: './linux64/steamcmd' '+force_install_dir' '/tmp/ck2linux' ' <+61 truncated>
+[2026-08-18 10:33:41] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2026-08-18 10:33:41] Using the following download hosts for Public, Realm steamglobal
+[2026-08-18 10:33:41] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2026-08-18 10:33:41] Checking for update on startup
+[2026-08-18 10:33:41] Checking for available updates...
+[2026-08-18 10:33:41] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_linux
+[2026-08-18 10:33:41] Manifest download: send request
+[2026-08-18 10:33:41] Manifest download: waiting for download to finish
+[2026-08-18 10:33:41] Manifest download: finished
+[2026-08-18 10:33:41] Download skipped: /steam_cmd_linux version 1785799152, installed version 1785799152, existing pending version 0
+[2026-08-18 10:33:41] Nothing to do
+[2026-08-18 10:33:41] Verifying installation...
+[2026-08-18 10:33:41] Verifying all executable checksums
+[2026-08-18 10:33:41] Unable to read and verify install manifest /tmp/libc32/usr/package/steam_cmd_linux.installed
+[2026-08-18 10:33:41] Verification complete
+[2026-08-18 10:33:41] Downloading update...
+[2026-08-18 10:33:41] Checking for available updates...
+[2026-08-18 10:33:41] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_linux
+[2026-08-18 10:33:41] Manifest download: send request
+[2026-08-18 10:33:42] Manifest download: waiting for download to finish
+[2026-08-18 10:33:42] Manifest download: finished
+[2026-08-18 10:33:42] Downloaded new manifest: /steam_cmd_linux version 1785799152, installed version 1785799152, existing pending version 0
+[2026-08-18 10:33:42] Download complete.
+[2026-08-18 10:33:42] uninstalled manifest found in /tmp/libc32/usr/package/steam_cmd_linux (1).
+[2026-08-18 10:33:42] Extracting package...
+[2026-08-18 10:33:45] Installing update...
+[2026-08-18 10:33:45] Cleaning up...
+[2026-08-18 10:33:45] Update complete, launching Steamcmd...
+[2026-08-18 10:33:45] Shutdown
+
+
+[2026-08-18 10:33:50] Startup - updater built Aug  3 2026 19:40:59
+[2026-08-18 10:33:50] Startup - Steam Client launched with: './linux64/steamcmd' '+force_install_dir' '/tmp/ck2linux' ' <+61 truncated>
+[2026-08-18 10:33:50] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2026-08-18 10:33:50] Using the following download hosts for Public, Realm steamglobal
+[2026-08-18 10:33:50] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2026-08-18 10:33:50] Checking for update on startup
+[2026-08-18 10:33:50] Checking for available updates...
+[2026-08-18 10:33:50] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_linux
+[2026-08-18 10:33:50] Manifest download: send request
+[2026-08-18 10:33:51] Manifest download: waiting for download to finish
+[2026-08-18 10:33:51] Manifest download: finished
+[2026-08-18 10:33:51] Download skipped: /steam_cmd_linux version 1785799152, installed version 1785799152, existing pending version 0
+[2026-08-18 10:33:51] Nothing to do
+[2026-08-18 10:33:51] Verifying installation...
+[2026-08-18 10:33:51] Verifying all executable checksums
+[2026-08-18 10:33:51] Verification complete
+[2026-08-18 10:34:01] Shutdown
