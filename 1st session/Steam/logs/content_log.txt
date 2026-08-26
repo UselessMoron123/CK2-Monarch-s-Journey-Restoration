@@ -1,6 +1,0 @@
-
-
-[2026-08-18 10:33:54] Client version: 1785799152
-[2026-08-18 10:33:54] Loaded 0 apps from install folder "/tmp/ck2linux/steamapps\appmanifest_*.acf".
-[2026-08-18 10:33:54] Triggered async write of Steam library folders configuration (1 libraries).
-[2026-08-18 10:34:01] Failed installing AppID 203770 (No subscription)

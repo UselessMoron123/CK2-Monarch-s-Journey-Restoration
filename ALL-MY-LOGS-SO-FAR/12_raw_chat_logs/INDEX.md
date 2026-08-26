@@ -22,10 +22,12 @@ use this map before archiving any of them.
 | `command_sha256sum_v5_tooling.txt` *(was `Новый текстовый документ3.txt`)* | 25 | 8.2 KB | Not a chat — a command transcript | `sha256sum` of V5 tooling + payload; V5 readiness blurb; runtime-load pending | source fact for artifact table (hashes) |
 | `report_fragment_v5_ready.txt` *(was `Новый текстовый документ4.txt`)* | 43 | 1.6 KB | Not a chat — a short report fragment | "V5 is ready" — account check in shared save validator; load-test steps for Bosnia save | source fact for Part 1/2 |
 
-## Extra transcripts in `adding just to make sure/` (renamed 2026-08-26)
+## Extra transcripts (renamed 2026-08-26, moved here 2026-08-26)
 
-Six more raw exports, uploaded to the top-level `adding just to make sure/` folder
-(later than the sessions above). Renamed from the generic `Новый текстовый документ (N).txt`:
+Six more raw exports, formerly in the top-level `adding just to make sure/` folder
+(later than the sessions above). They were renamed from the generic
+`Новый текстовый документ (N).txt` and now live in this folder (the loose
+top-level folder has been removed):
 
 | File | Lines | What it is | Archived as |
 |---|---:|---|---|
