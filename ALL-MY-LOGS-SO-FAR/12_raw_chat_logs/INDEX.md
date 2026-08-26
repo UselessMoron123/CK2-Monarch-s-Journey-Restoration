@@ -17,10 +17,28 @@ use this map before archiving any of them.
 | `new text doc(third).txt` | 1,600 | 60 KB | Continuation/wrap-around session | Save forensics (both saves valid/distinct), V5 reconstruction, the **successful 5-branch V6** (`f5b7dfd6…`), 868-line ultimate handoff | ✅ archived as **Part 3** (`…_PART3.md`) |
 | `new text doc(fourth).txt` | 411 | 21 KB | Short later session | V6 runtime verdict (loaded, interface stayed, "1" present), the **abandoned feat-V7** (`0074af70…`), cross-version/tracing plan, "second look" Pavao Bronze evidence | ✅ archived as **Part 3** |
 | `new text doc(5).txt` | 124 | 5.6 KB | Shortest session | feat-V7 test plan only ("two yes/no results"), possible narrow V8 for `IsActiveForPlaythrough`; never applied — premise disproven by Pavao Bronze | ✅ folded into **Part 3** (§D1) |
-| `Новый текстовый документ1.txt` | 2,793 | 141 KB | Session fragment (Russian-named export) — appears to be an earlier-thread export | May333, v1/v2 era, Continue/Load/Multiplayer greyed-out analysis ("in-memory session dirty") | 🟡 check for net-new content vs Part 1; likely same father session, different slice |
-| `Новый текстовый документ2.txt` | 5,108 | 283 KB | Disassembly-heavy session fragment | objdump of `0x1407bf…` xrefs, V4/V5 Continue-patch offset lists (byte maps like `7504 → 9090`) | 🟡 valuable raw offsets for the cumulative patch map — extract, then archive as Part 3/appendix |
-| `Новый текстовый документ3.txt` | 25 | 8.2 KB | Not a chat — a command transcript | `sha256sum` of V5 tooling + payload; V5 readiness blurb; runtime-load pending | source fact for artifact table (hashes) |
-| `Новый текстовый документ4.txt` | 43 | 1.6 KB | Not a chat — a short report fragment | "V5 is ready" — account check in shared save validator; load-test steps for Bosnia save | source fact for Part 1/2 |
+| `chat_fragment_may333_v1v2_continue_greyed.txt` *(was `Новый текстовый документ1.txt`)* | 2,793 | 141 KB | Session fragment (Russian-named export) — appears to be an earlier-thread export | May333, v1/v2 era, Continue/Load/Multiplayer greyed-out analysis ("in-memory session dirty") | 🟡 check for net-new content vs Part 1; likely same father session, different slice |
+| `chat_fragment_disasm_v4v5_continue_offsets.txt` *(was `Новый текстовый документ2.txt`)* | 5,108 | 283 KB | Disassembly-heavy session fragment | objdump of `0x1407bf…` xrefs, V4/V5 Continue-patch offset lists (byte maps like `7504 → 9090`) | 🟡 valuable raw offsets for the cumulative patch map — extract, then archive as Part 3/appendix |
+| `command_sha256sum_v5_tooling.txt` *(was `Новый текстовый документ3.txt`)* | 25 | 8.2 KB | Not a chat — a command transcript | `sha256sum` of V5 tooling + payload; V5 readiness blurb; runtime-load pending | source fact for artifact table (hashes) |
+| `report_fragment_v5_ready.txt` *(was `Новый текстовый документ4.txt`)* | 43 | 1.6 KB | Not a chat — a short report fragment | "V5 is ready" — account check in shared save validator; load-test steps for Bosnia save | source fact for Part 1/2 |
+
+## Extra transcripts in `adding just to make sure/` (renamed 2026-08-26)
+
+Six more raw exports, uploaded to the top-level `adding just to make sure/` folder
+(later than the sessions above). Renamed from the generic `Новый текстовый документ (N).txt`:
+
+| File | Lines | What it is | Archived as |
+|---|---:|---|---|
+| `session_father_monarchs_expiry.txt` *(was (6))* | 6,327 | Original "father" session — reads `monarchs.txt`, discovers the expiration switch | Part 1 |
+| `session_may333_exe_upload.txt` *(was (5))* | 3,189 | May-2020 3.3.3 exe base64 upload session | Part 2 |
+| `session_v2_v5_recap_upload_checklist.txt` *(was (4))* | 1,540 | Reads `previous chat log.txt`; V2→V5 recap + upload checklist | Part 2 |
+| `session_v6_runtime_crossversion_secondlook.txt` *(was (3))* | 370 | V6 runtime test + 4-exe cross-version + "second look" Pavao Bronze | Part 3 |
+| `session_featV7_patch_continue_to_V8.txt` *(was (1))* | 1,815 | feat-V7 candidate `0074af70…`; renames Continue fix to V8 | Part 3 D1 / `BANNED_ARTIFACTS.md` |
+| `session_featV7_test_plan.txt` *(was (2))* | 82 | feat-V7 two-question test plan (`IsActiveForPlaythrough`, narrow V8) | Part 3 D1 |
+
+These six are **different files** from the "logs to dissect" `Новый текстовый
+документ (1)–(6).txt` already torn apart and deleted (see cleanup table below) —
+the naming collision was the reason for the rename.
 
 ## Notes / cautions
 - The two **6,463-line** files (`first` and `previous chat log`) are the Part 1

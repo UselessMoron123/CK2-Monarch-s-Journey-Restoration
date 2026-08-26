@@ -1,8 +1,17 @@
 # Screenshots catalog (authoritative descriptions)
 
 Source: user-supplied names + what each shot was meant to show, merged with
-archive/chat context. **Image binaries are not in git** — place files under
-`14_screenshots_and_media/<subfolder>/` keeping original filenames.
+archive/chat context.
+
+> **2026-08-26 — image binaries removed.** All 56 screenshot/picture binaries
+> (`.png`/`.jpg`/`.mp4`) were deleted from the repo. **This file is now the
+> canonical record of every screenshot**: what it showed, why it was taken, and
+> which Case/Finding/Peculiarity it maps to. The "What's on screen" column is
+> the full textual substitute for the pixels — read it instead of re-uploading.
+> The `.dds` files (`test.dds`, `test_versioned.dds`) were **kept** — they are
+> binary patch artifacts (payload + loader-redirect name), not screenshots.
+> `14_screenshots_and_media/` stays as an optional drop zone if a future session
+> ever needs the actual pixels again.
 
 Legend in **Case** column → `CASES_AND_FINDINGS.md`.
 
@@ -131,6 +140,15 @@ Suggested subfolders:
 | `q2pkrvbmwml51.jpg` | F | F2 | Reward ladder only | Wizard’s Beard 10 → … → Mullet 70 → **Miller 90** → Joan 110 |
 | `seen this text somewhere.png` | F | INFO | Official MJ pitch → CK3 cosmetics | CK3 promo wall of text: Ruler Challenges, special cosmetic rewards for CK3, medieval sandbox… |
 | `Screenshot 1.png` / `2.png` / `3.png` | F | roster | Full wiki tables | **Entire content transcribed** into `FR_MJ_COMPLETE_ROSTER.md` — images optional |
+| `Ck3_reward_beard_t69X.png` | F | **C21** / F2 | CK3 cosmetic reward icon — Wizard's Beard (10) | beard icon from the reward strip |
+| `Ck3_reward_hair_male_t69X.png` | F | C21 / F2 | reward icon — The Pageboy (20) / Medieval Mullet (70) | male hair icon |
+| `Ck3_reward_hat_t69X.png` | F | C21 / F2 | reward icon — Chaperon (30) | hat icon |
+| `Ck3_reward_chest_t69X.png` | F | C21 / F2 | reward icon — Jester's Hat (40) | chest icon |
+| `Ck3_reward_veil_t69X.png` | F | C21 / F2 | reward icon — Cone Shaped Hennin (55) | veil icon |
+| `Ck3_reward_hair_female_t69X.png` | F | C21 / F2 | reward icon — The Miller (90) / The Joan of Arc (110) | female hair icon |
+
+These six `Ck3_reward_*` icons are the 8 ladder tiers collapsed into 6 textures
+(`hair_male` and `hair_female` each serve two tiers). Case **C21 / F2**.
 
 Miller = **90** (confirmed from wiki paste).
 
@@ -165,3 +183,27 @@ REWARDS REF:     7k2… YPmx… upload_2019… q2pkr… Screenshot 1–2 | (203)
 1. Put each file in the **Drop** subfolder (or flat into `14_screenshots_and_media/` if easier).
 2. Tell the agent “screenshots uploaded” — it should verify names, fix any Miller 70/90 mismatch from pixels, and label the crowd icon if visible.
 3. No need to re-upload patchers/logs already in `05_`–`13_`.
+
+---
+
+## J. Where screenshots are still mentioned (after 2026-08-26 deletion)
+
+The image *files* are gone, but their *filenames + descriptions* still appear in:
+
+- **This file** — the authoritative per-shot description + Case mapping (sections A–H).
+- `CASES_AND_FINDINGS.md` — the Case map (C01–C24), Findings F1–F10 and
+  Peculiarities P1–P8 all cite screenshots by name as evidence.
+- `STATUS.md` — "Still broken / Secondary" cites `log playing with new v6 patch/`
+  screenshots (1)(2)(4) and `v6 second look/` items.
+- `FR_MJ_COMPLETE_ROSTER.md` — transcribed wiki Screenshot 1/2/3 content.
+- `FEATURED_RULERS.md` — references the `1 ruler…12 ruler` FR shots.
+- `01_research_archives/*` and raw chat logs — narrate the shots being read
+  (e.g. Part 2 S4: screenshots (224)–(229)).
+- `MASTER_ARTIFACT_TABLE.md` / `EXECUTABLE_IDENTITIES.md` — hash-reference the
+  payload (`monarchs`, `fc6ec025…`) that `test.dds` duplicates.
+
+Note: some screenshots were **never** uploaded at all (the upload failed) and so
+never had binaries — those are catalogued here purely by description: (182)(188)
+(192)–(199)(204)(205)(208)(209)(210)(213)(214)(217)(218)(219)(221)(222)(223),
+`YPmxNMB.png`, `upload_2019-10-27_12-26-20.png`, `8b2cpjl9t9w31.png`,
+`v276klwr66031.png`, `xami5llmaht31.jpg`.

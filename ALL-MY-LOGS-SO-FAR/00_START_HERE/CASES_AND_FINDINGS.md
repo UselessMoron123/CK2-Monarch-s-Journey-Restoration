@@ -1,8 +1,9 @@
 # Cases, findings, peculiarities — screenshot-backed index
 
 Last updated from the user’s full image catalog (text descriptions of every
-shot gathered so far). **Pixels are not in the repo yet** — drop files into
-`14_screenshots_and_media/` using the suggested subfolders. Cross-ref:
+shot gathered so far). **Image binaries were removed 2026-08-26** — the
+descriptions here (Cases C01–C24, Findings F1–F10, Peculiarities P1–P8) are the
+canonical record and cite screenshots by name. Cross-ref:
 `SCREENSHOTS_CATALOG.md`, `FEATURED_RULERS.md`.
 
 Status tags:
