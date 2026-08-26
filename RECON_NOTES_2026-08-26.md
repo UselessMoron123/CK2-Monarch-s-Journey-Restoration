@@ -293,3 +293,13 @@ binaries (exes, base64 chunk folders, `debug files/`).
 - `CK2game333.exe`, `CK2game3351.exe` — the real executables (keep; hashes recorded).
 - `debug files/` — 2.6.1.1 `CK2game.exe` + `ck2*.rar` + `dbghelp.dll` (143 MB).
   Binaries deliberately not committed to the text archive; hashes in the artifact table.
+
+## 10. Turn 5 — raw logs torn apart & deleted; net-new facts preserved (2026-08-26)
+
+Following the Turn 4 fragment dissection, the whole `12_raw_chat_logs/` folder was
+torn: all 17 raw exports deleted after a full net-new sweep. Everything only-in-
+raw was consolidated into `03_analysis/RAWLOG_NETNEW_EXTRACTS.md` (9 sections:
+feat reader/writer case VAs, 3.3.5.1 function lists, Linux .rodata string
+addresses, GetContinueSave breadcrumbs, feat-DB load machinery, .pdata count
+reconciliation, feat-V7 offset→VA map, string→VA map, Continue-xref disasm set).
+INDEX.md rewritten as a tear-down ledger. See DISSECTION_REPORT Turn 5 for detail.

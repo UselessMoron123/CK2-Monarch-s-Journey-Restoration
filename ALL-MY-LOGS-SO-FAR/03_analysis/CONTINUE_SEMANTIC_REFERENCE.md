@@ -151,17 +151,18 @@ Continue path.
 
 ## E. Raw-fragment cross-reference (dissected 2026-08-26)
 
-The two "🟡" raw chat fragments in `12_raw_chat_logs/` were re-dissected. Their
-**analytical conclusions are all already captured above / in Parts 1–3**, but
-they are the ONLY surviving record of a few raw, still-unreferenced facts that
-are worth knowing when starting the Continue-V7 binary pass:
+The two "🟡" raw chat fragments in `12_raw_chat_logs/` were re-dissected and the
+raw files are now removed. Their **analytical conclusions are all already
+captured above / in Parts 1–3**, and the byte-level extras were preserved in
+**`RAWLOG_NETNEW_EXTRACTS.md`** (sections 4, 8, 9):
 
-| Fact | Value | Only in |
+| Fact | Value | Now preserved in |
 |---|---|---|
-| Raw disassembly of the Continue/Load frontend xref set | functions at VA `0x1407bf650`, `0x1407bfa20`, `0x1407bfb20`, `0x1407bd550`, `0x1407be200` (each ~0x1c0 B window disassembled) | `12_raw_chat_logs/chat_fragment_disasm_v4v5_continue_offsets.txt` |
-| `load_button` string VA | `0x141078318` (`0x141078318 'load_button'` in the May 3.3.3 binary) | `12_raw_chat_logs/chat_fragment_may333_v1v2_continue_greyed.txt` |
-| Stock Linux save/load symbols (`nm -C`) | `CInGameIdler::HandleBronzemanAutosave`, `CLoadGame::{Ctor,Clone,IsValid,Execute}`, `CGameSetup::ShowLoadGameWindow`, `CSaveGameModel::SetSynced`, `CAchievementsManager::VerifySavegame`, `SAVEGAME_ERROR_*` constants, etc. | `chat_fragment_may333_v1v2_continue_greyed.txt` (list is broader than the curated tracker table in Part 3 C2) |
+| Raw disassembly of the Continue/Load frontend xref set | functions at VA `0x1407bf650`, `0x1407bfa20`, `0x1407bfb20`, `0x1407bd550`, `0x1407be200` (each ~0x1c0 B window) | `RAWLOG_NETNEW_EXTRACTS.md` §9 |
+| `load_button` string VA | `0x141078318` | `RAWLOG_NETNEW_EXTRACTS.md` §8 (+ full string→VA map) |
+| Stock Linux save/load symbols (`nm -C`) | `CInGameIdler::HandleBronzemanAutosave`, `CLoadGame::{Ctor,Clone,IsValid,Execute}`, `CGameSetup::ShowLoadGameWindow`, `CSaveGameModel::SetSynced`, `CAchievementsManager::VerifySavegame`, `SAVEGAME_ERROR_*` constants, etc. | Part 3 C2 + `RAWLOG_NETNEW_EXTRACTS.md` §4/§5 |
 
 These are raw evidence pointers, not new conclusions. If the V7 work ever needs
 the full frontend xref disassembly (rather than the distilled helper `0x1409e4970`
-analysis above), those two fragment files are the source.
+analysis above), it is reproducible from `CK2game333.exe` (the `objdump` dump
+itself was not worth preserving verbatim).
