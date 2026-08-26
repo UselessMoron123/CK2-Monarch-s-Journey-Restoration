@@ -27,7 +27,9 @@ follow-on (see `00_START_HERE/FEATURED_RULERS.md`).
 8. **`07_runtime_logs/`** — game/error/system/setup logs
 9. **`08_steam_vdf/`** — Steam manifests
 10. **`09_web_captures/`** — GitHub / SteamDB HTML
-11. **`10_binary_placeholders/`** — `test_versioned.dds` (loader redirect name)
+11. **`10_binary_artifacts/`** — materialized Windows/Linux executables, the
+    2.6.1.1 debug drop, extracted PDBs, retained RAR volumes, manifests, and
+    `test_versioned.dds`
 12. **`11_git_patch/`** — Arena branch patch
 13. **`12_raw_chat_logs/`** — `INDEX.md` only (all raw exports were torn apart & deleted; their info lives in Parts 1–3 + `03_analysis/RAWLOG_NETNEW_EXTRACTS.md`)
 14. **`13_save_and_cache/`** — `*.meta` + feat cache `q847rsja8ndx`

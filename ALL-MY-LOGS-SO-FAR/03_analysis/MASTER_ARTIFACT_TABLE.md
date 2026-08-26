@@ -20,6 +20,11 @@ should check first; it supersedes the scattered hash lists.
 | Windows 3.3.5.1 | 24,236,024 | `a0cc8e92287ac900b0552f5cca20df5acedf4773244923a77b15bcdbe143b13d` | 2021-09-21 16:13:22 +0200 | Post-removal; −517 KiB vs May; byte-port infeasible |
 | Linux 3.3.3 (May 2020) | 27,729,272 | `99776be0b9b72b06a83ac7606e8df553dfcec4b4ce25ee40c7d1961ea12791a6` | 2020-05-06 | Symbol-rich reference; native `CNullGameSpark` |
 
+Materialized paths:
+- Windows executables: `10_binary_artifacts/executables/windows/`
+- Linux executable: `10_binary_artifacts/executables/linux/ck2`
+- 2.6.1.1 debug drop: `10_binary_artifacts/debug_files/`
+
 ## 2. Patched states (Windows May 3.3.3, all 24,753,368 bytes)
 
 | State | SHA-256 | Status |
@@ -68,9 +73,9 @@ should check first; it supersedes the scattered hash lists.
 
 | File | Size | SHA-256 | Note |
 |---|---:|---|---|
-| `CK2game.exe` (2.6.1.1) | 16,535,040 | `ec4ea0393ef1f8f835d2594dd7e1249ebe850a31688dae56c94c875a0748e5a6` | 2016-08-30; GUID `DC5E6265-72D6-44D9-B181-5EFB6CDCA6E6`, age 1 |
-| `ck2game.pdb` | 67,005,440 | `90ade46ce95f318c966b1619f76d88c7931364e020c9f0bf1a005526cc466bd1` | exact-match symbols for the above |
-| `ck2.pdb` | 64,770,048 | `ffe81233234846861733c8ffe04010553ca1c0b69c7eeb9246f03cd02c5206a9` | earlier live-branch build (2016-06-01), no matching EXE |
+| `CK2game.exe` (2.6.1.1) | 16,535,040 | `ec4ea0393ef1f8f835d2594dd7e1249ebe850a31688dae56c94c875a0748e5a6` | `10_binary_artifacts/debug_files/`; 2016-08-30; GUID `DC5E6265-72D6-44D9-B181-5EFB6CDCA6E6`, age 1 |
+| `ck2game.pdb` | 67,005,440 | `90ade46ce95f318c966b1619f76d88c7931364e020c9f0bf1a005526cc466bd1` | `10_binary_artifacts/debug_files/pdb/`; exact-match symbols for the above |
+| `ck2.pdb` | 64,770,048 | `ffe81233234846861733c8ffe04010553ca1c0b69c7eeb9246f03cd02c5206a9` | `10_binary_artifacts/debug_files/pdb/`; earlier live-branch build (2016-06-01), no matching EXE |
 
 These are a **semantic reference only**. None of their 32-bit VAs transfer to
 win333; use them for the Continue control-flow model (see

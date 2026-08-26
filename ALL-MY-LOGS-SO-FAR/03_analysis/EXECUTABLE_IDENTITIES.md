@@ -1,12 +1,19 @@
 # Executable and artifact identities — all verified
 
-Verified 2026-08-22 by concatenating each `*_upload_chunks` folder’s numbered
-Base64 parts in order, stripping CR/LF, decoding, and comparing SHA-256:
+Verified 2026-08-22 and rechecked 2026-08-26 by concatenating each upload
+set's numbered Base64 parts in order, stripping CR/LF, decoding, and comparing
+SHA-256. The large parts were removed after the second audit; their manifests
+remain in `10_binary_artifacts/upload_manifests/`:
+
+Historical reconstruction command (the source parts have since been removed):
 
 ```bash
 cat <folder>/<name>.base64.part*.txt | tr -d '\r\n ' | base64 -d > out
 sha256sum out
 ```
+
+For the current materialized-file paths and retained manifests, use
+`RECONSTRUCTED_ARTIFACTS.md`.
 
 ## Stock executables (reconstructed from this repository) — ALL MATCH
 
@@ -17,10 +24,11 @@ sha256sum out
 | Windows 3.3.5.1 | 24,236,024 | `a0cc8e92287ac900b0552f5cca20df5acedf4773244923a77b15bcdbe143b13d` | 2021-09-21 16:13:22 +0200 | Post-removal; −517 KiB vs May 3.3.3 |
 | Linux 3.3.3 (May 2020) | 27,729,272 | `99776be0b9b72b06a83ac7606e8df553dfcec4b4ce25ee40c7d1961ea12791a6` | 2020-05-06 12:57:06 +0200 | Symbol-rich reference; native `CNullGameSpark` local loader |
 
-The May Windows 3.3.3 matches the handoff’s verified stock identity exactly, and the
-Linux binary matches its previously verified identity. PE details for the Windows patch
-target: PE32+ x86-64, image base `0x140000000`, `.text` VMA `0x140001000`, raw `0x400`,
-so **VA = raw_offset + 0x140000c00**.
+The materialized May Windows 3.3.3 matches the handoff’s verified stock identity
+exactly, and the materialized Linux binary matches its previously verified identity.
+The files are stored under `10_binary_artifacts/executables/`. PE details for the
+Windows patch target: PE32+ x86-64, image base `0x140000000`, `.text` VMA
+`0x140001000`, raw `0x400`, so **VA = raw_offset + 0x140000c00**.
 
 ## Patched-state hashes (May Windows 3.3.3)
 
@@ -69,9 +77,9 @@ REVERT_CK2_MJ_V6_TO_V5.bat     6ac6c9d846928f9c999f18640c2dda4a34e43979a88297830
 
 ## Provenance and safety
 
-The Base64 chunks and manifests remain the byte-level source of truth. At the user's
-request, the stock files have also been materialized in the checkout as
-`CK2game332.exe`, `CK2game333.exe`, `CK2game3351.exe`, and `ck2`; their hashes are
-unchanged and are recorded above and in `RECONSTRUCTED_ARTIFACTS.md`. No patched
-executable was created. Keep the chunk sources when moving these files so their
-identities can be rechecked after copying.
+The manifests and the recorded hashes are the remaining identity records. At the
+user's request, the stock files are materialized under
+`10_binary_artifacts/executables/` and the debug drop under
+`10_binary_artifacts/debug_files/`; their hashes are unchanged and recorded above
+and in `RECONSTRUCTED_ARTIFACTS.md`. No patched executable was created. The original
+Base64 parts were deleted only after the second full decode-and-hash audit.

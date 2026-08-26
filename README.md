@@ -11,14 +11,17 @@ first, then `00_START_HERE/STATUS.md` for current state.
 - Audit/history of every organization pass: `RECON_NOTES_2026-08-26.md`
 
 ## Materialized binaries
-- `CK2game332.exe`, `CK2game333.exe`, `CK2game3351.exe` — Windows 3.3.2,
-  May-2020 3.3.3, and 3.3.5.1 executables reconstructed from the upload parts
-- `ck2` — Linux May-2020 3.3.3 executable reconstructed from its upload parts
-- `debug files/CK2game.exe` — supplied 2.6.1.1 executable
-- `debug files/ck2.pdb` and `debug files/ck2game.pdb` — PDBs extracted from the
-  corresponding RAR volume sets; `dbghelp.dll` is retained beside them
+All binary material is now sorted under
+[`ALL-MY-LOGS-SO-FAR/10_binary_artifacts/`](ALL-MY-LOGS-SO-FAR/10_binary_artifacts/):
 
-The original Base64 parts, manifests, and RAR volumes are retained as
-provenance. See [`RECONSTRUCTED_ARTIFACTS.md`](RECONSTRUCTED_ARTIFACTS.md) for
+- `executables/windows/` — `CK2game332.exe`, `CK2game333.exe`, and
+  `CK2game3351.exe`
+- `executables/linux/` — `ck2`
+- `debug_files/` — the supplied 2.6.1.1 `CK2game.exe`, `dbghelp.dll`, extracted
+  PDBs, and their original RAR volumes
+- `upload_manifests/` — the four small identity manifests retained after the
+  large Base64 parts were verified and removed
+
+See [`RECONSTRUCTED_ARTIFACTS.md`](RECONSTRUCTED_ARTIFACTS.md) for the
 source-to-output mapping, sizes, and verification hashes. Research notes and
 patch scripts remain under `ALL-MY-LOGS-SO-FAR/`.

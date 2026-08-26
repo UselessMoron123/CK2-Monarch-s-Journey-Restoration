@@ -4,7 +4,7 @@
 
 ## What was investigated
 
-`debug files/` folder (not in this logs-only repo due to size/binary policy, hashes in `IDENTITY.md`):
+`10_binary_artifacts/debug_files/` folder (the materialized debug drop; hashes in `IDENTITY.md`):
 
 | File | Size | SHA-256 | Format |
 |---|---|---|---|
@@ -60,6 +60,8 @@ Sandbox constraints: Python 3.11, gcc/g++/make present, apt blocked, network = P
 
 ## For restoration project repo migration
 
-- Do NOT copy `debug files/` RARs/PDBs/EXE — only hashes + analysis files. Already correct per safety.
-- Scratch tooling (`msf.py` etc.) not needed in organized repo — keep only deliverables.
+- The debug drop is retained in `10_binary_artifacts/debug_files/`, with extracted
+  PDBs under `pdb/` and the original RAR volumes under `rar_volumes/`.
+- Scratch tooling (`msf.py` etc.) is not needed in the organized repo — keep only
+  the verified binary inputs and durable analysis deliverables.
 - If restoration repo has old logs already dissected here, check `12_raw_chat_logs/INDEX.md` for overlap.

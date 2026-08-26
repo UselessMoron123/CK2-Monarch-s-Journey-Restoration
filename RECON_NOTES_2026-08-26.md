@@ -303,3 +303,34 @@ feat reader/writer case VAs, 3.3.5.1 function lists, Linux .rodata string
 addresses, GetContinueSave breadcrumbs, feat-DB load machinery, .pdata count
 reconciliation, feat-V7 offset→VA map, string→VA map, Continue-xref disasm set).
 INDEX.md rewritten as a tear-down ledger. See DISSECTION_REPORT Turn 5 for detail.
+
+## 11. Turn 6 — binary audit, sorting, and Base64 cleanup (2026-08-26)
+
+The materialized binaries and debug drop were checked again before cleanup:
+
+- Each of the four upload sets had every numbered part in order; strict Base64
+  decoding succeeded; the manifest character count, decoded size, and SHA-256
+  all matched. The Windows outputs have valid `MZ` headers and the Linux output
+  has a valid ELF header.
+- All debug-drop sizes and SHA-256 values matched the existing identity table.
+  Both PDBs have the MSF 7.00 signature. All six RAR volumes have RAR5
+  signatures, both three-volume sets list exactly their expected PDB member,
+  and both full multi-volume CRC tests passed.
+
+### New binary layout
+
+- `ALL-MY-LOGS-SO-FAR/10_binary_artifacts/executables/windows/` — the three
+  version-qualified Windows executables.
+- `ALL-MY-LOGS-SO-FAR/10_binary_artifacts/executables/linux/ck2` — the Linux
+  executable.
+- `ALL-MY-LOGS-SO-FAR/10_binary_artifacts/debug_files/` — the supplied
+  2.6.1.1 `CK2game.exe`, `dbghelp.dll`, extracted PDBs under `pdb/`, and the
+  original RAR volumes under `rar_volumes/`.
+- `ALL-MY-LOGS-SO-FAR/10_binary_artifacts/upload_manifests/` — the four small
+  manifests retained as identity records.
+
+After verification, the four large Base64 part sets were removed. They were
+reproducible intermediates and are no longer needed now that the exact output
+files are present. The RAR volumes were retained because they are the original
+multi-volume debug archives. See `RECONSTRUCTED_ARTIFACTS.md` and
+`10_binary_artifacts/README.md` for the current map.
