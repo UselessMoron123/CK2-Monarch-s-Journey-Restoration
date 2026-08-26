@@ -11,9 +11,18 @@ The logs from that session showed both tools failing silently. Fix these before
 collecting any more evidence, or the next run will be just as empty. Full write-up:
 `03_analysis/LATEST_LOGS_ANALYSIS_2026-08-26.md`.
 
-### 0.1 x64dbg killed the game before it ever opened (13 launches, 13 failures)
+### 0.0 Two things that are NOT the bug — do not chase them
 
-Every session in `x64dbg log1/2/3.txt` ended with:
+- **"Challenges: Disabled" on the bronze-gauntlet tooltip is cosmetic** (case C17,
+  *"stale account text; play works"*). Bronze has been earned with that tooltip on
+  screen. It does not stop feats counting. Ignore it.
+- **`[S_API FAIL] SteamAPI_Init() failed`** ×3 is expected offline and appears in
+  the successful runs too.
+
+### 0.1 x64dbg killed the game before it ever opened (14 launches, 14 failures)
+
+Every session in `x64dbg log1/2/3.txt` **and the newest log supplied on 2026-08-26**
+ended with:
 
 ```text
 Исключение SetThreadName на ...  ("Task#0")
@@ -26,27 +35,38 @@ only to tell a debugger a thread's name. It is **not** a crash. Seeing it as the
 the process died at its first thread-naming call, long before the main menu. That
 is why "x64dbg doesn't even open the game", and why no breakpoint was ever hit.
 
-**Fix — do this once:**
+The game runs fine for 35 minutes **without** the debugger and dies at the same
+instruction **with** it, every time — so the debugger setup is the cause.
 
-1. In x64dbg: **Options → Preferences → Exceptions**.
-2. Click **Add range**.
-3. Enter start `406D1388` and end `406D1388`.
-4. Tick it so the exception is **ignored / passed to the program** (do not break).
-5. Also ignore `4000001E` and `40010006` if they appear — both are benign.
-6. OK, then restart the debug session.
+**Fix A — use ATTACH mode. Do this one instead of fighting the settings.**
 
-Then `F9` **once** and CK2 boots to the menu normally.
+Attach skips the whole startup sequence, so the exception never arises. It also
+suits the problem better: Continue lives in the main menu, so there is nothing
+worth watching during startup anyway.
 
-Rule of thumb while debugging: **`F9` swallows the exception, `Shift+F9` passes it
-to the program.** For this game you want it passed.
+1. Start `CK2game.exe` **normally**, by double-clicking it. No debugger.
+2. Wait for the main menu to appear.
+3. Start **x64dbg** (the `x64dbg.exe` build — *not* `x32dbg.exe`).
+4. **File → Attach**, select `CK2game.exe` in the list, click Attach.
+5. Press **F9** once — the game unfreezes and keeps running.
+6. Now set breakpoints (§6) and click Continue to trigger them.
 
-Two more notes from those logs, both benign — do not chase them:
+**Fix B — only if you really want launch mode.**
 
-- `[S_API FAIL] SteamAPI_Init() failed` ×3 — expected offline, present in every
-  historical run including the successful ones.
-- `No symbols loaded for: ck2game.exe` — CK2 ships no PDB. The 2.6.1.1 PDBs in
-  `10_binary_artifacts/` belong to a *different build*; never force-load them onto
-  3.3.3, the addresses will be wrong.
+1. Options → Preferences → **Exceptions** tab.
+2. **Add range**: start `406D1388`, end `406D1388`.
+3. Set that entry to **ignore / pass to program** — *not* "break". In some builds
+   this is a "Ignore" checkbox; in others you must move it into the ignored list.
+4. Do the same for `4000001E` and `40010006` if they show up.
+5. Apply, then restart the session.
+
+Shortcut rule: **F9 swallows an exception; Shift+F9 passes it to the program.**
+If launch mode still dies, use Fix A — the newest log shows the settings change
+had not taken effect.
+
+One more benign note: `No symbols loaded for: ck2game.exe` is normal — CK2 ships
+no PDB. The 2.6.1.1 PDBs in `10_binary_artifacts/` belong to a *different build*;
+never force-load them onto 3.3.3 or every address will be wrong.
 
 ### 0.2 The old observer watched the wrong folders and captured nothing
 
@@ -64,16 +84,28 @@ the feat counters whenever the cache file changes.
 
 ### 0.3 Run the preflight first — it may end the investigation immediately
 
-```powershell
-Set-ExecutionPolicy -Scope Process Bypass
-.\preflight_ck2_mj.ps1 -GameRoot 'C:\Users\UZWERG\Desktop\SteamCrusader'
-```
+**Just double-click `RUN_PREFLIGHT.bat`.** Nothing to type, nothing to install; it
+is read-only and takes seconds. Step-by-step instructions are in
+`README_PREFLIGHT.md` next to it.
 
-It is read-only and takes seconds. It reports which patch level **each**
-`CK2game*.exe` actually is (all patch states share the same 24,753,368-byte size, so
-only the hash distinguishes them — and the last session had **both** a `CK2game.exe`
-and a `CK2gameV6.exe` present, with Windows launching the former), verifies the
-payload, locates the real save/cache folders, and prints current feat progress.
+It reports which patch level **each** `CK2game*.exe` actually is (all patch states
+share the same 24,753,368-byte size, so only the hash distinguishes them — and the
+last session had **both** a `CK2game.exe` and a `CK2gameV6.exe` present, with
+Windows launching the former), verifies the payload, locates the real save/cache
+folders, prints current feat progress, and flags whether the feat cache's `user_id`
+has drifted between runs.
+
+### 0.4 Three separate Continue surfaces — do not conflate them
+
+| Surface | Current state | Code path |
+|---|---|---|
+| **Paradox launcher** Continue | grey, unclickable (save name visible) | `pdx_launcher.lib` — `0x00DE47C0`, `0x00DE8BB0`, `0x0099F540` |
+| **In-game main menu** Continue | clickable → "Continue failed!" | frontend — `0x1408145ec` |
+| **MJ panel / Single Player** Continue | clickable → "Continue failed!" | frontend — `0x1408145ec`, `0x1407bffa1` |
+
+All three are longstanding (case C08); none of them changed recently. Fixing the
+frontend path will not necessarily un-grey the launcher button, and vice versa.
+**Single Player → Load Game still works** and remains the usable route.
 
 ---
 

@@ -217,22 +217,70 @@ if ($userRoot) {
                     $found = $true
                     Write-Host ''
                     Write-Host ("  {0}   ({1})" -f $f.FullName, $f.LastWriteTime) -ForegroundColor Green
+
+                    $vals = @{}
                     $nonZero = @()
                     foreach ($line in (Get-Content -LiteralPath $f.FullName -ErrorAction SilentlyContinue)) {
                         $mm = [regex]::Match($line, '^\s*([a-z0-9_]+)\s*=\s*(-?\d+)\s*$')
                         if ($mm.Success) {
                             $name = $mm.Groups[1].Value
                             $val  = [int64]$mm.Groups[2].Value
+                            $vals[$name] = $val
                             if ($val -ne 0 -and $name -notin @('key','id','user','user_id','category')) {
                                 $nonZero += ('{0}={1}' -f $name, $val)
                             }
                         }
                     }
+
+                    # Identity fields: if these drift, stored progress can look "reset".
+                    foreach ($idKey in @('key','id','user','user_id','category')) {
+                        if ($vals.ContainsKey($idKey)) {
+                            Write-Host ("    {0,-9}= {1}" -f $idKey, $vals[$idKey]) -ForegroundColor Cyan
+                        }
+                    }
+
+                    if ($vals.ContainsKey('user_id')) {
+                        $uid = $vals['user_id']
+                        switch ($uid) {
+                            453496064 { Write-Host '    user_id matches the archived q847rsja8ndx.txt capture (heretical_company=1 run).' -ForegroundColor DarkGray }
+                            84696387  { Write-Host '    user_id matches the archived v6-secondlook capture (established=4 Bronze run).' -ForegroundColor DarkGray }
+                            default   {
+                                Write-Host '    user_id matches NEITHER archived capture.' -ForegroundColor Yellow
+                                Add-Problem ("Feat-cache user_id is $uid - neither of the two known values (453496064 / 84696387). If this value changes between launches, stored progress can appear reset.")
+                            }
+                        }
+                    }
+
                     if ($nonZero.Count -gt 0) {
                         Write-Host ('    NON-ZERO FEATS: ' + ($nonZero -join ', ')) -ForegroundColor Green
                     } else {
                         Write-Host '    All feat counters are 0.' -ForegroundColor Yellow
                     }
+
+                    # Snapshot so two consecutive runs can be compared automatically.
+                    $snapDir = Join-Path $env:TEMP 'ck2_mj_preflight'
+                    New-Item -ItemType Directory -Force -Path $snapDir | Out-Null
+                    $snapFile = Join-Path $snapDir ($f.Name + '.last.txt')
+                    if (Test-Path -LiteralPath $snapFile) {
+                        $prev = Get-Content -LiteralPath $snapFile -Raw
+                        $curr = Get-Content -LiteralPath $f.FullName -Raw
+                        if ($prev -ne $curr) {
+                            Write-Host '    CHANGED since the previous preflight run:' -ForegroundColor Magenta
+                            $prevUid = ([regex]::Match($prev, 'user_id\s*=\s*(-?\d+)')).Groups[1].Value
+                            $currUid = ([regex]::Match($curr, 'user_id\s*=\s*(-?\d+)')).Groups[1].Value
+                            if ($prevUid -and $currUid -and $prevUid -ne $currUid) {
+                                Write-Host ("      user_id was $prevUid, is now $currUid") -ForegroundColor Red
+                                Add-Problem "Feat-cache user_id CHANGED between preflight runs ($prevUid -> $currUid). This alone can make progress look reset."
+                            } else {
+                                Write-Host '      (counter values differ; user_id is stable)' -ForegroundColor DarkGray
+                            }
+                        } else {
+                            Write-Host '    Identical to the previous preflight run.' -ForegroundColor DarkGray
+                        }
+                    } else {
+                        Write-Host '    Snapshot saved. Run this again after a game session to see what changed.' -ForegroundColor DarkGray
+                    }
+                    Copy-Item -LiteralPath $f.FullName -Destination $snapFile -Force
                 }
             }
         }
@@ -246,12 +294,21 @@ if ($userRoot) {
 Write-Head '7. VERDICT'
 if ($script:Problems.Count -eq 0) {
     Write-Host '  No blocking problems detected.' -ForegroundColor Green
-    Write-Host '  If feats still read 0, the loaded SAVE is the suspect: a save that was ever' -ForegroundColor Gray
-    Write-Host '  played while challenges were disabled can never earn feats again.' -ForegroundColor Gray
-    Write-Host '  Test with ONE FRESH Bronzeman campaign before drawing conclusions.' -ForegroundColor Gray
 } else {
     foreach ($p in $script:Problems) { Write-Host "  [!] $p" -ForegroundColor Red }
 }
+
 Write-Host ''
-Write-Host '  Reminder: never run wipe_feats. Keep the game offline for these tests.' -ForegroundColor DarkGray
+Write-Host '  NOTE: the "Challenges: Disabled" gauntlet tooltip is a KNOWN COSMETIC BUG'   -ForegroundColor DarkGray
+Write-Host '  (case C17 - stale account text). It does NOT stop feats from counting;'      -ForegroundColor DarkGray
+Write-Host '  Bronze has been earned before with that tooltip showing. Ignore it.'         -ForegroundColor DarkGray
 Write-Host ''
+Write-Host '  To test whether the feat identity is stable:'                                -ForegroundColor Gray
+Write-Host '    1. run this script'                                                        -ForegroundColor Gray
+Write-Host '    2. play a short session, then exit'                                        -ForegroundColor Gray
+Write-Host '    3. run this script again and read the CHANGED / user_id lines above'       -ForegroundColor Gray
+Write-Host ''
+Write-Host '  Reminder: never run wipe_feats. Keep the game offline for these tests.'      -ForegroundColor DarkGray
+Write-Host ''
+Write-Host '  Press any key to close...' -ForegroundColor DarkGray
+try { $null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown') } catch { }

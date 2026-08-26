@@ -1,27 +1,30 @@
 # CK2 Monarch’s Journey Restoration — authoritative project status
 
-> **2026-08-26 UPDATE — new session logs analysed. Two changes to the picture below.**
+> **2026-08-26 UPDATE — new session logs analysed.**
 >
-> 1. **Feats reading 0 is not a persistence regression.** The user's screenshot of the
->    gauntlet tooltip shows **"Challenges: Disabled"** with the row *"The save file must
->    not have been changed, and must have had challenges enabled from the start"*
->    marked `(X)`. That is service byte `+0x61` (`save_ok`) — a check V4/V5/V6
->    deliberately left intact. The in-game feat tracker shares the same eligibility
->    helper, so a false `+0x61` disables tracking entirely: counters read 0 and
->    unpausing cannot restore them. The `game.log` for that run has **no**
->    `messagehandler` lines and is missing the fast-forward `Executing History` line
->    present in the working V6 run — i.e. it **loaded a save** (1278.1.8) rather than
->    starting a fresh campaign. Prime suspects: the wrong `CK2game.exe` was launched
->    (a `CK2gameV6.exe` sits beside it, same size, and only hashes differ), or that
->    particular save is permanently ineligible.
-> 2. **Continue's symptom has changed** from "greyed out" to **clickable, returning the
->    stock "Continue failed!" dialog**. The enable predicate now appears satisfied and
->    the failure has moved downstream into candidate validation — this re-frames the
->    V7 target described below.
+> **C08 is unchanged and still UNSOLVED.** User-confirmed 2026-08-26: the *launcher*
+> Continue is still **grey and unclickable**, while the in-game main-menu / MJ-panel /
+> Single-Player Continue buttons still raise the **"Continue failed!"** dialog. Both
+> symptoms were already recorded together in C08 — nothing has regressed or improved.
+> Note these are **two different code paths**: the launcher (`pdx_launcher.lib`,
+> `0x00DE47C0` / `0x00DE8BB0` / `0x0099F540`) versus the frontend (`0x1408145ec`).
+>
+> **The "Challenges: Disabled" tooltip is NOT the cause of feats reading 0.** It is
+> case **C17 — cosmetic** (stale account text); Bronze has been earned before with
+> that tooltip on screen, which the user re-confirmed from memory. An earlier draft of
+> the analysis wrongly blamed it; that claim is **retracted**.
+>
+> Still-valid new finding: the failing session **loaded a save** (date 1278.1.8) rather
+> than starting a campaign — its `game.log` lacks the fast-forward `Executing History`
+> line and has **zero** `messagehandler` lines, whereas the working V6 run has both plus
+> the Bronze grant. Open leads: (a) the feat cache's `user_id`/`category` differ between
+> the two archived captures, so an unstable identity could make progress look reset;
+> (b) two same-sized executables sit in the game root (`CK2game.exe` and
+> `CK2gameV6.exe`) and only a hash distinguishes patch levels.
 >
 > Full evidence: `03_analysis/LATEST_LOGS_ANALYSIS_2026-08-26.md`.
-> New tools: `05_patches_and_scripts/ps1/preflight_ck2_mj.ps1` (run this first) and
-> `watch_ck2_mj_v2.ps1` (the v1 observer captured nothing — see the analysis §3).
+> New tools: `05_patches_and_scripts/RUN_PREFLIGHT.bat` (double-click; read-only) and
+> `ps1/watch_ck2_mj_v2.ps1` (the v1 observer captured nothing — see the analysis §4).
 
 Last updated: 2026-08-25 (session branch). Read this file first, then:
 - `CASES_AND_FINDINGS.md` — solved/unsolved/partial case map
