@@ -24,7 +24,7 @@ predicate, not a click handler issue) → V7 target: the flag/predicate the fron
 to decide a continuable save exists (see handoff callers `0x1407bffa1`, `0x1408145ec`,
 `0x140a0ba62`).
 
-### Proven working (evidence in `analysis/V6_RUNTIME_RESULTS.md`)
+### Proven working (evidence in `03_analysis/V6_RUNTIME_RESULTS.md`)
 
 - V6 patch applied cleanly from exact V5; final hash verified (patch-window text).
 - Local 11-ruler payload loads (`gfx\monarchs`, SHA `fc6ec025…`).
@@ -59,16 +59,16 @@ to decide a continuable save exists (see handoff callers `0x1407bffa1`, `0x14081
 | File | Content |
 |---|---|
 | `STATUS.md` (this file) | One-page current state — read first |
-| `analysis/debug2611/` | **2.6.1.1 debug-PDB analysis** (2026-08-23): the `debug files/` drop decoded — `ck2game.pdb` **exact-matches** the supplied `CK2game.exe` (GUID `DC5E6265-72D6-44D9-B181-5EFB6CDCA6E6`, age 1, 2016-08-30). Full 2.6.1.1 Continue/save-select semantic model: `CIronmanSaveSelect::GetContinueSave`/`UpdateContinueData` → `_bIsContinueSaveValid` → `RefreshContinueButton` pushes `CButton::Enable/Disable` (vtbl +0xDC/+0xE0) on widget `"continue"`. No account/online check exists in the 2.6.1.1 Continue path — any 3.3.x equivalent failure is therefore a *newer* predicate. See `IDENTITY.md`, `TYPE_AND_VTABLE_NOTES.md` (esp. §2 semantic checklist for V7), `SEARCH_RESULTS.md`, `SYMBOLS_FILTERED.csv`. |
-| `analysis/V6_RUNTIME_RESULTS.md` | Full evidence chain for the V6 verdict |
-| `analysis/EXECUTABLE_IDENTITIES.md` | All four GitHub executables verified byte-exact + payload/save/cache hashes |
-| `analysis/MASTER_ARTIFACT_TABLE.md` | **One canonical registry** of every artifact (exe/patch-state/payload/saves/cache/tools/PDB) → size/SHA/path/role |
-| `analysis/WINDOWS_333_PATCH_MAP.md` + `.csv` | Machine-readable cumulative V2→V6 patch table for May-2020 Win 3.3.3 |
-| `analysis/BANNED_ARTIFACTS.md` | Register of banned builds/hashes/helpers/approaches (the two bad "V6"/"V7" hashes, `0x1409e8200` load-path ban, etc.) |
-| `analysis/CONTINUE_SEMANTIC_REFERENCE.md` | 2.6.1.1 Continue model mapped to win333 anchor points + ordered V7 steps |
-| `analysis/CONTRADICTIONS.md` | Both-sides-and-verdict register for every documented disagreement |
-| `analysis/WINDOWS_3351_PORT_ASSESSMENT.md` | Cross-version comparison, 3.3.5.1 port verdict (not feasible), recovered component map, V7 breadcrumbs |
-| `things parent AI asked to upload/CK2_MJ_ULTIMATE_HANDOFF.md` | Deep background, dead ends, constraints |
+| `03_analysis/` | **2.6.1.1 debug-PDB analysis** (2026-08-23): the `10_binary_artifacts/debug_files/` drop decoded — `ck2game.pdb` **exact-matches** the supplied `CK2game.exe` (GUID `DC5E6265-72D6-44D9-B181-5EFB6CDCA6E6`, age 1, 2016-08-30). Full 2.6.1.1 Continue/save-select semantic model: `CIronmanSaveSelect::GetContinueSave`/`UpdateContinueData` → `_bIsContinueSaveValid` → `RefreshContinueButton` pushes `CButton::Enable/Disable` (vtbl +0xDC/+0xE0) on widget `"continue"`. No account/online check exists in the 2.6.1.1 Continue path — any 3.3.x equivalent failure is therefore a *newer* predicate. See `IDENTITY.md`, `TYPE_AND_VTABLE_NOTES.md` (esp. §2 semantic checklist for V7), `SEARCH_RESULTS.md`, `SYMBOLS_FILTERED.csv`. |
+| `03_analysis/V6_RUNTIME_RESULTS.md` | Full evidence chain for the V6 verdict |
+| `03_analysis/EXECUTABLE_IDENTITIES.md` | All four GitHub executables verified byte-exact + payload/save/cache hashes |
+| `03_analysis/MASTER_ARTIFACT_TABLE.md` | **One canonical registry** of every artifact (exe/patch-state/payload/saves/cache/tools/PDB) → size/SHA/path/role |
+| `03_analysis/WINDOWS_333_PATCH_MAP.md` + `.csv` | Machine-readable cumulative V2→V6 patch table for May-2020 Win 3.3.3 |
+| `03_analysis/BANNED_ARTIFACTS.md` | Register of banned builds/hashes/helpers/approaches (the two bad "V6"/"V7" hashes, `0x1409e8200` load-path ban, etc.) |
+| `03_analysis/CONTINUE_SEMANTIC_REFERENCE.md` | 2.6.1.1 Continue model mapped to win333 anchor points + ordered V7 steps |
+| `03_analysis/CONTRADICTIONS.md` | Both-sides-and-verdict register for every documented disagreement |
+| `03_analysis/WINDOWS_3351_PORT_ASSESSMENT.md` | Cross-version comparison, 3.3.5.1 port verdict (not feasible), recovered component map, V7 breadcrumbs |
+| `02_handoffs/CK2_MJ_ULTIMATE_HANDOFF.md` | Deep background, dead ends, constraints |
 
 ## Environment constants (unchanged)
 
@@ -80,7 +80,7 @@ to decide a continuable save exists (see handoff callers `0x1407bffa1`, `0x14081
 
 ## Next actions, in order (updated 2026-08-22 after cross-version analysis)
 
-1. ~~Cross-version executable comparison~~ **DONE** → `analysis/WINDOWS_3351_PORT_ASSESSMENT.md`.
+1. ~~Cross-version executable comparison~~ **DONE** → `03_analysis/WINDOWS_3351_PORT_ASSESSMENT.md`.
    Verdict: **3.3.5.1 byte-patch port is not feasible** (payload parser + `gs_virtual/feat_script`
    loader + GameSparks SDK removed; downstream Bronzeman/feat machinery survives but has no data
    source). May 3.3.3 stays the restoration target; hybrid usage recommended for performance.
@@ -90,8 +90,8 @@ to decide a continuable save exists (see handoff callers `0x1407bffa1`, `0x14081
    steps), `03_analysis/BANNED_ARTIFACTS.md`, and the breadcrumbs in
    `03_analysis/WINDOWS_3351_PORT_ASSESSMENT.md` §7: Linux
    `CIronmanSaveSelect::GetContinueSave` @ 0x121ac3a ↔ win333 `0x1409e5500` region and
-   caller `0x1408145ec`. **Requires the actual Windows May-2020 3.3.3 executable for
-   disassembly** — it is not in this logs-only repository.
+   caller `0x1408145ec`. Uses the verified Windows May-2020 3.3.3 executable at
+   `10_binary_artifacts/executables/windows/CK2game333.exe` for disassembly.**
 3. Later, separate projects: local score/reward gallery reconstruction (Linux
    `CRoadToTitusProgression::SetupRewards` @ 0x1444e92 has the local reward table —
    see assessment §6); recovering the five missing rulers.

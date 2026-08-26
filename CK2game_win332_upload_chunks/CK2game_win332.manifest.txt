@@ -1,1 +1,0 @@
-Original file: CK2game.exe Original size: 24727272 bytes SHA256: 83BA6A687270620633644BFDC93ECC2DD4C8579DA66EE085E31AF9AA0A506E75 Base64 characters: 32969696 Parts: 4 Part order: part001, part002, part003, and so on

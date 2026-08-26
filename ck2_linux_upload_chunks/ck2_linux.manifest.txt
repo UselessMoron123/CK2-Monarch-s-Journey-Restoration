@@ -1,1 +1,0 @@
-Original file: ck2 Original size: 27729272 bytes SHA256: 99776BE0B9B72B06A83AC7606E8DF553DFCEC4B4CE25EE40C7D1961EA12791A6 Base64 characters: 36972364 Parts: 5 Part order: part001, part002, part003, and so on

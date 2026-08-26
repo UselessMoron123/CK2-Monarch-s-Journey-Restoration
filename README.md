@@ -10,10 +10,18 @@ first, then `00_START_HERE/STATUS.md` for current state.
 - Organized archive: `ALL-MY-LOGS-SO-FAR/` (15 numbered subfolders + README + PLAN)
 - Audit/history of every organization pass: `RECON_NOTES_2026-08-26.md`
 
-## Still-loose binaries (kept at root, not in the text archive)
-- `CK2game333.exe` (May-2020 3.3.3) / `CK2game3351.exe` (3.3.5.1) — actual executables
-- `CK2game_win332/win333/win3351_upload_chunks/` + `ck2_linux_upload_chunks/` —
-  base64 upload chunks + manifests (reproducible intermediates; hashes in
-  `ALL-MY-LOGS-SO-FAR/03_analysis/MASTER_ARTIFACT_TABLE.md`)
-- `debug files/` — 2.6.1.1 `CK2game.exe`, `ck2.part1-3.rar`, `ck2game.part1-3.rar`,
-  `dbghelp.dll` (hashes recorded; binaries deliberately not committed to archive)
+## Materialized binaries
+All binary material is now sorted under
+[`ALL-MY-LOGS-SO-FAR/10_binary_artifacts/`](ALL-MY-LOGS-SO-FAR/10_binary_artifacts/):
+
+- `executables/windows/` — `CK2game332.exe`, `CK2game333.exe`, and
+  `CK2game3351.exe`
+- `executables/linux/` — `ck2`
+- `debug_files/` — the supplied 2.6.1.1 `CK2game.exe`, `dbghelp.dll`, extracted
+  PDBs, and their original RAR volumes
+- `upload_manifests/` — the four small identity manifests retained after the
+  large Base64 parts were verified and removed
+
+See [`RECONSTRUCTED_ARTIFACTS.md`](RECONSTRUCTED_ARTIFACTS.md) for the
+source-to-output mapping, sizes, and verification hashes. Research notes and
+patch scripts remain under `ALL-MY-LOGS-SO-FAR/`.

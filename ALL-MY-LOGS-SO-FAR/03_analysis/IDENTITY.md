@@ -1,6 +1,7 @@
 # CK2 2.6.1.1 debug files — identity and provenance
 
-Analysis of `debug files/` in this repository. All originals were treated read-only;
+Analysis of the material now stored under
+`10_binary_artifacts/debug_files/`. All originals were treated read-only;
 extraction/conversion was done on scratch copies. Analysis tooling: custom offline
 MSF-7/PDB + PE parsers (Python), GNU objdump for read-only disassembly annotation.
 No third-party symbol files were downloaded; no network symbol servers were used.
@@ -14,19 +15,23 @@ No third-party symbol files were downloaded; no network symbol servers were used
 
 | relative path | size (bytes) | SHA-256 | detected format |
 |---|---|---|---|
-| `debug files/CK2game.exe` | 16,535,040 | `ec4ea0393ef1f8f835d2594dd7e1249ebe850a31688dae56c94c875a0748e5a6` | PE32 (x86) EXE, "MZ", 5 sections |
-| `debug files/ck2.part1.rar` | 25,165,824 | `7e47fcfea055e5cb16b4490a93a7b7a1d09a20819e6507172c238201ec12bbda` | RAR5 multi-volume archive (part 1) |
-| `debug files/ck2.part2.rar` | 25,165,824 | `32ef4568e09822a5b630ff041126ce69dae3cb702217765d5b3e1909bfbd2aaa` | RAR5 (part 2) |
-| `debug files/ck2.part3.rar` | 14,438,896 | `6306a0d08da2e43ca5221413090c6a604113dfcbe115646dd2084e7303f943b3` | RAR5 (part 3, split-before flag) |
-| `debug files/ck2game.part1.rar` | 25,165,824 | `4dee57896fe5cf9d9d3bb5c22290ac8c7f494062a02dc3f90767fb8c08a293e8` | RAR5 (part 1) |
-| `debug files/ck2game.part2.rar` | 25,165,824 | `77ab8e662fb500d334f5d8377bc81fd10a82ef49d9199c020a9224ba696a269e` | RAR5 (part 2) |
-| `debug files/ck2game.part3.rar` | 16,674,312 | `5a3eae8b30589fcba4bb9c2b9ec24d7ec762b39d67d81485924382be0c3c21b1` | RAR5 (part 3, split-before flag) |
-| `debug files/dbghelp.dll` | 986,112 | `cf2647be9233f4a7248514cbd2541d5f7bebd61005bde1dca79c8e4234f53794` | PE32 (x86) DLL |
+| `10_binary_artifacts/debug_files/CK2game.exe` | 16,535,040 | `ec4ea0393ef1f8f835d2594dd7e1249ebe850a31688dae56c94c875a0748e5a6` | PE32 (x86) EXE, "MZ", 5 sections |
+| `10_binary_artifacts/debug_files/rar_volumes/ck2.part1.rar` | 25,165,824 | `7e47fcfea055e5cb16b4490a93a7b7a1d09a20819e6507172c238201ec12bbda` | RAR5 multi-volume archive (part 1) |
+| `10_binary_artifacts/debug_files/rar_volumes/ck2.part2.rar` | 25,165,824 | `32ef4568e09822a5b630ff041126ce69dae3cb702217765d5b3e1909bfbd2aaa` | RAR5 (part 2) |
+| `10_binary_artifacts/debug_files/rar_volumes/ck2.part3.rar` | 14,438,896 | `6306a0d08da2e43ca5221413090c6a604113dfcbe115646dd2084e7303f943b3` | RAR5 (part 3, split-before flag) |
+| `10_binary_artifacts/debug_files/rar_volumes/ck2game.part1.rar` | 25,165,824 | `4dee57896fe5cf9d9d3bb5c22290ac8c7f494062a02dc3f90767fb8c08a293e8` | RAR5 (part 1) |
+| `10_binary_artifacts/debug_files/rar_volumes/ck2game.part2.rar` | 25,165,824 | `77ab8e662fb500d334f5d8377bc81fd10a82ef49d9199c020a9224ba696a269e` | RAR5 (part 2) |
+| `10_binary_artifacts/debug_files/rar_volumes/ck2game.part3.rar` | 16,674,312 | `5a3eae8b30589fcba4bb9c2b9ec24d7ec762b39d67d81485924382be0c3c21b1` | RAR5 (part 3, split-before flag) |
+| `10_binary_artifacts/debug_files/dbghelp.dll` | 986,112 | `cf2647be9233f4a7248514cbd2541d5f7bebd61005bde1dca79c8e4234f53794` | PE32 (x86) DLL |
 
 No duplicate PDB copies; exactly one PDB per archive set. No `.map/.dbg/.sym`
 files were included in the drop.
 
 ### Extracted archive contents (CRC-verified by UnRAR during extraction)
+
+The extracted members are now materialized under
+`10_binary_artifacts/debug_files/pdb/`; the original RAR parts are retained
+under `10_binary_artifacts/debug_files/rar_volumes/` for provenance.
 
 | archive | member | size | SHA-256 |
 |---|---|---|---|

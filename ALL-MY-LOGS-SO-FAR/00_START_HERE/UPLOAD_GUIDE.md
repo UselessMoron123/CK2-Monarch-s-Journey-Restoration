@@ -27,7 +27,8 @@ Current source of truth: `STATUS.md`; detailed evidence: `03_analysis/V6_RUNTIME
 - GUI/GFX files already represented in `06_game_data/`
 - Duplicate patch scripts, saves, screenshots, payload files
 - Patched executable binaries themselves — guarded scripts are the deliverable
-- `debug files/` RARs/PDBs again — hashes preserved, large binaries excluded per safety
+- The 2.6.1.1 debug drop again — it is already materialized under
+  `10_binary_artifacts/debug_files/`, with hashes and identity analysis preserved
 
 ## Few uploads that could still be genuinely useful (optional, ranked)
 

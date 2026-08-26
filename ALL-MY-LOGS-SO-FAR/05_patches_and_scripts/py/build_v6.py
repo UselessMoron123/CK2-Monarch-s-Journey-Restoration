@@ -2,7 +2,7 @@ import pefile, hashlib, struct, sys, os
 
 ORIG_SHA = "656f4f482ed698958e1108938f7e5baff5b5dd31b3b310a7ea51386faca635d8"
 EXPECTED_V5 = None  # accept any valid state; compute below
-SRC = "CK2game333.exe"
+SRC = "ALL-MY-LOGS-SO-FAR/10_binary_artifacts/executables/windows/CK2game333.exe"
 OUT = "CK2game333_v6_test.exe"
 
 data = bytearray(open(SRC,"rb").read())
