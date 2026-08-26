@@ -1,0 +1,23 @@
+target,win333_may2020,stock_sha256,656f4f482ed698958e1108938f7e5baff5b5dd31b3b310a7ea51386faca635d8,v6_sha256,f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0
+raw_offset,virtual_address,introduced_in,stock_bytes,patched_bytes_v6,length_preserved,purpose,category
+0x00d73d02,,V2,74 2b,eb 2b,yes,Force local/null GameSpark factory branch,loader
+0x00d73e1a,,V2,ba 23 36 00,21 fc 32 00,yes,LoadLocalCache gfx\test.dds -> gfx\monarchs,loader
+0x007bd64e,,V3,75 04,90 90,yes,Enable Play when local ruler ready,panel_ui
+0x007beacb,,V3,74 19,eb 19,yes,Normal Play tooltip,panel_ui
+0x007beea2,,V3,74 0c,eb 0c,yes,Normal Continue tooltip,panel_ui
+0x007befaf,,V3,74 2d,eb 2d,yes,Normal Restart path,panel_ui
+0x007c0d18,,V3-reverted,74 0b,74 0b,yes,Stock - forced online reward container reverted (do not patch),do_not_touch
+0x007c0d23,,V4,eb 5c,90 90,yes,Hide empty reward controls and login text offline,challenge_mode
+0x00732b03,,V4,74 16,90 90,yes,Bypass Steam-active gate challenge Start button,challenge_mode
+0x007336b0,,V4,74 1d,90 90,yes,Bypass Steam-active gate challenge-enabled predicate,challenge_mode
+0x007337e1,,V4,74 1d,90 90,yes,Bypass Steam-active gate start-warning predicate,challenge_mode
+0x00737262,,V4,74 1b,90 90,yes,Bypass Steam-active gate challenge tooltip heading,challenge_mode
+0x007b78eb,,V4,75 0c,eb 0c,yes,Bypass Steam-active gate in-game feat tracking,challenge_mode
+0x000aeb83,,V4,80 7f 61 00 74 0c 80 7f 63 00 74 06 80 7f 62 00 74 02 33 f6 40 0f b6 c6,31 c0 66 83 7f 61 01 75 0f 80 7f 63 00 75 06 80 7f 65 00 75 03 ff c0 90,yes,Eligibility helper: stock_checksum || !steam_active,challenge_mode
+0x009e3d4c,0x1409e494c,V5,74 0b,eb 0b,yes,Generic valid-save predicate skip account check,save_loading
+0x009e1c2d,,V5,74 49,eb 49,yes,Normal save tooltip,save_loading
+0x009e4611,0x1409e5211,V6,74 0f,eb 0f,yes,Continue candidate selection accept FR save,continue
+0x009e4f1e,0x1409e5b1e,V6,0f 84 86 01 00 00,e9 87 01 00 00 90,yes,First save-list path accept (target 0x1409e5caa),save_loading
+0x009e4fc3,0x1409e5bc3,V6,74 0f,eb 0f,yes,Newer-save path accept (target 0x1409e5bd4),save_loading
+0x009e5377,0x1409e5f77,V6,0f 84 63 01 00 00,e9 64 01 00 00 90,yes,Named-save path accept (target 0x1409e60e0),save_loading
+0x009e5452,0x1409e6052,V6,74 0b,eb 0b,yes,Latest-save path accept (target 0x1409e605f),save_loading

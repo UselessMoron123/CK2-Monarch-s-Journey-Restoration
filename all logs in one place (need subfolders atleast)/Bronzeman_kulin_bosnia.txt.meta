@@ -1,0 +1,37 @@
+CK2txt
+	version="3.3.3.0"
+	date="1173.1.1"
+	player=
+	{
+		id=218800
+		type=66
+	}
+	ironman="save games/Bronzeman_kulin_bosnia.ck2"
+	seed=1184614649
+	count=317585
+	bronzeman=yes
+	player_realm="d_bosnia"
+	player_name="Doux Kulin of Bosnia"
+	player_age=20
+	player_portrait=
+	{
+		fem=no
+		dna="fahjjgrndrs"
+		properties="edhe0d00000000000000000000000000000000"
+		religion="catholic"
+		culture="bosnian"
+		government="feudal_government"
+		dynasty=183
+	}
+	special_event="kulin_bosnia"
+	game_rules=
+	{
+		alternate_start=no
+		ai_seduction="off"
+		generate_families="off"
+	}
+	game_speed=0
+	mapmode=0
+	playthrough_id=982599126
+}
+checksum="e192af4f48ea63db44e65941aceb9057"

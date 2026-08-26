@@ -1,0 +1,411 @@
+    New Chat
+    Leaderboard
+    Search
+
+Today
+
+    hey, can pick up from there? sessions with github are even shoerter for some reason
+    hey, can pick up from there? sessions with github are even shoerter for some reason
+    read and understand what's needed from you. (but don't do anything yet)
+
+Yesterday
+
+    read through this. tell if you need me to upload anything for fuller picture
+
+Older
+
+    <arena-system-message> The user attached the following files (saved to /home/user/uploads/): CK2_Mon…
+    you know monarch's journey in ck2. it was time limited. but i want to bring it back, at least for my…
+    look.what can be done to merge them all in one file? some objects are the same (just different id bu…
+    дай батник для переименовывания файлов в папке (добавление расширения .xml)
+    файл сохранения игры удобно ориентироваться. но если переименовать в txt (для редактирования) не пол
+    this is a part of save file (i have more separate parts - to not have one massive file). (i removed …
+    look through save file. say if things are sorted somehow or not
+    look through text. i want script (and bat to start it) to sort things in "terrainFeatures" by coordi…
+    look through variables in item sections that appear there and there but not consistently
+    look. there are "resources" that are separated in 4 big groups (objects, resourceClumps, largeTerrai…
+    look. there are "resources" that are separated in 4 big groups (objects, resourceClumps, largeTerrai…
+    I need a program that would delete "grass" items from text like this the example of part of text …
+    я хочу отсортировать ресурсы в группах по координатам. как мне это сделать самому, быстро, надёжно. …
+    what can you tell about "fragility"? random or not? <item> <key> <Vector2> <X>3</X> <Y>11</Y> </Vect
+    need to sort all by resource (and by coordinates in resource groups) (in same format) (there'…
+    need to sort all by resource (and by coordinates in resource groups) (there's leftovers that i …
+
+Terms of Use
+Privacy Policy
+
+read and understand what's needed from you. (but don't do anything yet)
+
+Understood. I’ve noted the repository, branch, workflow, and operating constraints. I won’t make any changes or run commands until you provide the next instruction.
+
+you realy can see (and operate with) things in repository? look at everything you have, and plan next actions.
+ReadREADME.md
+ReadCK2_MJ_ULTIMATE_HANDOFF.md
+ReadCK2_MJ_V6_TEST_GUIDE.md
+Readpatch_ck2_mj_v5.ps1
+Readpatch_ck2_mj_v6.ps1
+ReadAPPLY_CK2_MJ_V6.bat
+ReadCHECK_CK2_MJ_V6.bat
+ReadREVERT_CK2_MJ_V6_TO_V5.bat
+Readlog when patching to v5.txt
+Readthe V6 patch-window text.txt
+ReadCK2game_win332.manifest.txt
+ReadCK2game_win332.manifest.txt
+ReadCK2game_win333.manifest.txt
+ReadCK2game_win3351.manifest.txt
+Readck2_linux.manifest.txt
+Readmonarchs
+ReadAPPLY_CK2_MJ_V5.bat
+ReadСнимок экрана (224).png
+ReadСнимок экрана (225).png
+ReadСнимок экрана (226).png
+ReadСнимок экрана (227).png
+ReadСнимок экрана (228).png
+ReadСнимок экрана (229).png
+ReadСнимок экрана (1) still cant click continue.png
+ReadСнимок экрана (2) cant continue from main menu.png
+ReadСнимок экрана (2,5) multiplayer button breaks on second boot or when resigned from game and went to main menu from save.png
+ReadСнимок экрана (3) multiplayer button is working on FIRST boot. old problem - all land is gray as if hes only person alive. maybe cause of that there flickering when hovering on smll prtrt.png
+ReadСнимок экрана (4)cant continue from there too.png
+ReadСнимок экрана (5) from there it works.png
+ReadСнимок экрана (6) cant pick anyone else (as intended probably).png
+ReadСнимок экрана (7) when hovering on gauntlet it says that challange - bronzeman - wont work, but....png
+ReadСнимок экрана (15) when changed bookmark my character disapeared (not born yet actually).png
+ReadСнимок экрана (16) was able to choose random ruler - with bronze still active - but mj interface disapeared on load (well, probably i wouldnt be able to go so far normally).png
+ReadСнимок экрана (17) bronzeman, but no featured ruler crown.png
+ReadСнимок экрана (18) when loaded bronzeman save (but before clicking play on map), then clicked 00back00, then loaded again quick (this screen then got normal after sev seconds).png
+
+Yes. I can read and operate on the repository, including files, Git history, scripts, binary chunks, archives, and screenshots. I inspected all 53 tracked files without changing anything.
+What I found
+
+    Current branch is correct: arena/01a02609-ck2-monarch-s-journey-restorat
+    Working tree is clean.
+    This is an evidence/patch repository, not a conventional source-code project.
+    All four executable Base64 collections verify correctly against their manifests:
+        Windows 3.3.2
+        Windows May 2020 3.3.3
+        Windows 3.3.5.1
+        Linux May 2020 3.3.3
+    The Monarch’s Journey payload is valid:
+        101,949 bytes
+        SHA-256 fc6ec025b782c811636a0efb65a7b3f192f09fffd0ff6ca8051ef8bc6113db4e
+        11 rulers and the local challenge definitions
+    Both supplied .ck2 saves are valid ZIP archives with distinct internal states:
+        March save: 1173.3.3, global_heretical_company=1
+        January save: 1173.1.1, global_heretical_company=1
+    The patch scripts are guarded and hash-verified. V6 accepts only the exact V5 executable and produces the expected V6 hash.
+    The stored patch transcript proves that V6 was applied on the user’s Windows installation:
+        EXE SHA-256: f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0
+        Payload check passed
+    The screenshots confirm the previous V5 failure: the save was visible and selectable, but loading fell back to January 1 with 0/6, followed by the secondary corrupted-state UI. They do not prove whether V6 fixed this.
+
+Important limitation
+
+I can reconstruct and analyze the executable data here, but I cannot perform the actual Windows CK2 runtime test inside this Linux repository environment. That test must happen on the user’s Windows installation.
+Planned next actions
+1. Do the V6 runtime test first
+
+No new binary patching yet.
+
+The user should:
+
+    Keep Internet disconnected.
+    Close CK2 completely.
+    Verify the installed executable is the V6 file with the expected SHA-256.
+    Start that exact executable directly.
+    Use Single Player → Load Game.
+    Select Bosnia1173_03_03.ck2.
+    Confirm:
+        date: 3 March 1173
+        Heretical Company: 1/6
+    Do not overwrite either evidence save.
+
+2. Test persistence only if manual Load succeeds
+
+Then separately test:
+
+    normal Single Player Continue
+    Monarch’s Journey panel Continue
+    save, fully exit, restart, and reload
+    whether 1/6 remains after reload
+
+3. Diagnose based on the result
+
+    March 3 and 1/6: save loading works; document the result and test persistence.
+    March 3 but 0/6: deserialization works, but feat variables are reset during load; investigate feat initialization/reload.
+    January 1 again: selected save metadata still is not reaching the deserialize call; continue tracing the save-list fields at +0x368 and +0x3a8.
+    Manual Load works but Continue fails: inspect the remaining Continue callers and non-account rejection paths.
+
+4. Update the repository after the runtime result
+
+Once the user reports the test outcome, I would add or update a concise authoritative status report, likely including:
+
+    executable identities and verified hashes
+    V6 patch map
+    runtime test result
+    exact remaining limitation
+    reproduction/revert instructions
+
+5. Only afterward pursue later projects
+
+In this order:
+
+    persistent save/progress restoration
+    cross-version analysis and a separately guarded 3.3.5.1 port
+    local score/reward-gallery reconstruction
+    investigation of the five missing official rulers
+
+I will not apply May 2020 offsets to 3.3.5.1, commit decoded executables, redistribute modified binaries, or use wipe_feats.
+
+there two other folders in my github, can't you read what in them? (but to answer, it did load game, interface remained, "1" was present. but feats doesn't work. scores don't go up even if i do right things)
+
+Yes. I checked the GitHub repository itself, not only the local checkout.
+
+The current main branch has only these six folders:
+
+    CK2game_win332_upload_chunks
+    CK2game_win333_upload_chunks
+    CK2game_win3351_upload_chunks
+    ck2_linux_upload_chunks
+    log playing with new v6 patch
+    things parent AI asked to upload
+
+I already read both likely “other” folders:
+
+    log playing with new v6 patch contains the earlier runtime screenshots.
+    things parent AI asked to upload contains the handoff, patchers, payload, saves, patch logs, and screenshots.
+
+The repository has only one branch, main, and the current local checkout matches it. If you mean two folders from another repository, another GitHub account, or folders not yet committed/pushed, I cannot see those from this checkout; send their exact names or links.
+Your V6 result
+
+This is an important success:
+
+    the save loaded;
+    the Monarch’s Journey interface remained;
+    the saved value 1 was restored.
+
+That means V6 fixed the save-selection/deserialization problem. We should stop working on the generic save loader.
+
+The remaining problem is now the live feat evaluator:
+
+    the saved feat value is displayed;
+    new qualifying actions do not update the feat;
+    the individual challenge scores apparently remain unchanged.
+
+The likely area is the post-load initialization/update path: the game restores the variables but does not reconnect or execute the runtime feat tracker after loading. The existing V4/V5 patch changed one known tracking gate at raw offset 0x007b78eb, but the result suggests another initialization or update gate remains.
+
+There are two different kinds of “score” here:
+
+    Individual challenge progress — this should update during play and is now the main bug.
+    Overall historical reward/gallery score — this is not restored yet and was intentionally left for a later project.
+
+Next investigation plan
+
+    Record V6 as:
+        save loading: working
+        interface persistence: working
+        serialized value restoration: working
+        live feat updates after load: not working
+
+    Separate a loaded-game problem from a general tracker problem:
+        test the same feat in the loaded March save;
+        test it again in a fresh V6 Bronzeman campaign;
+        advance enough in-game time after the qualifying action and reopen the panel.
+
+    Perform focused static analysis around:
+        the existing in-game tracking patch at 0x007b78eb;
+        the feat update/registration calls;
+        post-load initialization;
+        the Linux 3.3.3 implementation as a reference;
+        remaining Windows 3.3.3 account/Steam gates.
+
+    Create a small, separate guarded patch only if the missing runtime path can be identified and hash-verified.
+
+    Update the repository’s status report with the V6 result before moving on to the reward gallery or 3.3.5.1 port.
+
+I do not need another broad upload. The most useful next detail is the exact feat you tested and the exact action you performed, plus whether a fresh new campaign also fails to update.
+
+whats needed from me? if nothing - then you can start working
+
+Nothing else is required from you right now. Your V6 result gives us the needed direction, so I’ll start the static investigation of the feat-update path using the verified Windows and Linux binaries, without changing your game files or committing decoded executables.
+Edit+1−1
+Edit+14−7×3
+Edit+2−2×2
+
+You didn’t need to provide anything else to begin. I started the investigation.
+What I found
+
+V6 successfully loads the save and restores the saved value, but two duplicated caller branches can still skip the live feat-update routine after loading. I prepared a focused V7 candidate that changes only those two branches and retains all V6 changes.
+
+This is a hypothesis-driven test patch, not yet a claimed final fix.
+Added and pushed
+
+Commit: c70a453
+Pushed to the session branch:
+
+arena/01a02609-ck2-monarch-s-journey-restorat
+
+New files in things parent AI asked to upload:
+
+    patch_ck2_mj_v7.ps1
+    APPLY_CK2_MJ_V7.bat
+    CHECK_CK2_MJ_V7.bat
+    REVERT_CK2_MJ_V7_TO_V6.bat
+    CK2_MJ_V7_TEST_GUIDE.md
+    CK2_MJ_V7_FEAT_UPDATE_FINDINGS.md
+
+The handoff document was also updated with the V6 result and V7 plan. No decoded executable or modified game executable was committed.
+What I need from you now
+
+Only the V7 runtime test:
+
+    Keep CK2 and the Internet disconnected.
+    Close CK2.
+    Put the V7 BAT files and patch_ck2_mj_v7.ps1 together.
+    Drag your current verified V6 CK2game.exe onto APPLY_CK2_MJ_V7.bat.
+    Confirm the resulting SHA-256 is:
+
+text
+
+0074af707665bb152d3592d8ba9320ea81e79e6f58edc218e22aa069b353aeb8
+
+    Start that exact executable.
+    Load Bosnia1173_03_03.ck2.
+    Perform one known qualifying feat action and allow enough in-game time for an update.
+    Check whether the feat progress and score increase.
+
+If possible, also repeat the same action in a fresh Kulin Bronzeman campaign. Please report:
+
+    which feat/action you tested;
+    whether the loaded save updated;
+    whether a fresh campaign updated;
+    a before/after screenshot if convenient.
+
+If V7 must be removed, REVERT_CK2_MJ_V7_TO_V6.bat restores the exact V6 hash.
+
+is it possible to observe overything that happens in real life? (like, start some program and it writes everything it needs, what calls for what, or what fails to reach. or something that i could periodically "push" to look what happens? maybe it would be deeper). also, you now have all possible exe files, 332, 333, 3351, linux - wouldnt it be useful to check if theres anything different in them?
+
+Yes—both approaches are possible, and using them together would be much deeper than guessing at another patch.
+
+I’ll treat this as two tracks:
+
+    Targeted runtime tracing on your Windows CK2 process.
+    Cross-version static comparison across 3.3.2, 3.3.3, Linux 3.3.3, and 3.3.5.1.
+
+No additional files are needed from you to start the cross-version work. For runtime tracing, you would eventually need to run a small debugger/tracer on Windows and bring back its compact text log; I cannot attach to your live Windows process directly from this sandbox.
+Edit+3−1
+Edit+7−5
+
+Yes, this is possible and would be much deeper.
+What can be observed
+
+Not literally every CPU instruction—that would create enormous, mostly useless logs—but we can observe the important decisions:
+
+    which functions are entered;
+    which functions are skipped;
+    return values such as “active” or “should track”;
+    whether the feat evaluator runs;
+    whether score recalculation runs;
+    call stacks and caller addresses;
+    file access, save loading, payload loading, and failed file lookups;
+    selected memory values before and after an update.
+
+There are two useful tracing levels:
+1. System-level tracing
+
+Tools such as Process Monitor can show:
+
+    which files CK2 opens;
+    whether it reads the save;
+    whether it finds gfx\monarchs;
+    whether it tries to access obsolete online/cache paths;
+    file, registry, and network failures.
+
+This is useful for loading/path problems, but it cannot show why an internal feat function returned false.
+2. Function-level tracing
+
+A debugger/instrumentation tool such as x64dbg, WinDbg, or Frida can log exact internal functions while the game continues normally.
+
+For the Windows 3.3.3 build, the most important targets are now identified:
+
+text
+
+IsActiveForPlaythrough:       0x1407b8370
+CalcShouldTrackFeatProgress:  0x1407b8450
+UpdateFeatProgress:           0x1407b8e60
+RecalcScore:                 0x1407b9340
+
+A small trace could produce output like:
+
+text
+
+IsActiveForPlaythrough -> 0
+CalcShouldTrackFeatProgress -> 0
+UpdateFeatProgress -> not reached
+RecalcScore -> not reached
+
+That would immediately tell us where the failure occurs.
+
+A periodic trace is also possible. You could run CK2 normally, reproduce one failed feat update, stop the trace, and provide a small trace.txt. You would not need to upload a memory dump or a large log archive. There is no automatic live connection from your Windows machine to this sandbox, so the log would still need to be copied, attached, or pushed manually.
+The four executable comparison is definitely useful
+
+I have already started that comparison. The Linux binary is especially valuable because it retains exported symbols for the complete tracker:
+
+text
+
+CRulerFeatTracker::IsActiveForPlaythrough()
+CRulerFeatTracker::CalcShouldTrackFeatProgress()
+CRulerFeatTracker::UpdateFeatProgress()
+CRulerFeatTracker::RecalcScore()
+CFeatProgressStorage::Update()
+CFeatProgressStorage::ReadCachedProgress()
+CFeatProgressStorage::SetNewProgress()
+
+The Windows 3.3.3 functions match that structure:
+
+text
+
+VA 0x1407b8370  = IsActiveForPlaythrough
+VA 0x1407b8450  = CalcShouldTrackFeatProgress
+VA 0x1407b8e60  = UpdateFeatProgress
+VA 0x1407b9340  = RecalcScore
+
+This has already produced an important new hypothesis:
+
+    V6 restores the saved feat value correctly.
+    V6 bypasses a later retired achievement/checksum-style gate.
+    But V6 and V7 do not bypass the earlier IsActiveForPlaythrough result.
+    A loaded save may display the restored value while still failing that active-playthrough test, preventing new feat evaluations.
+
+That is much more precise than simply adding another broad bypass.
+
+The version comparison also shows:
+
+    Windows 3.3.2: feature material exists, but the local monarchs_journey loader path is absent.
+    Windows May 3.3.3: local loader path, feature UI markers, and the full relevant structure are present.
+    Linux May 3.3.3: complete local-loader and tracker reference implementation with symbols.
+    Windows 3.3.5.1: lower-level feat/progress remnants remain, but several high-level UI/initialization markers are gone.
+
+Therefore the four files are useful both for finding the current Windows 3.3.3 problem and for assessing whether 3.3.5.1 can be restored safely. Raw offsets must not be copied between versions.
+
+I documented the comparison and trace plan in the repository and pushed it to the session branch. No further executable upload is needed from you right now. The next useful user-side step will be one focused runtime trace around the loaded save, after I prepare the beginner-friendly trace runner.
+
+look at new "more things" and "second look" folders. Second look - i tried playing with pavao, landed some family members, and after unpausing i've got message about getting bronze conditions met. (i didnt try with someone else. previously maybe conditions weren't explained clearly. maybe it's just with this ruler). More Things - there was a thing called featured ruler, MJ predicessor (mj was made on its base). an arrow to the right is a bit different, challenges appeared only on 7th ruler (also on screens of different people i've seen multiplayer button not working too, but some had it work. stange). also there was a ui bug when score was showing 0, but when "chalenges" tab opened they get back to normal. also, i noticed people having earlier versions (like 3.3.0) having MJ. should i provide earlier exe(by parts)? so, should i still try v7?
+
+Yes—this new evidence changes the priority somewhat. I’ll inspect the GitHub main tree for the exact more things and second look folders first, then compare those screenshots/logs with the V6/V7 findings before deciding whether V7 is still the right test. I’ll also check whether earlier CK2 executables would add useful reference information.
+Readfeatured-ruler.txt
+Readq847rsja8ndx
+Readdescriptions-challenges.txt
+Readv6_second_look_19_january_of_2020_no_arrow,_multiplayer_button_not_working_png
+Readv6_second_look_seen_this_text_somewhere_png
+Readv6_second_look_when_feature_was_going_to_end_such_things_occured_-_no_score_grayed_play_button,_grayed_arrows_to_change_rulers__play_button_appeared_when_no_internet,_with_date_set_to_earlier_time_png
+ReadMore_things_map_see_how_normally_it_should_look_when_choosing_ruler_png
+ReadMore_things_all_rulers_Screenshot_1_png
+ReadMore_things_all_rulers_Screenshot_2_png
+
+Please open a pull request for the changes on this branch.
+The conversation is too long for the model. Please start a new chat.
+
+
+CK2-Monarch-s-Journey-Restoration
+arena/01a02609-ck2-monarch-s-journey-restorat

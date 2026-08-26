@@ -1,0 +1,885 @@
+{
+	"can_see_highlighted_rulers": 1,
+	"scheduled_rulers": [
+		{
+			"highlighted_ruler": {
+				"key": "konan_brittany",
+				"event_time_end": 1893499200,
+				"alert_level": 2,
+				"title": "d_brittany",
+				"startdate": "1066.09.15",
+				"religion": "catholic",
+				"government": "feudal_government",
+				"dynasty_id": 22006,
+				"traits": [
+					"flamboyant_schemer",
+					"strong",
+					"cynical",
+					"paranoid",
+					"ambitious"
+				],
+				"portrait": {
+					"age": 33,
+					"female": false,
+					"dna": "niqipfxvgfu",
+					"properties": "we0dfd0000000000000000000000000000000",
+					"religion": "catholic",
+					"culture": "breton",
+					"government": "feudal_government"
+				},
+				"map": {
+					"provinces": [
+						103,
+						104,
+						1936,
+						1937,
+						105,
+						102,
+						101,
+						106,
+						1957
+					],
+					"color": [
+						0.600000,
+						0.600000,
+						1,
+						1
+					],
+					"camera_position": [
+						485,
+						400,
+						872
+					],
+					"camera_look_at": [
+						485,
+						0,
+						1102
+					]
+				},
+				"feats_script": "# King Konan of Brittany\ntime_bending = {\nicon = GFX_russkaya_pravda_34\nlevels = { 10 12 15 }\nupdate = {\nset_variable = { which = global_time_bending value = 0 }\nif = { \nlimit = { dynasty = 22006 } # Rennes\nif = {\nlimit = { completely_controls = c_rennes } # Roazhon 101\nchange_variable = { which = global_time_bending value = 1 }\n}\nif = {\nlimit = { completely_controls = c_penthievre } # Domnoea 102\nchange_variable = { which = global_time_bending value = 1 }\n}\nif = {\nlimit = { completely_controls = c_french_leon } # c_french_leon 103\nchange_variable = { which = global_time_bending value = 1 }\n}\nif = {\nlimit = { completely_controls = c_cornouaille } # 104\nchange_variable = { which = global_time_bending value = 1 }\n}\nif = {\nlimit = { completely_controls = c_vannes } # Broërec 105\nchange_variable = { which = global_time_bending value = 1 }\n}\nif = {\nlimit = { completely_controls = c_nantes } # Naoned 106\nchange_variable = { which = global_time_bending value = 1 }\n}\nif = {\nlimit = { completely_controls = c_tregor } # 1936\nchange_variable = { which = global_time_bending value = 1 }\n}\nif = {\nlimit = { completely_controls = c_poher } # 1937\nchange_variable = { which = global_time_bending value = 1 }\n}\nif = {\nlimit = { completely_controls = c_retz } # 1957\nchange_variable = { which = global_time_bending value = 1 }\n}\nif = {\nlimit = { completely_controls = c_devon }\nchange_variable = { which = global_time_bending value = 1 }\n}\nif = {\nlimit = { completely_controls = c_cornwall }\nchange_variable = { which = global_time_bending value = 1 }\n}\nif = {\nlimit = { completely_controls = c_anjou }\nchange_variable = { which = global_time_bending value = 1 }\n}\nif = {\nlimit = { completely_controls = c_maine }\nchange_variable = { which = global_time_bending value = 1 }\n}\nif = {\nlimit = { completely_controls = c_avranches }\nchange_variable = { which = global_time_bending value = 1 }\n}\nif = {\nlimit = { completely_controls = c_caen }\nchange_variable = { which = global_time_bending value = 1 }\n}\n}\n}\n}\ngloves_come_off = {\nicon = GFX_keeping_it_in_the_family_34\nlevels = { 2 3 5 }\nupdate = {\nset_variable = { which = global_gloves_come_off value = 0 }\nc_348 = { # King Konan of Brittany\nif = {\nlimit = { is_alive = yes } \nany_child = {\nif = {\nlimit = { \nNOT = { trait = bastard }\nis_female = no \n}\nchange_variable = { which = global_gloves_come_off value = 1 }\n} \n}\n}\n}\n}\n}\npreemtive_selfdefense = {\nicon = GFX_off_with_their_heads_34\nlevels = { 3 5 7 }\nupdate = {\nset_variable = { which = global_preemtive_selfdefense value = 0 }\nc_140 = { #duke William of de Normandie\nany_dynasty_member_even_if_dead = {\nif = {\nlimit = { \nis_alive = no\nkiller = { dynasty = 22006 }\n} \nchange_variable = { which = global_preemtive_selfdefense value = 1 }\n}\n}\n}\nc_140 = { #duke William of de Normandie\nif = {\nlimit = { \nis_alive = no\nkiller = { dynasty = 22006 }\n} \nchange_variable = { which = global_preemtive_selfdefense value = 1 }\n}\n}\n}\n}"
+			},
+			"add_localisation": [
+				"HIGHLIGHTED_RULER_konan_brittany_NAME;King Konan;Roi Conan;König Konan;;Rey Conan;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_konan_brittany_DESC;Remove the thorn while the rose is away!;Tenir la Rose en joue;Entfernt den Dorn, während die Rose weg ist!;;¡Quita la espina mientras la rosa se ausenta!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_konan_brittany_PORTRAIT_INSTANT;§YKing Konan of Brittany§!;§YRoi Conan de Bretagne§!;§YKönig Konan der Bretagne§!;;§YRey Conan de Bretaña§!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_konan_brittany_PORTRAIT_DELAYED;\"Konan II, Duke of Brittany would find himself in an uphill struggle to ensure his rule over Brittany. Having lost his father as a child, he faced many challenges to his rule from within and outside of his family. His uncle usurped his inheritance, and was later chained and imprisoned for his efforts. After becoming enthroned, he would face threats from William the Conqueror, later dying to suspectedly poisoned gloves while attempting to invade Anjou.\";\"Conan II, le duc de Bretagne s'est trouvé dans une lutte difficile pour assurer son autorité sur la Bretagne. Ayant perdu son père alors qu’il était enfant, il dût faire face à de nombreux défis, tant à l'extérieur de sa famille qu'à l'intérieur. Son oncle usurpa son héritage, puis fut enchaîné et emprisonné pour sa tentative. Après avoir été intronisé, Conan fera face aux menaces de Guillaume le Conquérant, mourant ensuite de gants supposés empoisonnés alors qu'il tentait d'envahir Anjou.\";\"Konan II, Herzog der Bretagne, würde sich in einem harten Kampf befinden, um seine Herrschaft über die Bretagne sicherzustellen. Nachdem er seinen Vater als Kind verloren hatte, sah er sich vielen Herausforderungen innerhalb und außerhalb seiner Familie gegenübergestellt. Sein Onkel übernahm sein Erbe und wurde später für seine Bemühungen in Ketten gelegt und eingesperrt. Nachdem er den Thron erklommen hatten, sah er sich der Bedrohung von Wilhelm dem Eroberer ausgesetzt, der später durch vergiftete Handschuhe starb, als er versuchte, Anjou zu überfallen.\";;\"Conan II, duque de Bretaña, tendría que luchar mucho para asegurar su dominio sobre Bretaña. Al perder a su padre cuando era niño, tuvo que enfrentarse a muchos desafíos a su reinado tanto dentro como fuera de su familia. Su tío usurpó su herencia, por lo que más tarde sería encadenado y encarcelado. Tras ascender al trono, se enfrentará a la amenaza de Guillermo el Conquistador para acabar muriendo, se supone que por unos guantes envenenados, cuando intentaba invadir Anjou.\";;;;;;;;;;;;;x",
+				"RULER_FEAT_time_bending_NAME;Time Bending;La courbure du temps;Zeitkrümmung;;Haciendo tiempo;;;;;;;;x",
+				"RULER_FEAT_time_bending_PROGRESS;Provinces Controlled;Provinces contrôlées;Kontrollierte Provinzen;;Prov. controladas;;;;;;;;x",
+				"RULER_FEAT_time_bending_DESC;Try to recreate Breton by controlling as many of these provinces as possible:\\n * Cornwall\\n * Devon\\n * Anjou\\n * Maine\\n * Mortain\\n * Caen\\n * Léon\\n * Kernev\\n * Poher\\n * Tregor\\n * Domnoea\\n * Broërec\\n * Roazhon\\n * Naoned\\n * Retz\\n * Progress continues for as long as you play the featured ruler's dynasty;Essayez de recréer les Bretons en contrôlant autant de ces provinces que possible :\\n * Cornwall\\n * Devon\\n * Anjou\\n * Maine\\n * Mortain\\n * Caen\\n * Léon\\n * Kernev\\n * Poher\\n * Tregor\\n * Domnoea\\n * Broërec\\n * Roazhon\\n * Naoned\\n * Retz\\n * La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant;Versucht die Bretonen wiederaufzubauen, indem Ihr von den folgenden Provinzen so viele wie möglich kontrolliert:\\n * Cornwall\\n * Devon\\n * Anjou\\n * Maine\\n * Mortain\\n * Caen\\n * Léon\\n * Kernev\\n * Poher\\n * Tregor\\n * Domnoea\\n * Broërec\\n * Roazhon\\n * Naoned\\n * Retz\\n * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;¡Recrea Bretaña controlando tantas provincias de estas como puedas!:\\n * Cornualles\\n * Devon\\n * Anjou\\n * Maine\\n * Mortain\\n * Caen\\n * Léon\\n * Kernev\\n * Poher\\n * Tregor\\n * Domnoea\\n * Broërec\\n * Roazhon\\n * Naoned\\n * Retz\\n * El progreso seguirá mientras juegues con la dinastía del gobernante presentado;;;;;;;;x",
+				"RULER_FEAT_time_bending_fail;Starting province lost!;Province de départ perdue!;Startprovinz verloren!;;¡Provincia inicial perdida!;;;;;;;;x",
+				"RULER_FEAT_time_bending_counting;Starting provinces not yet lost.;Provinces de départ pas encore perdues.;Startprovinz noch nicht verloren.;;Provincias iniciales aún no perdidas.;;;;;;;;x",
+				"RULER_FEAT_gloves_come_off_NAME;Gloves Come Off!;Ne pas prendre de gants;Handschuhe lösten sich!;;¡Sin miramientos!;;;;;;;;x",
+				"RULER_FEAT_gloves_come_off_PROGRESS;Number of Sons Alive;Nombre de fils en vie;Anzahl lebender Söhne;;Hijos vivos;;;;;;;;x",
+				"RULER_FEAT_gloves_come_off_DESC;Historically, King Konan is said to have died due to poisoned gloves. Ensure that King Konan has a male heir and a few to spare! Non-legitimized sons do not count.\\n * The challenge is only accomplishable with the featured ruler during their lifetime;Historiquement, le roi Conan serait mort à cause de gants empoisonnés. Assurez-vous qu'il ait un héritier et même plusieurs! Les fils non légitimés ne comptent pas.\\n * L’exploit est réalisable uniquement avec le dirigeant mis en avant;Historisch soll König Konan an vergifteten Handschuhen gestorben sein. Stellt sicher, dass König Konan einen männlichen Erben und einige weitere Erben in der Reserve hat! Nicht legitime Söhne zählen nicht.\\n * Diese Herausforderung ist nur mit dem vorgestellten Herrscher zu Lebzeiten erreichbar;;La historia dice que Conan murió por unos guantes envenenados. ¡Asegúrate de que el duque tiene un heredero varón y de repuesto! Los hijos ilegítimos no cuentan.\\n * Logro solo realizable en vida del gobernante presentado;;;;;;;;x",
+				"RULER_FEAT_preemtive_selfdefense_NAME;Pre-Emptive Self-Defense;Autodéfense préventive;Präventive Selbstverteidigung;;Autodefensa preventiva;;;;;;;;x",
+				"RULER_FEAT_preemtive_selfdefense_PROGRESS;Members of Williams Dynasty Killed;Nombre de tués de la dynastie de Guillaume;Getötete Mitglieder von Williams Dynastie;;Muertos de la dinastía de Guillermo;;;;;;;;x",
+				"RULER_FEAT_preemtive_selfdefense_DESC;Have you and your dynasty members kill as many of William of de Normandie's dynasty members as possible. Killing William himself gives 2 points!\\n * Progress continues for as long as you play the featured ruler's dynasty;Vous et les membres de votre dynastie devez tuer autant de membres de la dynastie de Guillaume de Normandie que possible. Tuer Guillaume donne 2 points!\\n * La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant;Tötet selbst oder lasst Eure Dynastiemitglieder so viele Mitglieder der Dynastie von Wilhelm der Normandie wie möglich töten. William selbst zu töten gibt 2 Punkte!\\n * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;Haz que los miembros de tu dinastía maten a todos los que puedan de la dinastía normanda de Guillermo. ¡Matar al mismo Guillermo da dos puntos!\\n * El progreso seguirá mientras juegues con la dinastía del gobernante presentado;;;;;;;;x"
+			]
+		},
+		{
+			"highlighted_ruler": {
+				"key": "llywelyn_gwynedd",
+				"event_time_end": 1893499200,
+				"alert_level": 2,
+				"title": "d_gwynedd",
+				"startdate": "1195.01.01",
+				"religion": "catholic",
+				"government": "feudal_government",
+				"dynasty_id": 101920,
+				"traits": [
+					"charismatic_negotiator",
+					"diligent",
+					"just",
+					"patient",
+					"brave"
+				],
+				"portrait": {
+					"age": 22,
+					"female": false,
+					"dna": "nxahdneizcy",
+					"properties": "wj0d0d00000000000000a0000000000000000",
+					"religion": "catholic",
+					"culture": "welsh",
+					"government": "feudal_government"
+				},
+				"map": {
+					"provinces": [
+						64,
+						60,
+						65,
+						1947,
+						1948,
+						1949
+					],
+					"color": [
+						0.600000,
+						0.600000,
+						1,
+						1
+					],
+					"camera_position": [
+						450,
+						400,
+						1032
+					],
+					"camera_look_at": [
+						450,
+						0,
+						1262
+					]
+				},
+				"feats_script": "# King LLywelyn II 'the Great' of Gwynedd\ndragons_fire = {\nicon = GFX_dragon_blood_34\nhappened = {\ndynasty = 101920 # Aberffraw \ncompletely_controls = c_gwent\ncompletely_controls = c_glamorgan\ncompletely_controls = c_gower\ncompletely_controls = c_dyfed\ncompletely_controls = c_brycheiniog\ncompletely_controls = c_builth\ncompletely_controls = c_ceredigion\ncompletely_controls = c_powys\ncompletely_controls = c_gwynedd\ncompletely_controls = c_perfeddwlad\ncompletely_controls = c_anglesey\n}\n}\nprinces_of_wales = {\nicon = GFX_merchant_prince_34\nlevels = { 3 6 9 }\nupdate = {\nset_variable = { which = global_princes_of_wales value = 0 }\nif = {\nlimit = { \ndynasty = 101920 # Aberffraw \nculture = welsh \nhas_landed_title = k_wales \nindependent = yes\n}\nany_realm_character = \n{\nif = {\nlimit = { \nhigher_tier_than = COUNT # Duke and up\ndynasty = 101920 # Aberffraw \nculture = welsh \nis_female = no \nNOT = { trait = bastard }\n}\nchange_variable = { which = global_princes_of_wales value = 1 }\n}\n}\n}\n}\n}\nlove_spoons = {\nicon = GFX_the_marriage_game_34\nlevels = { 2 3 4 }\nupdate = {\nset_variable = { which = global_love_spoons value = 0 }\nif = { \nlimit = { c_214714 = { is_alive = yes } } # Llywelyn ab Iorwerth\nany_child = {\nspouse = {\nif = { \nlimit = { \nculture = english \nOR = {\nnum_of_claims >= 1 \nnum_of_titles >= 1\n}\n}\nchange_variable = { which = global_love_spoons value = 1 }\nif = { \nlimit = { num_of_claims >= 1  } \ncustom_tooltip = { text = \"Has 1 claim or more\" }\n}\nif = { \nlimit = { num_of_titles >= 1  } \ncustom_tooltip = { text = \"Has 1 title or more\" }\n}\n}\n}\n}\n}\n}\n}"
+			},
+			"add_localisation": [
+				"HIGHLIGHTED_RULER_llywelyn_gwynedd_NAME;King Llywelyn II 'the Great';Roi Llywelyn II 'le Grand';König Llywelyn II 'der Große';;Rey Llywelyn II el Grande;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_llywelyn_gwynedd_DESC;Develop an Independent Wales and take it further!;Menez loin un Pays de Galles indépendant !;Schafft ein unabhängiges Wales und bringt es weiter!;;Crea un Gales independiente y expándelo!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_llywelyn_gwynedd_PORTRAIT_INSTANT;§YKing Llywelyn II 'the Great' of Gwynedd§!;§YRoi Llywelyn II 'le Grand' de Gwynedd§!;§YKing Llywelyn II 'der Große' of Gwynedd§!;;§YRey Llywelyn II el Grande de Gwynedd§!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_llywelyn_gwynedd_PORTRAIT_DELAYED;\"King of Gwynedd, Llywelyn ap Iorwerth, would unify Wales through great war strategy and diplomacy with the kings of England and the princes of Wales. He had trouble with marcher lords, often finding himself fighting in border disputes, while also forming many alliances with other rulers in the Marches. In 1234 he brought peace to Wales which remained until his death in 1240.\";\"Le roi de Gwynedd, Llywelyn ap Iorwerth, a unifié le Pays de Galles par une stratégie de guerre et une diplomatie excellente avec les rois d’Angleterre et les Princes de Galles. Combattant souvent dans des conflits de frontières, il eut à affronter les lords des Marches. En 1234, il apporta la paix au Pays de Galles, qui le restera jusqu'à sa mort en 1240.\";\"Llywelyn ap Iorwerth, König von Gwynedd, würde Wales durch großartige Kriegsstrategie und Diplomatie mit den Königen von England und den Prinzen von Wales zusammenbringen. Er geriet oft in Grenzkonflikte  mit den 'Marcher Lords', schmiedete aber auch viele Bündnisse mit anderen Herrschern in den Marken. Im Jahr 1234 brachte er Frieden nach Wales, der bis zu seinem Tod 1240 anhielt.\";;\"Llywelyn ab Iorwerth, rey de Gwynedd, uniría Gales mediante una gran estrategia bélica y diplomática con reyes de Inglaterra y otros príncipes de Gales. Tuvo problemas con los señores de las marcas, viéndose involucrado a menudo en disputas fronterizas, pero también formó otras alianzas en las Marcas. En 1234 trajo la paz a Gales, que se mantuvo hasta su muerte en 1240.\";;;;;;;;;;;;;x",
+				"RULER_FEAT_dragons_fire_NAME;Dragon's Fire;Le Feu du Dragon;Drachenfeuer;;Fuego de dragón;;;;;;;;x",
+				"RULER_FEAT_dragons_fire_PROGRESS;Provinces Controlled;Provinces contrôlées;Kontrollierte Provinzen;;Provincias controladas;;;;;;;;x",
+				"RULER_FEAT_dragons_fire_DESC;Conquer Wales and completely control the following provinces: \\n * Anglesey \\n * Rhos \\n * Perfeddwlad \\n * Powys \\n * Ceredigion \\n * Builth \\n * Dyfed \\n * Gwyr \\n * Breconshire \\n * Glywysing \\n * Gwent\\n * Progress continues for as long as you play the featured ruler's dynasty;Conquérir le Pays de Galles et contrôler ces provinces :\\n * Anglesey\\n * Rhos\\n * Perfeddwlad\\n * Powys\\n * Ceredigion\\n * Builth\\n * Dyfed\\n * Gwyr\\n * Breconshire\\n * Glywysing\\n * Gwent\\n * La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant;Erobert Wales und kontrolliert diese Provinzen: \\n * Anglesey \\n * Rhos \\n * Perfeddwlad \\n * Powys \\n * Ceredigion \\n * Builth \\n * Dyfed \\n * Gwyr \\n * Breconshire \\n * Glywysing \\n * Gwent\\n *Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;Conquista Gales y controla estas provincias: \\n * Anglesey \\n * Rhos \\n * Perfeddwlad \\n * Powys \\n * Ceredigion \\n * Builth \\n * Dyfed \\n * Gwyr \\n * Breconshire \\n * Glywysing \\n * Gwent\\n * El progreso seguirá mientras juegues con la dinastía del gobernante presentado;;;;;;;;x",
+				"RULER_FEAT_princes_of_wales_NAME;Princes of Wales;Princes du Pays de Galles;Prinzessin von Wales;;Príncipes galeses;;;;;;;;x",
+				"RULER_FEAT_princes_of_wales_PROGRESS;Vassals of Your Dynasty;Vassaux;Vasallen;;Vasallos;;;;;;;;;x",
+				"RULER_FEAT_princes_of_wales_DESC;While holding the Kingdom of Wales, you must have as many vassals as possible be of your own dynasty. Have them retain the title of duke or higher. Bastard members do not count unless legitimized.\\n * Your character must be an independent ruler\\n * The ruler and vassals must also be of Welsh culture\\n * Progress continues for as long as you play the featured ruler's dynasty;Tout en détenant le titre de roi de Galles, vous devez avoir autant de vassaux que possible de la même dynastie que la vôtre. Faites en sorte qu'ils gardent un titre de duc (ou roi si vous êtes empereur). Les bâtards ne comptent que s'ils sont légitimés.\\n * Votre personnage doit être un dirigeant indépendant.\\n * Le souverain et les vassaux doivent également être de culture galloise.\\n * La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant;Während Ihr den Titel König von Wales tragt, müsst Ihr so viele Vasallen wie möglich aus Eurer eigenen Dynastie haben. Gebt ihnen den Titel des Herzogs oder höher. Bastard-Mitglieder zählen nicht, sofern sie nicht legitimiert sind.\\n * Eurer Charakter muss unabhängig herrschen.\\n * Euer Herrscher und die Vasallen müssen von walisischer Kultur sein.\\n * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;Manteniendo el título Rey de Gales, ten todos los vasallos posibles. Que retengan el título de duque o superior. Los miembros bastardos no cuentan si no están legitimados.\\n * Gobernante y vasallos también deben ser de cultura galesa.\\n * El progreso seguirá mientras juegues con la dinastía del gobernante presentado;;;;;;;;x",
+				"RULER_FEAT_love_spoons_NAME;Love Spoons;Vassalité familiale;Liebeslöffel;;Amor a cucharas;;;;;;;;x",
+				"RULER_FEAT_love_spoons_PROGRESS;English Spouses Married to Your Children;Conjoints anglais mariés à vos enfants;Englische Ehepartner Eurer Kinder;;Cónyuges ingleses de tus hijos;;;;;;;;x",
+				"RULER_FEAT_love_spoons_DESC;Marry as many of Llywelyn's children to those of English culture as you can. Only the English spouses with titles or claims count toward the challenge!\\n * The married children and their spouses must be alive to count towards the challenge.\\n * The challenge is only accomplishable with the featured ruler during their lifetime;Mariez autant d'enfants de Llywelyn à ceux de la culture anglaise. Seuls les conjoints anglais détenteurs de titres ou de revendications comptent pour l'exploit!\\n * Les enfants mariés et leurs conjoints doivent être en vie pour être pris en compte dans l'exploit.\\n * L’exploit est réalisable uniquement avec le dirigeant mis en avant;Verheiratet so viele Kinder von Llywelyn wie möglich mit Charakteren von englischer Kultur. Nur englische Ehepartner mit Titeln oder Ansprüchen zählen!\\n * Die verheirateten Kinder und ihre Ehepartner müssen für diese Herausforderung leben;;Casa a todos los hijos de Llywelyn con gente de cultura inglesa. ¡Para el logro solo cuentan los cónyuges ingleses con títulos o derechos!\\n * Hijos casados y sus cónyuges deben estar vivos para contar.\\n * Logro solo realizable en vida del gobernante presentado;;;;;;;;x"
+			]
+		},
+		{
+			"highlighted_ruler": {
+				"key": "mordechai_al_dawla",
+				"event_time_end": 1893499200,
+				"alert_level": 2,
+				"title": "d_baghdad",
+				"startdate": "1289.01.01",
+				"religion": "sunni",
+				"government": "muslim_government",
+				"dynasty_id": 1059023,
+				"required_dlcs": [
+					"dlc007"
+				],
+				"traits": [
+					"midas_touched",
+					"physician",
+					"ambitious",
+					"patient",
+					"brave"
+				],
+				"portrait": {
+					"age": 49,
+					"female": false,
+					"coa_dynasty": true,
+					"dna": "eakfjsnttnv",
+					"properties": "mb0dkd00000000000000000000000000000000",
+					"religion": "sunni",
+					"culture": "persian",
+					"government": "muslim_government"
+				},
+				"map": {
+					"provinces": [
+						694,
+						695,
+						696,
+						687,
+						693,
+						692
+					],
+					"color": [
+						0.600000,
+						0.600000,
+						1,
+						1
+					],
+					"camera_position": [
+						1780,
+						800,
+						443
+					],
+					"camera_look_at": [
+						1780,
+						0,
+						673
+					]
+				},
+				"feats_script": "#Saad Mordechai\none_of_us = {\nicon = GFX_shadow_prince_34\nlevels = { 2 3 4 }\nupdate = { \nset_variable = { which = global_one_of_us value = 0 }\nif = {\nlimit = { NOT = { religion_group = jewish_group } }\njob_chancellor = { \nif = { \nlimit = { religion = jewish\tdiplomacy = 10 }\nchange_variable = { which = global_one_of_us value = 1 }\t\n}\n}\njob_marshal = { \nif = { \nlimit = { religion = jewish\tmartial = 10 }\nchange_variable = { which = global_one_of_us value = 1 }\t\n}\n}\njob_treasurer = { \nif = { \nlimit = { religion = jewish\tstewardship = 10 }\nchange_variable = { which = global_one_of_us value = 1 }\t\n}\n}\njob_spymaster = { \nif = { \nlimit = { religion = jewish\tintrigue = 10 }\nchange_variable = { which = global_one_of_us value = 1 }\t\n}\n}\n}\n}\n}\npeace = { \nicon = GFX_by_the_gods_34\nlevels = { 5 8 12 }\nupdate = {\nset_variable = { which = global_peace value = 0 }\t\nany_vassal = { \nif = { \nlimit = { \nprisoner = no\nopinion = { who = ROOT value = 60 }\nNOT = { religion = ROOT }\n}\nchange_variable = { which = global_peace value = 1 }\t\n}\n}\n}\n} \nsecret_stays_with_me = { #Saad Mordechai\nicon = GFX_divine_blood_34\nlevels = { 6 10 16 }\nupdate = {\nset_variable = { which = global_secret_stays_with_me value = 0 }\nc_242001 = { \nif = { \nlimit = { \nis_alive = yes\nreligion = sunni \nsecret_religion = jewish\n}\nany_kill_list_character = {\nif = { \nlimit = { culture = mongol }\nchange_variable = { which = global_secret_stays_with_me value = 1 }\n}\nif = { \nlimit = { religion_group = muslim }\nchange_variable = { which = global_secret_stays_with_me value = 1 }\n}\nif = { \nlimit = {\nOR = { \nreligion_group = muslim\nculture = mongol\n}\ndeath_murder_unknown_trigger = yes\n}\nchange_variable = { which = global_secret_stays_with_me value = 1 }\n}\n}\n}\n}\n}\n}"
+			},
+			"add_localisation": [
+				"HIGHLIGHTED_RULER_mordechai_al_dawla_NAME;High Chief Saad Mordechai;Grand chef Saad Mordechai;Großhäuptling Saad Mordechai;;Gran jefe Saad Mordecai;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_mordechai_al_dawla_DESC;Spread Judaism as the prosperous physician!;En tant que médecin pacifique, répandez le judaïsme !;Verbreitet das Judentum als friedlicher Arzt!;;¡Propaga el judaísmo como un médico pacífico!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_mordechai_al_dawla_PORTRAIT_INSTANT;§YHigh Chief Saad Mordechai of the Al-Dawla High Chiefdom§!;§YLe grand chef Saad Mordechai de la grande chefferie Al-Dawla§!;§YGroßhäuptling Saad Mordechai des Al-Dawla Großhäuptlingtums§!;;§YGran jefe Saad Mordecai de la gran jefatura de Al-Dawla§!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_mordechai_al_dawla_PORTRAIT_DELAYED;\"During his lifetime, Sa'ad al-Dawla would be the bridge that supported Jewish peace and prosperity in Baghdad. His reputation and knowledge as a physician would give him the chance to cure Arghun Khan of an ailment, forming a great trusting friendship and allowing Sa'ad to secure a safe haven for Jews to live. His position and relationships with Arghun, and the fact that he was Jewish would cause much hatred from Mongolians who wanted to corrupt the flow of finances, and Muslims who did not enjoy the idea of having a Jew in a position of power over them.\";\"Saad al-Dawla serait de son vivant celui qui a maintenu la paix et la prospérité juives à Bagdad. Sa réputation et sa connaissance en tant que médecin lui donneront l'occasion de guérir Arghoun d'un mal, forgeant ainsi une grande amitié lui permettant de garantir un refuge sûr aux juifs. Son poste et ses relations avec Arghoun Khan, ainsi que le fait qu’il soit juif suscitera la haine des Mongols qui voulaient corrompre le flux des finances, et des musulmans qui ne voulaient pas d'un juif à une fonction au-dessus d'eux.\";\"Zu seinen Lebzeiten war Sa'ad al-Dawla die Brücke, die den jüdischen Frieden und Wohlstand in Bagdad unterstützte. Sein Ruf und sein Wissen als Arzt würden ihm die Chance geben, Arghun von einer Krankheit zu heilen, eine große vertrauensvolle Freundschaft zu schließen und Sa'ad einen sicheren Zufluchtsort für Juden finden zu lassen. Seine Position und seine Beziehungen zu Arghun Khan und die Tatsache, dass er Jude war, würde die Verärgerung vieler Mongolen, die den Finanzfluss korrumpieren wollten und Muslime, die keinen Juden in einer Position über sich haben wollten, anziehen.\";;\"Mientras vivió, Sa'ad al-Dawla fue el puente que sostuvo la paz y prosperidad judía en Bagdad. Su reputación y conocimientos médicos le permitirían curar a Arghun de una dolencia, creando una gran amistad y confianza que permitió a Sa'ad crear un lugar seguro donde los judíos pudieran vivir. Su posición y relación con Arghun Kan y el hecho de que fuera judío provocó gran odio entre mongoles que querían corromper la circulación de las finanzas y musulmanes a los que no les gustaba tener a un judío por encima de ellos.\";;;;;;;;;;;;;x",
+				"RULER_FEAT_one_of_us_NAME;One of Us!;Un des nôtres!;Einer von uns!;;¡Uno de los nuestros!;;;;;;;;x",
+				"RULER_FEAT_one_of_us_PROGRESS;Jewish Council Members;Membres du Conseil juifs;Jüdische Ratsmitglieder;;Miembros judíos del consejo;;;;;;;;x",
+				"RULER_FEAT_one_of_us_DESC;While not practicing Judaism yourself, have your council consist of openly Jewish people. They must also be capable at their job, with a minimum of 10 in the attribute related to their position. Those practicing Judaism in secrecy do not count.\\n * Progress continues for as long as you play the featured ruler's dynasty;Tout en ne pratiquant pas le judaïsme vous-même, ayez un Conseil composé de personnages ouvertement juifs. Ils doivent aussi avoir au moins 10 à l'attribut lié à leur poste. Ceux qui pratiquent le judaïsme dans le secret ne comptent pas.\\n * La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant;Praktiziert das Judentum nicht selbst, aber habt einen Rat, der nur aus offen jüdischen Charakteren besteht. Diese müssen außerdem in der Lage sein, ihren Job zu erledigen, was bedeutet, dass das Attribut ihrer Position mindestens 10 betragen muss. Diejenigen, die das Judentum im Geheimen praktizieren, zählen nicht.\\n * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;Aunque no practiques el judaísmo, que tu consejo consista de gente abiertamente judía. Deben ser competentes en su trabajo, con un mínimo de 10 en el atributo relacionado con su puesto. Practicantes de judaísmo a escondidas no cuentan.\\n * El progreso seguirá mientras juegues con la dinastía del gobernante presentado;;;;;;;;x",
+				"RULER_FEAT_peace_NAME;Peace!;Paix!;Frieden!;;¡Paz!;;;;;;;;x",
+				"RULER_FEAT_peace_PROGRESS;Vassals with 60+ Opinion;Vassaux avec plus de 60 d'opinion;Vasallen mit 60+ Meinung;;Vasallos con opinión 60+;;;;;;;;x",
+				"RULER_FEAT_peace_DESC;Be on good terms (60+ opinion) with those of your vassals who are openly worshiping another religion than your own. Secret religions are disregarded for this challenge.\\n * Progress continues for as long as you play the featured ruler's dynasty;Soyez en bons termes (60 ans et plus) avec vos vassaux qui suivent ouvertement une autre religion que la vôtre. Les religions secrètes ne sont pas prises en compte pour ce défi.\\n * La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant;Habt mit Euren Vasallen gute Beziehungen (60+), die offen einer anderen Religion als Ihr folgt. Geheime Religionen werden für diese Herausforderung nicht beachtet.\\n * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;Ten buenas relaciones con tus vasallos (+60) que sigan abiertamente otra religión. Para este reto no cuentan las religiones secretas.\\n * El progreso seguirá mientras juegues con la dinastía del gobernante presentado;;;;;;;;x",
+				"RULER_FEAT_secret_stays_with_me_NAME;Secret Stays with Me;C'est notre petit secret;Bewahrer der Geheimnisse;;Me guardo el secreto;;;;;;;;x",
+				"RULER_FEAT_secret_stays_with_me_PROGRESS;Kills and Bonus Points;Tués et points bonus;Tötungen und Bonuspunkte;;Muertes y puntos extra;;;;;;;;x",
+				"RULER_FEAT_secret_stays_with_me_DESC;Sa'ad al-Dawla was murdered by his enemies who disagreed with his religion. Let's turn the tables!\\n * Playing as the featured Ruler, continue to practice Judaism in secrecy while pretending to be a Sunni Muslim. Kill as many Muslim (religion) and Mongol (culture) characters as possible: Duel, assassinate, or execute them.\\n * Yes, Mongol Muslims are worth two points. Kills where your complicity is hidden is worth another 1 point! Progress for this challenge stops if you should change religion.\\n * The challenge is only accomplishable with the featured ruler during their lifetime;Sa'ad al-Dawla a été assassiné par ses ennemis qui n'étaient pas d'accord avec sa religion. Retournez la situation!\\n * En jouant le rôle du dirigeant mis en avant, continuez à pratiquer le judaïsme en secret tout en prétendant être un musulman sunnite. Tuez autant de personnages musulmans (religion) et mongols (culture) que possible! : défiez-les, assassinez-les ou exécutez-les.\\n * Les musulmans mongols valent deux points. Les meurtres avec votre complicité cachée valent 1 point de plus! La progression de cet exploit s'arrête si vous deviez changer de religion.\\n * L’exploit est réalisable uniquement avec le dirigeant mis en avant;Sa'ad al-Dawla wurde von seinen Feinden ermordet, die mit seiner Religion nicht einverstanden waren. Lasst uns das Blatt wenden!\\n * Spielt als vorgestellter Herrscher und übt im Verborgenen das Judentum aus, während Ihr Euch als sunnitischer Muslim ausgeben. Tötet so viele muslimische (Religion) und mongolische (Kultur) Charaktere wie möglich: Duelliert, ermordet oder richtet sie hin. \\n * Mongolische Muslime sind zwei Punkte wert. Tötungen, wo Eure Mittäterschaft verborgen bleibt, sind einen weiteren Punkt wert! Der Fortschritt hält an, wenn Ihr die Religion wechseln sollten.\\n * Diese Herausforderung ist nur mit dem vorgestellten Herrscher zu Lebzeiten erreichbar;;Sa'ad al-Dawla fue asesinado por unos enemigos a los que no les gustaba su religión. ¡Démosle la vuelta a eso!\\n * Jugando con el gobernante presentado, sigue practicando el judaísmo en secreto fingiendo ser musulmán suní. Mata todos los personajes musulmanes (religión) y mongoles (cultura) que puedas: en duelo, asesinato o ejecución.\\n * Sí, los musulmanes mongoles valen dos puntos. ¡Muertes de las que seas cómplice valen otro punto! El progreso de este logro parará si cambias de religión.\\n * Logro solo realizable en vida del gobernante presentado;;;;;;;;x"
+			]
+		},
+		{
+			"highlighted_ruler": {
+				"key": "konstantinos_samos",
+				"event_time_end": 1893499200,
+				"alert_level": 2,
+				"title": "d_samos",
+				"startdate": "1108.01.01",
+				"religion": "orthodox",
+				"government": "feudal_government",
+				"dynasty_id": 195,
+				"traits": [
+					"fortune_builder",
+					"fair",
+					"brave",
+					"groomed",
+					"lustful"
+				],
+				"portrait": {
+					"age": 22,
+					"female": false,
+					"dna": "rcfxhefeihv",
+					"properties": "cn0e0d00000000000000000000000000000000",
+					"religion": "orthodox",
+					"culture": "greek",
+					"government": "feudal_government"
+				},
+				"map": {
+					"provinces": [
+						745,
+						746
+					],
+					"color": [
+						0.600000,
+						0.600000,
+						1,
+						1
+					],
+					"camera_position": [
+						1245,
+						400,
+						560
+					],
+					"camera_look_at": [
+						1245,
+						0,
+						790
+					]
+				},
+				"feats_script": "# Strategos Konstantinos of Samos\nmoving_up = {\nicon = GFX_its_good_to_be_king_34\nlevels = { 2 3 4 }\nupdate = {\nset_variable = { which = global_moving_up value = 0 }\nset_variable = { which = global_others_moving_up value = 0 }\nif = {\nlimit = { dynasty = 195 }\nexport_to_variable = {\nwhich = global_others_moving_up\nvalue = num_of_king_titles\n}\nchange_variable = { which = global_moving_up which = global_others_moving_up }\n}\nany_dynasty_member = {\nif = {\nlimit = { dynasty = 195 }\nset_variable = { which = global_others_moving_up value = 0 } # Important that this value is reset before adding titles\nexport_to_variable = {\nwhich = global_others_moving_up\nvalue = num_of_king_titles\n}\nchange_variable = { which = global_moving_up which = global_others_moving_up }\n}\n}\n}\n}\nlovely_rule = { \nicon = GFX_casanova_34\nlevels = { 5000 10000 15000 }\nupdate = {\nset_variable = { which = global_lovely_rule value = 0 }\nif = {\nlimit = { dynasty = 195 }\nexport_to_variable = {\nwhich = global_lovely_rule\nvalue = score\n}\n}\n}\n} \nkon_once_kon_twice = {\nicon = GFX_royal_blood_34\nlevels = { 3 7 10 }\nupdate = {\nset_variable = { which = global_kon_once_kon_twice value = 0 }\nc_215509 = {\nif = {\nlimit = { is_alive = yes }\nany_child = {\nif = {\nlimit = { dynasty = 195 }\nchange_variable = { which = global_kon_once_kon_twice value = 1 }\n}\n}\n}\n}\n}\n}"
+			},
+			"add_localisation": [
+				"HIGHLIGHTED_RULER_konstantinos_samos_NAME;Strategos Konstantinos II;Strategos Konstantinos II;Strategos Konstantin II;;Strategos Constantino II;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_konstantinos_samos_DESC;Don't let his vanity ruin the Byzantine Empire again!;Ne laissez pas sa vanité ruiner l'empire byzantin à nouveau !;Verhindert, dass Eitelkeit das Byzantinische Reich erneut ruiniert!;;¡Que su vanidad no destruya de nuevo el Imperio!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_konstantinos_samos_PORTRAIT_INSTANT;§YStrategos Konstantinos II of Samos§!;§YStrategos Konstantinos II de Samos§!;§YStrategos Konstantin II. von Samos§!;;§YStrategos Constantino II de Samos§!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_konstantinos_samos_PORTRAIT_DELAYED;\"Konstantinos Angelo was a man of exceeding beauty and bravery, who came from a small aristocratic family. He would marry Theodora Komnene, daughter of Emperor Alexios I Komnenos and be granted the title of sebastohypertatos, a high Byzantine dignity. He would start the Angelos dynasty, which would disastrously rule the Byzantine Empire in 1185-1204, crippling the empire and eventually leading to its deconstruction.\";\"Konstantinos Angelo, issu d’une petite famille aristocratique, était un homme d’une extrême beauté et d’une grande bravoure. Il épousa Theodora Komnene, fille de l’empereur Alexios I Komnenos, et se vit attribuer le titre de sebastohypertatos, une haute dignité byzantine. La dynastie Angelos, qui gouverna de manière désastreuse l’empire byzantin de 1185 à 1204, paralysa l’empire et le conduisit finalement à son effondrement.\";\"Konstantin Angelo war ein Mann von außerordentlicher Schönheit und Tapferkeit, der aus einer kleinen aristokratischen Familie stammte. Er würde Theodora Komnene, die Tochter des Kaisers Alexios I. Komnenos, heiraten und den Titel Sebastokrator erhalten, eine hohe byzantinische Würde. Er würde die Angelos-Dynastie beginnen, die das Byzantinische Reich in den Jahren 1185 - 1204 katastrophal regieren, das Imperium verkrüppeln und schließlich zu dessen Dekonstruktion führen würde.\";;\"Constantino Angelo era un hombre de una belleza y valor extraordinarios que provenía de una familia noble menor. Se casaría con Teodora Comnena, hija del emperador Alejo I Comneno y se le concedió el título de sebastohipertato, una alta dignidad bizantina. Comenzaría la dinastía de los Angelos, que gobernaría catastróficamente el Imperio bizantino de 1185 a 1204, paralizándolo y llevándolo finalmente a su disolución.\";;;;;;;;;;;;;x",
+				"RULER_FEAT_moving_up_NAME;Moving Up;Élévation;Beförderung;;Ascendiendo;;;;;;;;x",
+				"RULER_FEAT_moving_up_PROGRESS;King Titles Obtained;Titres de roi obtenus;Erlangte Königstitel;;Títulos de rey;;;;;;;;x",
+				"RULER_FEAT_moving_up_DESC;Rise from a life of obscure nobility! Have your dynasty obtain as many king titles as possible.\\n * Progress continues for as long as you play the featured ruler's dynasty;Allez au-delà d'une vie de petite noblesse! Faites en sorte que votre dynastie obtienne autant de titres royaux que possible\\n. * La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant;Erhebt Euch aus dem Leben eines Adligen! Lasst Eure Dynastie so viele Königstitel wie möglich halten.\\n * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;¡Álzate de una vida de nobleza desconocida! Haz que tu dinastía logre todos los títulos de rey posibles.\\n * El progreso seguirá mientras juegues con la dinastía del gobernante presentado;;;;;;;x",
+				"RULER_FEAT_lovely_rule_NAME;Lovely Rule!;Les anges dans nos campagnes;Liebliche Herrschaft;;¡Reinado de amor!;;;;;;;;x",
+				"RULER_FEAT_lovely_rule_PROGRESS;Game Score;Score;Wertung;;Marcador;;;;;;;;x",
+				"RULER_FEAT_lovely_rule_DESC;Change the course of history and ensure the Angelos dynasty becomes a grand one! Acquire the highest game score you can.\\n * Progress continues for as long as you play the featured ruler's dynasty;Changez le cours de l'histoire et assurez-vous que la dynastie Angelos en devienne une grande!\\n * La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant;Ändert den Lauf der Geschichte und stellt sicher, dass die Angelos-Dynastie wahre Größe erreicht!\\n * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;¡Cambia el curso de la historia y haz grande la dinastía de los Angelos!\\n * El progreso seguirá mientras juegues con la dinastía del gobernante presentado;;;;;;;;x",
+				"RULER_FEAT_kon_once_kon_twice_NAME;Kon Once, Kon Twice...;Les bons Kontes;Kon eins, Kon zwei ...;;Con uno, con dos…;;;;;;;;x",
+				"RULER_FEAT_kon_once_kon_twice_PROGRESS;Number of Children;Nombre d'enfants;Anzahl an Kindern;;Hijos e hijas;;;;;;;;x",
+				"RULER_FEAT_kon_once_kon_twice_DESC;As Konstantinos, have the largest family you can. Your children must be alive and of your dynasty to count.\\n * The challenge is only accomplishable with the featured ruler during their lifetime;En jouant Konstantinos, ayez la plus grande famille possible. Les enfants doivent être en vie et faire partie de votre dynastie pour pouvoir compter.\\n * L’exploit est réalisable uniquement avec le dirigeant mis en avant;Habt als Konstantinos eine so große Familie wie möglich. Die Kinder müssen am Leben und Teil Eurer Dynastie sein, um zu zählen.\\n * Diese Herausforderung ist nur mit dem vorgestellten Herrscher zu Lebzeiten erreichbar;;Como Constantino, ten una familia lo más grande posible. Para que los hijos cuenten deben estar vivos y ser parte de tu dinastía.\\n * Logro solo realizable en vida del gobernante presentado;;;;;;;;x"
+			]
+		},
+		{
+			"highlighted_ruler": {
+				"key": "louise_aquitaine",
+				"event_time_end": 1893499200,
+				"alert_level": 2,
+				"title": "k_aquitaine",
+				"startdate": "867.01.01",
+				"religion": "catholic",
+				"government": "feudal_government",
+				"dynasty_id": 25061,
+				"required_dlcs": [
+					"dlc024"
+				],
+				"traits": [
+					"grey_eminence",
+					"stutter",
+					"feeble",
+					"charitable",
+					"just"
+				],
+				"portrait": {
+					"age": 23,
+					"female": false,
+					"coa_dynasty": false,
+					"dna": "qjnfyugegpr",
+					"properties": "wj00ac0000000000000000000000000000000",
+					"religion": "catholic",
+					"culture": "frankish",
+					"government": "feudal_government"
+				},
+				"map": {
+					"provinces": [
+						149,
+						150,
+						151,
+						208,
+						209,
+						215,
+						210,
+						214,
+						212,
+						204,
+						205,
+						205,
+						211,
+						213,
+						218,
+						219,
+						220,
+						145,
+						147,
+						1966,
+						217,
+						223
+					],
+					"color": [
+						0.600000,
+						0.600000,
+						1,
+						1
+					],
+					"camera_position": [
+						618,
+						400,
+						729
+					],
+					"camera_look_at": [
+						618,
+						0,
+						959
+					]
+				},
+				"feats_script": "# King Louis the Stammerer\nfrench_toast = {\nicon = GFX_paris_je_taime_34\nhappened = {\nhas_landed_title = e_france \nhas_landed_title = k_france   \nhas_landed_title = k_aquitaine \n}\n}\nhis_unfulfilled_dream = {\nicon = GFX_turbulent_priest_34\nlevels = { 4 7 10 }\nupdate = {\nset_variable = { which = global_his_unfulfilled_dream value = 0 }\nc_90123 = { # King Louis the Stammerer\nif = {\nlimit = { is_alive = yes }\nany_kill_list_character = {\nif = { \nlimit = { \nOR = { \nreligion = norse_pagan\nreligion = norse_pagan_reformed\n}\n}\nchange_variable = { which = global_his_unfulfilled_dream value = 1 }\n}\n}\nany_kill_list_character = {\nif = { \nlimit = {\nOR = { \nreligion = norse_pagan\nreligion = norse_pagan_reformed\n}\nOR = {\ntrait = viking\ntrait = ravager\ntrait = seaking\ntrait = sea_queen\ntrait = berserker\ntrait = shieldmaiden\ntrait = valhalla_bound\n} \n}\nchange_variable = { which = global_his_unfulfilled_dream value = 1 }\n}\n}\n}\n}\n}\n}\nwhy_dont_you_love_me = {\nicon = GFX_empressive_34\nlevels = { 4 6 8 }\nupdate = {\nset_variable = { which = global_why_dont_you_love_me value = 0 }\nc_90123 = { # King Louis the Stammerer\nif = { \nlimit = { is_alive = yes } \nany_vassal = \n{ \nif = { \nlimit = { \ntier = duke \nopinion = { who = ROOT value = 65 }\n}\nchange_variable = { which = global_why_dont_you_love_me value = 1 }\n}\n}\n}\n}\n}\n}"
+			},
+			"add_localisation": [
+				"HIGHLIGHTED_RULER_louise_aquitaine_NAME;King Louis II 'the Stammerer';Roi Louis II 'le Balbutiant';König Ludwig II. 'der Stammerer';;Rey Luis II el Tartamudo;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_louise_aquitaine_DESC;Show the world that strength comes from within!;Montrez au monde que la force vient de l'intérieur !;Zeigt der Welt, dass Stärke von innen kommt!;;¡Muestra al mundo que la fuerza viene de dentro!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_louise_aquitaine_PORTRAIT_INSTANT;§YKing Louis II 'the Stammerer' of Aquitaine§!;§YRoi Louis II 'le Balbutiant d'Aquitaine§!;§YKönig Ludwig II. 'der Stammerer' von Aquitanien§!;;§YRey Luis II el Tartamudo§!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_louise_aquitaine_PORTRAIT_DELAYED;\"Louis II  of Aquitaine was a ruler famous, and named so, for his physical weaknesses. He was crowned twice, the second time by Pope John VIII, after succeeding his father's rule of West Francia.  Three of his sons would become kings of West Francia, the last of which would be known as Charles III the Simple, with a reputation of being straightforward.\";\"Louis II d’Aquitaine était un souverain célèbre, et nommé ainsi, pour ses faiblesses physiques. Il a été couronné deux fois, la deuxième fois par le pape Jean VIII après avoir succédé à son père en Francie occidentale. Trois de ses fils deviendront rois de Francie occidentale, dont le dernier s'appellera Charles III dit « le Simple » pour sa réputation d'honnêteté.\";\"Ludwig II. von Aquitanien war ein Herrscher, der für seine körperlichen Schwächen berühmt wurde. Er wurde zweimal gekrönt, das zweite Mal von Papst Johannes VIII, nachdem er die Herrschaft seines Vaters über Westfranken übernommen hatte. Drei seiner Söhne würden Könige von Westfranken werden, von denen der letzte als Karl III. 'der einfache' bekannt war.\";;\"Luis de Aquitania fue un gobernante famoso por su debilidad física, de donde proviene su apodo. Fue coronado dos veces, la segunda por el papa Juan VIII tras suceder a su padre en el trono de Francia Occidental. Tres de sus hijos serían reyes de esta y el último sería conocido como Carlos III el Simple por su franqueza.\";;;;;;;;;;;;;x",
+				"RULER_FEAT_french_toast_NAME;French Toast!;Soyons Francs!;French Toast!;;¡Tortilla francesa!;;;;;;;;x",
+				"RULER_FEAT_french_toast_PROGRESS;Conditions Fulfilled;Conditions remplies;Erfüllte Bedingungen;;Condiciones cumplidas;;;;;;;;x",
+				"RULER_FEAT_french_toast_DESC;Hold the Kingdoms of France and Aquitaine, completely controlling their de jure provinces, and form the Empire of Francia.\\n * Progress continues for as long as you play the featured ruler's dynasty;Formez la Francie et contrôlez la France de jure et l'Aquitaine de jure.\\n * La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant;Gründet Francia und kontrolliert De-Jure Frankreich und De-Jure Aquitanien.\\n * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;Forma Francia y controla Francia y Aquitania de iure.\\n * El progreso seguirá mientras juegues con la dinastía del gobernante presentado;;;;;;;;x",
+				"RULER_FEAT_his_unfulfilled_dream_NAME;His Unfulfilled Dream;Son rêve non réalisé;Sein unerfüllter Traum;;Su sueño incumplido;;;;;;;;x",
+				"RULER_FEAT_his_unfulfilled_dream_PROGRESS;Pagans Killed;Païens tués;Getötete Heiden;;Paganos muertos;;;;;;;;x",
+				"RULER_FEAT_his_unfulfilled_dream_DESC;King Louis passed away before he could see through his dream of a northern crusade. Kill as many characters of the Germanic faith as possible! Reformed Germanic pagans also count. Norse characters with ONE OF these traits count as two points:  \\n * Viking\\n * Ravager\\n * Seaking\\n * Sea queen\\n * Berserker\\n * Shieldmaiden\\n * The challenge is only accomplishable with the featured ruler during their lifetime;Le roi Louis a trépassé avant de voir se réaliser son rêve d'une croisade dans le nord. Tuez autant de personnages de la foi germanique que possible! Les païens germaniques réformés comptent également. Les personnages nordiques ayant un des traits suivants comptent pour deux points :\\n * Viking\\n * Ravageur\\n * Roi des mers\\n * Reine des mers\\n * Berserk\\n * Skjaldmö\\n * L’exploit est réalisable uniquement avec le dirigeant mis en avant;König Ludwig verstrab noch bevor er seinen Traum von einem Kreuzzug im Norden erfüllen konnte. Tötet so viele Charaktere des germanischen Glaubens wie möglich! Auch reformierte germanische Heiden zählen. Nordische Charaktere mit EINEM dieser Merkmale zählen als zwei Punkte:  \\n * Vikinger\\n * Verwüster\\n * Seekönig\\n * Seekönigin\\n * Berserker\\n * Schildmaid\\n * Diese Herausforderung ist nur mit dem vorgestellten Herrscher zu Lebzeiten erreichbar;;El rey Luis murió antes de ver cumplido su sueño de una cruzada del norte. ¡Mata a todos los personajes de religión germánica que puedas! También cuentan los paganos germánicos reformados. Personajes nórdicos con UNO de estos rasgos dan dos puntos:\\n * Vikingo\\n * Saqueador\\n * Rey del mar\\n * Reina del mar\\n * Berserker\\n *Escudera\\n * Logro solo realizable en vida del gobernante presentado;;;;;;;;x",
+				"RULER_FEAT_why_dont_you_love_me_NAME;Why Don't You like Me?;Pourquoi ne m'appréciez-vous pas ?;Warum magst du mich nicht?;;¿Por qué no me queréis?;;;;;;;;x",
+				"RULER_FEAT_why_dont_you_love_me_PROGRESS;Number of Dukes Who like You;Nombre de ducs qui vous apprécient;Anzahl an Herzögen, die Euch mögen;;Duques a los que les gustas;;;;;;;;x",
+				"RULER_FEAT_why_dont_you_love_me_DESC;Make those vassal dukes like you! Get as many with +65 opinion as possible!\\n * The challenge is only accomplishable with the featured ruler during their lifetime;Faites en sorte que ces ducs vassaux vous apprécient! Obtenez le plus grand nombre d'opinions à plus de 65!\\n * L’exploit est réalisable uniquement avec le dirigeant mis en avant;Freundet Euch mit den Vasallenherzögen an! Erreicht eine Meinung von +65 mit so vielen wie möglich von ihnen!\\n * Diese Herausforderung ist nur mit dem vorgestellten Herrscher zu Lebzeiten erreichbar;;¡Haz que esos duques vasallos te quieran! ¡Consigue una opinión 65+ de todos los que puedas!\\n * Logro solo realizable en vida del gobernante presentado;;;;;;;;x"
+			]
+		},
+		{
+			"highlighted_ruler": {
+				"key": "shajar_egypt",
+				"event_time_end": 1893499200,
+				"alert_level": 2,
+				"title": "k_egypt",
+				"startdate": "1250.01.01",
+				"religion": "sunni",
+				"government": "muslim_government",
+				"dynasty_id": 762,
+				"required_dlcs": [
+					"dlc007"
+				],
+				"traits": [
+					"amateurish_plotter",
+					"envious",
+					"deceitful",
+					"diligent",
+					"cruel"
+				],
+				"portrait": {
+					"age": 35,
+					"female": true,
+					"dna": "tonatzjeaix",
+					"properties": "nhjcfc0000000000c000000000000000000000",
+					"religion": "sunni",
+					"culture": "armenian",
+					"government": "muslim_government"
+				},
+				"map": {
+					"provinces": [
+						805,
+						806,
+						808,
+						801,
+						802,
+						803,
+						804,
+						796,
+						797,
+						798,
+						799,
+						800,
+						785,
+						786,
+						787,
+						788,
+						789,
+						790,
+						795,
+						800,
+						1782,
+						791,
+						794,
+						1781,
+						720,
+						721,
+						722,
+						723,
+						773,
+						774,
+						776,
+						777,
+						779,
+						782,
+						778,
+						783,
+						1536,
+						718,
+						716,
+						719,
+						861,
+						1535,
+						724,
+						725,
+						714,
+						769,
+						728,
+						726,
+						727,
+						713,
+						710,
+						711,
+						712,
+						687,
+						696,
+						685,
+						697,
+						700,
+						697,
+						684,
+						683,
+						700,
+						699,
+						734,
+						733,
+						708,
+						698,
+						709,
+						732,
+						730,
+						731
+					],
+					"color": [
+						0.600000,
+						0.600000,
+						1,
+						1
+					],
+					"camera_position": [
+						1835,
+						1570,
+						508
+					],
+					"camera_look_at": [
+						1835,
+						0,
+						738
+					]
+				},
+				"feats_script": "heiroglyphics = {\nicon = GFX_family_bliss_34\nlevels = { 80 }\nupdate = { \nset_variable = { which = global_heiroglyphics value = 1 }\nany_dynasty_member_even_if_dead = {\nchange_variable = { which = global_heiroglyphics value = 1 }\n}\n}\n}\ntutan_kha_doom = { \nicon = GFX_headhunter_34\nlevels = { 3 4 5 }\nupdate = {\nset_variable = { which = global_tutan_kha_doom value = 0 }\nc_32928 = { # Queen Shajar al-Durr of Egypt\nif = { \nlimit = { is_alive = yes }\nany_kill_list_character = {\nif = { \nlimit = { \nis_landed = yes \nNOT = { dynasty = 762 }\n}\nchange_variable = { which = global_tutan_kha_doom value = 1 }\n}\n}\n}\n}\n}\n} \ndont_stop_me_now = {\nicon = GFX_empressive_34\nlevels = { 2 3 4 }\nupdate = {\nset_variable = { which = global_dont_stop_me_now value = 0 }\nif = { \nlimit = { is_female = yes }\nexport_to_variable = {\nwhich = global_dont_stop_me_now\nvalue = num_of_king_titles\n}\n}\n}\n}"
+			},
+			"add_localisation": [
+				"HIGHLIGHTED_RULER_shajar_egypt_NAME;Queen Shajar al-Durr;La reine Shajar al-Durr;Königin Schadschar ad-Durr;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_shajar_egypt_DESC;Shajar was murdered by maids, will it happen again?;Shajar a été assassinée par des servantes. Est-ce que cela va se reproduire ?;Schadschar wurde von ihren Mägden ermordet. Wird es wieder passieren?;;Reina Shajar al-Durr;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_shajar_egypt_PORTRAIT_INSTANT;§YQueen Shajar al-Durr of Egypt§!;§YLa reine Shajar al-Durr d'Égypte§!;§YKönigin Schadschar ad-Durr von Ägypten§!;;Unas sirvientas mataron a Shajar, ¿pasará de nuevo?;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_shajar_egypt_PORTRAIT_DELAYED;\"The second Muslim woman in history to become a monarch, Queen Shajar al-Durr of Egypt would enjoy only a short time as ruler. She would be the first of the Mamluk Sultanate, a realm that would last until 1517. There would be a brutal end to her reign, being captured for her involvement in the murder of Sultan Aybak and later beaten to death by the bondmaids of Al-Mansur Ali.\";\"Deuxième femme musulmane de l'Histoire à devenir monarque, la reine Shajar al-Durr d'Égypte ne jouira que d'une courte période de règne. Elle sera le premier dirigeant du sultanat mamelouk, un pays qui durera jusqu'en 1517. Elle se fera capturée pour son implication dans le meurtre d'Aybak, puis battue à mort par les servantes d'Al-Mansur Ali.\";\"Königin Schadschar al-Durr von Ägypten, die zweite muslimische Frau in der Geschichte, die Monarchin werden würde, genoss nur eine kurze Zeit als Herrscherin. Sie wird die erste des Mamluken-Sultanats sein, ein Reich, das bis 1517 bestehen würde. Ihre Herrschaft würde brutal zu Ende gehen, beteiligt an der Ermordung von Aybak und später von den Leibeigenen von al-Mansur Ali zu Tode geprügelt.\";;Shajar al-Durr de Egipto, la segunda mujer musulmana de la historia que fue monarca disfrutaría muy poco tiempo como gobernante. Sería la primera del sultanato mameluco, un reino que duraría hasta 1517. Su reinado tendría un final brutal cuando fue capturada por su participación en el asesinato de Aibek y más tarde golpeada hasta morir por las sirvientas de al-mansur Ali.\";;;;;;;;;;;;;x",
+				"RULER_FEAT_heiroglyphics_NAME;Heiroglyphics!;Héritiers nombreux;Erbtastisch!;;¡Genealógico!;;;;;;;;x",
+				"RULER_FEAT_heiroglyphics_PROGRESS;Dynasty Members;Membres de la dynastie;Dynastiemitglieder;;Miembros de dinastía;;;;;;;;x",
+				"RULER_FEAT_heiroglyphics_DESC;Make sure your bloodline lives on by expanding your dynasty to a size of 80 members.\\n * Progress continues for as long as you play the featured ruler's dynasty;Ne laissez pas votre lignée disparaître, amenez votre dynastie à une taille de 80.\\n * La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant;Lasst nicht zu, dass Eure Blutlinie endet und erweitert Eure Dynastie auf 80 Mitglieder.\\n * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;No permitas que tu linaje se acabe, aumenta tu dinastía hasta 80.\\n * El progreso seguirá mientras juegues con la dinastía del gobernante presentado;;;;;;;;x",
+				"RULER_FEAT_tutan_kha_doom_NAME;Tutan-Kha-Doom!;Cléo-Paf!;Tod-anch-amun!;;¡Tutás-kaput!;;;;;;;;x",
+				"RULER_FEAT_tutan_kha_doom_PROGRESS;Number of Murders;Nombre de meurtres;Anzahl an Morden;;Asesinatos;;;;;;;;x",
+				"RULER_FEAT_tutan_kha_doom_DESC;Kill as many landed characters of other dynasties as possible.\\n * The challenge is only accomplishable with the featured ruler during their lifetime;Tuez autant de personnages d'autres dynasties avec un titre foncier que possible.\\n * L’exploit est réalisable uniquement avec le dirigeant mis en avant;Tötet so viele Charaktere anderer Dynastien, die ein Besitztum haben, wie möglich.\\n * Diese Herausforderung ist nur mit dem vorgestellten Herrscher zu Lebzeiten erreichbar;;Mata todos los miembros de otras dinastías con tierras que puedas.\\n * Logro solo realizable en vida del gobernante presentado;;;;;;;;x",
+				"RULER_FEAT_dont_stop_me_now_NAME;Don't Stop Me Now!;Ne m'arrêtez pas maintenant!;Don't stop me now!;;¡Ahora no me pares!;;;;;;;;x",
+				"RULER_FEAT_dont_stop_me_now_PROGRESS;Number of Queen Titles;Nombre de titres de reine;Anzahl an Königinentiteln;;Títulos de reina;;;;;;;;x",
+				"RULER_FEAT_dont_stop_me_now_DESC;Hold as many queen titles as possible.\\n * Progress continues for as long as you play a female character of the featured ruler's dynasty;Avoir autant de titres de reine que possible.\\n * La progression se poursuit tant que vous jouez une femme de la dynastie du dirigeant mis en avant;Habt so viele Königinentitel wie möglich.\\n * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;Ten todos los títulos de reina que puedas.\\n * El progreso seguirá mientras juegues con una mujer de la dinastía del gobernante presentado;;;;;;;;x"
+			]
+		},
+		{
+			"highlighted_ruler": {
+				"key": "pavao_croatia",
+				"event_time_end": 1893499200,
+				"alert_level": 2,
+				"title": "d_croatia",
+				"startdate": "1278.01.01",
+				"religion": "catholic",
+				"government": "feudal_government",
+				"dynasty_id": 18005,
+				"traits": [
+					"tough_soldier",
+					"clubfooted",
+					"patient"
+				],
+				"portrait": {
+					"age": 33,
+					"female": false,
+					"dna": "gtfylpywaey",
+					"properties": "wind0d0000000000000000000000000000000",
+					"religion": "catholic",
+					"culture": "croatian",
+					"government": "feudal_government"
+				},
+				"map": {
+					"provinces": [
+						459,
+						464,
+						467,
+						1967,
+						466
+					],
+					"color": [
+						0.600000,
+						0.600000,
+						1,
+						1
+					],
+					"camera_position": [
+						940,
+						400,
+						700
+					],
+					"camera_look_at": [
+						940,
+						0,
+						930
+					]
+				},
+				"feats_script": "# Paul I Subic\nconquerer_from_bribir = {\nicon = GFX_bring_it_on_34\nlevels = { 4 }\nupdate = { \nset_variable = { which = global_conquerer_from_bribir value = 0 }\nif = { \nlimit = { dynasty = 18005 } # Subic\nif = {\nlimit = { completely_controls = k_serbia } \nchange_variable = { which = global_conquerer_from_bribir value = 1 }\n}\nif = {\nlimit = { completely_controls = d_bosnia } \nchange_variable = { which = global_conquerer_from_bribir value = 1 }\n}\nif = {\nlimit = { completely_controls = d_croatia } \nchange_variable = { which = global_conquerer_from_bribir value = 1 }\n}\nif = {\nlimit = { completely_controls = d_dalmatia }\nchange_variable = { which = global_conquerer_from_bribir value = 1 }\n}\n}\n}\n}\nestablished = {\nicon = GFX_dream_home_34\nlevels = { 4 6 8 }\nupdate = {\nset_variable = { which = global_established value = 0 }\nc_470001 = { # Paul\nif = {\nlimit = { is_alive = yes } \nany_dynasty_member = {\nif = {\nlimit = { \nis_landed = yes\n}\nchange_variable = { which = global_established value = 1 }\n} \n}\n}\n}\n}\n}\nsubic_stantial_legacy = {\nicon = GFX_rise_of_civilization_34\nlevels = { 1 2 3 }\nupdate = {\nset_variable = { which = global_subic_stantial_legacy value = 0 }\nif = { \nlimit = { dynasty = 18005 } # Subic\nany_realm_wonder = {\nif = {\nlimit = {\noriginal_wonder_owner = {\ndynasty = 18005\n}\n}\nchange_variable = { which = global_subic_stantial_legacy value = 1 }\n}\n}\n}\n}\n}"
+			},
+			"add_localisation": [
+				"HIGHLIGHTED_RULER_pavao_croatia_NAME;Duke Pavao;Duc Pavao;Herzog Pavao;;Duque Pablo;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_pavao_croatia_DESC;Conquer Bosnia, Croatia, Dalmatia and Serbia!;Partez à la conquête de la Bosnie, la Croatie, la Dalmatie et la Serbie!;Erobert Bosnien, Kroatien, Dalmatien und Serbien!;;!Conquista Bosnia, Croacia, Dalmacia y Serbia!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_pavao_croatia_PORTRAIT_INSTANT;§YDuke Pavao of Croatia§!;§YDuc Pavao de Croatie§!;§YHerzog Pavao von Kroatien§!;;§YDuque Pablo de Croacia§!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_pavao_croatia_PORTRAIT_DELAYED;\"Duke Pavao of Croatia, the most impressive member of the Subic house conquered Bosnia and declared himself overlord, ruling over Croatia and Dalmatia and parts of Serbia. He declared peace with Venice and his political actions would later see Charles I become the king of Hungary.\";\"Le duc de Croatie Pavao, le membre le plus impressionnant de la Maison Subic, a conquis la Bosnie et s'est proclamé chef suprême, régnant sur la Croatie, la Dalmatie et une partie de la Serbie. Il a signé la paix avec Venise et ses actions politiques donneront à Charles Ier le rang de roi de Hongrie.\";\"Herzog Pavao von Kroatien, das eindrucksvollste Mitglied der Subic, eroberte Bosnien und erklärte sich selbst zum Oberherrscher über Kroatien und Dalmatien sowie Teile Serbiens. Er erklärte den Frieden mit Venedig und seine politischen Aktionen würden Karl I. zum König von Ungarn machen.\";;\"El duque Pablo de Croacia, el miembro más impresionante de la Casa de Subic conquistó Bosnia y se proclamó soberano reinante de Croacia, Dalmacia y partes de Serbia. Proclamó la paz con Venecia y sus acciones políticas llevarían a que Carlos I se convirtiera en rey de Hungría.\";;;;;;;;;;;;;x",
+				"RULER_FEAT_conquerer_from_bribir_NAME;Conquerer from Bribir!;Conquérant de Bribir !;Eroberer Bribirs!;;¡Conquistador de Bribir!;;;;;;;;;x",
+				"RULER_FEAT_conquerer_from_bribir_PROGRESS;Titles Controlled;Zones conquises;Eroberte Regionen;;Áreas conquistadas;;;;;;;;;x",
+				"RULER_FEAT_conquerer_from_bribir_DESC;Ban of Croatia, lord of all of Bosnia, and uniter of Dalmatia, finish what Paul never could and conquer Serbia as well! Hold the Kingdom of Serbia and duchies of Bosnia, Croatia and Hum and completely control all their de jure provinces.\n * Progress continues for as long as you play the featured ruler's dynasty;Ban de Croatie, Seigneur de toute la Bosnie et unificateur de Dalmatie, terminez ce que Paul n'a jamais pu faire et emparez-vous de la Serbie !\n * La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant.;Beendet als Ban von Kroatien, Fürst von ganz Bosnien und Vereiniger von Dalmatien das, was Paulus nie konnte, und erobert Serbien!\n * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;Ban de Croacia, señor de toda Bosnia y unificador de Dalmacia, ¡termina lo que Pablo no pudo hacer y conquista también Serbia!\n * El progreso continuará mientras juegues con la dinastía del gobernante presentado;;;;;;;;;x",
+				"RULER_FEAT_established_NAME;Established;Bien établi;Etabliert;;Asentado;;;;;;;;;x",
+				"RULER_FEAT_established_PROGRESS;Number of Landed Dynasty Members;Nombre de membres dynastiques avec terres;Anzahl an Dynastiemitgliedern mit Besitz;;Miembros dinastía con títulos;;;;;;;;;x",
+				"RULER_FEAT_established_DESC;Paul appointed his brothers and sons to many positions of power throughout his realm. Continue this tradition and make sure that the dynasty has a strong grasp on the land.\n * The challenge is only accomplishable with the featured ruler during their lifetime;Paul a nommé ses frères et ses fils à de nombreux postes de pouvoir dans son pays. Continuez cette tradition et assurez-vous que la dynastie a une forte emprise sur le pays.\n * L’exploit est réalisable uniquement avec le dirigeant mis en avant.;Paulus erhob seine Brüder und Söhne in viele Machtpositionen in seinem ganzen Reich. Setzt diese Tradition fort und stellt sicher, dass Eure Dynastie das Land fest im Griff hat.\n * Diese Herausforderung ist nur mit dem vorgestellten Herrscher zu Lebzeiten erreichbar;;Pablo puso a sus hermanos e hijos en puestos de poder por todo el reino. Continua esta tradición y asegúrate de que la dinastía tiene un control firme sobre sus tierras.\n * Logro solo realizable en vida del gobernante presentado.;;;;;;;;;x",
+				"RULER_FEAT_subic_stantial_legacy_NAME;Subic-Stantial Legacy;Héritage substantiel;Subisch-Stantisches Vermächtnis;;Legado Subicstancial;;;;;;;;;x",
+				"RULER_FEAT_subic_stantial_legacy_PROGRESS;Great Works Built;Grands ouvrages construits;Gebaute Große Bauwerke;;Grandes obras;;;;;;;;;x",
+				"RULER_FEAT_subic_stantial_legacy_DESC;Paul built multiple monasteries, a church, a fort, and relations with Venice. Can you leave an even grander legacy behind?\n * Progress continues for as long as you play the featured ruler's dynasty;Paul a construit plusieurs monastères, une église et un fort, et établi des relations avec Venise. Pouvez-vous laisser un héritage encore plus grand ?\n * La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant.;Paulus baute mehrere Klöster, eine Kirche, eine Festung und Beziehungen zu Venedig auf. Könnt Ihr ein noch größeres Erbe hinterlassen?\n * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;Pablo construyó muchos monasterios, una iglesia, una fortaleza y sus relaciones con Venecia. ¿Podrás dejar tras de ti un legado aún mayor?\n * El progreso continuará mientras juegues con la dinastía del gobernante presentado;;;;;;;;;x"
+			]
+		},
+		{
+			"highlighted_ruler": {
+				"key": "arwa_yemen",
+				"event_time_end": 1893499200,
+				"alert_level": 2,
+				"title": "k_yemen",
+				"startdate": "1074.10.4",
+				"religion": "shiite",
+				"government": "muslim_government",
+				"dynasty_id": 590,
+				"required_dlcs": [
+					"dlc007"
+				],
+				"traits": [
+					"mastermind_theologian",
+					"hafiz",
+					"genius",
+					"poet"
+				],
+				"portrait": {
+					"age": 26,
+					"female": true,
+					"dna": "jwoaaodrvnr",
+					"properties": "ogy0nc0000000000b00000000000000000000",
+					"religion": "shiite",
+					"culture": "bedouin_arabic",
+					"government": "muslim_government"
+				},
+				"map": {
+					"provinces": [
+						1533,
+						860,
+						1532,
+						858,
+						857,
+						856,
+						1534,
+						859
+					],
+					"color": [
+						0.600000,
+						0.600000,
+						1,
+						1
+					],
+					"camera_position": [
+						1940,
+						900,
+						161
+					],
+					"camera_look_at": [
+						1940,
+						0,
+						391
+					]
+				},
+				"feats_script": "# Arwa Al-Sulayhi\nlong_live_the_queen = {\nicon = GFX_pay_to_win_34\nlevels = { 100 }\nupdate = {\nif = {\nlimit = {\ndynasty = 590 # Sulayhid\nhas_landed_title = k_yemen\ncompletely_controls = c_najran\ncompletely_controls = c_zabid\ncompletely_controls = c_sanaa\ncompletely_controls = c_taizz\ncompletely_controls = c_aden\ncompletely_controls = c_bayda\ncompletely_controls = c_al_ahqaf\ncompletely_controls = c_kathiri\ncompletely_controls = c_socotra\ncompletely_controls = c_mahra\ncompletely_controls = c_dhofar\nNOT = { has_character_flag = long_live_queen_tracker }\n}\nset_character_flag = long_live_queen_tracker\n}\nif = {\nlimit = {\nhas_character_flag = long_live_queen_tracker\nNOR = {\ndynasty = 590 # Sulayhid\nhas_landed_title = k_yemen\ncompletely_controls = c_najran\ncompletely_controls = c_zabid\ncompletely_controls = c_sanaa\ncompletely_controls = c_taizz\ncompletely_controls = c_aden\ncompletely_controls = c_bayda\ncompletely_controls = c_al_ahqaf\ncompletely_controls = c_kathiri\ncompletely_controls = c_socotra\ncompletely_controls = c_mahra\ncompletely_controls = c_dhofar\n}\n}\nclr_character_flag = long_live_queen_tracker\n}\nif = {\nlimit = {\nhad_character_flag = { flag = long_live_queen_tracker days = 365 }\n}\nchange_variable = { which = global_long_live_the_queen value = 1 }\nclr_character_flag = long_live_queen_tracker\n}\n}\n}\ngods_will_be_done = { \nicon = GFX_dream_home_34\nlevels = { 5 8 12 }\nupdate = {\nset_variable = { which = global_gods_will_be_done value = 0 }\nc_220820 = { # Arwa Al-Sulayhi\nif = {\nlimit = { is_alive = yes }\nany_realm_province = {\nany_province_holding = { \nif = { \nlimit = { holding_type = temple\t}\nchange_variable = { which = global_gods_will_be_done value = 1 }\n}\n}\n}\n}\n}\n}\n}\nconvert_hindu_to_muslim = {\nicon = GFX_holy_smoke_34\nlevels = { 2 4 6 }\nupdate = {\nset_variable = { which = global_convert_hindu_to_muslim value = 0 }\nc_220820 = { # Arwa Al-Sulayhi\nif = {\nlimit = {\nis_alive = yes\ncheck_variable = { which = character_converted_to_shia value = 1 }\n}\nset_variable = { which = global_convert_hindu_to_muslim which = character_converted_to_shia }\n}\n}\n}\n}"
+			},
+			"add_localisation": [
+				"HIGHLIGHTED_RULER_arwa_yemen_NAME;Sultana Arwa;Sultane Arwa;Sultana Arwa;;Sultana Arwa;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_arwa_yemen_DESC;Discover God's Will in her lifetime!;Découvrez la volonté de Dieu dans sa vie!;Entdeckt Gottes Wille zu ihrer Lebzeit!;;!Descubre la obra de Dios durante su vida!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_arwa_yemen_PORTRAIT_INSTANT;§YSultana Arwa of the Sulayhid Sultanate§!;§YSultane Arwa du Sultanat Sulayhide§!;§YSultana Arwa des Sulayhid-Sultants§!;;§YSultana Arwa del sultanato sulayhida§!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_arwa_yemen_PORTRAIT_DELAYED;\"Arwa al-Sulayhi, Sultana of the Sulayhid Sultanate referred to as the Noble Lady, was the first woman to be given the title of hujja, the closest living image of God’s will in her lifetime. She reigned over Yemen for 68 years, improving economy, building schools and mosques.\";\"Arwa al-Sulayhi, la sultane du sultanat Sulayhide appelée la noble dame, a été la première femme à se voir attribuer le titre de hujja, l'incarnation la plus proche de la volonté de Dieu de son vivant. Elle a régné sur le Yémen pendant 68 ans, améliorant l'économie et faisant construire écoles et mosquées.\";\"Arwa al-Sulayhi, die Sultanin des Sultanats von Sulayhid, die als edle Lady bezeichnet wurde, war die erste Frau, die den Titel 'Hujja' erhielt, dem lebenden Abbild von Gottes Willen zu Lebzeiten. Sie regierte 68 Jahre lang den Jemen, verbesserte die Wirtschaft und baute Schulen und Moscheen.\";;\"Arwa al-Sulayhi, sultana del sultanato sulayhida, llamada la Dama noble, fue la primera mujer en recibir en vida el título de hujja, lo más cercano a la imagen viviente de Dios. Reinó 68 años sobre el Yemen, mejorando la economía y construyendo escuelas y mezquitas.\";;;;;;;;;;;;;x",
+				"RULER_FEAT_long_live_the_queen_NAME;Long Live the Queen!;Longue vie à la reine!;Lang lebe die Königin!;;¡Viva la reina!;;;;;;;;;x",
+				"RULER_FEAT_long_live_the_queen_PROGRESS;Years Ruled;Années de règne;Jahre geherrscht;;Años gobernados;;;;;;;;;x",
+				"RULER_FEAT_long_live_the_queen_DESC;Under Arwa's rule Yemen prospered.\n * Hold the Sultanate of Yemen and completely control its de jure provinces for 100 years\n * Progress continues for as long as you play the featured ruler's dynasty;Sous le gouvernement d'Araw, le Yémen a prospéré.\n * Vous devez détenir le titre de Sultanat du Yémen et devez assumer le contrôle de tous les comtés de jure du Yémen.\n * L'avancement progresse tant que vous jouez la dynastie du dirigeant mis en avant.;Unter der Herrschaft Arwa's florierte Yemen.\n * Herrscht über das Sultanat von Yemen, und habt komplette Kontrolle über alle De-Jure Grafschaften Yemens.\n * Der Fortschritt geht weiter so lange Ihr in der Dynastie des vorgestellten Herrschers spielt.;Bajo el gobierno de Arwa, Yemen prosperó.\n * Mantén el título de Sultanato de Yemen y controla por completo todos los condados de jure de Yemen.\n El progreso continúa mientras juegues en la Dinastía del gobernante.;;;;;;;;;x",
+				"RULER_FEAT_gods_will_be_done_NAME;God's Will Be Done;Que la volonté de Dieu soit faite;Gottes Wille wird durchgesetzt;;Se hará la obra de Dios;;;;;;;;;x",
+				"RULER_FEAT_gods_will_be_done_PROGRESS;Temples in Realm;Temples;Tempel;;Templos;;;;;;;;;x",
+				"RULER_FEAT_gods_will_be_done_DESC;Build as many temples in your realm as you can.\n * The challenge is only accomplishable with the featured ruler during their lifetime;Construisez autant de temples que vous le pouvez dans votre pays.\n * L’exploit est réalisable uniquement avec le dirigeant mis en avant.;Baut in Eurem Reich so viele Tempel wie möglich.\n * Diese Herausforderung ist nur mit dem vorgestellten Herrscher zu Lebzeiten erreichbar;;Construye todos los templos que puedas en tu reino. \n * Logro solo realizable en vida del gobernante presentado.;;;;;;;;;x",
+				"RULER_FEAT_convert_hindu_to_muslim_NAME;Dawn of a New Da'is!;De l'hindouisme au chiisme;Ein neuer Da'i!;;¡Albas de nuevos da'is!;;;;;;;;;x",
+				"RULER_FEAT_convert_hindu_to_muslim_PROGRESS;Hindus Converted to Shia;Hindouistes convertis en chiites;Zum Schiitentum konvertierte Hindus;;Hindús convertidos a chiismo;;;;;;;;;x",
+				"RULER_FEAT_convert_hindu_to_muslim_DESC;Convert as many Hindus to Shia as possible. Only characters converted through character interaction count toward the challenge!\n * The challenge is only accomplishable with the featured ruler during their lifetime;Convertissez autant d’hindouistes au chiisme que possible. Seuls les personnages convertis grâce à une interaction de personnage comptent pour l'exploit!\n* L’exploit est réalisable uniquement avec le dirigeant mis en avant.;Konvertiert so viele Hindus zum Schiitentum wie möglich. Nur Charaktere, die durch die Charakter-Interaktion konvertiert wurden, zählen für diese Herausforderung!\n * Diese Herausforderung ist nur mit dem vorgestellten Herrscher zu Lebzeiten erreichbar;;Convierte todos los hindúes que puedas al chiismo. ¡Para el logro solo cuentan las conversiones mediante interacción de personaje!\n * Logro solo realizable en vida del gobernante presentado.;;;;;;;;;x"
+			]
+		},
+		{
+			"highlighted_ruler": {
+				"key": "harald_norway",
+				"event_time_end": 1893499200,
+				"alert_level": 2,
+				"title": "k_norway",
+				"startdate": "1066.09.15",
+				"religion": "catholic",
+				"government": "feudal_government",
+				"dynasty_id": 499,
+				"traits": [
+					"skilled_tactician",
+					"varangian",
+					"just",
+					"zealous",
+					"envious",
+					"brave"
+				],
+				"portrait": {
+					"age": 51,
+					"female": false,
+					"dna": "xgktcttzntp",
+					"properties": "fepjlj0000000000000000000000000000000",
+					"religion": "catholic",
+					"culture": "norwegian",
+					"government": "feudal_government"
+				},
+				"map": {
+					"provinces": [
+						37,
+						33,
+						34,
+						268,
+						269,
+						270,
+						271,
+						272,
+						273,
+						1620,
+						296,
+						1621,
+						276,
+						284,
+						275,
+						1622,
+						1623,
+						1624,
+						1625,
+						274,
+						277,
+						278,
+						391,
+						389
+					],
+					"color": [
+						0.600000,
+						0.600000,
+						1,
+						1
+					],
+					"camera_position": [
+						960,
+						900,
+						1336
+					],
+					"camera_look_at": [
+						960,
+						0,
+						1566
+					]
+				},
+				"feats_script": "# Harald Hardrade\na_ruler_harder_than_steel = {\nicon = GFX_hard_ruler_34\nhappened = {\ndynasty = 499\ncompletely_controls = k_england\ncompletely_controls = k_norway\n}\n}\nhide_the_pain_harold = { \nicon = GFX_over_your_dead_body_34\nlevels = { 5 10 15 }\nupdate = {\nset_variable = { which = global_hide_the_pain_harold value = 0 }\nif = {\nlimit = { dynasty = 499 }\nif = {\nc_122 = { # Harold II of England\nany_dynasty_member_even_if_dead = {\nif = {\nlimit = { \nis_alive = no\nkiller = { dynasty = 499 }\n} \nchange_variable = { which = global_hide_the_pain_harold value = 1 }\n}\n}\n}\n}\n}\n}\n}\nrule_with_an_iron_fist = {\nicon = GFX_i_am_the_law_34\nlevels = { 4 8 12 }\nupdate = {\nif = {\nlimit = { \nwar = no \ndynasty = 499 \ncheck_variable = { which = global_is_dirty value = 1 }\n}\nset_variable = { which = global_is_dirty value = 0 }\nchange_variable = { which = global_rule_with_an_iron_fist value = 1 }\n}\n\nif = {\nlimit = { war = yes }\nany_war = {\nif = {\nlimit = {\nOR = {\nusing_cb = cb_minor_clan_revolt\nusing_unimportant_cb = yes\nin_revolt = yes\n}\ndefender = { \ndynasty = 499\nNOT = { war_score = -15 }\n}\nNOT = { check_variable = { which = global_is_dirty value = 1 } } \n}\n change_variable = { which = global_is_dirty value = 1 }\n}\nif = {\nlimit = { \nOR = {\nusing_cb = cb_minor_clan_revolt \nusing_unimportant_cb = yes \nin_revolt = yes\n}\ndefender = {\ndynasty = 499\nwar_score = -15\n}\ncheck_variable = { which = global_is_dirty value = 1 }\n}\nset_variable = { which = global_is_dirty value = 0 }\n}\n}\n}\n\nif = { \nlimit = { NOT = { dynasty = 499 } }\nset_variable = { which = global_rule_with_an_iron_fist value = 0 }\n}\n}\n}"
+			},
+			"add_localisation": [
+				"HIGHLIGHTED_RULER_harald_norway_NAME;King Harald IV 'Hårdråde';Roi Harald IV 'Hårdråde';König Haral IV 'Hårdråde';;Rey Harald IV 'Hardrada';;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_harald_norway_DESC;Change History and become King of England!;Changez l'histoire et devenez roi d'Angleterre!;Ändert die Geschichte und werdet König von England!;;!Cambia la historia y conviértete en rey de Inglaterra!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_harald_norway_PORTRAIT_INSTANT;§YKing Harald IV 'Hårdråde' of Norway§!;§YRoi Harald IV 'Hårdråde' de Norvège§!;§YKönig Haral IV 'Hårdråde' von Norwegen§!;;§YRey Harald IV 'Hardrada' de Noruega§!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_harald_norway_PORTRAIT_DELAYED;\"Harald Hårdråde, King of Norway spent a great period of his life fighting battles, joining his first in 1030, the Battle of Stiklestad at the age of 15. Exiled for the loss, he was sent to Kievan Rus where he eventually became captain in the army of Yaroslav the Wise and later commander of the Byzantine Varangian Guard. He would eventually claim England but lose his life in battle of Stamford Bridge, starting the end of the Viking Age.\";\"Harald Hårdråde, roi de Norvège, passa une grande partie de sa vie sur le champ de bataille. Le premier en 1030, la bataille de Stiklestad, à l'âge de 15 ans. Exilé à cause des pertes, il fut envoyé à Kiev Rus où il devint capitaine dans l'armée de Yaroslav le Sage et plus tard commandant de la Garde byzantine varègue. Il finira par revendiquer l'Angleterre mais perdra la vie dans la bataille de Stamford Bridge, marquant la fin de l'âge viking.\";\"Harald Hårdråde, König von Norwegen, verbrachte eine lange Zeit seines Lebens mit Schlachten und schloss sich 1030 im Alter von 15 Jahren bereits seiner ersten Schlacht, der Schlacht von Stiklestad, an. Er wurde wegen seiner Niederlage ins Kiewer Rus geschickt, wo er schließlich Kapitän der Armee von Jaroslaw dem Weisen wurde und späterem Kommandeur der byzantinischen Warägergarde. Er würde England für sich beanspruchen, aber in der Schlacht um Stamford Bridge sein Leben verlieren und so das Ende der Wikingerzeit einläuten.\";;\"Harald Hardrada, rey de Noruega, pasó una gran parte de su vida luchando en batallas. La primera, cuando tenía 15 años, fue la batalla de Stiklestad. Exiliado tras la derrota, fue enviado a la Rus de Kiev donde se convertiría en capitán del ejército de Yaroslav el Sabio y más tarde en comandante de la guardia varega de Bizancio. Al final reclamaría Inglaterra, pero perdió la vida en la batalla de Stamford Bridge, lo que sería el principio del fin de la era vikinga.\";;;;;;;;;;;;;x",
+				"RULER_FEAT_a_ruler_harder_than_steel_NAME;Harder Than Steel;Un dirigeant plus dur que l'acier;Ein Herrscher, härter als Stahl;;Más duro que el acero;;;;;;;;;x",
+				"RULER_FEAT_a_ruler_harder_than_steel_DESC;Hold the kingdoms of Norway & England and completely control their de jure provinces.\n* Progress continues for as long as you play the featured ruler's dynasty;Détenez les titres de roi de Norvège et roi d'Angleterre\n* La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant.;Haltet den Titel des Königs von Norwegen und des Königs von England\n* Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;Posee los títulos de Rey de Noruega y de Inglaterra \n* El progreso continuará mientras juegues con la dinastía del gobernante presentado;;;;;;;;;x",
+				"RULER_FEAT_a_ruler_harder_than_steel_PROGRESS;King of Norway and England;Roi de Norvège et d'Angleterre;König von Norwegen und England;;Rey de Noruega e Inglaterra;;;;;;;;;x",
+				"RULER_FEAT_hide_the_pain_harold_NAME;Hide the Pain, Harold...;La douleur de Harold...;Unterdrückt den Schmerz, Harald ...;;Esconde el dolor, Harold…;;;;;;;;;x",
+				"RULER_FEAT_hide_the_pain_harold_DESC;Kill as many members of King Harold II of England's dynasty, the Godwins, as possible. \n* Deaths caused by other members of your dynasty also count! \n* Progress continues for as long as you play the featured ruler's dynasty;Tuez autant de membres de la dynastie du roi Harold II d’Angleterre – la dynastie des Godwin.\n* Les décès causés par d'autres membres de votre dynastie comptent également !\n* La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant.;Tötet so viele Mitglieder der Dynastie von Harald II. von England, der Godwin-Dynastie, wie möglich.\n* Tode, die durch andere Mitglieder Eurer Dynastie erzielt werden, zählen ebenfalls!\n* Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;Mata a todos los miembros de la dinastía del rey Harold II de Inglaterra, la dinastía Godwin. \n* ¡También cuentan las muertes causadas por otros miembros de tu dinastía! \n* El progreso continuará mientras juegues con la dinastía del gobernante presentado;;;;;;;;;x",
+				"RULER_FEAT_hide_the_pain_harold_PROGRESS;Godwin Deaths;Décès des Godwin;Tote unter den Godwins;;Muertes Godwin;;;;;;;;;x",
+				"RULER_FEAT_rule_with_an_iron_fist_NAME;With an Iron Fist;Avec une poigne de fer;Mit eiserner Faust;;Con puño de hierro;;;;;;;;;x",
+				"RULER_FEAT_rule_with_an_iron_fist_DESC;Crush as many revolts as possible. Crush those who rise up to oppose your rule! \n* Progress continues for as long as you play the featured ruler's dynasty;Écrasez le plus de révoltes possible. Écrasez ceux qui s'opposent à votre règne !\n* La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant.;Zerschlagt so viele Revolten wie möglich. Zerschlagt jene, die sich gegen Eure Herrschaft stellen!\n* Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;Aplasta todas las revueltas que puedas. ¡Destroza a todos aquellos que se rebelen contra tu reinado! \n* El progreso continuará mientras juegues con la dinastía del gobernante presentado;;;;;;;;;x",
+				"RULER_FEAT_rule_with_an_iron_fist_PROGRESS;Revolts Crushed;Révoltes écrasées;Zerschlagene Revolten;;Revueltas aplastadas;;;;;;;;;x"
+			]
+		},
+		{
+			"highlighted_ruler": {
+				"key": "hethum_armenia",
+				"event_time_end": 1893499200,
+				"alert_level": 2,
+				"title": "k_armenia",
+				"startdate": "1226.01.01",
+				"religion": "miaphysite",
+				"government": "feudal_government",
+				"dynasty_id": 23003,
+				"traits": [
+					"underhanded_rogue",
+					"patient",
+					"brave",
+					"ambitious",
+					"cynical"
+				],
+				"portrait": {
+					"age": 16,
+					"female": false,
+					"dna": "miafpqlteaj",
+					"properties": "am000c0000000000000000000000000000000",
+					"religion": "miaphysite",
+					"culture": "armenian",
+					"government": "feudal_government"
+				},
+				"map": {
+					"provinces": [
+						735,
+						762,
+						761,
+						758
+					],
+					"color": [
+						0.600000,
+						0.600000,
+						1,
+						1
+					],
+					"camera_position": [
+						1420,
+						400,
+						505
+					],
+					"camera_look_at": [
+						1420,
+						0,
+						735
+					]
+				},
+				"feats_script": "# Hethum I\nnot_so_little_armenia = {\nicon = little_brother_rules_34\nlevels = { 8 }\nupdate = { \nset_variable = { which = global_not_so_little_armenia value = 0 }\nif = { \nlimit = { dynasty = 23003 } # Hetoumi\nany_realm_province = {\nchange_variable = { which = global_not_so_little_armenia value = 1 }\n}\n}\n}\n}\nkeep_your_friends_close = {\nicon = sword_to_ploughshare_34\nlevels = { 3 6 9 }\nupdate = { \nset_variable = { which = global_keep_your_friends_close value = 0 }\nif = { \nlimit = { dynasty = 23003 } # Hetoumi\nany_independent_ruler = {\nlimit = {\nculture = mongol\n}\nif = { #Does the ruler like me?\nlimit = {\nopinion = {\nwho = PREV\nvalue > 60\n}\n}\nPREV = { change_variable = { which = global_keep_your_friends_close value = 1 } }\n}\nany_courtier_or_vassal = { #Does any of their courtiers or vassals like me?\nlimit = {\nis_alive = yes\nopinion = {\nwho = PREVPREV\nvalue > 60\n}\n}\nPREVPREV = { change_variable = { which = global_keep_your_friends_close value = 1 } }\n}\n}\n}\n}\n}\nwe_will_not_submit = {\nicon = GFX_not_so_great_34\nlevels = { 25 50 75 }\nupdate = { \nset_variable = { which = global_we_will_not_submit value = 0 }\nif = { \nlimit = {\ndynasty = 23003 # Hetoumi\nNOT = { \ncheck_variable = { which = global_failure_we_will_not_submit value = 1 } \n}\n} \nexport_to_variable = {\nwhich = global_we_will_not_submit\nvalue = total_years_played\n}\n}\nif = {\nlimit = { \nNOR = {\nis_tributary = no\nindependent = yes\n} \n}\nset_variable = { which = global_failure_we_will_not_submit value = 1 }\nset_variable = { which = global_we_will_not_submit value = 0 }\n}\n}\n}"
+			},
+			"add_localisation": [
+				"HIGHLIGHTED_RULER_hethum_armenia_NAME;King Hethum;Roi Hethum;König Hethum;;Rey Haitón;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_hethum_armenia_DESC;Face down the threatening Mongol Empire as Armenia!;Affrontez le menaçant Empire mongol en Arménie!;Stellt Euch dem bedrohlichen Mongolenreich als Armanien gegenüber!;;!Enfréntate como Armenia a la amenaza del Imperio mongol!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_hethum_armenia_PORTRAIT_INSTANT;§YKing Hethum of Armenia§!;§YHethum d'Arménie§!;§YKönig Hethum von Armenien§!;;§YRey Haitón de Armenia§!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_hethum_armenia_PORTRAIT_DELAYED;\"In marrying Isabella of Armenia, Hethum I would become king of Armenia in 1226. He founded the Hethumids, the last native Armenian dynasty. Hethum is famous for his relations with the Mongols in which he travelled great distances to offer gifts in the face of the rapidly expanding Mongol Empire.\";\"En épousant Isabella d'Arménie, Hethum I devint roi d'Arménie en 1226. Il fonda les Héthoumides, la dernière dynastie arménienne autochtone. Hethum est célèbre pour ses relations avec les Mongols dans lesquelles il parcourut de grandes distances pour offrir des cadeaux face à l'empire mongol en expansion rapide.\";\"Mit der Heirat von Isabella von Armenien würde Hethum I. 1226 König von Armenien werden. Er gründete die Hethumiden, die letzte gebürtige armenische Dynastie. Hethum ist berühmt für seine Beziehungen zu den Mongolen, bei denen er große Entfernungen bereiste, um dem schnell expandierende mongolische Reich persönlich Geschenke anzubieten.\";;\"Haitón se convertiría en rey de Armenia al casarse con Isabel de Armenia en 1226, fundando la última dinastía nativa armenia, los hetúmidas. Haitón es célebre por sus relaciones con los mongoles, al recorrer grandes distancias para ofrecer regalos a la vista de la rápida expansión del Imperio mongol.\";;;;;;;;;;;;;x",
+				"RULER_FEAT_not_so_little_armenia_NAME;Not-So-Little Armenia;Pas-Si-Petite-Arménie;Nicht-so-kleines-Armenien;;Armenia no tan Menor;;;;;;;;;x",
+				"RULER_FEAT_not_so_little_armenia_PROGRESS;Number of Provinces;Nombre de provinces;Anzahl an Provinzen;;Número de provincias;;;;;;;;;x",
+				"RULER_FEAT_not_so_little_armenia_DESC;A sobriquet of the Kingdom of Armenia at the time was 'Little Armenia.'\nCan you change that? Double the size of the kingdom!\n * Progress continues for as long as you play the featured ruler's dynasty;Un sobriquet du royaume d'Arménie à l'époque était « Petite-Arménie ». Pouvez-vous changer cela ? Doublez la taille du royaume d'Arménie !\n * La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant.;Zu seiner Zeit war ein Spitzname des Königreichs Armenien 'Kleinarmenien'.\nKönnt Ihr das ändern? Verdoppelt die Größe des Königreichs Armenien\n * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;El sobrenombre del Reino de Armenia en esa época era 'Armenia Menor'.\n ¿Podrás cambiarlo? ¡Dobla el tamaño del Reino de Armenia! \n * El progreso continuará mientras juegues con la dinastía del gobernante presentado;;;;;;;;;x",
+				"RULER_FEAT_keep_your_friends_close_NAME;Keep Your Friends Close...;Gardez vos amis proches...;Halte deine Freunde nahe ...;;Ten cerca a tus amigos…;;;;;;;;;x",
+				"RULER_FEAT_keep_your_friends_close_PROGRESS;Number of Mongols with 60+ Opinion;Mongols à au moins 60 d'opinion;Anzahl an Mongolen mit einer Meinung von über 60;;Mongoles con opinión 60+;;;;;;;;;x",
+				"RULER_FEAT_keep_your_friends_close_DESC;Have good relations with Mongols (60+ opinion). Rulers, their vassals, and their courtiers with Mongol culture count.\n * Progress continues for as long as you play the featured ruler's dynasty;Ayez de bonnes relations avec les Mongols (au moins 60 d'opinion). Les souverains, leurs vassaux et leurs courtisans de culture mongole comptent.\n * La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant.;Habt gute Beziehungen zu Mongolen (60+ Meinung). Mongolische Herrscher, ihre Vasallen und ihre Höflinge mit mongolischer Kultur zählen.\n * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;Ten buenas relaciones con mongoles (opinión 60+). Cuentan gobernantes, sus vasallos y cortesanos con cultura mongola.\n * El progreso continuará mientras juegues con la dinastía del gobernante presentado;;;;;;;;;x",
+				"RULER_FEAT_we_will_not_submit_NAME;We Will Not Submit;Nous ne nous soumettrons pas;Wir geben nicht nach!;;No nos someteremos;;;;;;;;;x",
+				"RULER_FEAT_we_will_not_submit_PROGRESS;Years Independent;Années;Jahre;;Años.;;;;;;;;;x",
+				"RULER_FEAT_we_will_not_submit_DESC;Hethum I decided to submit to Mongol suzerainty as their rapid expansion were of great concern. Can you keep the Armenian kingdom independent?\nRule for as many years as possible as an independent kingdom, without becoming a tributary.\n * Progress continues for as long as you play the featured ruler's dynasty;Hethum Ier a décidé de se soumettre à la suzeraineté mongole car leur rapide expansion était une source de préoccupation. Pouvez-vous maintenir indépendant le royaume arménien ?\nRégnez le plus longtemps possible sur un royaume indépendant, sans devenir un tributaire.\n * La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant.;Hethum I. beschloss, sich der mongolischen Herrschaft zu unterwerfen, da ihre rasche Expansion von großer Besorgnis war. Könnt Ihr das armenische Königreich zur Unabhängigkeit führen?\nBeherrscht für so viele Jahre wie möglich ein unabhängiges Königreich, ohne dabei ein Tributstaat zu werden\n * Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;Haitón I decidió someterse a la protección mongola, preocupado por su rápida expansión. ¿Podrás mantener el reino armenio independiente?\nGobierna como reino independiente todos los años que puedas, sin convertirte en tributario.\n * El progreso continuará mientras juegues con la dinastía del gobernante presentado;;;;;;;;;;;x"
+			]
+		},
+		{
+			"highlighted_ruler": {
+				"key": "kulin_bosnia",
+				"event_time_end": 1893499200,
+				"alert_level": 2,
+				"title": "d_bosnia",
+				"startdate": "1173.01.01",
+				"religion": "catholic",
+				"government": "feudal_government",
+				"dynasty_id": 183,
+				"traits": [
+					"skilled_tactician",
+					"lustful",
+					"humble",
+					"brave"
+				],
+				"portrait": {
+					"age": 20,
+					"female": false,
+					"dna": "fahjjgrndrs",
+					"properties": "edhe0d0000000000000000000000000000000",
+					"religion": "catholic",
+					"culture": "bosnian",
+					"government": "feudal_government"
+				},
+				"map": {
+					"provinces": [
+						463,
+						1971,
+						1970,
+						1969,
+						1968,
+						504
+					],
+					"color": [
+						0.600000,
+						0.600000,
+						1,
+						1
+					],
+					"camera_position": [
+						1010,
+						400,
+						725
+					],
+					"camera_look_at": [
+						1010,
+						0,
+						955
+					]
+				},
+				"feats_script": "#Kulin Kulinic \nnot_so_land_locked = {\nicon = GFX_dream_home_34\nhappened = {\ncompletely_controls = k_bosnia\nhas_landed_title = k_bosnia\nindependent = yes\ndynasty = 183\n}\n}\nheretical_company = { \nicon = GFX_prodigous_five_34\nlevels = { 6 9 12 }\nupdate = {\nset_variable = { which = global_heretical_company value = 0 }\nif = {\nlimit = { dynasty = 183 }\nif = { \nlimit = { is_heretic = yes}\nchange_variable = { which = global_heretical_company value = 1 }\n}\nany_courtier_or_vassal = { \nif = { \nlimit = { \nis_heretic = yes\nprisoner = no\n}\nchange_variable = { which = global_heretical_company value = 1 }\n}\n}\n}\n}\n}\nindependence_day = {\nicon = GFX_stargazer_34\nlevels = { 4 8 12 }\nupdate = {\nif = {\nlimit = {\nOR = {\nNAND = {\ndynasty = 183\nindependent = yes\nin_revolt = no\nwar = no\n}\ncheck_variable = { which = global_character_died value = 1 }\n}\n}\nset_variable = { which = global_independence_day value = 0 }\nset_variable = { which = global_character_died value = 0 }\n}\nif = {\nlimit = {\ndynasty = 183\nindependent = yes\nin_revolt = no\nwar = no\n}\nif = {\nlimit = {\nNOT = { has_character_flag = independence_day_tracker }\n}\nset_character_flag = independence_day_tracker\n}\nif = {\nlimit = {\nhad_character_flag = { flag = independence_day_tracker days = 365 }\n}\nchange_variable = { which = global_independence_day value = 1 }\nclr_character_flag = independence_day_tracker\n}\n}\nexport_to_variable = { which = current_day_of_birth value = day_of_birth }\nexport_to_variable = { which = current_month_of_birth value = month_of_birth }\nexport_to_variable = { which = current_year_of_birth value = year_of_birth }\nif = {\nlimit = {\nNAND = {\ncheck_variable = { which = stored_day_of_birth which == current_day_of_birth }\ncheck_variable = { which = stored_month_of_birth which == current_month_of_birth }\ncheck_variable = { which = stored_year_of_birth which == current_year_of_birth }\n}\n}\nexport_to_variable = { which = stored_day_of_birth value = day_of_birth }\nexport_to_variable = { which = stored_month_of_birth value = month_of_birth }\nexport_to_variable = { which = stored_year_of_birth value = year_of_birth }\nchange_variable = { which = global_character_died value = 1 }\n}\n}\n}"
+			},
+			"add_localisation": [
+				"HIGHLIGHTED_RULER_kulin_bosnia_NAME;Doux Kulin;Doux Kulin;Doux Kulin;;Dux Kulin;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_kulin_bosnia_DESC;Bring Peace to Bosnia and become a hero!;Apportez la paix en Bosnie et devenez un héros !;Bringt Bosnien den Frieden und werdet zum Helden!;;!Lleva la paz a Bosnia y conviértete en un héroe!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_kulin_bosnia_PORTRAIT_INSTANT;§YDoux Kulin of Bosnia§!;§YDoux Kulin de Bosnie§!;§YDoux Kulin von Bosnien§!;;§YDux Kulin de Bosnia§!;;;;;;;;;;;;;x",
+				"HIGHLIGHTED_RULER_kulin_bosnia_PORTRAIT_DELAYED;\"Kulin of Bosnia was the man who would lead Bosnia through the Bosnian Age of Peace and Prosperity, responsible for creating a de facto independent state. Often regarded as a hero of Bosnia, his leadership was not without difficulty, with Kulin often having to find political balance between the powers of Hungary, Serbia and the Pope.\";\"Kulin de Bosnie était l'homme qui dirigerait la Bosnie pendant l'ère de la paix et de la prospérité en Bosnie, chargé de créer un État de facto indépendant. Souvent considéré comme un héros de la Bosnie, son règne a souvent dû trouver un équilibre politique entre les puissances de la Hongrie, de la Serbie et du pape.\";\"Kulin von Bosnien war der Mann, der Bosnien durch das bosnische Zeitalter des Friedens und des Wohlstands führen würde und für die Schaffung eines faktisch unabhängigen Staates verantwortlich war. Oft als ein Held Bosniens betrachtet, war seine Führung nicht ohne Schwierigkeiten und oft ohne ein politisches Gleichgewicht zwischen den beiden die Mächte Ungarns, Serbiens und des Papstes.\";;\"Kulin de Bosnia fue el quien guiaría a Bosnia por su edad de paz y prosperidad, el responsable de crear un estado independiente de facto. A menudo considerado un héroe bosnio, su liderazgo no estuvo carente de dificultades, teniendo que encontrar a menudo un equilibrio político entre los poderes de Hungría, Serbia y el papa.\";;;;;;;;;;;;;x",
+				"RULER_FEAT_not_so_land_locked_NAME;Not-So Landlocked;Pas si enclavé;Nicht nur von Land umschlossen;;Con algún litoral;;;;;;;;;x",
+				"RULER_FEAT_not_so_land_locked_DESC;Rule an independent Kingdom of Bosnia! You must:\n* Hold the Kingdom of Bosnia\n* Completely control all its de jure provinces\n* Be independent \n* Progress continues for as long as you play the featured ruler's dynasty;Régnez sur un royaume de Bosnie indépendant !\n* Vous devez détenir le titre de roi de Bosnie et être indépendant.\n* La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant.;Beherrscht ein unabhängiges Königreich Bosnien!\n* Ihr müsst den Titel des Königs von Bosnien tragen und unabhängig sein.\n* Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;¡Gobierna en un Reino de Bosnia independiente!\n* Debes poseer el título de Rey de Bosnia y ser independiente. \n* El progreso continuará mientras juegues con la dinastía del gobernante presentado;;;;;;;;;x",
+				"RULER_FEAT_not_so_land_locked_PROGRESS;King of Bosnia;Roi de Bosnie;König von Bosnien;;Rey de Bosnia;;;;;;;;;x",
+				"RULER_FEAT_heretical_company_NAME;Heretical Company;Compagnie hérétique;Häretische Gesellschaft;;Compañía hereje;;;;;;;;;x",
+				"RULER_FEAT_heretical_company_DESC;Have as many courtiers as possible who openly practise a heretical belief! \n* Prisoners don't count! \n* Progress continues for as long as you play the featured ruler's dynasty;Ayez autant de courtisans que possible qui pratiquent ouvertement une croyance hérétique !\n* Les prisonniers ne comptent pas !\n* La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant.;Habt so viele Höflinge wie möglich, die offen einem häretischen Glauben folgen!\n* Gefangene zählen nicht!\n* Der Fortschritt geht solange weiter, wie Ihr die vorgestellte Herrscher-Dynastie spielt;;¡Ten todos los cortesanos que practiquen abiertamente creencias heréticas que puedas! \n* ¡Los prisioneros no cuentan! \n* El progreso continuará mientras juegues con la dinastía del gobernante presentado;;;;;;;;;x",
+				"RULER_FEAT_heretical_company_PROGRESS;Heretical Courtiers;Courtisans hérétiques;Häretische Höflinge;;Cortesanos heréticos;;;;;;;;;x",
+				"RULER_FEAT_independence_day_NAME;Celebrating our Independence Day!;Célébrer notre indépendance !;Feiern unserer Unabhängigkeit!;;¡Celebrando la independencia!;;;;;;;;;x",
+				"RULER_FEAT_independence_day_DESC;As an independent realm, remain at peace and independence for as long as possible!\n* Progress resets on character death and when entering a war\n* Progress continues for as long as you play the featured ruler's dynasty;Restez en paix et indépendant le plus longtemps possible !\n* Le progrès est réinitialisé à la mort du personnage et lorsqu'il entre en guerre\n* La progression se poursuit tant que vous jouez la dynastie du dirigeant mis en avant.;Bleibt als unabhängiges Reich solange im Frieden und unabhängig wie möglich;;¡Como reino independiente, mantente en paz e independiente todo lo que puedas!\n* El progreso continuará mientras juegues con la dinastía del gobernante presentado;;;;;;;;;x",
+				"RULER_FEAT_independence_day_PROGRESS;Years of Peace;Années de paix;Jahre im Frieden;;Años de paz;;;;;;;;;x"
+			]
+		}
+	]
+}
