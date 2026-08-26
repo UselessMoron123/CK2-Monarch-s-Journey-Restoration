@@ -3,6 +3,80 @@
 This guide is for the exact May-2020 Windows CK2 3.3.3 test installation. Do not use
 these addresses with CK2 3.3.5.1 or another build.
 
+---
+
+## Part 0 — READ FIRST: two problems found in the 2026-08-26 log drop
+
+The logs from that session showed both tools failing silently. Fix these before
+collecting any more evidence, or the next run will be just as empty. Full write-up:
+`03_analysis/LATEST_LOGS_ANALYSIS_2026-08-26.md`.
+
+### 0.1 x64dbg killed the game before it ever opened (13 launches, 13 failures)
+
+Every session in `x64dbg log1/2/3.txt` ended with:
+
+```text
+Исключение SetThreadName на ...  ("Task#0")
+Процесс остановлен с кодом выхода 0x406D1388 (1080890248)
+```
+
+`0x406D1388` is `MS_VC_EXCEPTION` — the harmless magic exception a program raises
+only to tell a debugger a thread's name. It is **not** a crash. Seeing it as the
+*exit code* means the debugger swallowed it instead of passing it back to CK2, so
+the process died at its first thread-naming call, long before the main menu. That
+is why "x64dbg doesn't even open the game", and why no breakpoint was ever hit.
+
+**Fix — do this once:**
+
+1. In x64dbg: **Options → Preferences → Exceptions**.
+2. Click **Add range**.
+3. Enter start `406D1388` and end `406D1388`.
+4. Tick it so the exception is **ignored / passed to the program** (do not break).
+5. Also ignore `4000001E` and `40010006` if they appear — both are benign.
+6. OK, then restart the debug session.
+
+Then `F9` **once** and CK2 boots to the menu normally.
+
+Rule of thumb while debugging: **`F9` swallows the exception, `Shift+F9` passes it
+to the program.** For this game you want it passed.
+
+Two more notes from those logs, both benign — do not chase them:
+
+- `[S_API FAIL] SteamAPI_Init() failed` ×3 — expected offline, present in every
+  historical run including the successful ones.
+- `No symbols loaded for: ck2game.exe` — CK2 ships no PDB. The 2.6.1.1 PDBs in
+  `10_binary_artifacts/` belong to a *different build*; never force-load them onto
+  3.3.3, the addresses will be wrong.
+
+### 0.2 The old observer watched the wrong folders and captured nothing
+
+`ck2_live_observer.log` was 15,530 lines: 15,526 of them a one-time inventory of the
+game directory taken *before* launch, then only 4 process lines. **Zero** file-change
+events across 35 minutes of play, because v1 dropped `save games`, `cache` and the
+Paradox `logs` folder at startup (they did not exist yet) and never re-checked, and
+because it looked for `%USERPROFILE%\Documents`, which is wrong on a redirected,
+localised or OneDrive-backed profile.
+
+**Use `ps1/watch_ck2_mj_v2.ps1` instead** — it re-resolves those folders every pass,
+finds the real Documents location, hashes each `CK2game*.exe` at startup so the
+actually-launched build is recorded, streams new `game.log` lines live, and prints
+the feat counters whenever the cache file changes.
+
+### 0.3 Run the preflight first — it may end the investigation immediately
+
+```powershell
+Set-ExecutionPolicy -Scope Process Bypass
+.\preflight_ck2_mj.ps1 -GameRoot 'C:\Users\UZWERG\Desktop\SteamCrusader'
+```
+
+It is read-only and takes seconds. It reports which patch level **each**
+`CK2game*.exe` actually is (all patch states share the same 24,753,368-byte size, so
+only the hash distinguishes them — and the last session had **both** a `CK2game.exe`
+and a `CK2gameV6.exe` present, with Windows launching the former), verifies the
+payload, locates the real save/cache folders, and prints current feat progress.
+
+---
+
 ## Part 1 — safe external observer (recommended first)
 
 This only watches files and process start/exit. It does not inject, patch, or alter CK2.
@@ -131,12 +205,20 @@ loops too often. Close the log with `.logclose` before sending it.
 
 Best bundle, in priority order:
 
-1. `ck2_live_observer.log`;
-2. `ck2_windbg.log` or screenshots from x64dbg;
-3. the last `game.log` and `error.log`;
-4. exact description: “Continue grey from main menu”, “Continue grey from MJ panel”,
-   or both;
-5. whether manual Load still opens the same Bronzeman save.
+1. **the full console output of `preflight_ck2_mj.ps1`** — highest value by far;
+2. `ck2_live_observer_v2.log` (from the v2 observer, not v1);
+3. `ck2_windbg.log` or screenshots from x64dbg;
+4. the last `game.log` and `error.log`;
+5. **a photo/screenshot of the bronze-gauntlet "Challenges" tooltip**, showing which
+   rows are `(X)` and which are `(*)` — this single image identifies the failing
+   predicate faster than any log;
+6. exact wording of the Continue failure: is the button **grey/unclickable**, or does
+   it click and show the **"Continue failed!"** dialog? These are different bugs and
+   the answer changed between sessions;
+7. whether manual Load still opens the same Bronzeman save.
+
+Only one observer log is needed — in the last drop `watch_ck2_mj LOG.txt` turned out
+to be nothing more than the final 1,479 lines of `ck2_live_observer.log`.
 
 Do not send passwords, account files, or your entire Documents directory.
 

@@ -1,5 +1,28 @@
 # CK2 Monarch’s Journey Restoration — authoritative project status
 
+> **2026-08-26 UPDATE — new session logs analysed. Two changes to the picture below.**
+>
+> 1. **Feats reading 0 is not a persistence regression.** The user's screenshot of the
+>    gauntlet tooltip shows **"Challenges: Disabled"** with the row *"The save file must
+>    not have been changed, and must have had challenges enabled from the start"*
+>    marked `(X)`. That is service byte `+0x61` (`save_ok`) — a check V4/V5/V6
+>    deliberately left intact. The in-game feat tracker shares the same eligibility
+>    helper, so a false `+0x61` disables tracking entirely: counters read 0 and
+>    unpausing cannot restore them. The `game.log` for that run has **no**
+>    `messagehandler` lines and is missing the fast-forward `Executing History` line
+>    present in the working V6 run — i.e. it **loaded a save** (1278.1.8) rather than
+>    starting a fresh campaign. Prime suspects: the wrong `CK2game.exe` was launched
+>    (a `CK2gameV6.exe` sits beside it, same size, and only hashes differ), or that
+>    particular save is permanently ineligible.
+> 2. **Continue's symptom has changed** from "greyed out" to **clickable, returning the
+>    stock "Continue failed!" dialog**. The enable predicate now appears satisfied and
+>    the failure has moved downstream into candidate validation — this re-frames the
+>    V7 target described below.
+>
+> Full evidence: `03_analysis/LATEST_LOGS_ANALYSIS_2026-08-26.md`.
+> New tools: `05_patches_and_scripts/ps1/preflight_ck2_mj.ps1` (run this first) and
+> `watch_ck2_mj_v2.ps1` (the v1 observer captured nothing — see the analysis §3).
+
 Last updated: 2026-08-25 (session branch). Read this file first, then:
 - `CASES_AND_FINDINGS.md` — solved/unsolved/partial case map
 - `FR_MJ_COMPLETE_ROSTER.md` — **all FR+MJ rulers, bios, challenge tiers** (text; no pics needed)
