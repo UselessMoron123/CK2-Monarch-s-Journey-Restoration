@@ -188,3 +188,58 @@ All are referenced in `MASTER_ARTIFACT_TABLE.md`.
 - **All important information from those logs is preserved in main** — either as organized files, or intentionally as documented exclusions (banned/abandoned) with hashes and roadcause reports.
 - **No info loss** detected except minor git history squash (content intact) and one small CFG note not merged (easily fixable).
 - Ready to merge PROMPT v3 and proceed to V7 Continue enable fix (Phase 2).
+
+---
+
+## 9. Turn 4 — re-dissect the raw chat fragments + tooling integrity (2026-08-26)
+
+Scope: dissect the raw session logs still flagged 🟡 in `12_raw_chat_logs/INDEX.md`
+(`chat_fragment_may333_v1v2_continue_greyed.txt`, `chat_fragment_disasm_v4v5_continue_offsets.txt`,
+plus the two command/report fragments), confirm whether anything is genuinely net-new, and
+re-verify all runnable bats/ps1/py are intact. Also reviewed the original prompt and the
+PROMPT organisation lineage (v1→v2→v3) to decide whether a newer prompt version is warranted.
+
+### Coverage result
+The two 🟡 fragments are **already ~fully distilled** into `01_research_archives/` (Parts 1–3)
+and `03_analysis/`:
+- V4/V5 patch offsets (`0x009e3d4c`, `0x009e1c2d`, the 24-byte `0x000aeb83` eligibility rewrite,
+  all `0x007…` gates, the V5 15-group/46-byte diff) → already in `WINDOWS_333_PATCH_MAP.md`.
+- Linux `nm -C` symbol list, dirty-session theory, Featured-Ruler account check → Parts 1/3 +
+  `CONTINUE_SEMANTIC_REFERENCE.md`.
+- The two command/report fragments (`command_sha256sum_v5_tooling.txt`,
+  `report_fragment_v5_ready.txt`) → already captured (V5 hashes + offsets in Part 2).
+
+### Net-new facts rescued (only exist in the raw fragments)
+A cross-reference sweep (grep every VA/string/symbol against archives + analysis) found three
+facts present **nowhere but the raw files**; recorded in `CONTINUE_SEMANTIC_REFERENCE.md` §E:
+1. Raw Continue/Load **frontend xref disassembly set** at VA `0x1407bf650`, `0x1407bfa20`,
+   `0x1407bfb20`, `0x1407bd550`, `0x1407be200` (each ~0x1c0 B window).
+2. **`load_button` string VA** `0x141078318`.
+3. The broader **Linux save/load `nm` symbol list** (beyond the curated Part 3 C2 tracker table).
+
+These are raw evidence pointers, not new conclusions; the two fragment files remain in
+`12_raw_chat_logs/` as the byte-level source. `INDEX.md` flags for both updated 🟡 → ✅.
+
+### Tooling integrity check (bats/ps1/py)
+Verified all runnable artifacts are intact under `05_patches_and_scripts/`:
+- **19 `.bat`** (APPLY v2–v6, CHECK v1/v3/v4/v5/v6 + SAVES, REVERT v3/v4/v5/v6, PREPARE v5-EXE,
+  `dump_ck2_strings`, `prepare_linux_ck2_upload`, `prepare_windows_may333_upload`) — all non-empty.
+- **9 `.ps1`** (`check_ck2_mj`, `check_ck2_mj_saves`, `patch_ck2_mj`, `patch_ck2_mj_minimal`,
+  `patch_ck2_mj_v2`–`v6`) — all non-empty.
+- **3 `.py`** (`build_v6`, `patch_ck2_mj`, `patch_ck2_mj_minimal`) — all non-empty.
+- No `.bat`/`.ps1`/`.py` anywhere else in the repo; no leftover `*_bat.txt` / `*_ps1.txt` / `*_py.txt`
+  mirror copies. The only patcher still missing is the **V7 Continue** one (not yet built — correct).
+
+### Prompt lineage → produced v4
+Reviewed original prompt (`11first111myoriginal prompt.txt`: preserve evolution/attempts/dead ends/
+results/future directions/interesting findings, produce a reusable instruction for the next AI,
+list personal-storage files) and the PROMPT organisation v1→v3 evolution. Produced
+**`PROMPT_organize_research_log_v4.md`** (operative; v1–v3 kept as history per the established
+convention). v4 adds lessons from this pass: (1) **dissect-or-verify-first** — cross-reference a
+fragment's VAs/strings/symbols before declaring it "already sorted"; (2) **tool-output fragments are
+first-class evidence**, not noise; (3) **living INDEX** updates per fragment; (4) **runnable tooling
+integrity check** as an explicit completion rule. README updated to point at v4 as operative.
+
+### Conclusion
+All raw session logs are now dissected; net-new facts preserved with cross-references; all
+bats/ps1/py intact; prompt upgraded to v4. No further dissection needed on the current archive.

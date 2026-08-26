@@ -17,7 +17,7 @@ follow-on (see `00_START_HERE/FEATURED_RULERS.md`).
    - **`FR_MJ_COMPLETE_ROSTER.md`** — every FR+MJ ruler, bio, B/S/G challenge (text-only)
    - **`FEATURED_RULERS.md`** — FR UI/timeline/assets/restore checklist
    - **`SCREENSHOTS_CATALOG.md`** — image intents (optional; roster is complete without pics)
-   - original prompt + organize-prompt templates
+   - original prompt + organize-prompt templates (**v4** is the operative one; v1–v3 kept as history)
 2. **`01_research_archives/`** — Parts 1–3 structured archives
 3. **`02_handoffs/`** — incl. `V7_CONTINUE_INITIAL_TRIAGE.md`
 4. **`03_analysis/`** — binary analysis, patch maps, banned artifacts, Continue semantics
