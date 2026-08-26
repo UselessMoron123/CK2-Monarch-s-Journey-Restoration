@@ -60,14 +60,29 @@ Materialized paths:
 |---|---|---|
 | `q847rsja8ndx` | `feat_progress_storage.cpp` plaintext key=value; `user_id=84696387`; 33 counters, nonzero `established=4` (Bronze peak), `conquerer_from_bribir=1` | `13_save_and_cache/` |
 
-## 6. V6 patcher toolchain (hashes match handoff §11)
+## 6. Patcher toolchain (V2–V6, all hashes recomputed 2026-08-26 against `05_patches_and_scripts/`)
 
 | File | SHA-256 |
 |---|---|
+| `patch_ck2_mj_v4.ps1` | `d1c8d41d9bd6c209a97a27fd86f342b7bb9345e193c6dd1e2d90db6383da5702` |
+| `APPLY_CK2_MJ_V4.bat` | `576ed4822b8c0b53839209b541d05a72197b3fa8f1503e72989e707d2e435ed2` |
+| `CHECK_CK2_MJ_V4.bat` | `904bc214b77fd4df744d9ff1a88c27b7db0f08e80a5df29123a3be9c4c723b35` |
+| `REVERT_CK2_MJ_V4.bat` | `2e6cdc90439dc242e911da4f269af08c3ac2e71d67d2dc67ac5e61d224b37281` |
+| `patch_ck2_mj_v5.ps1` | `06ee55f6348e3e28f0a38ccdde1a94185e59892ce55955add16a9d46c59562a5` |
+| `APPLY_CK2_MJ_V5.bat` | `4eb1691bcc7c95497e38b9f540f00b685688527680f7fc6bbe048539948b6747` |
+| `CHECK_CK2_MJ_V5.bat` | `f7f9f75ca24ff4308ceeb46f1b19bc808840e536be67e0e23eb8803a821de05e` |
+| `REVERT_CK2_MJ_V5.bat` | `ee89486d3e3eb97c3130f21b42f79c2845f1d1add1b7811e42d9706fdab08ecf` |
 | `patch_ck2_mj_v6.ps1` | `995ee9aa9db75d13a1374cfe4a6b575893d262acfd763032060d3b87fd956e3b` |
 | `APPLY_CK2_MJ_V6.bat` | `f92ed979ede2d5bf25179ba89e494b28da41cb2285dea7a1cd527f68c7f4a4cc` |
 | `CHECK_CK2_MJ_V6.bat` | `607e4f6c8a2cf3ddf82f9497187a7fce0cc014c9d1e3e216482dad034ec34013` |
 | `REVERT_CK2_MJ_V6_TO_V5.bat` | `6ac6c9d846928f9c999f18640c2dda4a34e43979a882978307785d9295abf8c7` |
+
+Test guides: `CK2_MJ_V5_load_test_guide.md` = `ef3c4335733dc516991ffa997fb1cac04bae020332098aad24d84ca8cb65a086`;
+`CK2_MJ_V6_TEST_GUIDE.md` = `0d4d3d21f0f000210cbfaa1a30b5afb2f89311babee6e2996a2985ecded8ab87`;
+`CK2_MJ_windows_v4_test_guide.md` (now under `04_test_guides_and_reports/`) = `9e7664a52b18dba919dd939ff11da4f6cb65e13212c6010b1096a3a858d062cd`
+— ⚠️ the old handoff recorded `3177eaef5298482de564278b1d79006a28f73ea9bb64ce84c5483505947c3234`
+for the V4 guide; the current file hashes to `9e7664a5…` (edited after that hash was
+taken; harmless, V4 superseded). Flagged 2026-08-26.
 
 ## 7. 2.6.1.1 debug/symbol files (PDB reference set — different build, 32-bit)
 

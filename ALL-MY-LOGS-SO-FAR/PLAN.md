@@ -30,10 +30,13 @@ follow-on once MJ Continue works (`00_START_HERE/FEATURED_RULERS.md`).
 ## PHASE 2 — V7 Continue enable fix ⬅ current
 **Case C08.** Continue greyed = *enable predicate*, not click handler.
 V6 already patched account branch in helper `0x1409e4970`.
+Knowledge base is consolidated: `03_analysis/CONTINUE_SEMANTIC_REFERENCE.md`
+(2.6.1.1 model → win333 anchors, two-helper CFG correction, rejection-path
+breadcrumbs, ordered steps). The old triage/CFG notes were merged into it
+(2026-08-26).
 
-- [ ] Finish `02_handoffs/V7_CONTINUE_INITIAL_TRIAGE.md`
 - [ ] Anchors: Linux `GetContinueSave` ↔ win333 `0x1409e5500` region;
-      callers `0x1408145ec`, `0x1407bffa1`, `0x140a0ba62`
+      callers `0x1407bffa1`, `0x1408145ec`, `0x140a0ba62`
 - [ ] Map `_bIsContinueSaveValid` / `RefreshContinueButton` equivalents
 - [ ] Hypotheses: FR-marker in continue validator; account-bound session flag;
       cloud/timestamp; widget refresh order

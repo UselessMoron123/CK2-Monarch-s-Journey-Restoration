@@ -17,9 +17,9 @@ follow-on (see `00_START_HERE/FEATURED_RULERS.md`).
    - **`FR_MJ_COMPLETE_ROSTER.md`** — every FR+MJ ruler, bio, B/S/G challenge (text-only)
    - **`FEATURED_RULERS.md`** — FR UI/timeline/assets/restore checklist
    - **`SCREENSHOTS_CATALOG.md`** — image intents (optional; roster is complete without pics)
-   - original prompt + organize-prompt templates (**v4** is the operative one; v1–v3 kept as history)
+   - original prompt + organize-prompt templates (**v5** is the operative one; v1–v4 kept as history)
 2. **`01_research_archives/`** — Parts 1–3 structured archives
-3. **`02_handoffs/`** — incl. `V7_CONTINUE_INITIAL_TRIAGE.md`
+3. **`02_handoffs/`** — **one** handoff (`CK2_MJ_ULTIMATE_HANDOFF.md`, deep background; older handoffs merged into it 2026-08-26) + completed PDB-investigation mission brief
 4. **`03_analysis/`** — binary analysis, patch maps, banned artifacts, Continue semantics
 5. **`04_test_guides_and_reports/`** — in-game click paths
 6. **`05_patches_and_scripts/`** — guarded bat/ps1/py patchers (only things that touch the exe)

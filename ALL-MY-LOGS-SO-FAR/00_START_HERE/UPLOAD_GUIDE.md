@@ -66,5 +66,5 @@ Most useful subset if full folder too large: PDB for principal game EXE + exact 
 
 When you download everything from here and upload into restoration project repo:
 - That repo probably already contains old logs already dissected here — check `12_raw_chat_logs/INDEX.md` naming collision table (V6 `a6cb92b8…` banned vs `f5b7dfd6…` proven vs feat-V7 `0074af70…` abandoned). Key by SHA, never label.
-- Files like "v7 something" (`V7_CONTINUE_CFG.md`, `V7_CONTINUE_INITIAL_TRIAGE.md`, feat-V7 bats/ps1) — `V7_CONTINUE_CFG.md` recovered here (112 lines), feat-V7 intentionally excluded (hash in `BANNED_ARTIFACTS.md`, offsets `0x00666546` + `0x007856e8` documented as abandoned, not shipped).
+- Files like "v7 something" (feat-V7 bats/ps1) — feat-V7 intentionally excluded (hash `0074af70…` in `BANNED_ARTIFACTS.md`, offsets `0x00666546` + `0x007856e8` documented as abandoned, not shipped). The two V7 analysis notes (`V7_CONTINUE_CFG.md`, `V7_CONTINUE_INITIAL_TRIAGE.md`) were merged into `03_analysis/CONTINUE_SEMANTIC_REFERENCE.md` on 2026-08-26; that file is the single V7 knowledge base.
 - Do NOT copy `logs to dissect.../` raw files — they are staging area, now torn apart into this guide + `DISSECTION_REPORT.md` + `V7_CONTINUE_CFG.md` + `PROMPT_v3.md`. Delete staging folder before migration to avoid duplication.
