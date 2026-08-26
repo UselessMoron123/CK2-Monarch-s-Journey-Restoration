@@ -1,0 +1,817 @@
+[controlcommands.cpp:135]: Local player will control 470001
+[controlcommands.cpp:92]: AI will control 470001
+[controlcommands.cpp:135]: Local player will control 470001
+[gamestate.cpp:4568]: Starting AI
+[gamestate.cpp:4605]: AI takes control of Duke Ferry III of Upper Lorraine
+[gamestate.cpp:4605]: AI takes control of Duke Konrad II of Mazovia
+[gamestate.cpp:4605]: AI takes control of Duke Valdemar of Västergötland
+[gamestate.cpp:4605]: AI takes control of Count Adolf of Berg
+[gamestate.cpp:4605]: AI takes control of Count Arne of Romerike
+[gamestate.cpp:4605]: AI takes control of Sheikh Faraj of Malaga
+[gamestate.cpp:4605]: AI takes control of Earl Duncan of Fife
+[gamestate.cpp:4605]: AI takes control of Countess Agnes of Bourbon
+[gamestate.cpp:4605]: AI takes control of Chief Ruhollas of Tashkurgan
+[gamestate.cpp:4605]: AI takes control of Grand Mayor Eskil of Gotland
+[gamestate.cpp:4605]: AI takes control of Chief Kobyak of Charkliq
+[gamestate.cpp:4605]: AI takes control of Duke Johann of Saxony
+[gamestate.cpp:4605]: AI takes control of Prince Solamish of the Bunduqdarid Sultanate
+[gamestate.cpp:4605]: AI takes control of Count Johann of Werle
+[gamestate.cpp:4605]: AI takes control of Count Hartmann of Thurgau
+[gamestate.cpp:4605]: AI takes control of Khagan Mongke Temur of the Golden Horde
+[gamestate.cpp:4605]: AI takes control of Count Robert of Artois
+[gamestate.cpp:4605]: AI takes control of Chief Gazheg of Kolva
+[gamestate.cpp:4605]: AI takes control of Duke Capoferro of Abruzzo
+[gamestate.cpp:4605]: AI takes control of King Loua of Semien
+[gamestate.cpp:4605]: AI takes control of Patrician Bovarello of Grimaldi
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Flann of Iona
+[gamestate.cpp:4605]: AI takes control of Chief Aarif of Dariya
+[gamestate.cpp:4605]: AI takes control of King Philippe III of France
+[gamestate.cpp:4605]: AI takes control of Count Thomas of Piemonte
+[gamestate.cpp:4605]: AI takes control of King Traidenis of Lithuania
+[gamestate.cpp:4605]: AI takes control of Earl John of Moray
+[gamestate.cpp:4605]: AI takes control of Thakurani Ballamahadevi of Honnore
+[gamestate.cpp:4605]: AI takes control of Thakur Mandlik of Bhumilka
+[gamestate.cpp:4605]: AI takes control of Chief Dodai of Kuban
+[gamestate.cpp:4605]: AI takes control of Count Diego of Asturias de Santillana
+[gamestate.cpp:4605]: AI takes control of King Ador of Alodia
+[gamestate.cpp:4605]: AI takes control of Count Martim of Évora
+[gamestate.cpp:4605]: AI takes control of Padishah Balban of the Balban Khaganate
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Nicholas of Winchester
+[gamestate.cpp:4605]: AI takes control of Count Abbondazio of Bozen
+[gamestate.cpp:4605]: AI takes control of Count Waldemar of Rostock
+[gamestate.cpp:4605]: AI takes control of Duke Mszczuj II of Pomeralia
+[gamestate.cpp:4605]: AI takes control of Sheikh Thabit of Al Djazair
+[gamestate.cpp:4605]: AI takes control of Count Leutold of Krems
+[gamestate.cpp:4605]: AI takes control of Count Meinhard of Innsbruck
+[gamestate.cpp:4605]: AI takes control of Chief Yaroslav of Pronsk
+[gamestate.cpp:4605]: AI takes control of Chief Namwar of Alamut
+[gamestate.cpp:4605]: AI takes control of Khan Kaidu of Mongolia
+[gamestate.cpp:4605]: AI takes control of King Dragutin of Serbia
+[gamestate.cpp:4605]: AI takes control of Duke Manuel of Murcia
+[gamestate.cpp:4605]: AI takes control of King Erik V of Denmark
+[gamestate.cpp:4605]: AI takes control of Count Frederick of Pettau
+[gamestate.cpp:4605]: AI takes control of Rector Benedetto of Ragusa
+[gamestate.cpp:4605]: AI takes control of Chief Barbat of Severin
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Jean of Liege
+[gamestate.cpp:4605]: AI takes control of Maharaja Ramachandra of the Seuna Yadava Kingdom
+[gamestate.cpp:4605]: AI takes control of Count Kõszegi Miklós of Fejer
+[gamestate.cpp:4605]: AI takes control of Count Estevão of Coruña
+[gamestate.cpp:4605]: AI takes control of Count Pedro of Aracena
+[gamestate.cpp:4605]: AI takes control of Thakur Gaoji of Kutch
+[gamestate.cpp:4605]: AI takes control of Earl Malise of Strathearn
+[gamestate.cpp:4605]: AI takes control of Pujari Siyaram of Ramagiri
+[gamestate.cpp:4605]: AI takes control of King Charles of Sicily
+[gamestate.cpp:4605]: AI takes control of Queen Jeanne of Navarra
+[gamestate.cpp:4605]: AI takes control of Kaiser Rudolf of the Holy Roman Empire
+[gamestate.cpp:4605]: AI takes control of High Chief Munglig of Ikh Bogd
+[gamestate.cpp:4605]: AI takes control of Count Michael of Monemvasia
+[gamestate.cpp:4605]: AI takes control of Sheikh Talha of Annaba
+[gamestate.cpp:4605]: AI takes control of Chief Hussayn of Al Nadjaf
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Konrad of Chur
+[gamestate.cpp:4605]: AI takes control of Thakur Saranga Dev of Bandhugadha
+[gamestate.cpp:4605]: AI takes control of Prince Kulacêkara of the Lanka
+[gamestate.cpp:4605]: AI takes control of Duke Friedrich III of Nordgau
+[gamestate.cpp:4605]: AI takes control of Chief Jatau of Kebbi
+[gamestate.cpp:4605]: AI takes control of Prince Simeon of Galicia-Volhynia
+[gamestate.cpp:4605]: AI takes control of Count Muzaffaraddin of Assab
+[gamestate.cpp:4605]: AI takes control of Earl John of Atholl
+[gamestate.cpp:4605]: AI takes control of Chief Tugule of Kagha
+[gamestate.cpp:4605]: AI takes control of Thakur Jairam-Deo of Garhwal
+[gamestate.cpp:4605]: AI takes control of Count Guido of Ravenna
+[gamestate.cpp:4605]: AI takes control of Sultan Kaykhusraw III of Rum
+[gamestate.cpp:4605]: AI takes control of Emir Umar of the Walashma Emirate
+[gamestate.cpp:4605]: AI takes control of Prince-Archbishop Werner of Mainz
+[gamestate.cpp:4605]: AI takes control of Chief Danjuma of Daura
+[gamestate.cpp:4605]: AI takes control of Prince Daumantas of Lithuania
+[gamestate.cpp:4605]: AI takes control of Count Nicolas of Demetrias
+[gamestate.cpp:4605]: AI takes control of Chief Alchi of Otrar
+[gamestate.cpp:4605]: AI takes control of Maharaja Sutepha of the Ahom Kingdom
+[gamestate.cpp:4605]: AI takes control of Countess Beatrice of Charolais
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Godfrey of Worcester
+[gamestate.cpp:4605]: AI takes control of Sultan al-Muzaffar Yusif of the Rasulid Sultanate
+[gamestate.cpp:4605]: AI takes control of Count Otto of Werben
+[gamestate.cpp:4605]: AI takes control of Count Enno of Ostfriesland
+[gamestate.cpp:4605]: AI takes control of Chief Aghsartan of Kuma
+[gamestate.cpp:4605]: AI takes control of Mai Kashim Biri of Kanem
+[gamestate.cpp:4605]: AI takes control of Count Heinrich of Fürstenberg
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Suero of Zamora
+[gamestate.cpp:4605]: AI takes control of Count Hans of Västergötland
+[gamestate.cpp:4605]: AI takes control of Duke Guillaume II of Achaia
+[gamestate.cpp:4605]: AI takes control of High Chief Chulgetei of Ötüken
+[gamestate.cpp:4605]: AI takes control of Bey Mesud of Amasya
+[gamestate.cpp:4605]: AI takes control of Chief Sarak of Dvina
+[gamestate.cpp:4605]: AI takes control of Duke Richard of Ulster
+[gamestate.cpp:4605]: AI takes control of Chief Lyneg of Bolshoy Yugan
+[gamestate.cpp:4605]: AI takes control of Count Jean of Amiens
+[gamestate.cpp:4605]: AI takes control of Duke Robert II of Burgundy
+[gamestate.cpp:4605]: AI takes control of Thakur Pratapasimha of Satyapura
+[gamestate.cpp:4605]: AI takes control of High Chief Gleb of Veps
+[gamestate.cpp:4605]: AI takes control of Chief Mandak of Kolguyev
+[gamestate.cpp:4605]: AI takes control of Count Kanizsai Imre of Vas
+[gamestate.cpp:4605]: AI takes control of Lord Mayor Alessandro of Lucca
+[gamestate.cpp:4605]: AI takes control of Count Philippe of Tyrus
+[gamestate.cpp:4605]: AI takes control of Emir Manaa of the Usfurid Emirate
+[gamestate.cpp:4605]: AI takes control of Earl William of Ross
+[gamestate.cpp:4605]: AI takes control of Count Henri of Saintois
+[gamestate.cpp:4605]: AI takes control of King Dilmarrah of Shewa
+[gamestate.cpp:4605]: AI takes control of Basileus Michael VIII of the Byzantine Empire
+[gamestate.cpp:4605]: AI takes control of King Árpád László IV of Hungary
+[gamestate.cpp:4605]: AI takes control of High Chief Gugwa of Hausaland
+[gamestate.cpp:4605]: AI takes control of Count Nicolso of Malta
+[gamestate.cpp:4605]: AI takes control of Count Csák Máté of Trencsen
+[gamestate.cpp:4605]: AI takes control of Count Gazo of Avlonas
+[gamestate.cpp:4605]: AI takes control of Ezangquhuai Hao of Dêrlênka
+[gamestate.cpp:4605]: AI takes control of King Afonso III of Portugal
+[gamestate.cpp:4605]: AI takes control of King Ivan III of Bulgaria
+[gamestate.cpp:4605]: AI takes control of Earl Aed of Locha Léin
+[gamestate.cpp:4605]: AI takes control of Lord Mayor Ercole of Siena
+[gamestate.cpp:4605]: AI takes control of Lord Mayor Vittorio of Noli
+[gamestate.cpp:4605]: AI takes control of Countess Margaret of Wiltshire
+[gamestate.cpp:4605]: AI takes control of Maharaja Arjunavarman II of the Paramara Kingdom
+[gamestate.cpp:4605]: AI takes control of Count Heinrich of Luxembourg
+[gamestate.cpp:4605]: AI takes control of Count Karl of Södermanland
+[gamestate.cpp:4605]: AI takes control of Captain Yu of Outlaws of the Marsh
+[gamestate.cpp:4605]: AI takes control of High Chief Balagha of Yaik
+[gamestate.cpp:4605]: AI takes control of Grand Prince Yuriy II of Turov
+[gamestate.cpp:4605]: AI takes control of Count Torsten of Finland
+[gamestate.cpp:4605]: AI takes control of Maharaja Saranga of the Vaghela Kingdom
+[gamestate.cpp:4605]: AI takes control of Thakur Komta of Munda
+[gamestate.cpp:4605]: AI takes control of Sultan Tughan of the Tughral Sultanate
+[gamestate.cpp:4605]: AI takes control of Count Enguerrand of Vermandois
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Brynolf of Skara
+[gamestate.cpp:4605]: AI takes control of Count Jaromar of Rügen
+[gamestate.cpp:4605]: AI takes control of Raja Irâcêntira III of the Chalukya Chola Raj
+[gamestate.cpp:4605]: AI takes control of Prince-Archbishop Heinrich of Trier
+[gamestate.cpp:4605]: AI takes control of Bey Aintipal of Mathura
+[gamestate.cpp:4605]: AI takes control of Chief Meggyesi Miklós of Marmaros
+[gamestate.cpp:4605]: AI takes control of Count Rodrigo of Alcalá
+[gamestate.cpp:4605]: AI takes control of Thakur Prataparudra of Vijayawada
+[gamestate.cpp:4605]: AI takes control of Chief Andrei of Gorodets
+[gamestate.cpp:4605]: AI takes control of Countess Abisha Hadud of Ahvaz
+[gamestate.cpp:4605]: AI takes control of Sheikh Seyfullah of Maan
+[gamestate.cpp:4605]: AI takes control of Chief Sugr of Balkhash
+[gamestate.cpp:4605]: AI takes control of Bey Ertugrul of Ankara
+[gamestate.cpp:4605]: AI takes control of Lord Mayor Bernardo of Como
+[gamestate.cpp:4605]: AI takes control of Earl Roger of Westmorland
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Johann of Riga
+[gamestate.cpp:4605]: AI takes control of Countess Teresa of Albarracin
+[gamestate.cpp:4605]: AI takes control of Thakur Narchandra of Asirgarh
+[gamestate.cpp:4605]: AI takes control of Chief Num of Ugra
+[gamestate.cpp:4605]: AI takes control of Count Kõszegi Henrik of Bács
+[gamestate.cpp:4605]: AI takes control of Count Garcia of Alcantara
+[gamestate.cpp:4605]: AI takes control of Chief Thocomerius of Calarasi
+[gamestate.cpp:4605]: AI takes control of Duke Gilbert II of Gwent
+[gamestate.cpp:4605]: AI takes control of Count Wladyslaw of Cieszyn
+[gamestate.cpp:4605]: AI takes control of Chief Morokha of Osha
+[gamestate.cpp:4605]: AI takes control of Earl Domnall of Desmond
+[gamestate.cpp:4605]: AI takes control of King Magnus III of Sweden
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Hugues of Nice
+[gamestate.cpp:4605]: AI takes control of Princess Margaretha of the Latin Empire
+[gamestate.cpp:4605]: AI takes control of Chief Yusuf Shah of Yazd
+[gamestate.cpp:4605]: AI takes control of Count Christian of Oldenburg
+[gamestate.cpp:4605]: AI takes control of Earl Alexander of Buchan
+[gamestate.cpp:4605]: AI takes control of High Chief Tolik of Mezen
+[gamestate.cpp:4605]: AI takes control of Chief Kuntuvdi of Beshbaliq
+[gamestate.cpp:4605]: AI takes control of Lord Mayor Marko of Split
+[gamestate.cpp:4605]: AI takes control of Ecumenical Patriarch Ioannes XI
+[gamestate.cpp:4605]: AI takes control of Count João of Faro
+[gamestate.cpp:4605]: AI takes control of Emir Muhammad II of the Hashimid Emirate
+[gamestate.cpp:4605]: AI takes control of Gyalpo Khon Drogön Chögyal Phagpa of Sakya Trizin
+[gamestate.cpp:4605]: AI takes control of High Chief Safrak of Alania
+[gamestate.cpp:4605]: AI takes control of High Chief Chuga of Perm
+[gamestate.cpp:4605]: AI takes control of Maharaja Laksmadeva of the Dakhinpara Kingdom
+[gamestate.cpp:4605]: AI takes control of Count Robèrt of Aurilliac
+[gamestate.cpp:4605]: AI takes control of Queen Mother Margarete of Denmark
+[gamestate.cpp:4605]: AI takes control of King Bolad of Wadai
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Lorenz of Metz
+[gamestate.cpp:4605]: AI takes control of Duke Heinrich III of Meissen
+[gamestate.cpp:4605]: AI takes control of Count Hoassi of Suakin
+[gamestate.cpp:4605]: AI takes control of Chief Bolkhada of Badakhshan
+[gamestate.cpp:4605]: AI takes control of Raja Chachigadeva of the Chauhan Raj
+[gamestate.cpp:4605]: AI takes control of Count Axel of Värmland
+[gamestate.cpp:4605]: AI takes control of Chief Sambor of Reval
+[gamestate.cpp:4605]: AI takes control of Emir Sunkur of Damashq
+[gamestate.cpp:4605]: AI takes control of Count Karl of Dal
+[gamestate.cpp:4605]: AI takes control of Grand Mayor Feodor of Ryazan
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Friedrich of Dorpat
+[gamestate.cpp:4605]: AI takes control of Prince Benaim of Abyssinia
+[gamestate.cpp:4605]: AI takes control of Count Heinrich of Cham
+[gamestate.cpp:4605]: AI takes control of King Yekuno Amlak of Abyssinia
+[gamestate.cpp:4605]: AI takes control of Count Dauid of Dotawo
+[gamestate.cpp:4605]: AI takes control of Earl Domnall of Uí Maine
+[gamestate.cpp:4605]: AI takes control of Count Henryk of Lower Silesia
+[gamestate.cpp:4605]: AI takes control of Raja Samar-Singh of the Guhilot Raj
+[gamestate.cpp:4605]: AI takes control of Count Marianu of Cagliari
+[gamestate.cpp:4605]: AI takes control of Duke Obizzo II of Ferrara
+[gamestate.cpp:4605]: AI takes control of Duke Blagai Babonjeg II of Slavonia
+[gamestate.cpp:4605]: AI takes control of High Chief Aladdin of the Ata-Malik Emirate
+[gamestate.cpp:4605]: AI takes control of Count Fernando of Plasencia
+[gamestate.cpp:4605]: AI takes control of Chief Fakhr al-Din of Sinjar
+[gamestate.cpp:4605]: AI takes control of Earl Muirchertach of Leinster
+[gamestate.cpp:4605]: AI takes control of Sheikh Ja'far of Cyrenaica
+[gamestate.cpp:4605]: AI takes control of Chief Somatu of Tobysh
+[gamestate.cpp:4605]: AI takes control of High Chief Syudbya of Pechora
+[gamestate.cpp:4605]: AI takes control of King Hugues of Jerusalem
+[gamestate.cpp:4605]: AI takes control of High Chief Shams II ud-Din of the Kartid Satrapy
+[gamestate.cpp:4605]: AI takes control of Chief Begter of Bandja
+[gamestate.cpp:4605]: AI takes control of Chief Mukhtas of Irbil
+[gamestate.cpp:4605]: AI takes control of Duke Ezana of Gojjam
+[gamestate.cpp:4605]: AI takes control of Chief Arnfast of Västerbotten
+[gamestate.cpp:4605]: AI takes control of Count Eberhard of Schwaben
+[gamestate.cpp:4605]: AI takes control of Count Ludwig of Ulm
+[gamestate.cpp:4605]: AI takes control of Count Theobald of Sundgau
+[gamestate.cpp:4605]: AI takes control of Maharaja Bhanudeva of the Kalinga Ganga Kingdom
+[gamestate.cpp:4605]: AI takes control of Raja Gokuladeva of the Deva Raj
+[gamestate.cpp:4605]: AI takes control of Raja Parbata of the Chand Raj
+[gamestate.cpp:4605]: AI takes control of Chief Gazheg of Vishera
+[gamestate.cpp:4605]: AI takes control of Count Hugues of Lecce
+[gamestate.cpp:4605]: AI takes control of Count Mladen of Zachlumia
+[gamestate.cpp:4605]: AI takes control of High Chief Qun-Quran of Sibir
+[gamestate.cpp:4605]: AI takes control of Prince Jaume of Aragon
+[gamestate.cpp:4605]: AI takes control of Chief Nuyanza of Severnaya
+[gamestate.cpp:4605]: AI takes control of Mozang Xidi of Lingtsang
+[gamestate.cpp:4605]: AI takes control of Khagan Buqa Temur of Chagatai
+[gamestate.cpp:4605]: AI takes control of Lord Mayor Guglielmo of Theodosia
+[gamestate.cpp:4605]: AI takes control of Farin Tidarpo of Bobo Dyulasso
+[gamestate.cpp:4605]: AI takes control of High Chief Nasir II al-Din of the Mihrabanid Satrapy
+[gamestate.cpp:4605]: AI takes control of King Mahamed II of Berbera
+[gamestate.cpp:4605]: AI takes control of Count Eberhard of Bern
+[gamestate.cpp:4605]: AI takes control of Count Huiarnviu of Léon
+[gamestate.cpp:4605]: AI takes control of Earl Gaston of Béarn
+[gamestate.cpp:4605]: AI takes control of Count Ulrich of Württemberg
+[gamestate.cpp:4605]: AI takes control of Emir Pethion of the Chrusarkha Emirate
+[gamestate.cpp:4605]: AI takes control of Chief Senselau of Craiova
+[gamestate.cpp:4605]: AI takes control of Queen Isabelle of Jerusalem
+[gamestate.cpp:4605]: AI takes control of Count Knut of Finnveden
+[gamestate.cpp:4605]: AI takes control of Sheikh Yusuf of Al Jawf
+[gamestate.cpp:4605]: AI takes control of Serene Doge Oberto VI of Genoa
+[gamestate.cpp:4605]: AI takes control of Prince Luis of León
+[gamestate.cpp:4605]: AI takes control of Caliph Al-Hakim
+[gamestate.cpp:4605]: AI takes control of Thakur Khandkya Ballal Singh of Vairagara
+[gamestate.cpp:4605]: AI takes control of Count Juan of Burgos
+[gamestate.cpp:4605]: AI takes control of King Pere III of Aragon
+[gamestate.cpp:4605]: AI takes control of Chief Nogai of Farava
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Pierre of Reims
+[gamestate.cpp:4605]: AI takes control of Count Massimo of Cismonte
+[gamestate.cpp:4605]: AI takes control of Count Ivan of Imotski
+[gamestate.cpp:4605]: AI takes control of Count Grapozzo of Euboia
+[gamestate.cpp:4605]: AI takes control of High Chief Dmitriy of Vladimir
+[gamestate.cpp:4605]: AI takes control of Patrician Faste of Hejnum
+[gamestate.cpp:4605]: AI takes control of Chief Hulyen of Narim
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Gonçalo of Santiago
+[gamestate.cpp:4605]: AI takes control of Sheikh Sa'ud of Al 'Aqabah
+[gamestate.cpp:4605]: AI takes control of Bey Peepalrajji of Hisar
+[gamestate.cpp:4605]: AI takes control of Chief Sulayman of Bir Um Grein
+[gamestate.cpp:4605]: AI takes control of Chief Buri of Chortitza
+[gamestate.cpp:4605]: AI takes control of Duke Valdemar V of Jylland
+[gamestate.cpp:4605]: AI takes control of Duke Gerhard of Holstein
+[gamestate.cpp:4605]: AI takes control of High Chief Îsmaîl of the Shabankarai Satrapy
+[gamestate.cpp:4605]: AI takes control of Thupo Gar Sönam Rinchen of Dêgê
+[gamestate.cpp:4605]: AI takes control of Emir Khahtan of the Nabhanid Emirate
+[gamestate.cpp:4605]: AI takes control of Count Dujma of Veglia
+[gamestate.cpp:4605]: AI takes control of Duke Boleslaw III of Greater Poland
+[gamestate.cpp:4605]: AI takes control of Count Bertoldo of Orvieto
+[gamestate.cpp:4605]: AI takes control of Sheikh Umar of Manurqa
+[gamestate.cpp:4605]: AI takes control of Earl William of Warwick
+[gamestate.cpp:4605]: AI takes control of King Magnus VI of Norway
+[gamestate.cpp:4605]: AI takes control of Chief Marturophoros of Gezira
+[gamestate.cpp:4605]: AI takes control of Prince Mayor Mikhail II of Novgorod
+[gamestate.cpp:4605]: AI takes control of King Llywelyn III of Gwynedd
+[gamestate.cpp:4605]: AI takes control of Chief Ajai of Chach
+[gamestate.cpp:4605]: AI takes control of Duke Shishman of Vidin
+[gamestate.cpp:4605]: AI takes control of Count Gruffydd Fychan of Powys
+[gamestate.cpp:4605]: AI takes control of High Chief Daniil of Moskva
+[gamestate.cpp:4605]: AI takes control of Duchess Adelaide of Franche Comté
+[gamestate.cpp:4605]: AI takes control of Bhikkhu Mandalika of Gaya
+[gamestate.cpp:4605]: AI takes control of Chief Abagha of Khantia
+[gamestate.cpp:4605]: AI takes control of Sultan Guneri of the Karaman Sultanate
+[gamestate.cpp:4605]: AI takes control of Earl Roger of Shrewsbury
+[gamestate.cpp:4605]: AI takes control of Patrician Dietwin of Wittenborg
+[gamestate.cpp:4605]: AI takes control of Count Balassa Biter of Gömör
+[gamestate.cpp:4605]: AI takes control of Serene Doge Jacopo II of Pisa
+[gamestate.cpp:4605]: AI takes control of Count Jean of Bourges
+[gamestate.cpp:4605]: AI takes control of Chief Ashraf of Rahbah
+[gamestate.cpp:4605]: AI takes control of Count Csák István of Arva
+[gamestate.cpp:4605]: AI takes control of Count Otto of Lüneburg
+[gamestate.cpp:4605]: AI takes control of Count Tekle of Antalo
+[gamestate.cpp:4605]: AI takes control of Bey Lahar of Nandana
+[gamestate.cpp:4605]: AI takes control of Duke Ludwig II of Bavaria
+[gamestate.cpp:4605]: AI takes control of Bey Kiratpal of Trigarta
+[gamestate.cpp:4605]: AI takes control of Earl Arnaut-Guilhèm of Dax
+[gamestate.cpp:4605]: AI takes control of Thakur Jaitrasimha of Ranthambore
+[gamestate.cpp:4605]: AI takes control of Lord Mayor Luchetto of Bologna
+[gamestate.cpp:4605]: AI takes control of Earl William of Teviotdale
+[gamestate.cpp:4605]: AI takes control of High Chief Yezdigerd of the Bavandid Satrapy
+[gamestate.cpp:4605]: AI takes control of Chief Vladimir of Beresty
+[gamestate.cpp:4605]: AI takes control of Count Hugues of Lusignan
+[gamestate.cpp:4605]: AI takes control of Thakur Narayanadeva of Srihatta
+[gamestate.cpp:4605]: AI takes control of Grand Prince Matti of Kareliya
+[gamestate.cpp:4605]: AI takes control of Count Heinrich of Paderborn
+[gamestate.cpp:4605]: AI takes control of Prince-Archbishop Friedrich of Salzburg
+[gamestate.cpp:4605]: AI takes control of Duke Smiletz of Moesia
+[gamestate.cpp:4605]: AI takes control of Chief Taj al-Din Ebrahim of Gilan
+[gamestate.cpp:4605]: AI takes control of Count Ermengol of Urgell
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Pawel of Sacz
+[gamestate.cpp:4605]: AI takes control of Chief Chilagun of Azov
+[gamestate.cpp:4605]: AI takes control of Thakur Krishna of Chauragarh
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Henri of Verdun
+[gamestate.cpp:4605]: AI takes control of Chief Kaday of Masseniya
+[gamestate.cpp:4605]: AI takes control of Sheikh Sentiko of Aydhab
+[gamestate.cpp:4605]: AI takes control of High Chief Kharuchi of Kargopol
+[gamestate.cpp:4605]: AI takes control of Lord Mayor Malatesta of Rimini
+[gamestate.cpp:4605]: AI takes control of Sheikh Da'ud of Az Zarqa
+[gamestate.cpp:4605]: AI takes control of Raja Janhu of the Nagavamsi Raj
+[gamestate.cpp:4605]: AI takes control of Sultan Yusuf IV of the Marinid Sultanate
+[gamestate.cpp:4605]: AI takes control of Sheikh Khalid of Tabuk
+[gamestate.cpp:4605]: AI takes control of Farbas Ali II Kolon of Songhay
+[gamestate.cpp:4605]: AI takes control of Count Juraj of Zara
+[gamestate.cpp:4605]: AI takes control of Count Pedro of Huelva
+[gamestate.cpp:4605]: AI takes control of Patrician Goffredo of Caetani
+[gamestate.cpp:4605]: AI takes control of Countess Yolande of Nevers
+[gamestate.cpp:4605]: AI takes control of High Chief Baidu of Mafaza
+[gamestate.cpp:4605]: AI takes control of Patrician Marino of Faliero
+[gamestate.cpp:4605]: AI takes control of Prince Floris of the Holy Roman Empire
+[gamestate.cpp:4605]: AI takes control of Chief Konstantin of Tula
+[gamestate.cpp:4605]: AI takes control of Duke Jan of Brabant
+[gamestate.cpp:4605]: AI takes control of Count Wilhelm of Jülich
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Henrich of Havelberg
+[gamestate.cpp:4605]: AI takes control of Sheikh Rashid of Senoussi
+[gamestate.cpp:4605]: AI takes control of Count Giordano of Catanzaro
+[gamestate.cpp:4605]: AI takes control of Beylerbey Tej-Rao of the Bhatti Raj
+[gamestate.cpp:4605]: AI takes control of Count Adolf of Marburg
+[gamestate.cpp:4605]: AI takes control of Chief Syudbya of Kanin
+[gamestate.cpp:4605]: AI takes control of Prince-Archbishop Siegfried of Köln
+[gamestate.cpp:4605]: AI takes control of Earl Amlaíb of Bréifne
+[gamestate.cpp:4605]: AI takes control of Count Aimeric of Narbonne
+[gamestate.cpp:4605]: AI takes control of Duke Albrecht of Brunswick
+[gamestate.cpp:4605]: AI takes control of Chief Axel of Hälsingland
+[gamestate.cpp:4605]: AI takes control of Gyalpo Purgyal Jitarimalla of Yartse
+[gamestate.cpp:4605]: AI takes control of Count Pietro of Cosenza
+[gamestate.cpp:4605]: AI takes control of Earl Patrick of Dunbar
+[gamestate.cpp:4605]: AI takes control of Count Gustav of Tjust
+[gamestate.cpp:4605]: AI takes control of Bey Rudramana of Damin-i-koh
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Robert II of the Durham
+[gamestate.cpp:4605]: AI takes control of High Chief Gleb of Smolensk
+[gamestate.cpp:4605]: AI takes control of Count Guido of Urbino
+[gamestate.cpp:4605]: AI takes control of Earl Taichlech of Muaidhe
+[gamestate.cpp:4609]: Human takes control of Duke Pavao of Croatia
+[gamestate.cpp:4605]: AI takes control of High Chief Banai of Sarkel
+[gamestate.cpp:4605]: AI takes control of Earl Guiraud of Armagnac
+[gamestate.cpp:4605]: AI takes control of Patrician Olaf of Gildehusen
+[gamestate.cpp:4605]: AI takes control of Count Otto of Weimar
+[gamestate.cpp:4605]: AI takes control of Maharaja Narasimha V of the Hoysala Kingdom
+[gamestate.cpp:4605]: AI takes control of Duke Angus II of The Isles
+[gamestate.cpp:4605]: AI takes control of Raja Simhana of the Haihaya Raj
+[gamestate.cpp:4605]: AI takes control of Grandmaster Guillaume of Knights Templar
+[gamestate.cpp:4605]: AI takes control of Bey Narpal of Kota
+[gamestate.cpp:4605]: AI takes control of Count Guglielmo of Monferrato
+[gamestate.cpp:4605]: AI takes control of High Chief Hasan of the Tigin Beylerbeylik
+[gamestate.cpp:4605]: AI takes control of High Chief Sviatoslav of Tver
+[gamestate.cpp:4605]: AI takes control of Countess Isabel of Devon
+[gamestate.cpp:4605]: AI takes control of Thakur Arjuna of Kiranapura
+[gamestate.cpp:4605]: AI takes control of Patrician Folke of Stråben
+[gamestate.cpp:4605]: AI takes control of Count Monfiorito of Istria
+[gamestate.cpp:4605]: AI takes control of Farin Gugwa of Dendi
+[gamestate.cpp:4605]: AI takes control of Chief Njuolla of Sápmi
+[gamestate.cpp:4605]: AI takes control of Patrician Dietrich of Vorrade
+[gamestate.cpp:4605]: AI takes control of Count Anders of Järnbäraland
+[gamestate.cpp:4605]: AI takes control of Earl John of Galloway
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Everhard of Münster
+[gamestate.cpp:4605]: AI takes control of Thakur Nagimalla of Doti
+[gamestate.cpp:4605]: AI takes control of Grandmaster Juan of Knights of Calatrava
+[gamestate.cpp:4605]: AI takes control of Count Lope of Viscaya
+[gamestate.cpp:4605]: AI takes control of Chief Chindia of Canarias
+[gamestate.cpp:4605]: AI takes control of Emir Muhammad II of the Nasrid Emirate
+[gamestate.cpp:4605]: AI takes control of High Chief Nogai of Khiva
+[gamestate.cpp:4605]: AI takes control of High Chief Kolik of Velsk
+[gamestate.cpp:4605]: AI takes control of Chief Fadil of Halaban
+[gamestate.cpp:4605]: AI takes control of Count Jaume of Castellon
+[gamestate.cpp:4605]: AI takes control of Duke Heinrich II of Mecklenburg
+[gamestate.cpp:4605]: AI takes control of Count Bernat of Lleida
+[gamestate.cpp:4605]: AI takes control of Khan Lev of Galicia-Volhynia
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Raimondo of Aquileia
+[gamestate.cpp:4605]: AI takes control of High Chief Alpi of the Ortokid Beylerbeylik
+[gamestate.cpp:4605]: AI takes control of Duke Jean of Brittany
+[gamestate.cpp:4605]: AI takes control of Count Nuno of Bragança
+[gamestate.cpp:4605]: AI takes control of Lord Mayor Alberto of Verona
+[gamestate.cpp:4605]: AI takes control of Maharaja Kulacêkara of the Pandya Kingdom
+[gamestate.cpp:4605]: AI takes control of High Chief Burhanaddin of the Awellimid High Chiefdom
+[gamestate.cpp:4605]: AI takes control of Duke Jean II of Hellas
+[gamestate.cpp:4605]: AI takes control of Chief Chormakhan of Uzen
+[gamestate.cpp:4605]: AI takes control of High Chief Baba Kawun of Dihistan
+[gamestate.cpp:4605]: AI takes control of Count Rogier-Bernat of Foix
+[gamestate.cpp:4605]: AI takes control of Count Albrecht of Magdeburg
+[gamestate.cpp:4605]: AI takes control of Bey Rupa of Reni
+[gamestate.cpp:4605]: AI takes control of Count Philotheos of Trinkitat
+[gamestate.cpp:4605]: AI takes control of Serene Doge Iacopo II of Venice
+[gamestate.cpp:4605]: AI takes control of Prince al-Muwahhid Abdallah Taqi al-Din of the Egypt
+[gamestate.cpp:4605]: AI takes control of Bey Sau Malik of Gilgit
+[gamestate.cpp:4605]: AI takes control of Prince Veeraballala of the Hoysala Kingdom
+[gamestate.cpp:4605]: AI takes control of Count Mikulás of Olmütz
+[gamestate.cpp:4605]: AI takes control of Chief Taj Mughal of Pamir
+[gamestate.cpp:4605]: AI takes control of High Chief Yusuf Šah of the Hazaraspid Satrapy
+[gamestate.cpp:4605]: AI takes control of Count Csanád László of Csanád
+[gamestate.cpp:4605]: AI takes control of High Chief Sareika of Skalva
+[gamestate.cpp:4605]: AI takes control of Chief Akhsitan of Albania
+[gamestate.cpp:4605]: AI takes control of Earl Domnall of Tír Chonaill
+[gamestate.cpp:4605]: AI takes control of Chief Kichay of Thisageta
+[gamestate.cpp:4605]: AI takes control of Patrician Carlo of Fieschi
+[gamestate.cpp:4605]: AI takes control of Count Alber of Medelike
+[gamestate.cpp:4605]: AI takes control of Count Ulf of Närke
+[gamestate.cpp:4605]: AI takes control of Count Ponç of Empuries
+[gamestate.cpp:4605]: AI takes control of Earl Gilbert of Bernicia
+[gamestate.cpp:4605]: AI takes control of Chief Manglik of Aksu
+[gamestate.cpp:4605]: AI takes control of Raja Kôpperuñcimman II of the Kadava Raj
+[gamestate.cpp:4605]: AI takes control of Chief Izz ad-Din Husayn of Qazwin
+[gamestate.cpp:4605]: AI takes control of Ngapo Ashokmalla of Jumla
+[gamestate.cpp:4605]: AI takes control of Count Rudolf of Baden
+[gamestate.cpp:4605]: AI takes control of King Alfonso IX of Castille
+[gamestate.cpp:4605]: AI takes control of Lord Mayor Corrado of Padua
+[gamestate.cpp:4605]: AI takes control of Duke Mikhail of Polotsk
+[gamestate.cpp:4605]: AI takes control of Thakur Asalla of Candhoba
+[gamestate.cpp:4605]: AI takes control of Count Berthold of Lausitz
+[gamestate.cpp:4605]: AI takes control of Beylerbey Yavlak Arslan of the Qayi Beylerbeylik
+[gamestate.cpp:4605]: AI takes control of Patriarch of the East Denha
+[gamestate.cpp:4605]: AI takes control of Patrician Ugolino of della Gherardesca
+[gamestate.cpp:4605]: AI takes control of Chief Bogen of Buzachi
+[gamestate.cpp:4605]: AI takes control of King Tadg IV of Connachta
+[gamestate.cpp:4605]: AI takes control of Count Matteo of Pavia
+[gamestate.cpp:4605]: AI takes control of Earl Alexander of Clydesdale
+[gamestate.cpp:4605]: AI takes control of High Chief Narin of Khorasan
+[gamestate.cpp:4605]: AI takes control of Duke Siemomysl of Kuyavia
+[gamestate.cpp:4605]: AI takes control of Pope Nicolaus III
+[gamestate.cpp:4605]: AI takes control of Patrician Johan of Stenkyrka
+[gamestate.cpp:4605]: AI takes control of High Chief Tartu of Crimea
+[gamestate.cpp:4605]: AI takes control of Sheikh Yusuf of Algeciras
+[gamestate.cpp:4605]: AI takes control of Count Arnould of Guines
+[gamestate.cpp:4605]: AI takes control of Bey Kantal of Vairata
+[gamestate.cpp:4605]: AI takes control of High Chief Samatu II of Zavarot
+[gamestate.cpp:4605]: AI takes control of King Edward of England
+[gamestate.cpp:4605]: AI takes control of Count Csák Ugrin of Pecs
+[gamestate.cpp:4605]: AI takes control of Lord Mayor Onorio of Arezzo
+[gamestate.cpp:4605]: AI takes control of Count Blagai István of Syrmia
+[gamestate.cpp:4605]: AI takes control of Doge Leone of Ancona
+[gamestate.cpp:4605]: AI takes control of Prince Roman of Galicia-Volhynia
+[gamestate.cpp:4605]: AI takes control of Count Szentgyörgyi Tamás of Bereg
+[gamestate.cpp:4605]: AI takes control of Prince Rama of the Vaghela Kingdom
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Berthold of Würzburg
+[gamestate.cpp:4605]: AI takes control of Count Nuño of Cadiz
+[gamestate.cpp:4605]: AI takes control of Thakur Kaul Chandra of Kangra
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Konrad of Osnabrück
+[gamestate.cpp:4605]: AI takes control of High Chief Is'mail IV of the Atef High Chiefdom
+[gamestate.cpp:4605]: AI takes control of Chakhar Lhamo Karma of Bumthang
+[gamestate.cpp:4605]: AI takes control of Count Joanes of Nájera
+[gamestate.cpp:4605]: AI takes control of High Chief Ivan II of Kiev
+[gamestate.cpp:4605]: AI takes control of Nirgrantha Devarshi of Rajrappa
+[gamestate.cpp:4605]: AI takes control of Count Giudice of Cinarca
+[gamestate.cpp:4605]: AI takes control of Earl Humphrey of Breconshire
+[gamestate.cpp:4605]: AI takes control of Mansa Abubakari of Mali
+[gamestate.cpp:4605]: AI takes control of Chief Syrka of Kozhva
+[gamestate.cpp:4605]: AI takes control of King Boleslaw V of Poland
+[gamestate.cpp:4605]: AI takes control of High Chieftess Khutulun of Kashgar
+[gamestate.cpp:4605]: AI takes control of Grandmaster Nicolas of Knights Hospitaller
+[gamestate.cpp:4605]: AI takes control of Earl Áed of Tír Eoghain
+[gamestate.cpp:4605]: AI takes control of Count Borsa Barnabás of Heves
+[gamestate.cpp:4605]: AI takes control of Count Dietrich of Kleve
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Heinrich of Trient
+[gamestate.cpp:4605]: AI takes control of Lord Mayor Ludwig of Freistadt
+[gamestate.cpp:4605]: AI takes control of Sheikh Khalil of Baalbek
+[gamestate.cpp:4605]: AI takes control of Count Simon of Saarbrücken
+[gamestate.cpp:4605]: AI takes control of Chief Azeg of Shish
+[gamestate.cpp:4605]: AI takes control of Chief Pulad of Kubera
+[gamestate.cpp:4605]: AI takes control of Earl Brian of Oriel
+[gamestate.cpp:4605]: AI takes control of Count Abebe of Lakomelza
+[gamestate.cpp:4605]: AI takes control of Count Petrou of Nubia
+[gamestate.cpp:4605]: AI takes control of Prince Edmund of the Holy Roman Empire
+[gamestate.cpp:4605]: AI takes control of Count Dietmar of Steyr
+[gamestate.cpp:4605]: AI takes control of Chief Nayaga of Karghalik
+[gamestate.cpp:4605]: AI takes control of Count Leszek of Sieradz
+[gamestate.cpp:4605]: AI takes control of Chief Sandaki of Ouadane
+[gamestate.cpp:4605]: AI takes control of Chief Roman of Uglich
+[gamestate.cpp:4605]: AI takes control of Count Nuno of Mértola
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Arnaut of Agen
+[gamestate.cpp:4605]: AI takes control of Earl Richard of Sussex
+[gamestate.cpp:4605]: AI takes control of Chief Ioan of Câmpulung
+[gamestate.cpp:4605]: AI takes control of Sheikh Muhammad of Ashir
+[gamestate.cpp:4605]: AI takes control of Doux Alexios III of Abydos
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Ugues of Vivarais
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Berenguié of Melgueil
+[gamestate.cpp:4605]: AI takes control of Thakur Sindhurai of Kamatapur
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Pierre of Valais
+[gamestate.cpp:4605]: AI takes control of Sheikh Ali of Druz
+[gamestate.cpp:4605]: AI takes control of Monyul Lhundup of Paro
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Hermann of Ösel
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Conrad of Freising
+[gamestate.cpp:4605]: AI takes control of Count Aba Fintá of Szepes
+[gamestate.cpp:4605]: AI takes control of Earl John of Surrey
+[gamestate.cpp:4605]: AI takes control of Prince Edmund of England
+[gamestate.cpp:4605]: AI takes control of Maharaja Bhuvanaikabahu of the Siri Sanga Bo Kingdom
+[gamestate.cpp:4605]: AI takes control of Chief Gazheg of Viled
+[gamestate.cpp:4605]: AI takes control of Thakur Arjuna of Nandapur
+[gamestate.cpp:4605]: AI takes control of Patrician Hermann of Warendorp
+[gamestate.cpp:4605]: AI takes control of High Chief Kán László IV of Transylvania
+[gamestate.cpp:4605]: AI takes control of Hochmeister Hartmann of the Teutonic State
+[gamestate.cpp:4605]: AI takes control of Chief Báthory Miklós of Szekelyföld
+[gamestate.cpp:4605]: AI takes control of High Chief Aepak of Nagormo
+[gamestate.cpp:4605]: AI takes control of Duke Philippe of Savoy
+[gamestate.cpp:4605]: AI takes control of Emir Yghomracen of the Zayanid Emirate
+[gamestate.cpp:4605]: AI takes control of Sheikh Mohammad of Safed
+[gamestate.cpp:4605]: AI takes control of King Alexander III of Scotland
+[gamestate.cpp:4605]: AI takes control of Count Gonçalo of Guarda
+[gamestate.cpp:4605]: AI takes control of Duke Beka of Tao
+[gamestate.cpp:4605]: AI takes control of Countess Marjory of Carrick
+[gamestate.cpp:4605]: AI takes control of Patrician Giovanni of Dandolo
+[gamestate.cpp:4605]: AI takes control of Bey Sahjendra Singh of Chanderi
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Ubaldo of Ivrea
+[gamestate.cpp:4605]: AI takes control of Count Afonso of Alcácer do Sal
+[gamestate.cpp:4605]: AI takes control of Duke Riccardo of Cephalonia
+[gamestate.cpp:4605]: AI takes control of Chief Chormakhan of Lower Don
+[gamestate.cpp:4605]: AI takes control of Duke John II of Orkney
+[gamestate.cpp:4605]: AI takes control of Duke Henryk IV of Silesia
+[gamestate.cpp:4605]: AI takes control of Earl John of Kildare
+[gamestate.cpp:4605]: AI takes control of Earl Archambaut of Périgord
+[gamestate.cpp:4605]: AI takes control of King Demetre II of Georgia
+[gamestate.cpp:4605]: AI takes control of Count Stjepan of Donji Kraji
+[gamestate.cpp:4605]: AI takes control of High Chief Nogai of Moldavia
+[gamestate.cpp:4605]: AI takes control of Duke Thrugot of Skåne
+[gamestate.cpp:4605]: AI takes control of King Meskedet of Makuria
+[gamestate.cpp:4605]: AI takes control of Emir Qalawun of the Bahri Beylerbeylik
+[gamestate.cpp:4605]: AI takes control of Earl Alexander of Argyll
+[gamestate.cpp:4605]: AI takes control of Patrician Raimundo of Embriaco
+[gamestate.cpp:4605]: AI takes control of Farin Kalabi of Taghaza
+[gamestate.cpp:4605]: AI takes control of Count Viczay Beled of Sopron
+[gamestate.cpp:4605]: AI takes control of Countess Maria of Limousin
+[gamestate.cpp:4605]: AI takes control of Maharaja Viravarma of the Chandela Kingdom
+[gamestate.cpp:4605]: AI takes control of Count Thiébaut of Bar
+[gamestate.cpp:4605]: AI takes control of Chief Odeg of Sedyu
+[gamestate.cpp:4605]: AI takes control of Chief Masud-Beg of Bukhara
+[gamestate.cpp:4605]: AI takes control of High Chief Feodor of Vologda
+[gamestate.cpp:4605]: AI takes control of Despot Georgios of Trebizond
+[gamestate.cpp:4605]: AI takes control of Sheikh Muhammad Sayf al-Din al-Mansur of Hama
+[gamestate.cpp:4605]: AI takes control of Emir Sayf of the Suleimid Emirate
+[gamestate.cpp:4605]: AI takes control of Count Jean of Vienne
+[gamestate.cpp:4605]: AI takes control of Count Jean of Vendôme
+[gamestate.cpp:4605]: AI takes control of Duke Heinrich III of Brandenburg
+[gamestate.cpp:4605]: AI takes control of Count Bernhard of Zerbst
+[gamestate.cpp:4605]: AI takes control of Count Reinoud of Gelre
+[gamestate.cpp:4605]: AI takes control of Chief Saru of Aylik
+[gamestate.cpp:4605]: AI takes control of Count Albero of Traungau
+[gamestate.cpp:4605]: AI takes control of High Chief Alik II of Bjarmia
+[gamestate.cpp:4605]: AI takes control of Protector General Chigu of the Yuan
+[gamestate.cpp:4605]: AI takes control of Count Joan of Forez
+[gamestate.cpp:4605]: AI takes control of Count Pedro of Asturias de Oviedo
+[gamestate.cpp:4605]: AI takes control of Raja Ananta of Nepal
+[gamestate.cpp:4605]: AI takes control of Patrician Oberto of Spinola
+[gamestate.cpp:4605]: AI takes control of Doux Andronikos of Samos
+[gamestate.cpp:4605]: AI takes control of Earl Donnchad of Thomond
+[gamestate.cpp:4605]: AI takes control of Chief Ali of Bauchi
+[gamestate.cpp:4605]: AI takes control of Patrician Giovanni of Morosini
+[gamestate.cpp:4605]: AI takes control of Count Anselmo of Arboréa
+[gamestate.cpp:4605]: AI takes control of Count Guy of Thouars
+[gamestate.cpp:4605]: AI takes control of Earl Henry of Hull
+[gamestate.cpp:4605]: AI takes control of Count Jean of Eu
+[gamestate.cpp:4605]: AI takes control of Count Gruffydd of Builth
+[gamestate.cpp:4605]: AI takes control of High Chief Torleif of Jemtland
+[gamestate.cpp:4605]: AI takes control of Count Fernando of Valladolid
+[gamestate.cpp:4605]: AI takes control of High Chief Farrukhzad II of the Kesranid Satrapy
+[gamestate.cpp:4605]: AI takes control of Prince Kaykaus of Rum
+[gamestate.cpp:4605]: AI takes control of Gyalpo Purgyal Gyaltsen of Guge
+[gamestate.cpp:4605]: AI takes control of King Levon II of Armenia
+[gamestate.cpp:4605]: AI takes control of Chief Ahmad of Rafha
+[gamestate.cpp:4605]: AI takes control of Count Egino of Breisgau
+[gamestate.cpp:4605]: AI takes control of Chief Yuriy of Obran Osh
+[gamestate.cpp:4605]: AI takes control of Raja Shakrasinhadeva of the Karnata Raj
+[gamestate.cpp:4605]: AI takes control of Duke Barnim of Pomerania
+[gamestate.cpp:4605]: AI takes control of Count Svantepolk of Kinda
+[gamestate.cpp:4605]: AI takes control of Raja Gaurinarayan of the Sutiya Raj
+[gamestate.cpp:4605]: AI takes control of Count Poth Miklós of Somogy
+[gamestate.cpp:4605]: AI takes control of Chief Begluk of Cadota
+[gamestate.cpp:4605]: AI takes control of Duke Teruworq of Damot
+[gamestate.cpp:4605]: AI takes control of Chief Parush of Izhma
+[gamestate.cpp:4605]: AI takes control of Chief Baeivi of Kemi
+[gamestate.cpp:4605]: AI takes control of Prince Mayor Johann of The Hansa
+[gamestate.cpp:4605]: AI takes control of Chief Yakubu of Gobir
+[gamestate.cpp:4605]: AI takes control of Raja Makardhwaj Narayan of the Kachari Raj
+[gamestate.cpp:4605]: AI takes control of Patrician Andrea of Ziani
+[gamestate.cpp:4605]: AI takes control of Count Harald of Bornholm
+[gamestate.cpp:4605]: AI takes control of Patrician Francesco of Alliata
+[gamestate.cpp:4605]: AI takes control of Chief Dokya of Ural
+[gamestate.cpp:4605]: AI takes control of Thakur Kavadeva of Banavasi
+[gamestate.cpp:4605]: AI takes control of Chief Komantas of Sudovia
+[gamestate.cpp:4605]: AI takes control of Count Einar of Gudbrandsdalen
+[gamestate.cpp:4605]: AI takes control of High Chief Kuntuvdi of Karashar
+[gamestate.cpp:4605]: AI takes control of Pope Yohannes VII
+[gamestate.cpp:4605]: AI takes control of Sheikh Zayd of Tobruk
+[gamestate.cpp:4605]: AI takes control of Duke Prijezda of Bosnia
+[gamestate.cpp:4605]: AI takes control of Prince Andronikos of the Byzantine Empire
+[gamestate.cpp:4605]: AI takes control of Earl Theobald of Ormond
+[gamestate.cpp:4605]: AI takes control of Chief Mikhail of Mstislavl
+[gamestate.cpp:4605]: AI takes control of Duke Ottone of Milan
+[gamestate.cpp:4605]: AI takes control of Emir Abd-al-Qasim of the Azfavid Emirate
+[gamestate.cpp:4605]: AI takes control of Khagan Abaga of the Ilkhanate
+[gamestate.cpp:4605]: AI takes control of Countess Constància of Marsan
+[gamestate.cpp:4605]: AI takes control of High Chief Purgyal Lhachen IX Jospal of Ladakh
+[gamestate.cpp:4605]: AI takes control of King Premysl II of Bohemia
+[gamestate.cpp:4605]: AI takes control of Count Jean of Blois
+[gamestate.cpp:4605]: AI takes control of Duke Guy of Flanders
+[gamestate.cpp:4605]: AI takes control of Thakur Emal of Mohadavasaka
+[gamestate.cpp:4605]: AI takes control of High Chief Bujeg of Azov
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Adémar of Lyon
+[gamestate.cpp:4605]: AI takes control of Count Gonzalo of Astorga
+[gamestate.cpp:4605]: AI takes control of Count Diego of Salamanca
+[gamestate.cpp:4605]: AI takes control of High Chief Qutlugh-Khan Muzzafar ad-Din of the Qutlugh-Khan Duchy
+[gamestate.cpp:4605]: AI takes control of Chief Mariana of Hayya
+[gamestate.cpp:4605]: AI takes control of Countess Alix of Auxerre
+[gamestate.cpp:4605]: AI takes control of Earl Guillaume of Dyfed
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Johann of Sticht
+[gamestate.cpp:4605]: AI takes control of Chief Várdai László of Bihar
+[gamestate.cpp:4605]: AI takes control of Count Francesco of Brescia
+[gamestate.cpp:4605]: AI takes control of Earl Roger of Norfolk
+[gamestate.cpp:4605]: AI takes control of Duke Bohemond IV of Tripoli
+[gamestate.cpp:4605]: AI takes control of Chief Davyd of Galich Mersky
+[gamestate.cpp:4605]: AI takes control of Count Ugolino of Gallura
+[gamestate.cpp:4605]: AI takes control of Count Rudolf of Neuchatel
+[gamestate.cpp:4605]: AI takes control of Thakur Nityapal of Goalpara
+[gamestate.cpp:4605]: AI takes control of Chief Ibrahim of Hajr
+[gamestate.cpp:4605]: AI takes control of Sheikh Bashar of Bahrein
+[gamestate.cpp:4605]: AI takes control of Bey Katar of Mallabhum
+[gamestate.cpp:4605]: AI takes control of Chief Atabeg of Dwin
+[gamestate.cpp:4605]: AI takes control of Chief Stepanos of Samarra
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Gijsbert of Bremen
+[gamestate.cpp:4605]: AI takes control of Count Jan of Loon
+[gamestate.cpp:4605]: AI takes control of Glo Poso of Manthang
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Tyge of Aarhus
+[gamestate.cpp:4605]: AI takes control of Earl Robert of Oxford
+[gamestate.cpp:4605]: AI takes control of Duke Albrecht of Thüringia
+[gamestate.cpp:4605]: AI takes control of Patrician Alexander of Lüneburg
+[gamestate.cpp:4605]: AI takes control of Prince-Bishop Volkwin of Minden
+[gamestate.cpp:4605]: AI takes control of Despot Nikephoros of Epirus
+[gamestate.cpp:4605]: AI takes control of Count Ioannes of Thessalia
+[gamestate.cpp:4605]: AI takes control of Count Theodoros of Rhodos
+[gamestate.cpp:4605]: AI takes control of Bey Anangapal of Sripatha
+[gamestate.cpp:4605]: AI takes control of Chief Telegdi Tamás of Temes
+[gamestate.cpp:4605]: AI takes control of Duke Csák Lörinc II of Nyitra
+[gamestate.cpp:4605]: AI takes control of Duke Aba Amadé of Ungvár
+[gamestate.cpp:4605]: AI takes control of Count Manfredo of Cremona
+[gamestate.cpp:4605]: AI takes control of Count Tommaso of Saluzzo
+[gamestate.cpp:4605]: AI takes control of Duke Marco II of Aegean Islands
+[gamestate.cpp:4605]: AI takes control of Sheikh Hassan of Archa
+[gamestate.cpp:4605]: AI takes control of Sheikh Aziz of Halab
+[gamestate.cpp:4605]: AI takes control of Sheikh Hakeem of Asas
+[gamestate.cpp:4605]: AI takes control of Sheikh Ahmad of Palmyra
+[gamestate.cpp:4605]: AI takes control of Sheikh Mas'ud of Al Bichri
+[gamestate.cpp:4605]: AI takes control of Sheikh Illyas of Al-Sukhnah
+[gamestate.cpp:4605]: AI takes control of Sheikh Muaddam of Homs
+[gamestate.cpp:4605]: AI takes control of Chief Idris of Bira
+[gamestate.cpp:4605]: AI takes control of Prince Ya'qub of the Marinid Sultanate
+[gamestate.cpp:4605]: AI takes control of Sultan Zakariya II of the Hafsid Sultanate
+[gamestate.cpp:4605]: AI takes control of Emir Ahmad of Tripolitania
+[gamestate.cpp:4605]: AI takes control of Chief Kaya of Araouane
+[gamestate.cpp:4605]: AI takes control of Farin Yama of Bambuk
+[gamestate.cpp:4605]: AI takes control of Thakur Kamadeva of Goa
+[gamestate.cpp:4605]: AI takes control of Chief Malek of Daylam
+[gamestate.cpp:4605]: AI takes control of Chief Akhutai of Iasi
+[gamestate.cpp:4605]: AI takes control of Chief Khabichi of Bratslav
+[gamestate.cpp:4605]: AI takes control of Chief Jochi of Aral
+[gamestate.cpp:4605]: AI takes control of Chief Alchi of Emba Steppe
+[gamestate.cpp:4605]: AI takes control of High Chief Uladu Noyan of Kabulistan
+[gamestate.cpp:4605]: AI takes control of Count Bertrand of Foggia
+[gamestate.cpp:4605]: AI takes control of Count Aymon of Genevois
+[gamestate.cpp:4605]: AI takes control of Countess Blanca of Molina
+[gamestate.cpp:4605]: AI takes control of High Chief Muhammad II of Bolghar
+[gamestate.cpp:4605]: AI takes control of Sultan al-Said Barakah of the Bunduqdarid Sultanate
+[gamestate.cpp:4605]: AI takes control of Count Thomas of Thebes
+[gamestate.cpp:4605]: AI takes control of Captain Rodolfo of Papal Guards
+[gamestate.cpp:4605]: AI takes control of Dedebaba Zahak of Bektashi Order
+[gamestate.cpp:4605]: AI takes control of Captain Kaytun of Turkmen Company
+[gamestate.cpp:4605]: AI takes control of Captain Yerneslu of Khazar Company
+[gamestate.cpp:4605]: AI takes control of Captain Adal of Berber Company
+[gamestate.cpp:4605]: AI takes control of Captain Alim of Arab Company
+[gamestate.cpp:4605]: AI takes control of Captain Savtekin of Turkoman Company
+[gamestate.cpp:4605]: AI takes control of Captain Bönek of Steppe Company
+[gamestate.cpp:4605]: AI takes control of Captain Urtilian of Tuareg Company
+[gamestate.cpp:4605]: AI takes control of Captain Uways of Bedouin Company
+[gamestate.cpp:4605]: AI takes control of Captain Michael of White Company
+[gamestate.cpp:4605]: AI takes control of Captain Helferich of Great Company
+[gamestate.cpp:4605]: AI takes control of Condottiere Galasso of Company of St. George
+[gamestate.cpp:4605]: AI takes control of Condottiere Ennio of Company of the Star
+[gamestate.cpp:4605]: AI takes control of Condottiere Costanzo of Company of the Hat
+[gamestate.cpp:4605]: AI takes control of Condottiere Ubaldo of Company of the Rose
+[gamestate.cpp:4605]: AI takes control of Condottiere Guerau of Catalan Company
+[gamestate.cpp:4605]: AI takes control of Condottiere Aznar of Navarrese Company
+[gamestate.cpp:4605]: AI takes control of Captain Aldéric of Swiss Company
+[gamestate.cpp:4605]: AI takes control of Captain Arthuiu of Breton Company
+[gamestate.cpp:4605]: AI takes control of Captain Clemente of Sardinian Company
+[gamestate.cpp:4605]: AI takes control of Captain Stentore of Sardinian Band
+[gamestate.cpp:4605]: AI takes control of Captain Theodorich of Victual Brothers
+[gamestate.cpp:4605]: AI takes control of Captain Kotyan of Cuman Company
+[gamestate.cpp:4605]: AI takes control of Captain Gleb of Rus Company
+[gamestate.cpp:4605]: AI takes control of Captain Korkutan of Pecheneg Company
+[gamestate.cpp:4605]: AI takes control of Captain Kulin of Bulgarian Company
+[gamestate.cpp:4605]: AI takes control of Captain Bahadir of Turkic Company
+[gamestate.cpp:4605]: AI takes control of Condottiere Germano of Lombard Band
+[gamestate.cpp:4605]: AI takes control of Captain Hildebert of Swiss Band
+[gamestate.cpp:4605]: AI takes control of Captain Guilherm of Breton Band
+[gamestate.cpp:4605]: AI takes control of Condottiere Guillem-Ramon of Catalan Band
+[gamestate.cpp:4605]: AI takes control of Captain Burgheard of Saxon Band
+[gamestate.cpp:4605]: AI takes control of Captain Borç of Cuman Band
+[gamestate.cpp:4605]: AI takes control of Captain Rodislav of Rus Band
+[gamestate.cpp:4605]: AI takes control of Captain Miemo of Finnish Band
+[gamestate.cpp:4605]: AI takes control of Captain Ámmot of Sami Band
+[gamestate.cpp:4605]: AI takes control of Captain Butvydas of Lithuanian Band
+[gamestate.cpp:4605]: AI takes control of Captain Bworo of Abyssinian Band
+[gamestate.cpp:4605]: AI takes control of Captain Epiphanios of Nubian Band
+[gamestate.cpp:4605]: AI takes control of Captain Aulay of Scottish Band
+[gamestate.cpp:4605]: AI takes control of Captain Conmáel of Irish Band
+[gamestate.cpp:4605]: AI takes control of Captain Akhsar of Alan Riders
+[gamestate.cpp:4605]: AI takes control of Captain Boru of Pecheneg Band
+[gamestate.cpp:4605]: AI takes control of Captain Bernardin of Bulgarian Band
+[gamestate.cpp:4605]: AI takes control of Captain Bugra of Turkic Band
+[gamestate.cpp:4605]: AI takes control of Captain Jawdat of Mamluks
+[gamestate.cpp:4605]: AI takes control of Captain Albino of the Adriatic Galleys
+[gamestate.cpp:4605]: AI takes control of Captain Valentino of the Ligurian Galleys
+[gamestate.cpp:4605]: AI takes control of Captain Gerlach of the Baltic Cogs
+[gamestate.cpp:4605]: AI takes control of Captain Antoon of the North Sea Cogs
+[gamestate.cpp:4605]: AI takes control of Captain Amri of the Maghreb Navy
+[gamestate.cpp:4605]: AI takes control of Captain Turhan of Ghilman
+[gamestate.cpp:4605]: AI takes control of Captain Ouati of Ghanan Band
+[gamestate.cpp:4605]: AI takes control of Pope Abraham
+[gamestate.cpp:4605]: AI takes control of Patriarch Georgios
+[gamestate.cpp:4605]: AI takes control of Patriarch Stephanos
+[gamestate.cpp:4605]: AI takes control of Captain Rong of Dragon Army
+[gamestate.cpp:4605]: AI takes control of Captain Yifu of Phoenix Company
+[gamestate.cpp:4605]: AI takes control of Captain Zhizhou of Qilin Company
+[gamestate.cpp:4605]: AI takes control of Captain Suiliang of Tortoise Company
+[gamestate.cpp:4605]: AI takes control of Captain Lin of Crane Band
+[gamestate.cpp:4605]: AI takes control of Captain Gongren of Peony Band
+[gamestate.cpp:4605]: AI takes control of Captain Yanwei of Orchid Band
+[gamestate.cpp:4605]: AI takes control of Captain Šišihuan of Jurchen Band
+[gamestate.cpp:4605]: AI takes control of Captain Dashi of Tangut Band
+[gamestate.cpp:4605]: AI takes control of Captain Nyasig of Bödpa Band
+[gamestate.cpp:4605]: AI takes control of Captain Juyuan of Treasure Fleet
+[gamestate.cpp:4605]: AI takes control of Captain Wei of the Han Junks
+[gamestate.cpp:4605]: AI takes control of Captain Nigæ of the Jurchen Corsairs
+[gamestate.cpp:4605]: AI takes control of Captain Irâcâtirâcatevar of Tamil Band
+[gamestate.cpp:4605]: AI takes control of Captain Jayajirao of Marathi Company
+[gamestate.cpp:4605]: AI takes control of Captain Gopalrao of Marathi Band
+[gamestate.cpp:4605]: AI takes control of Captain Manava of Bengal Company
+[gamestate.cpp:4605]: AI takes control of Captain Bhumimitra of Bengal Band
+[gamestate.cpp:4605]: AI takes control of Captain Bahadur-Singh of Rajput Company
+[gamestate.cpp:4605]: AI takes control of Captain Suratrana of Rajput Band
+[gamestate.cpp:4605]: AI takes control of Captain Nezam of Persian Caravan Guards
+[gamestate.cpp:4605]: AI takes control of Captain Khushal of Silk Road Sentinels
+[gamestate.cpp:4605]: AI takes control of Captain Kutlug of Turkic Guard
+[gamestate.cpp:4605]: AI takes control of Warchief Samsou-Keïna of Ton-Tigi Army
+[gamestate.cpp:4605]: AI takes control of Warchief Biyu of Mandekalu Horsemen
+[gamestate.cpp:4605]: AI takes control of Warchief Sentiko of Kèlè-Koun Infantry
+[gamestate.cpp:4605]: AI takes control of Warchief Soumaba of Mandekalu Band
+[gamestate.cpp:4605]: AI takes control of Captain Rano of Hausa Company
+[gamestate.cpp:4605]: AI takes control of Warchief Borgo of Band of the Hippo
+[gamestate.cpp:4605]: AI takes control of Warchief Al'a'addin of Crocodile Company
+[gamestate.cpp:4605]: AI takes control of Count Poppo of Hadeln
+[gamestate.cpp:4605]: AI takes control of Lord Mayor Kiratpala of Sarangpur
+[gamestate.cpp:4605]: AI takes control of Grandmaster Juan of Knights of Santiago
+[gamestate.cpp:4605]: AI takes control of High Chieftess Chakha
+[gamestate.cpp:4605]: AI takes control of Count Onfroy of Boulogne
+[gamestate.cpp:4605]: AI takes control of Thakur Amritapala of Debul
+[gamestate.cpp:4605]: AI takes control of Thakur Bijjala of Kolhapur
+[gamestate.cpp:4605]: AI takes control of Thakur Bhandanaditya of Kollipake
+[gamestate.cpp:4605]: AI takes control of Count Piotr of Lomza
+[gamestate.cpp:4605]: AI takes control of Count Sedzimir of Gostynin
+[gamestate.cpp:4605]: AI takes control of Beylerbey Rustem of the Rustemid Beylerbeylik
+[gamestate.cpp:4605]: AI takes control of Bey Sökmen of Charsianon
+[gamestate.cpp:4605]: AI takes control of Bey Sehinsah of Aksaray
+[gamestate.cpp:4605]: AI takes control of Bey Togay of Nyssa
+[gamestate.cpp:4605]: AI takes control of Bey Toruntay of Kara Hissar
+[gamestate.cpp:4605]: AI takes control of Sheikh Ciise of Zeila
+[gamestate.cpp:4605]: AI takes control of Sheikh Sa'daddin of Bayda
+[gamestate.cpp:4605]: AI takes control of Chief Bughu of Khasagt Khairkhan
+[gamestate.cpp:4605]: AI takes control of Thakur Chandanaraja of Vidisa
+[gamestate.cpp:4605]: AI takes control of Chief Zaur of Kalaus
+[gamestate.cpp:4605]: AI takes control of Count Ekkehard of Gorlitz
+[gamestate.cpp:4605]: AI takes control of Chief Matfei of Murom
+[gamestate.cpp:4605]: AI takes control of Patriarch Ezana of Abyssinia
+[gamestate.cpp:4605]: AI takes control of Thakur Skandavarman of Sambalpur
+[gamestate.cpp:4605]: AI takes control of Thakur Umavarman of Suvarnapura
+[gamestate.cpp:4605]: AI takes control of Thakur Padmanava of Puri
+[gamestate.cpp:4605]: AI takes control of Thakur Kotukulapattan of Kallikkottai
+[gamestate.cpp:4605]: AI takes control of Bey Bahadir of Boli
+[gamestate.cpp:4605]: AI takes control of Chief Radoslav of Voin
+[gamestate.cpp:4605]: AI takes control of Chief Andrei of Serpukhov
+[gamestate.cpp:4605]: AI takes control of Count Gastone of Zakynthos
+[gamestate.cpp:4605]: AI takes control of Count Rolf of Halland
+[gamestate.cpp:4605]: AI takes control of Thakur Chandramukhavarman of Lhoyu
+[gamestate.cpp:4605]: AI takes control of Chief Tamachi of Keltma
+[gamestate.cpp:4605]: AI takes control of Chief Tuk of Veliky Ustug
+[gamestate.cpp:4605]: AI takes control of Chief Krovat of Illyinsk
+[gamestate.cpp:4605]: AI takes control of Bey Ayaz of Amorion
+[gamestate.cpp:4605]: AI takes control of Patrician Landolfo of di Monferrato
+[gamestate.cpp:4605]: AI takes control of Patrician Berto of Dandolo
+[gamestate.cpp:4605]: AI takes control of Patrician Corrado of Moncada
+[gamestate.cpp:4605]: AI takes control of Patrician Oddone of di Chiaramonte
+[gamestate.cpp:4605]: AI takes control of Thakur Allat of Mandapika
+[gamestate.cpp:4605]: AI takes control of Grandmaster Tolpal of Followers of Arjuna
+[gamestate.cpp:4605]: AI takes control of Grandmaster Keshideva of Chosen of Ashoka
+[gamestate.cpp:4605]: AI takes control of Grandmaster Marasimha of Bulls of Rishabha
+[gamestate.cpp:4605]: AI takes control of Thakur Govinda of Thalner
+[gamestate.cpp:4605]: AI takes control of Thakur Dhaulshaya of Vadodara

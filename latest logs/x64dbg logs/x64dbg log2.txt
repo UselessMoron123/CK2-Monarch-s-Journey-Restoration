@@ -1,0 +1,245 @@
+Инициализация объектов ожидания...
+Инициализация отладчика...
+Инициализация функций отладчика...
+Установка функций управления памятью JSON...
+Получение сведений о каталоге...
+Путь к символьной информации: C:\Users\UZWERG\Desktop\x64 dbg\release\x64\symbols
+Запуск чтения файлового потока...
+Получение индексов syscall...
+Выделение стека для сообщений...
+Инициализация глобальных переменных скриптов...
+Регистрация команд отладчика...
+Регистрация обработчика команд пользовательского интерфейса...
+Регистрация функций вычисления выражений...
+Регистрация функций форматирования...
+Регистрация обработчика команд Script DLL...
+Запуск командного цикла...
+Инициализация успешно завершена!
+Загрузка плагинов...
+Обработка командной строки...
+  "C:\Users\UZWERG\Desktop\x64 dbg\release\x64\x64dbg.exe" 
+Индексы Syscall загружены!
+База данных кодов ошибок загружена!
+База данных кодов исключений загружена!
+База данных кодов NTSTATUS загружена!
+База данных констант Windows загружена!
+Чтение файла заметок...
+Чтение файлового потока закончено!
+Отладка: C:\Users\UZWERG\Desktop\SteamCrusader\CK2game.exe
+Файл базы данных: C:\Users\UZWERG\Desktop\x64 dbg\release\x64\db\CK2game.exe.dd64
+Процесс запущен: 00007FF75EF20000 C:\Users\UZWERG\Desktop\SteamCrusader\CK2game.exe
+  "C:\Users\UZWERG\Desktop\SteamCrusader\CK2game.exe"
+  argv[0]: C:\Users\UZWERG\Desktop\SteamCrusader\CK2game.exe
+Module ck2game.exe loaded from disk path
+Точка останова по адресу 00007FF75FD40C14 (останов в точке входа) установлена!
+DLL загружена: 00007FFEE2810000 C:\Windows\System32\ntdll.dll
+DLL загружена: 00007FFEE09F0000 C:\Windows\System32\kernel32.dll
+DLL загружена: 00007FFEE02B0000 C:\Windows\System32\KernelBase.dll
+DLL загружена: 00007FFEE1250000 C:\Windows\System32\shell32.dll
+DLL загружена: 00007FFEE0770000 C:\Windows\System32\msvcp_win.dll
+DLL загружена: 00007FFEE0050000 C:\Windows\System32\ucrtbase.dll
+Поток 3716 создан, Точка входа: ntdll.00007FFEE2862B20, Параметр: 000001CD23CD4D00Поток 5664 создан, Точка входа: ntdll.00007FFEE2862B20, Параметр: 000001CD23CD4D00DLL загружена: 00007FFEE0BA0000 C:\Windows\System32\user32.dll
+DLL загружена: 00007FFEE06A0000 C:\Windows\System32\win32u.dll
+DLL загружена: 00007FFEE08A0000 C:\Windows\System32\gdi32.dll
+DLL загружена: 00007FFEE0590000 C:\Windows\System32\gdi32full.dll
+Поток 1132 создан, Точка входа: ntdll.00007FFEE2862B20, Параметр: 000001CD23CD4D00DLL загружена: 00007FFEE1050000 C:\Windows\System32\ws2_32.dll
+DLL загружена: 00007FFEE0EC0000 C:\Windows\System32\rpcrt4.dll
+DLL загружена: 00007FFEB7600000 C:\Users\UZWERG\Desktop\SteamCrusader\tbb.dll
+DLL загружена: 00007FFEB19B0000 C:\Users\UZWERG\Desktop\SteamCrusader\SDL2.dll
+DLL загружена: 00007FFECD540000 C:\Windows\System32\winmm.dll
+DLL загружена: 00007FFEE2050000 C:\Windows\System32\msvcrt.dll
+DLL загружена: 00007FFEDA610000 C:\Windows\System32\vcruntime140.dll
+DLL загружена: 00007FFED4990000 C:\Windows\System32\msvcp140.dll
+DLL загружена: 00007FFEE0FF0000 C:\Windows\System32\shlwapi.dll
+DLL загружена: 00007FFEE0860000 C:\Windows\System32\imm32.dll
+DLL загружена: 00007FFEE1EE0000 C:\Windows\System32\psapi.dll
+DLL загружена: 00007FFEDA600000 C:\Windows\System32\vcruntime140_1.dll
+DLL загружена: 00007FFEE1F10000 C:\Windows\System32\advapi32.dll
+DLL загружена: 00007FFEE0150000 C:\Windows\System32\crypt32.dll
+DLL загружена: 00007FFEE0D40000 C:\Windows\System32\sechost.dll
+DLL загружена: 00007FFEE1120000 C:\Windows\System32\ole32.dll
+DLL загружена: 00007FFEE21A0000 C:\Windows\System32\combase.dll
+DLL загружена: 00007FFECDE30000 C:\Windows\System32\d3d9.dll
+DLL загружена: 000001CD23DD0000 C:\Windows\System32\ole32.dll
+DLL выгружена: 000001CD23DD0000 ole32.dll
+DLL загружена: 00007FFEB0F60000 C:\Windows\System32\D3DX9_41.dll
+DLL загружена: 00007FFEE19A0000 C:\Windows\System32\oleaut32.dll
+DLL загружена: 00000000584A0000 C:\Users\UZWERG\Desktop\SteamCrusader\steam_api64.dll
+Пропуск неподдерживаемого отладочного типа IMAGE_DEBUG_TYPE_POGO в модуле pops_api.dll...
+Не найдены какие-либо поддерживаемые отладочные типы в модуле pops_api.dll!
+DLL загружена: 00007FFEB14B0000 C:\Users\UZWERG\Desktop\SteamCrusader\pops_api.dll
+Пропуск неподдерживаемого отладочного типа IMAGE_DEBUG_TYPE_POGO в модуле physfs.dll...
+Не найдены какие-либо поддерживаемые отладочные типы в модуле physfs.dll!
+DLL загружена: 00007FFEB75B0000 C:\Users\UZWERG\Desktop\SteamCrusader\physfs.dll
+DLL загружена: 00007FFED55B0000 C:\Windows\System32\version.dll
+DLL загружена: 00007FFEE0B30000 C:\Windows\System32\normaliz.dll
+DLL загружена: 0000000000400000 C:\Windows\System32\xinput1_3.dll
+DLL загружена: 00007FFEDEA20000 C:\Windows\System32\kernel.appcore.dll
+DLL загружена: 00007FFEDD8C0000 C:\Windows\System32\dwmapi.dll
+DLL загружена: 00007FFEDDBB0000 C:\Windows\System32\windows.storage.dll
+DLL загружена: 00007FFEB0EF0000 C:\Users\UZWERG\Desktop\SteamCrusader\SDL2_mixer.dll
+DLL загружена: 00007FFEE1A70000 C:\Windows\System32\setupapi.dll
+DLL загружена: 00007FFEE0810000 C:\Windows\System32\cfgmgr32.dll
+DLL загружена: 00007FFEE0740000 C:\Windows\System32\bcrypt.dll
+DLL загружена: 00007FFEDF7B0000 C:\Windows\System32\wldp.dll
+DLL загружена: 00007FFEB0E60000 C:\Users\UZWERG\Desktop\SteamCrusader\PDXBrowser_IPC.dll
+Достигнута системная точка останова!
+INT3 точка останова "останов в точке входа" на <ck2game.OptionalHeader.AddressOfEntryPoint> (00007FF75FD40C14)!
+DLL загружена: 00007FFEB72C0000 C:\Users\UZWERG\Desktop\SteamCrusader\tbbmalloc.dll
+DLL загружена: 00007FFEDFE10000 C:\Windows\System32\userenv.dll
+DLL загружена: 00007FFEDFE50000 C:\Windows\System32\profapi.dll
+DLL выгружена: 00007FFEDFE50000 profapi.dll
+DLL выгружена: 00007FFEDFE10000 userenv.dll
+DLL загружена: 00007FFEE0930000 C:\Windows\System32\SHCore.dll
+Строка отладки: «[S_API FAIL] SteamAPI_Init() failed; SteamAPI_IsSteamRunning() failed.»
+Строка отладки: «[S_API FAIL] SteamAPI_Init() failed; unable to locate a running instance of Steam, or a local steamclient64.dll.»
+Строка отладки: «[S_API FAIL] SteamAPI_Init() failed; SteamAPI_IsSteamRunning() failed.»
+Строка отладки: «[S_API FAIL] SteamAPI_Init() failed; unable to locate a running instance of Steam, or a local steamclient64.dll.»
+Строка отладки: «[S_API FAIL] SteamAPI_Init() failed; SteamAPI_IsSteamRunning() failed.»
+Строка отладки: «[S_API FAIL] SteamAPI_Init() failed; unable to locate a running instance of Steam, or a local steamclient64.dll.»
+DLL загружена: 00007FFEDD500000 C:\Windows\System32\uxtheme.dll
+DLL загружена: 00007FFEE2500000 C:\Windows\System32\msctf.dll
+DLL загружена: 00007FFEAE920000 C:\Windows\System32\igdumdim64.dll
+DLL загружена: 00007FFECBE90000 C:\Windows\System32\DriverStore\FileRepository\nvami.inf_amd64_a3d5bcc37ff12fed\nvdlistx.dll
+DLL выгружена: 00007FFECBE90000 nvdlistx.dll
+DLL выгружена: 00007FFEAE920000 igdumdim64.dll
+DLL загружена: 00007FFEB0D70000 C:\Windows\System32\DriverStore\FileRepository\nvami.inf_amd64_a3d5bcc37ff12fed\nvldumdx.dll
+DLL загружена: 00007FFEE06D0000 C:\Windows\System32\wintrust.dll
+DLL загружена: 00007FFEDFA90000 C:\Windows\System32\msasn1.dll
+Поток 3576 создан, Точка входа: crypt32.00007FFEE016BF50, Параметр: 000001CD23D5EAE0DLL загружена: 00007FFEE1EF0000 C:\Windows\System32\imagehlp.dll
+DLL загружена: 00007FFEDF7F0000 C:\Windows\System32\cryptsp.dll
+DLL загружена: 00007FFEDEED0000 C:\Windows\System32\rsaenh.dll
+DLL загружена: 00007FFEDF720000 C:\Windows\System32\cryptbase.dll
+DLL загружена: 00007FFEDFFC0000 C:\Windows\System32\bcryptprimitives.dll
+DLL загружена: 00007FFEAF9B0000 C:\Windows\System32\DriverStore\FileRepository\nvami.inf_amd64_a3d5bcc37ff12fed\nvd3dumx.dll
+Поток 5816 создан, Точка входа: nvd3dumx.00007FFEAF9BD750, Параметр: 0000000000000000Поток 5816 завершенПоток 1844 создан, Точка входа: nvd3dumx.00007FFEB0605384, Параметр: 000001CD23DCE450Поток 1844 завершенDLL выгружена: 00007FFEAF9B0000 nvd3dumx.dll
+DLL выгружена: 00007FFEB0D70000 nvldumdx.dll
+DLL загружена: 00007FFEDD5E0000 C:\Windows\System32\ResourcePolicyClient.dll
+DLL выгружена: 00007FFEDD5E0000 resourcepolicyclient.dll
+DLL загружена: 00007FFEB0D70000 C:\Windows\System32\DriverStore\FileRepository\nvami.inf_amd64_a3d5bcc37ff12fed\nvldumdx.dll
+DLL загружена: 00007FFEAF9B0000 C:\Windows\System32\DriverStore\FileRepository\nvami.inf_amd64_a3d5bcc37ff12fed\nvd3dumx.dll
+Поток 1292 создан, Точка входа: nvd3dumx.00007FFEAF9BD750, Параметр: 0000000000000000Поток 4396 создан, Точка входа: nvd3dumx.00007FFEB0605384, Параметр: 000001CD256AA590Поток 1292 завершенDLL загружена: 00007FFEDFCD0000 C:\Windows\System32\powrprof.dll
+DLL загружена: 00007FFEDFCB0000 C:\Windows\System32\umpdc.dll
+Поток 2792 создан, Точка входа: nvd3dumx.00007FFEB0605384, Параметр: 000001CD23D43920DLL загружена: 00007FFED7DC0000 C:\Windows\System32\DXCore.dll
+DLL загружена: 00007FFEAD470000 C:\Windows\System32\igdumdim64.dll
+DLL загружена: 00007FFED5D00000 C:\Windows\System32\igdusc64.dll
+Поток 2660 создан, Точка входа: d3d9.00007FFECDF6ED20, Параметр: 000001CD2ABE5060Поток 2792 завершенDLL выгружена: 00007FFEDFCB0000 umpdc.dll
+DLL выгружена: 00007FFEDFCD0000 powrprof.dll
+DLL выгружена: 00007FFED5D00000 igdusc64.dll
+DLL выгружена: 00007FFEAD470000 igdumdim64.dll
+Поток 2660 завершенПоток 4396 завершенDLL выгружена: 00007FFEAF9B0000 nvd3dumx.dll
+DLL выгружена: 00007FFEB0D70000 nvldumdx.dll
+Поток 2116 создан, Точка входа: ck2game.00007FF75FD6BBA8, Параметр: 000001CD256D3520Исключение SetThreadName на 00007FFEE02DCD29 (844, "Task#0")
+Исключение SetThreadName на 00007FFEE02DCD29 (844, "Task#0")
+Поток 3716 завершенПоток 3208 завершенПоток 1132 завершенПоток 2116 завершенПоток 5664 завершенПроцесс остановлен с кодом выхода 0x406D1388 (1080890248)
+Сохранение базы данных в C:\Users\UZWERG\Desktop\x64 dbg\release\x64\db\CK2game.exe.dd64 15мс
+Отладка остановлена!
+Отладка: C:\Users\UZWERG\Desktop\SteamCrusader\CK2game.exe
+Файл базы данных: C:\Users\UZWERG\Desktop\x64 dbg\release\x64\db\CK2game.exe.dd64
+Процесс запущен: 00007FF75EF20000 C:\Users\UZWERG\Desktop\SteamCrusader\CK2game.exe
+  "C:\Users\UZWERG\Desktop\SteamCrusader\CK2game.exe"
+  argv[0]: C:\Users\UZWERG\Desktop\SteamCrusader\CK2game.exe
+Module ck2game.exe loaded from disk path
+Точка останова по адресу 00007FF75FD40C14 (останов в точке входа) установлена!
+DLL загружена: 00007FFEE2810000 C:\Windows\System32\ntdll.dll
+DLL загружена: 00007FFEE09F0000 C:\Windows\System32\kernel32.dll
+DLL загружена: 00007FFEE02B0000 C:\Windows\System32\KernelBase.dll
+DLL загружена: 00007FFEE1250000 C:\Windows\System32\shell32.dll
+DLL загружена: 00007FFEE0770000 C:\Windows\System32\msvcp_win.dll
+DLL загружена: 00007FFEE0050000 C:\Windows\System32\ucrtbase.dll
+Поток 3168 создан, Точка входа: ntdll.00007FFEE2862B20, Параметр: 0000024F42CB4D00Поток 5456 создан, Точка входа: ntdll.00007FFEE2862B20, Параметр: 0000024F42CB4D00DLL загружена: 00007FFEE0BA0000 C:\Windows\System32\user32.dll
+DLL загружена: 00007FFEE06A0000 C:\Windows\System32\win32u.dll
+DLL загружена: 00007FFEE08A0000 C:\Windows\System32\gdi32.dll
+DLL загружена: 00007FFEE0590000 C:\Windows\System32\gdi32full.dll
+DLL загружена: 00007FFEE1050000 C:\Windows\System32\ws2_32.dll
+DLL загружена: 00007FFEE0EC0000 C:\Windows\System32\rpcrt4.dll
+DLL загружена: 00007FFEE0FF0000 C:\Windows\System32\shlwapi.dll
+DLL загружена: 00007FFEB75A0000 C:\Users\UZWERG\Desktop\SteamCrusader\tbb.dll
+DLL загружена: 00007FFECD540000 C:\Windows\System32\winmm.dll
+DLL загружена: 00007FFEB1940000 C:\Users\UZWERG\Desktop\SteamCrusader\SDL2.dll
+DLL загружена: 00007FFEE2050000 C:\Windows\System32\msvcrt.dll
+DLL загружена: 00007FFEE1EE0000 C:\Windows\System32\psapi.dll
+DLL загружена: 00007FFEE0150000 C:\Windows\System32\crypt32.dll
+DLL загружена: 00007FFEE1120000 C:\Windows\System32\ole32.dll
+DLL загружена: 00007FFED4990000 C:\Windows\System32\msvcp140.dll
+DLL загружена: 00007FFEE0860000 C:\Windows\System32\imm32.dll
+DLL загружена: 00007FFEDA610000 C:\Windows\System32\vcruntime140.dll
+DLL загружена: 00007FFEE1F10000 C:\Windows\System32\advapi32.dll
+Поток 132 создан, Точка входа: ntdll.00007FFEE2862B20, Параметр: 0000024F42CB4D00DLL загружена: 00007FFECDE30000 C:\Windows\System32\d3d9.dll
+DLL загружена: 00007FFEB12A0000 C:\Windows\System32\D3DX9_41.dll
+DLL загружена: 00007FFEE0D40000 C:\Windows\System32\sechost.dll
+DLL загружена: 0000024F42DB0000 C:\Windows\System32\ole32.dll
+DLL загружена: 0000000000400000 C:\Windows\System32\xinput1_3.dll
+DLL выгружена: 0000024F42DB0000 ole32.dll
+DLL загружена: 00007FFEE19A0000 C:\Windows\System32\oleaut32.dll
+DLL загружена: 00007FFEE1A70000 C:\Windows\System32\setupapi.dll
+DLL загружена: 00007FFEE21A0000 C:\Windows\System32\combase.dll
+DLL загружена: 00007FFEE0810000 C:\Windows\System32\cfgmgr32.dll
+DLL загружена: 00007FFEE0740000 C:\Windows\System32\bcrypt.dll
+DLL загружена: 00000000584A0000 C:\Users\UZWERG\Desktop\SteamCrusader\steam_api64.dll
+Пропуск неподдерживаемого отладочного типа IMAGE_DEBUG_TYPE_POGO в модуле pops_api.dll...
+Не найдены какие-либо поддерживаемые отладочные типы в модуле pops_api.dll!
+DLL загружена: 00007FFEB0DA0000 C:\Users\UZWERG\Desktop\SteamCrusader\pops_api.dll
+Пропуск неподдерживаемого отладочного типа IMAGE_DEBUG_TYPE_POGO в модуле physfs.dll...
+Не найдены какие-либо поддерживаемые отладочные типы в модуле physfs.dll!
+DLL загружена: 00007FFEB72C0000 C:\Users\UZWERG\Desktop\SteamCrusader\physfs.dll
+DLL загружена: 00007FFEE0B30000 C:\Windows\System32\normaliz.dll
+DLL загружена: 00007FFEDA600000 C:\Windows\System32\vcruntime140_1.dll
+DLL загружена: 00007FFED55B0000 C:\Windows\System32\version.dll
+DLL загружена: 00007FFEDEA20000 C:\Windows\System32\kernel.appcore.dll
+DLL загружена: 00007FFEDD8C0000 C:\Windows\System32\dwmapi.dll
+DLL загружена: 00007FFEDDBB0000 C:\Windows\System32\windows.storage.dll
+DLL загружена: 00007FFEDF7B0000 C:\Windows\System32\wldp.dll
+DLL загружена: 00007FFEB18D0000 C:\Users\UZWERG\Desktop\SteamCrusader\SDL2_mixer.dll
+DLL загружена: 00007FFEB1840000 C:\Users\UZWERG\Desktop\SteamCrusader\PDXBrowser_IPC.dll
+Достигнута системная точка останова!
+INT3 точка останова "останов в точке входа" на <ck2game.OptionalHeader.AddressOfEntryPoint> (00007FF75FD40C14)!
+DLL загружена: 00007FFEB0D50000 C:\Users\UZWERG\Desktop\SteamCrusader\tbbmalloc.dll
+DLL загружена: 00007FFEDFE10000 C:\Windows\System32\userenv.dll
+DLL загружена: 00007FFEDFE50000 C:\Windows\System32\profapi.dll
+DLL выгружена: 00007FFEDFE50000 profapi.dll
+DLL выгружена: 00007FFEDFE10000 userenv.dll
+DLL загружена: 00007FFEE0930000 C:\Windows\System32\SHCore.dll
+Строка отладки: «[S_API FAIL] SteamAPI_Init() failed; SteamAPI_IsSteamRunning() failed.»
+Строка отладки: «[S_API FAIL] SteamAPI_Init() failed; unable to locate a running instance of Steam, or a local steamclient64.dll.»
+Строка отладки: «[S_API FAIL] SteamAPI_Init() failed; SteamAPI_IsSteamRunning() failed.»
+Строка отладки: «[S_API FAIL] SteamAPI_Init() failed; unable to locate a running instance of Steam, or a local steamclient64.dll.»
+Строка отладки: «[S_API FAIL] SteamAPI_Init() failed; SteamAPI_IsSteamRunning() failed.»
+Строка отладки: «[S_API FAIL] SteamAPI_Init() failed; unable to locate a running instance of Steam, or a local steamclient64.dll.»
+DLL загружена: 00007FFEDD500000 C:\Windows\System32\uxtheme.dll
+DLL загружена: 00007FFEE2500000 C:\Windows\System32\msctf.dll
+DLL загружена: 00007FFEAE810000 C:\Windows\System32\igdumdim64.dll
+DLL загружена: 00007FFECBE90000 C:\Windows\System32\DriverStore\FileRepository\nvami.inf_amd64_a3d5bcc37ff12fed\nvdlistx.dll
+DLL выгружена: 00007FFECBE90000 nvdlistx.dll
+DLL выгружена: 00007FFEAE810000 igdumdim64.dll
+DLL загружена: 00007FFEB0C60000 C:\Windows\System32\DriverStore\FileRepository\nvami.inf_amd64_a3d5bcc37ff12fed\nvldumdx.dll
+DLL загружена: 00007FFEE06D0000 C:\Windows\System32\wintrust.dll
+DLL загружена: 00007FFEDFA90000 C:\Windows\System32\msasn1.dll
+Поток 2768 создан, Точка входа: crypt32.00007FFEE016BF50, Параметр: 0000024F42D3EAE0DLL загружена: 00007FFEE1EF0000 C:\Windows\System32\imagehlp.dll
+DLL загружена: 00007FFEDF7F0000 C:\Windows\System32\cryptsp.dll
+DLL загружена: 00007FFEDEED0000 C:\Windows\System32\rsaenh.dll
+DLL загружена: 00007FFEDF720000 C:\Windows\System32\cryptbase.dll
+DLL загружена: 00007FFEDFFC0000 C:\Windows\System32\bcryptprimitives.dll
+DLL загружена: 00007FFEAF8A0000 C:\Windows\System32\DriverStore\FileRepository\nvami.inf_amd64_a3d5bcc37ff12fed\nvd3dumx.dll
+Поток 1312 создан, Точка входа: nvd3dumx.00007FFEAF8AD750, Параметр: 0000000000000000Поток 1312 завершенПоток 5968 создан, Точка входа: nvd3dumx.00007FFEB04F5384, Параметр: 0000024F42DAE450Поток 5968 завершенDLL выгружена: 00007FFEAF8A0000 nvd3dumx.dll
+DLL выгружена: 00007FFEB0C60000 nvldumdx.dll
+DLL загружена: 00007FFEDD5E0000 C:\Windows\System32\ResourcePolicyClient.dll
+DLL выгружена: 00007FFEDD5E0000 resourcepolicyclient.dll
+DLL загружена: 00007FFEB0C60000 C:\Windows\System32\DriverStore\FileRepository\nvami.inf_amd64_a3d5bcc37ff12fed\nvldumdx.dll
+DLL загружена: 00007FFEAF8A0000 C:\Windows\System32\DriverStore\FileRepository\nvami.inf_amd64_a3d5bcc37ff12fed\nvd3dumx.dll
+Поток 3388 создан, Точка входа: nvd3dumx.00007FFEAF8AD750, Параметр: 0000000000000000Поток 2264 создан, Точка входа: nvd3dumx.00007FFEB04F5384, Параметр: 0000024F44D0A590Поток 3388 завершенDLL загружена: 00007FFEDFCD0000 C:\Windows\System32\powrprof.dll
+DLL загружена: 00007FFEDFCB0000 C:\Windows\System32\umpdc.dll
+Поток 3716 создан, Точка входа: nvd3dumx.00007FFEB04F5384, Параметр: 0000024F42D68710DLL загружена: 00007FFED7DC0000 C:\Windows\System32\DXCore.dll
+DLL загружена: 00007FFEAD360000 C:\Windows\System32\igdumdim64.dll
+DLL загружена: 00007FFED5D00000 C:\Windows\System32\igdusc64.dll
+Поток 5260 создан, Точка входа: d3d9.00007FFECDF6ED20, Параметр: 0000024F49C5A060Поток 3716 завершенDLL выгружена: 00007FFEDFCB0000 umpdc.dll
+DLL выгружена: 00007FFEDFCD0000 powrprof.dll
+DLL выгружена: 00007FFED5D00000 igdusc64.dll
+DLL выгружена: 00007FFEAD360000 igdumdim64.dll
+Поток 5260 завершенПоток 2264 завершенDLL выгружена: 00007FFEAF8A0000 nvd3dumx.dll
+DLL выгружена: 00007FFEB0C60000 nvldumdx.dll
+Поток 2256 создан, Точка входа: ck2game.00007FF75FD6BBA8, Параметр: 0000024F44CA9420Исключение SetThreadName на 00007FFEE02DCD29 (8D0, "Task#0")
+Исключение SetThreadName на 00007FFEE02DCD29 (8D0, "Task#0")
+Поток 3644 завершенПоток 2768 завершенПоток 5456 завершенПоток 3168 завершенПоток 2256 завершенПроцесс остановлен с кодом выхода 0x406D1388 (1080890248)
+Сохранение базы данных в C:\Users\UZWERG\Desktop\x64 dbg\release\x64\db\CK2game.exe.dd64 16мс
+Отладка остановлена!
