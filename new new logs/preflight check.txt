@@ -1,0 +1,165 @@
+
+============================================================
+ CK2 Monarch's Journey - preflight
+ Game folder: C:\Users\UZWERG\Desktop\SteamCrusader
+ This check is READ-ONLY. Nothing will be modified.
+============================================================
+
+
+==========================================================================
+1. GAME ROOT
+==========================================================================
+Path: C:\Users\UZWERG\Desktop\SteamCrusader
+
+==========================================================================
+2. EXECUTABLES  (all patch states are 24,753,368 bytes - only the hash tells them apart)
+==========================================================================
+
+  CK2game.exe   <-- this is the one Windows launches by default
+    size    : 24 753 368 bytes
+    sha256  : f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0
+    state   : V6 CURRENT BASELINE (runtime-proven)
+
+  CK2gameV6.exe
+    size    : 24 753 368 bytes
+    sha256  : f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0
+    state   : V6 CURRENT BASELINE (runtime-proven)
+
+  NOTE: more than one CK2game*.exe is present. Windows runs CK2game.exe;
+        a patched copy sitting beside it under another name is NOT used.
+
+==========================================================================
+3. MONARCH PAYLOAD
+==========================================================================
+  gfx\monarchs : 101 949 bytes
+  sha256       : fc6ec025b782c811636a0efb65a7b3f192f09fffd0ff6ca8051ef8bc6113db4e
+  RESULT       : CORRECT (11 rulers / 33 challenges, 2030 expiry)
+
+==========================================================================
+4. USER DATA TREE  (saves / logs / feat cache live here, NOT in the game folder)
+==========================================================================
+  Documents resolves to : C:\Users\UZWERG\Documents
+  CK2 user folder       : C:\Users\UZWERG\Documents\Paradox Interactive\Crusader Kings II
+
+==========================================================================
+5. SAVES
+==========================================================================
+  Folder: C:\Users\UZWERG\Documents\Paradox Interactive\Crusader Kings II\save games
+  (no .ck2 saves)
+
+==========================================================================
+6. LOCAL FEAT-PROGRESS CACHE  (this is where peak challenge progress lives)
+==========================================================================
+  No feat cache file found yet (it appears after challenge progress is made).
+
+==========================================================================
+7. VERDICT
+==========================================================================
+  No blocking problems detected.
+
+  NOTE: the "Challenges: Disabled" gauntlet tooltip is a KNOWN COSMETIC BUG
+  (case C17 - stale account text). It does NOT stop feats from counting;
+  Bronze has been earned before with that tooltip showing. Ignore it.
+
+  To test whether the feat identity is stable:
+    1. run this script
+    2. play a short session, then exit
+    3. run this script again and read the CHANGED / user_id lines above
+
+  Reminder: never run wipe_feats. Keep the game offline for these tests.
+
+  Press any key to close...
+
+
+
+
+
+
+
+============================================================
+ CK2 Monarch's Journey - preflight
+ Game folder: C:\Users\UZWERG\Desktop\SteamCrusader
+ This check is READ-ONLY. Nothing will be modified.
+============================================================
+
+
+==========================================================================
+1. GAME ROOT
+==========================================================================
+Path: C:\Users\UZWERG\Desktop\SteamCrusader
+
+==========================================================================
+2. EXECUTABLES  (all patch states are 24,753,368 bytes - only the hash tells them apart)
+==========================================================================
+
+  CK2game.exe   <-- this is the one Windows launches by default
+    size    : 24 753 368 bytes
+    sha256  : f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0
+    state   : V6 CURRENT BASELINE (runtime-proven)
+
+  CK2gameV6.exe
+    size    : 24 753 368 bytes
+    sha256  : f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0
+    state   : V6 CURRENT BASELINE (runtime-proven)
+
+  NOTE: more than one CK2game*.exe is present. Windows runs CK2game.exe;
+        a patched copy sitting beside it under another name is NOT used.
+
+==========================================================================
+3. MONARCH PAYLOAD
+==========================================================================
+  gfx\monarchs : 101 949 bytes
+  sha256       : fc6ec025b782c811636a0efb65a7b3f192f09fffd0ff6ca8051ef8bc6113db4e
+  RESULT       : CORRECT (11 rulers / 33 challenges, 2030 expiry)
+
+==========================================================================
+4. USER DATA TREE  (saves / logs / feat cache live here, NOT in the game folder)
+==========================================================================
+  Documents resolves to : C:\Users\UZWERG\Documents
+  CK2 user folder       : C:\Users\UZWERG\Documents\Paradox Interactive\Crusader Kings II
+
+==========================================================================
+5. SAVES
+==========================================================================
+  Folder: C:\Users\UZWERG\Documents\Paradox Interactive\Crusader Kings II\save games
+
+  Gwynedd1195_01_08.ck2
+    modified : 26.08.2026 22:18:34   size: 3 836 788 bytes
+    date          : 1195.1.8
+    bronzeman     : yes
+    ironman       : save games/Gwynedd1195_01_08.ck2
+    special_event : llywelyn_gwynedd
+    player_name   : King Llywelyn 'the Great'
+    version       : 3.3.3.0
+
+  Bronzeman_llywelyn_gwynedd.ck2
+    modified : 26.08.2026 22:15:08   size: 3 682 972 bytes
+    date          : 1195.1.1
+    bronzeman     : yes
+    ironman       : save games/Bronzeman_llywelyn_gwynedd.ck2
+    special_event : llywelyn_gwynedd
+    player_name   : King Llywelyn 'the Great'
+    version       : 3.3.3.0
+
+==========================================================================
+6. LOCAL FEAT-PROGRESS CACHE  (this is where peak challenge progress lives)
+==========================================================================
+  No feat cache file found yet (it appears after challenge progress is made).
+
+==========================================================================
+7. VERDICT
+==========================================================================
+  No blocking problems detected.
+
+  NOTE: the "Challenges: Disabled" gauntlet tooltip is a KNOWN COSMETIC BUG
+  (case C17 - stale account text). It does NOT stop feats from counting;
+  Bronze has been earned before with that tooltip showing. Ignore it.
+
+  To test whether the feat identity is stable:
+    1. run this script
+    2. play a short session, then exit
+    3. run this script again and read the CHANGED / user_id lines above
+
+  Reminder: never run wipe_feats. Keep the game offline for these tests.
+
+  Press any key to close...
