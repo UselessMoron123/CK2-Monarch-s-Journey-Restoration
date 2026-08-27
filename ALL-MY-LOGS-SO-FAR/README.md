@@ -7,7 +7,7 @@ duplicates have been deleted.** Unique content only.
 Restore the retired **Monarch's Journey / Featured Rulers / Bronzeman** mode of
 Crusader Kings II for **personal, fully offline use on Windows**, via payload
 re-activation, version archaeology, and hash-guarded executable patches
-(v1→v6 done; **V7 = Continue button** open). Featured Rulers is a planned
+(v1→v7 done; **V7 = in-game Continue** proven; launcher Continue is C25). Featured Rulers is a planned
 follow-on (see `00_START_HERE/FEATURED_RULERS.md`).
 
 ## Read in this order
@@ -17,7 +17,7 @@ follow-on (see `00_START_HERE/FEATURED_RULERS.md`).
    - **`FR_MJ_COMPLETE_ROSTER.md`** — every FR+MJ ruler, bio, B/S/G challenge (text-only)
    - **`FEATURED_RULERS.md`** — FR UI/timeline/assets/restore checklist
    - **`SCREENSHOTS_CATALOG.md`** — image intents (optional; roster is complete without pics)
-   - original prompt + organize-prompt templates (**v5** is the operative one; v1–v4 kept as history)
+   - original prompt + organize-prompt templates (**v6** is the operative one; v1–v5 kept as history)
 2. **`01_research_archives/`** — Parts 1–3 structured archives
 3. **`02_handoffs/`** — **one** handoff (`CK2_MJ_ULTIMATE_HANDOFF.md`, deep background; older handoffs merged into it 2026-08-26) + completed PDB-investigation mission brief
 4. **`03_analysis/`** — binary analysis, patch maps, banned artifacts, Continue semantics
@@ -38,8 +38,8 @@ follow-on (see `00_START_HERE/FEATURED_RULERS.md`).
 ## Cases at a glance
 | Status | Examples |
 |---|---|
-| **SOLVED** | payload load, login gate, Challenges enable, live tracking, save Load + feat persistence, Bronze popup, time-gate via payload dates |
-| **UNSOLVED (V7)** | **Continue grey / “Continue failed”** |
+| **SOLVED** | payload load, login gate, Challenges enable, live tracking, save Load + feat persistence, Bronze popup, time-gate, **in-game Continue (V7)** |
+| **UNSOLVED (C25)** | Paradox **launcher** Continue still grey (launch `CK2game.exe` directly) |
 | **UNSOLVED secondary** | MP 2nd-boot, grey map, portrait flicker, missing MJ arrow |
 | **INFO / future** | Featured Rulers full roster, local reward gallery |
 

@@ -9,7 +9,7 @@ canonical record and cite screenshots by name. Cross-ref:
 Status tags:
 - **SOLVED** — fixed by a known patch gen / payload change; do not re-open
 - **PARTIAL** — core works, remaining edge / cosmetic
-- **UNSOLVED** — open work (V7 and polish)
+- **UNSOLVED** — open work (launcher Continue C25 and polish)
 - **INFO** — historical reference, not a defect
 - **PECULIARITY** — odd but non-blocking behaviour
 
@@ -26,7 +26,8 @@ Status tags:
 | C05 | Live challenge tracking works in-session | **SOLVED** | v4 core loop | (214) tooltip 1/6 |
 | C06 | Progress lost after save/load (0/6) | **SOLVED** | **V6** five save-list gates + feat globals | (228) before; (256) after |
 | C07 | Manual Load of Bronzeman save | **SOLVED** | V6 | (5) works via SP→Load |
-| C08 | **Continue button greyed / “Continue failed”** | **SOLVED** | **V7** bypassed retired cloud check at `0x1409E678B` | (1)(2)(4)(217)(219)(224)(226) |
+| C08 | **In-game Continue “Continue failed!” popup** | **SOLVED** | **V7** `0x1409E678B` / `0x009E5B8B` `75 2f→eb 2f` | (1)(2)(4)(217)(219)(224)(226) |
+| C25 | **Paradox launcher Continue still grey** | **UNSOLVED** | Separate `pdx_launcher.lib` / `launcher-v2.sqlite`; V7 does not touch it | launcher UI |
 | C09 | Multiplayer breaks 2nd boot / resign→menu | **UNSOLVED** secondary | frontend refresh | (2,5)(3)(225) |
 | C10 | Grey “only person alive” selection map | **UNSOLVED** secondary | empty history / no ruler-set provinces | (3) + map reference |
 | C11 | Portrait tooltip flicker on small MJ portrait | **UNSOLVED** secondary | tied to grey-map hover hitbox? | (188), `flickering.mp4` |
@@ -84,10 +85,17 @@ When the reward strip is shown without server catalogue: score/name/desc all
 `UI Missing…` — (202)(205)(208–210). V4 **hides** that container. Challenge
 text progress still works without it — (214).
 
-### F5 — Continue ≠ Load
-- **Load Game** path can work while **Continue** stays grey — (5) vs (1)(2)(4).
-- “Continue failed” popup lists DLC / newer version / mods / clock — (2)(4)(224)(226).
-- V6 fixed Load + feat globals; Continue enable predicate remains → **V7**.
+### F5 — Continue ≠ Load (and launcher ≠ in-game)
+- **Load Game** path worked on V6 while in-game **Continue** still popped the
+  generic failed dialog — (5) vs (1)(2)(4).
+- Canonical English wording of that dialog (user transcript):
+  *Continue failed! / Continuing from the latest save failed… The save is
+  broken / requires DLC / doesn't work with the current version / a mod save
+  folder / ironman + modified checksum. If the cause was ironman, load via
+  Load Game.*
+- V6 fixed Load + feat globals. **V7** (`57b18e43…`) fixed in-game Continue
+  *execution* (cloud-sync byte `[rsi+0x63]`). The Paradox **launcher** Continue
+  button is a different surface and stays grey (C25).
 
 ### F6 — Time gate is real and offline-clock-sensitive
 When `event_time_end` passed: no score, grey Play, grey arrows — filename of
@@ -143,9 +151,9 @@ in `Снимок.PNG` / `Снимок2.PNG` — textures exist; controller is co
 
 ## Recommended work order (from this index)
 
-1. **V7 / C08** — Continue enable predicate (shots A-set).
-2. Optional polish: C09–C12 (MP, grey map, flicker, missing arrow).
+1. Optional: **C25** — Paradox launcher Continue (not required to play; launch `CK2game.exe` directly).
+2. Optional polish: C09–C12 (MP, grey map, flicker, missing arrow), C17 tooltip.
 3. Separate project: **Featured Rulers** full roster + FR UI (`FEATURED_RULERS.md`).
 4. Separate project: local reward gallery (C21) using ladder in F2 + Linux reward table.
 
-Do **not** re-open C01–C07, C18, C22 without new contradictory evidence.
+Do **not** re-open C01–C08, C18, C22 without new contradictory evidence.

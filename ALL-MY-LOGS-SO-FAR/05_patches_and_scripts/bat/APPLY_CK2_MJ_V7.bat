@@ -1,22 +1,22 @@
 @echo off
 setlocal
-title Apply CK2 Monarch's Journey V6 save-loading test
+title Apply CK2 Monarch's Journey V7 Continue Fix
 
 if "%~1"=="" (
   echo.
-  echo Drag your current V5 CK2game.exe onto this BAT file.
-  echo Keep this BAT beside patch_ck2_mj_v6.ps1.
+  echo Drag your current V6 (or V5) CK2game.exe onto this BAT file.
+  echo Keep this BAT beside patch_ck2_mj_v7.ps1.
   echo.
   pause
   exit /b 1
 )
-if not exist "%~dp0patch_ck2_mj_v6.ps1" (
-  echo ERROR: patch_ck2_mj_v6.ps1 is not beside this BAT file.
+if not exist "%~dp0patch_ck2_mj_v7.ps1" (
+  echo ERROR: patch_ck2_mj_v7.ps1 is not beside this BAT file.
   pause
   exit /b 1
 )
 
-powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File "%~dp0patch_ck2_mj_v6.ps1" Apply "%~1"
+powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File "%~dp0patch_ck2_mj_v7.ps1" Apply "%~1"
 if errorlevel 1 (
   echo.
   echo PATCH FAILED. Nothing else will be changed.
@@ -41,12 +41,13 @@ if errorlevel 1 (
 
 echo.
 echo ============================================================
-echo V6 SAVE-LOADING TEST PATCH COMPLETE
+echo V7 CONTINUE FIX PATCH COMPLETE
 echo Executable: %~f1
-echo Expected V6 SHA-256:
-echo f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0
+echo Expected V7 SHA-256:
+echo 57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571
 echo.
-echo Start this exact executable directly.
+echo You can now launch CK2game.exe directly!
+echo The Continue button will load your game without any popups.
 echo ============================================================
 pause
 endlocal

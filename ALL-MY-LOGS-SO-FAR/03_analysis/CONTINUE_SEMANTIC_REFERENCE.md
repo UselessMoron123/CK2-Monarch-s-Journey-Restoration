@@ -1,11 +1,11 @@
 # Continue button — semantic reference (2.6.1.1 PDB → win333 mapping)
 
-The V7 target is the **greyed Continue button** on win333 May 3.3.3. This file
-consolidates the two things a V7 analyst needs in one place: (A) the *proven*
-2.6.1.1 Continue control-flow model from the exact-matched PDB, and (B) the
-known win333 anchor points to map it onto. The 2.6.1.1 material is a **semantic
-checklist only** — its 32-bit VAs do not transfer; the win333 facts are the
-patch target.
+**V7 in-game Continue execution is SOLVED** (`57b18e43…`, see §F). This file
+still consolidates (A) the *proven* 2.6.1.1 Continue control-flow model from the
+exact-matched PDB and (B) the win333 anchor points that led there. The remaining
+open Continue surface is the **Paradox launcher** button (case C25), not the
+engine path. The 2.6.1.1 material is a **semantic checklist only** — its 32-bit
+VAs do not transfer.
 
 Primary sources: `TYPE_AND_VTABLE_NOTES.md` §2, `SEARCH_RESULTS.md` group 1,
 `WINDOWS_3351_PORT_ASSESSMENT.md` §7, the Part 1–3 archives. The two earlier V7
@@ -185,18 +185,18 @@ valid save found); final Continue-specific rejection (the enable predicate).
 
 - The "V7" hash `0074af70…` from the raw `fourth`/`(5)` logs is an unrelated,
   **abandoned feat-update** patch (see Part 3 / BANNED_ARTIFACTS). It is not
-  this Continue-V7; do not reuse its bytes or name.
+  Continue-V7 `57b18e43…`; do not reuse its bytes. Unguarded one-liners that
+  poke `0x009e5b8b` are not deliverables — only the guarded patcher is.
 - Never call `0x1409e8200` (vector append) from any read/load path.
 - The win333 Continue helper is 64-bit; the 2.6.1.1 PDB is 32-bit — port logic,
   not offsets.
 
-## D1. Current confidence (from the initial triage, 2026-08-23 — unchanged)
+## D1. Confidence — superseded by live V7 proof (2026-08-27)
 
-- **High:** the three reported UI paths converge at `0x1409e4970`.
-- **High:** V7 should begin in the shared selection helper, not with separate
-  caller patches.
-- **Medium:** the helper's returned candidate/empty result drives the disabled state.
-- **Unproven:** the specific remaining predicate and any safe patch bytes.
+The 2026-08-23 triage assumed the remaining blocker was an *enable* predicate
+on the grey button. Live attach-mode tracing showed the in-game button *was*
+clickable; the failure was **execution** at `0x1409E6700` (cloud-sync byte).
+See §F. The grey **launcher** button is a separate program (C25).
 
 ## D2. Preservation note
 
@@ -220,7 +220,34 @@ captured above / in Parts 1–3**, and the byte-level extras were preserved in
 | `load_button` string VA | `0x141078318` | `RAWLOG_NETNEW_EXTRACTS.md` §8 (+ full string→VA map) |
 | Stock Linux save/load symbols (`nm -C`) | `CInGameIdler::HandleBronzemanAutosave`, `CLoadGame::{Ctor,Clone,IsValid,Execute}`, `CGameSetup::ShowLoadGameWindow`, `CSaveGameModel::SetSynced`, `CAchievementsManager::VerifySavegame`, `SAVEGAME_ERROR_*` constants, etc. | Part 3 C2 + `RAWLOG_NETNEW_EXTRACTS.md` §4/§5 |
 
-These are raw evidence pointers, not new conclusions. If the V7 work ever needs
-the full frontend xref disassembly (rather than the distilled helper `0x1409e4970`
-analysis above), it is reproducible from `CK2game333.exe` (the `objdump` dump
-itself was not worth preserving verbatim).
+These are raw evidence pointers, not new conclusions. Frontend xref disassembly
+is reproducible from `CK2game333.exe`.
+
+## F. V7 proven execution path (2026-08-27)
+
+Enable vs execute are different stages. V6 already selected the FR save. V7
+fixes the *click* path.
+
+| Item | Value |
+|---|---|
+| Dispatch | `0x1409E6700` |
+| Cloud byte | `[rsi+0x63]` (`movzx ecx, byte ptr [rsi+0x63]` @ `0x1409E6785`) |
+| Fail jump | `0x1409E678B` `75 2f` (`jne` to load) — taken only if `cl != 0` |
+| Fail ctor | `CContinueFailedPopup` `0x140726560` |
+| V7 patch | raw `0x009E5B8B` `75 2f` → `eb 2f` (always load) |
+| V7 SHA | `57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571` |
+| Live load | `Bosnia1173_01_02.ck2` → `Kulin of d_bosnia (218800)` |
+
+VA↔offset: `0x1409E678B − 0x140000C00 = 0x009E5B8B`.
+
+ASLR examples from attach sessions (module base + RVA):
+
+- base `0x7FF75EF20000`: `+9E5500`, `+9E4970`, `+E64E90`, `+8145EC`, `+DE47C0`, `+DE8BB0`, `+99F540`
+- base `0x7FF73C980000`: INT3 at `+8145EC`, `+9E4970`, `+9E5500`, `+9E678B` (patch site hit live)
+
+Register scraps at `RIP=+8145EC` / `+9E4970`: `RAX`/`R10`/`R11` → `"checksum"`;
+`RDX` → `"irst_on_top"` (truncated `"first_on_top"`). Unrelated freeze dump
+with `R10="view_in_store"` is UI noise.
+
+Launcher Continue is **not** this path. Do not treat `launcher-v2.sqlite` /
+`pdx_launcher.lib` as proven until inspected.

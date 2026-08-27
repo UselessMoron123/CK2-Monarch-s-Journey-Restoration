@@ -85,11 +85,12 @@ foreach ($exe in $exes) {
 
     $colour = 'Yellow'
     if ($sha -eq $GoodExe)        { $colour = 'Green' }
+    elseif ($AcceptableExe -contains $sha) { $colour = 'Cyan' }
     elseif ($BannedExe -contains $sha) { $colour = 'Red' }
     Write-Host  "    state   : $label" -ForegroundColor $colour
 
-    if ($isLaunched -and $sha -ne $GoodExe) {
-        Add-Problem ("CK2game.exe is NOT the V6 baseline - it is: $label")
+    if ($isLaunched -and $AcceptableExe -notcontains $sha) {
+        Add-Problem ("CK2game.exe is neither V7 nor V6 - it is: $label")
     }
     if ($BannedExe -contains $sha) {
         Add-Problem ("$($exe.Name) is a BANNED build. Do not run it.")

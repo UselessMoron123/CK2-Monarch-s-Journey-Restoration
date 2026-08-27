@@ -1,4 +1,4 @@
-# Raw chat-log index (ALL raw logs torn apart 2026-08-26)
+# Raw chat-log index (ALL raw logs torn apart 2026-08-26; dump chats 2026-08-27)
 
 > **Status: this folder now holds NO raw files.** Every exported chat/session
 > log and fragment in this repo was fully dissected on 2026-08-26 and its
@@ -9,13 +9,14 @@
 >
 > **Migration rule:** copy the organized tree only. Do NOT copy raw staging
 > files. If the restoration project repo already has logs dissected here, key
-> by SHA (see naming-collision table in Part 3 and `PROMPT_organize_research_log_v5.md` Step 0).
+> by SHA (see naming-collision table in Part 3 / STATUS and `PROMPT_organize_research_log_v6.md` Step 0).
 
 ## How to trace any raw fact
 1. The **research archives** are the self-sufficient record of every session:
    - Part 1 = `01_research_archives/CK2_MJ_RESEARCH_ARCHIVE.md` (father session, v1–v5)
    - Part 2 = `…_PART2.md` (second session, V5, failed-V6)
    - Part 3 = `…_PART3.md` (successful V6, abandoned feat-V7, road to Continue)
+   - Part 4 = `…_PART4.md` (attach-mode x64dbg, V7 Continue execution)
 2. **Byte-level extras only in the raw logs** → `03_analysis/RAWLOG_NETNEW_EXTRACTS.md`.
 3. Analysis documents (`03_analysis/`) hold the distilled patch maps, Continue
    semantics, cross-version assessment, PDB/symbol notes, banned register.
@@ -42,6 +43,9 @@
 | `chat_fragment_disasm_v4v5_continue_offsets.txt` *(was `Новый…2`)* | 5,108 | Disassembly-heavy — objdump of `0x1407bf…` xrefs, V4/V5 offset byte maps | `WINDOWS_333_PATCH_MAP.md` + `RAWLOG_NETNEW_EXTRACTS.md` §9 |
 | `command_sha256sum_v5_tooling.txt` *(was `Новый…3`)* | 25 | Command transcript — `sha256sum` of V5 tooling + payload | `MASTER_ARTIFACT_TABLE.md` (hashes) |
 | `report_fragment_v5_ready.txt` *(was `Новый…4`)* | 43 | Short report — "V5 is ready", account check in shared save validator | Part 1/2 |
+| dump `latest latest logs/latest latest log1.txt` | 572 | Analyse `latest logs/`; retracted C17/C08 claims; preflight; PR #10 `cd7dd1b` | LATEST_LOGS_ANALYSIS + `RAWLOG_NETNEW_EXTRACTS.md` §10 |
+| dump `latest latest logs/latest latest log2.txt` | 17,752 | Attach-mode x64dbg; Continue BPs; live V7 proof; PR #11 `d609c1b`; Part 4 | Part 4, V7_RUNTIME_RESULTS, CONTINUE_SEMANTIC §F, `RAWLOG_NETNEW_EXTRACTS.md` §10 |
+| dump `what we wanted to do.txt` | — | Earlier fragment of the same arc (watcher + x64dbg request) | already in LATEST_LOGS_ANALYSIS / debug guide |
 
 > **Earliest cleanup:** the separate `logs to dissect.../` set of six
 > `Новый текстовый документ (N).txt` files (reorg/Part1/Part2/PDB-handoff/V7-
@@ -51,11 +55,9 @@
 > `02_handoffs/`, and `03_analysis/` (IDENTITY/SYMBOL_*/SEARCH/TYPE_*/DEBUG_INVESTIGATION_TOOLS).
 
 ## Notes / cautions (for future sessions)
-- ⚠️ **Naming collision across the wrap-around sessions:** "V6" means both the
-  *banned* trampoline build `a6cb92b8…` (Part 2) and the *successful*
-  5-branch save-selection build `f5b7dfd6…` (Part 3 / baseline). "V7" means both
-  the *abandoned* feat-update patch `0074af70…` (Part 3) and the *current*
-  Continue-button target (STATUS.md). Key builds by SHA, never label alone.
+- ⚠️ **Naming collision:** "V6" = banned trampoline `a6cb92b8…` **or** proven
+  5-branch `f5b7dfd6…` (V7 revert target). "V7" = abandoned feat-update
+  `0074af70…` **or** proven Continue-V7 `57b18e43…`. Key builds by SHA.
 - The four `Новый…` files mixed genuine session fragments with command/report
   snippets; all were absorbed into Parts 1–2 and `RAWLOG_NETNEW_EXTRACTS.md`.
 - Branch IDs seen in exports: `arena/01a02609…` (V6/feat-V7 sessions) and

@@ -34,7 +34,8 @@ Materialized paths:
 | V3 (UI gates) | `e91a5f4693ca3b747d7340fda71ed66b3593e2f98af14c37e6086b0d76fb13ca` | superseded |
 | V4 (offline challenges) | `f2967f6f2c5b8b7d49dec2f7066139ace321cca19480f5c57d3ca8d576259b30` | superseded |
 | V5 (save validator + tooltip) | `29556549fb5fc657f2966949b6a5b59c9b89b707f954adca4868cfd3d90b1535` | superseded (safe rollback target) |
-| **V6 (current baseline)** | `f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0` | ✅ runtime-proven |
+| V6 (previous baseline / V7 revert target) | `f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0` | ✅ runtime-proven |
+| **V7 Continue (current in-game baseline)** | `57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571` | ✅ in-game Continue proven (`0x009E5B8B` `75 2f→eb 2f`) |
 | ⛔ "V6" trampoline (Part 2) | `a6cb92b8eda36c775751eb2af8c27a2509c5b9cee84872ef9e5fd6afd3cb18ff` | **BANNED** — see `BANNED_ARTIFACTS.md` |
 | ⚠️ "V7" feat-update candidate | `0074af707665bb152d3592d8ba9320ea81e79e6f58edc218e22aa069b353aeb8` | abandoned (premise disproven) |
 
@@ -53,6 +54,8 @@ Materialized paths:
 | Bronzeman_pavao_croatia.ck2 | 1278.1.1 | pavao_croatia | `d6ee9fc10449c15a4f6eb40d065e71a592e3e01e9e5ce8af54fac9742898ce68` | user-side (V6 second-look) |
 | Croatia1278_01_02.ck2 | 1278.1.2 | pavao_croatia | `da84b4d1be695dee53455a1c3a8e749de4014cedfdec131fa289533f17b3a51c` | user-side |
 | Croatia1278_01_10.ck2 | 1278.1.10 | pavao_croatia | `68d0c993ca68d22250ee1ed93c345b04f7c30eb11df7f4622a85d2819e2b322f` | user-side |
+| Bronzeman_llywelyn_gwynedd.ck2 | 1195.1.1 | llywelyn_gwynedd | *(not uploaded)* | user-side; preflight 2026-08-26: 3,682,972 B, `bronzeman=yes`, player King Llywelyn 'the Great' |
+| Gwynedd1195_01_08.ck2 | 1195.1.8 | llywelyn_gwynedd | *(not uploaded)* | user-side; preflight 2026-08-26: 3,836,788 B, `bronzeman=yes`; **no feat cache after this session** |
 
 ## 5. Local feat-progress cache
 
@@ -60,7 +63,7 @@ Materialized paths:
 |---|---|---|
 | `q847rsja8ndx` | `feat_progress_storage.cpp` plaintext key=value; `user_id=84696387`; 33 counters, nonzero `established=4` (Bronze peak), `conquerer_from_bribir=1` | `13_save_and_cache/` |
 
-## 6. Patcher toolchain (V2–V6, all hashes recomputed 2026-08-26 against `05_patches_and_scripts/`)
+## 6. Patcher toolchain (V2–V7; V4–V6 hashes 2026-08-26, V7 hashes 2026-08-27)
 
 | File | SHA-256 |
 |---|---|
@@ -76,9 +79,14 @@ Materialized paths:
 | `APPLY_CK2_MJ_V6.bat` | `f92ed979ede2d5bf25179ba89e494b28da41cb2285dea7a1cd527f68c7f4a4cc` |
 | `CHECK_CK2_MJ_V6.bat` | `607e4f6c8a2cf3ddf82f9497187a7fce0cc014c9d1e3e216482dad034ec34013` |
 | `REVERT_CK2_MJ_V6_TO_V5.bat` | `6ac6c9d846928f9c999f18640c2dda4a34e43979a882978307785d9295abf8c7` |
+| `patch_ck2_mj_v7.ps1` | `6d2288ed44595b39f6d1eb95969d87dee1e948b7c2c12da9fddb131e4263e7e2` |
+| `APPLY_CK2_MJ_V7.bat` | `1c06cc833438f0745d7b9db15eea56b24e1adc00fbfcfc59f3380fc1e07a6834` |
+| `CHECK_CK2_MJ_V7.bat` | `438c6f36e1aa98429bd33b4c06374a7015d4254ad1908e3b2c6846bbc96adab9` |
+| `REVERT_CK2_MJ_V7_TO_V6.bat` | `a4cc34a50e2b106f5ed7e03e7e2f7f5489fb8eeb130beed2ecaef4526732ad32` |
 
 Test guides: `CK2_MJ_V5_load_test_guide.md` = `ef3c4335733dc516991ffa997fb1cac04bae020332098aad24d84ca8cb65a086`;
 `CK2_MJ_V6_TEST_GUIDE.md` = `0d4d3d21f0f000210cbfaa1a30b5afb2f89311babee6e2996a2985ecded8ab87`;
+`CK2_MJ_V7_TEST_GUIDE.md` = `e0e182c2180cf19a27cb35285a3c1867953cc151ad765a7ef705a962b1d87b5d`;
 `CK2_MJ_windows_v4_test_guide.md` (now under `04_test_guides_and_reports/`) = `9e7664a52b18dba919dd939ff11da4f6cb65e13212c6010b1096a3a858d062cd`
 — ⚠️ the old handoff recorded `3177eaef5298482de564278b1d79006a28f73ea9bb64ce84c5483505947c3234`
 for the V4 guide; the current file hashes to `9e7664a5…` (edited after that hash was

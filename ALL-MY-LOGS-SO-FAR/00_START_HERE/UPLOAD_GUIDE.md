@@ -41,7 +41,7 @@ Current source of truth: `STATUS.md`; detailed evidence: `03_analysis/V6_RUNTIME
    - Exported/archived CK3 reward pages, old MJ web/cache data, CSV/text describing scores/costs
    - Repo has some reward icon screenshots and `LT.csv`, but no full authoritative reward catalogue.
 
-3. **Precise V7 Continue-test capture — only AFTER V7 patch exists:**
+3. **Optional Continue-success screenshot** (catalog A still empty):
    - Patch-window text
    - Screenshot showing Continue enabled before clicking
    - Screenshot after it successfully loads
