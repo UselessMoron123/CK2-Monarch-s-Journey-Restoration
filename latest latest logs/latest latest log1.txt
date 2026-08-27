@@ -1,0 +1,573 @@
+look in latest logs folder and read through raw log, through game logs, watcher log, debug log. also, when i patched game with these in this folder, for some reason feats did reset like earlier. it didn't get back when i unpaused either
+
+I'll start by exploring the repository structure and finding the latest logs folder.
+
+Now let me read the project's own analysis docs to ground these logs in the known history.
+
+Now let me cross-check the observer log against what the patch scripts expect — this is where the interesting details are.
+
+Let me dig into the repo's own findings on the feat cache and challenge-enabled flag, to test my hypotheses against the evidence.
+
+Let me verify some key hypotheses against the evidence.
+
+Let me verify several specific hypotheses against the evidence before I report.
+
+Let me verify a few decisive hypotheses before reporting.
+
+Excellent — the repo has archived runtime logs from the working V6 run. Let me diff those against these new logs; that's the strongest evidence available.
+
+Interesting — the new setup.log and text.log are byte-identical in size to the archived V6 run. Let me diff the new logs against the archived working-V6 logs directly.
+
+The archived V6 run's game.log is much larger. That's the key comparison — let me diff them.
+
+The archived logs from the working V6 run give me a direct baseline. Let me nail down the differences.
+
+The archived logs from the working V6 run give me a direct A/B baseline. Let me confirm a few decisive points.
+
+Let me verify the decisive points before writing up.
+
+A critical finding just emerged. Let me verify it carefully.
+
+Let me verify the remaining details and check what diagnostic tooling already exists.
+
+Let me check the existing debug guide so my fixes integrate cleanly.
+
+A clear picture is emerging. Let me confirm two final details.
+
+Two more checks to confirm the decisive points.
+
+A very clear picture has emerged. Let me do a final verification round before writing it up.
+
+Let me check the save metadata for a checksum field — that would confirm my leading hypothesis.
+
+Let me verify the x64dbg exception behavior before I write recommendations.
+
+Two decisive findings just landed. Let me grab the banned hashes so the new tooling can flag them.
+
+I have a complete picture now. Let me verify two last details and check for a PowerShell linter.
+
+Let me confirm the exact eligibility semantics — this is the crux of the feat question.
+
+I've now read everything and cross-checked it against the repo's archived logs from the working V6 run. That A/B comparison is decisive. Let me write up the findings and build the tooling to confirm the diagnosis.
+WriteALL-MY-LOGS-SO-FAR/03_analysis/LATEST_LOGS_ANALYSIS_2026-08-26.md+299
+
+Now let me build the two corrected scripts, starting with the preflight tool that answers the "which binary am I running" question.
+WriteALL-MY-LOGS-SO-FAR/05_patches_and_scripts/ps1/preflight_ck2_mj.ps1+258
+
+Now the corrected watcher, fixing the three bugs that made the original capture nothing:
+WriteALL-MY-LOGS-SO-FAR/05_patches_and_scripts/ps1/watch_ck2_mj_v2.ps1+219
+
+Let me sanity-check both scripts for syntax errors, since I can't run PowerShell here.
+
+Let me check for a specific PowerShell parameter-binding bug pattern that static brace-checking can't catch.
+
+Good catch — that line has a real bug. -f would bind as a parameter instead of formatting. Let me fix it.
+Edit+1−1
+
+Let me fix two more compatibility issues I want to be safe about.
+
+Let me validate the metadata-parsing logic against the real save files in the repo.
+
+The meta entry exists as expected. Let me verify my regex extracts the right fields from real save metadata.
+
+Parsing logic verified against all five real saves. Now let me update the debug guide with the x64dbg fix.
+
+Now let me insert the critical exception fix at the top of the guide, where it will be seen first.
+Edit+80−6
+
+Now let me update the "what to send back" section to reflect the corrected tooling.
+Edit+20−12
+
+Let me update STATUS.md, since the Continue symptom has genuinely changed from what's recorded there.
+Edit+26−3
+
+I read everything in latest logs/ and — critically — diffed it against the archived logs of your working V6 run (07_runtime_logs/*_v6sl.log). That A/B is what makes this diagnosis evidence-based.
+The feats didn't reset — tracking was switched off all session
+
+The answer was in your own text of error messages.txt:
+
+text
+
+Challenges: Disabled
+  (X) The save file must not have been changed, and must have had
+      challenges enabled from the start
+
+That row is service byte +0x61 (save_ok) — a check V4/V5/V6 deliberately left intact because a legit Bronzeman save passes it. The Steam and checksum rows being red is normal and documented; this row is the regression.
+
+Because the in-game feat tracker shares the same eligibility helper (0x1400af690), a false +0x61 kills tracking outright. That explains both halves of your symptom: everything reads 0, and unpausing can't bring it back — the tracker simply never runs. It's not the old token-0x3816 reader bug, and it's not corruption (error.log has zero save errors — 220 lines, all cosmetic coat-of-arms noise).
+The decisive clue: this run loaded a save, the working run started fresh
+
+The working V6 game.log has a third Executing History … to 1278.1.1 line (history fast-forwards only on a new campaign) and 6 messagehandler lines including the Bronze grant. Your new log has neither — plus a mid-campaign date of 1278.1.8 and a named Country: Pavao Subic. So you resumed a save, and that save is what's failing the check.
+
+That matters, because "must have had challenges enabled from the start" is sticky. If that campaign was ever begun or re-saved while challenges were off, fixing the binary later will never make feats count in it.
+
+Two candidates, and I couldn't separate them from logs alone:
+
+    Wrong binary. Your folder has both CK2game.exe and CK2gameV6.exe — and Windows launched the former. All patch states are identically 24,753,368 bytes, so only a hash tells them apart, and nothing hashed them.
+    That save is permanently ineligible.
+
+Your two tools were both silently broken
+
+    The watcher captured nothing. 15,530 lines = 15,526 pre-launch inventory + 4 process lines. Zero file-change events in 35 minutes. It dropped save games/cache/logs at startup because they didn't exist yet, and used a Documents path that fails on redirected/OneDrive profiles. (watch_ck2_mj LOG.txt is just the last 1,479 lines of the same file — only ever send one.)
+    x64dbg never ran the game — 13 launches, 13 identical failures. Every session died on 0x406D1388, which is MS_VC_EXCEPTION — the harmless thread-naming exception. Seeing it as the exit code means the debugger swallowed it instead of passing it to CK2, killing the process before the menu. That's why "it doesn't even open." One setting fixes it: Options → Preferences → Exceptions → add range 406D1388 → ignore.
+
+Also worth knowing
+
+Continue's behaviour changed: STATUS.md records it as greyed out, but your transcript shows it now clicks and returns "Continue failed!". The enable predicate is satisfied; the failure moved downstream — and the dialog's own listed causes point at the same +0x61/checksum family, suggesting one shared root cause rather than two bugs.
+
+I committed and pushed: the full analysis, preflight_ck2_mj.ps1 (read-only; hashes every exe and names its exact patch level, verifies the payload, finds your real save/cache folders, dumps feat counters — its save parsing is verified against all five archived saves), a fixed watch_ck2_mj_v2.ps1, and a new Part 0 in the debug guide.
+
+Run preflight_ck2_mj.ps1 first — it may end this in seconds. Then start one fresh Bronzeman campaign before touching the old save; that's the configuration already proven to work.
+
+actually no. continue in launcher is still gay and unclickable. and these messages about not being able to continue, were before and still present (continue in main menu, continue from mj window, continue when clicking single player (there are buttons continue, new game, load game)). and previously "chalanges: disabled" didn't prevent anything - at least i clearly remember earning points and getting notification about reaching bronze level of reward.
+
+also, write what exactly to do with preflight (how to start? step by step. or bat)
+
+here's new x64 log:
+
+Инициализация объектов ожидания...
+
+Инициализация отладчика...
+
+Инициализация функций отладчика...
+
+Установка функций управления памятью JSON...
+
+Получение сведений о каталоге...
+
+Путь к символьной информации: C:\Users\UZWERG\Desktop\x64 dbg\release\x64\symbols
+
+Запуск чтения файлового потока...
+
+Получение индексов syscall...
+
+Выделение стека для сообщений...
+
+Инициализация глобальных переменных скриптов...
+
+Регистрация команд отладчика...
+
+Регистрация обработчика команд пользовательского интерфейса...
+
+Регистрация функций вычисления выражений...
+
+Регистрация функций форматирования...
+
+Регистрация обработчика команд Script DLL...
+
+Запуск командного цикла...
+
+Инициализация успешно завершена!
+
+Загрузка плагинов...
+
+Обработка командной строки...
+
+"C:\Users\UZWERG\Desktop\x64 dbg\release\x64\x64dbg.exe"
+
+Индексы Syscall загружены!
+
+База данных кодов ошибок загружена!
+
+База данных кодов исключений загружена!
+
+База данных кодов NTSTATUS загружена!
+
+База данных констант Windows загружена!
+
+Чтение файла заметок...
+
+Чтение файлового потока закончено!
+
+Отладка: C:\Users\UZWERG\Desktop\SteamCrusader\CK2game.exe
+
+Файл базы данных: C:\Users\UZWERG\Desktop\x64 dbg\release\x64\db\CK2game.exe.dd64
+
+Процесс запущен: 00007FF75EF20000 C:\Users\UZWERG\Desktop\SteamCrusader\CK2game.exe
+
+"C:\Users\UZWERG\Desktop\SteamCrusader\CK2game.exe"
+
+argv[0]: C:\Users\UZWERG\Desktop\SteamCrusader\CK2game.exe
+
+Module ck2game.exe loaded from disk path
+
+Точка останова по адресу 00007FF75FD40C14 (останов в точке входа) установлена!
+
+DLL загружена: 00007FFEE2810000 C:\Windows\System32\ntdll.dll
+
+DLL загружена: 00007FFEE09F0000 C:\Windows\System32\kernel32.dll
+
+DLL загружена: 00007FFEE02B0000 C:\Windows\System32\KernelBase.dll
+
+DLL загружена: 00007FFEE1250000 C:\Windows\System32\shell32.dll
+
+DLL загружена: 00007FFEE0770000 C:\Windows\System32\msvcp_win.dll
+
+DLL загружена: 00007FFEE0050000 C:\Windows\System32\ucrtbase.dll
+
+Поток 5616 создан, Точка входа: ntdll.00007FFEE2862B20, Параметр: 0000021DE2924D00DLL загружена: 00007FFEE0BA0000 C:\Windows\System32\user32.dll
+
+DLL загружена: 00007FFEE06A0000 C:\Windows\System32\win32u.dll
+
+DLL загружена: 00007FFEE08A0000 C:\Windows\System32\gdi32.dll
+
+DLL загружена: 00007FFEE0590000 C:\Windows\System32\gdi32full.dll
+
+Поток 1052 создан, Точка входа: ntdll.00007FFEE2862B20, Параметр: 0000021DE2924D00Поток 6160 создан, Точка входа: ntdll.00007FFEE2862B20, Параметр: 0000021DE2924D00DLL загружена: 00007FFEE1050000 C:\Windows\System32\ws2_32.dll
+
+DLL загружена: 00007FFEE0EC0000 C:\Windows\System32\rpcrt4.dll
+
+DLL загружена: 00007FFEC6260000 C:\Users\UZWERG\Desktop\SteamCrusader\tbb.dll
+
+DLL загружена: 00007FFEB1330000 C:\Users\UZWERG\Desktop\SteamCrusader\SDL2.dll
+
+DLL загружена: 00007FFECD540000 C:\Windows\System32\winmm.dll
+
+DLL загружена: 00007FFEE2050000 C:\Windows\System32\msvcrt.dll
+
+DLL загружена: 00007FFED4990000 C:\Windows\System32\msvcp140.dll
+
+DLL загружена: 00007FFEDA610000 C:\Windows\System32\vcruntime140.dll
+
+DLL загружена: 00007FFEDA600000 C:\Windows\System32\vcruntime140_1.dll
+
+DLL загружена: 00007FFEE0FF0000 C:\Windows\System32\shlwapi.dll
+
+DLL загружена: 00007FFEE0860000 C:\Windows\System32\imm32.dll
+
+DLL загружена: 00007FFEE1EE0000 C:\Windows\System32\psapi.dll
+
+DLL загружена: 00007FFECDE30000 C:\Windows\System32\d3d9.dll
+
+DLL загружена: 00007FFEB0DE0000 C:\Windows\System32\D3DX9_41.dll
+
+DLL загружена: 00007FFEE0D40000 C:\Windows\System32\sechost.dll
+
+DLL загружена: 00007FFEE1F10000 C:\Windows\System32\advapi32.dll
+
+DLL загружена: 00007FFEE0150000 C:\Windows\System32\crypt32.dll
+
+DLL загружена: 00007FFEE21A0000 C:\Windows\System32\combase.dll
+
+DLL загружена: 0000000000400000 C:\Windows\System32\xinput1_3.dll
+
+DLL загружена: 00007FFEE1120000 C:\Windows\System32\ole32.dll
+
+Пропуск неподдерживаемого отладочного типа IMAGE_DEBUG_TYPE_POGO в модуле pops_api.dll...
+
+Не найдены какие-либо поддерживаемые отладочные типы в модуле pops_api.dll!
+
+DLL загружена: 00007FFEB08E0000 C:\Users\UZWERG\Desktop\SteamCrusader\pops_api.dll
+
+DLL загружена: 00007FFEE19A0000 C:\Windows\System32\oleaut32.dll
+
+DLL загружена: 00007FFEE1A70000 C:\Windows\System32\setupapi.dll
+
+DLL загружена: 00000000584A0000 C:\Users\UZWERG\Desktop\SteamCrusader\steam_api64.dll
+
+DLL загружена: 00007FFEE0810000 C:\Windows\System32\cfgmgr32.dll
+
+Пропуск неподдерживаемого отладочного типа IMAGE_DEBUG_TYPE_POGO в модуле physfs.dll...
+
+Не найдены какие-либо поддерживаемые отладочные типы в модуле physfs.dll!
+
+DLL загружена: 00007FFEB7500000 C:\Users\UZWERG\Desktop\SteamCrusader\physfs.dll
+
+DLL загружена: 00007FFEE0B30000 C:\Windows\System32\normaliz.dll
+
+DLL загружена: 00007FFEE0740000 C:\Windows\System32\bcrypt.dll
+
+DLL загружена: 00007FFED55B0000 C:\Windows\System32\version.dll
+
+DLL загружена: 00007FFEDD8C0000 C:\Windows\System32\dwmapi.dll
+
+DLL загружена: 00007FFEDDBB0000 C:\Windows\System32[windows.storage](http://windows.storage).dll
+
+DLL загружена: 00007FFEDEA20000 C:\Windows\System32\kernel.appcore.dll
+
+DLL загружена: 00007FFEB0870000 C:\Users\UZWERG\Desktop\SteamCrusader\SDL2_mixer.dll
+
+DLL загружена: 00007FFEB07E0000 C:\Users\UZWERG\Desktop\SteamCrusader\PDXBrowser_IPC.dll
+
+DLL загружена: 00007FFEDF7B0000 C:\Windows\System32\wldp.dll
+
+Достигнута системная точка останова!
+
+INT3 точка останова "останов в точке входа" на <ck2game.OptionalHeader.AddressOfEntryPoint> (00007FF75FD40C14)!
+
+DLL загружена: 00007FFEC63E0000 C:\Users\UZWERG\Desktop\SteamCrusader\tbbmalloc.dll
+
+DLL загружена: 00007FFEDFE10000 C:\Windows\System32\userenv.dll
+
+DLL загружена: 00007FFEDFE50000 C:\Windows\System32\profapi.dll
+
+DLL выгружена: 00007FFEDFE50000 profapi.dll
+
+DLL выгружена: 00007FFEDFE10000 userenv.dll
+
+DLL загружена: 00007FFEE0930000 C:\Windows\System32\SHCore.dll
+
+Строка отладки: «[S_API FAIL] SteamAPI_Init() failed; SteamAPI_IsSteamRunning() failed.»
+
+Строка отладки: «[S_API FAIL] SteamAPI_Init() failed; unable to locate a running instance of Steam, or a local steamclient64.dll.»
+
+Строка отладки: «[S_API FAIL] SteamAPI_Init() failed; SteamAPI_IsSteamRunning() failed.»
+
+Строка отладки: «[S_API FAIL] SteamAPI_Init() failed; unable to locate a running instance of Steam, or a local steamclient64.dll.»
+
+Строка отладки: «[S_API FAIL] SteamAPI_Init() failed; SteamAPI_IsSteamRunning() failed.»
+
+Строка отладки: «[S_API FAIL] SteamAPI_Init() failed; unable to locate a running instance of Steam, or a local steamclient64.dll.»
+
+DLL загружена: 00007FFEDD500000 C:\Windows\System32\uxtheme.dll
+
+DLL загружена: 00007FFEE2500000 C:\Windows\System32\msctf.dll
+
+DLL загружена: 00007FFEAE2A0000 C:\Windows\System32\igdumdim64.dll
+
+DLL загружена: 00007FFEC4CE0000 C:\Windows\System32\DriverStore\FileRepository\nvami.inf_amd64_a3d5bcc37ff12fed\nvdlistx.dll
+
+DLL выгружена: 00007FFEC4CE0000 nvdlistx.dll
+
+DLL выгружена: 00007FFEAE2A0000 igdumdim64.dll
+
+DLL загружена: 00007FFEB1A50000 C:\Windows\System32\DriverStore\FileRepository\nvami.inf_amd64_a3d5bcc37ff12fed\nvldumdx.dll
+
+DLL загружена: 00007FFEE06D0000 C:\Windows\System32\wintrust.dll
+
+DLL загружена: 00007FFEDFA90000 C:\Windows\System32\msasn1.dll
+
+Поток 4060 создан, Точка входа: crypt32.00007FFEE016BF50, Параметр: 0000021DE29AEB30DLL загружена: 00007FFEE1EF0000 C:\Windows\System32\imagehlp.dll
+
+DLL загружена: 00007FFEDF7F0000 C:\Windows\System32\cryptsp.dll
+
+DLL загружена: 00007FFEDEED0000 C:\Windows\System32\rsaenh.dll
+
+DLL загружена: 00007FFEDF720000 C:\Windows\System32\cryptbase.dll
+
+DLL загружена: 00007FFEDFFC0000 C:\Windows\System32\bcryptprimitives.dll
+
+DLL загружена: 00007FFEAF420000 C:\Windows\System32\DriverStore\FileRepository\nvami.inf_amd64_a3d5bcc37ff12fed\nvd3dumx.dll
+
+Поток 6476 создан, Точка входа: nvd3dumx.00007FFEAF42D750, Параметр: 0000000000000000Поток 6476 завершенПоток 6524 создан, Точка входа: nvd3dumx.00007FFEB0075384, Параметр: 0000021DE49E2870Поток 6524 завершенDLL выгружена: 00007FFEAF420000 nvd3dumx.dll
+
+DLL выгружена: 00007FFEB1A50000 nvldumdx.dll
+
+DLL загружена: 00007FFEDD5E0000 C:\Windows\System32\ResourcePolicyClient.dll
+
+DLL выгружена: 00007FFEDD5E0000 resourcepolicyclient.dll
+
+DLL загружена: 00007FFEB1A50000 C:\Windows\System32\DriverStore\FileRepository\nvami.inf_amd64_a3d5bcc37ff12fed\nvldumdx.dll
+
+DLL загружена: 00007FFEAF420000 C:\Windows\System32\DriverStore\FileRepository\nvami.inf_amd64_a3d5bcc37ff12fed\nvd3dumx.dll
+
+Поток 1812 создан, Точка входа: nvd3dumx.00007FFEAF42D750, Параметр: 0000000000000000Поток 6432 создан, Точка входа: nvd3dumx.00007FFEB0075384, Параметр: 0000021DE29D4C50Поток 1812 завершенDLL загружена: 00007FFEDFCD0000 C:\Windows\System32\powrprof.dll
+
+DLL загружена: 00007FFEDFCB0000 C:\Windows\System32\umpdc.dll
+
+Поток 6420 создан, Точка входа: nvd3dumx.00007FFEB0075384, Параметр: 0000021DE49D35B0DLL загружена: 00007FFED7DC0000 C:\Windows\System32\DXCore.dll
+
+DLL загружена: 00007FFEACEE0000 C:\Windows\System32\igdumdim64.dll
+
+DLL загружена: 00007FFED5D00000 C:\Windows\System32\igdusc64.dll
+
+Поток 6528 создан, Точка входа: d3d9.00007FFECDF6ED20, Параметр: 0000021DE98F3060Поток 6420 завершенDLL выгружена: 00007FFEDFCB0000 umpdc.dll
+
+DLL выгружена: 00007FFEDFCD0000 powrprof.dll
+
+DLL выгружена: 00007FFED5D00000 igdusc64.dll
+
+DLL выгружена: 00007FFEACEE0000 igdumdim64.dll
+
+Поток 6528 завершенПоток 6432 завершенDLL выгружена: 00007FFEAF420000 nvd3dumx.dll
+
+DLL выгружена: 00007FFEB1A50000 nvldumdx.dll
+
+Поток 1016 создан, Точка входа: ck2game.00007FF75FD6BBA8, Параметр: 0000021DE29EEEF0Исключение SetThreadName на 00007FFEE02DCD29 (3F8, "Task#0")
+
+Исключение SetThreadName на 00007FFEE02DCD29 (3F8, "Task#0")
+
+Поток 4236 завершенПоток 5616 завершенПоток 1052 завершенПоток 1016 завершенПоток 4060 завершенПроцесс остановлен с кодом выхода 0x406D1388 (1080890248)
+
+Сохранение базы данных в C:\Users\UZWERG\Desktop\x64 dbg\release\x64\db\CK2game.exe.dd64 16мс
+
+Отладка остановлена!
+
+Thank you — those corrections matter, and two of them mean I got things wrong. Let me check the evidence before rewriting.
+
+The user's corrections overturn two of my conclusions. Let me verify against the repo's own record before rewriting.
+
+I was wrong on two counts. Let me verify against the repo's own records before correcting.
+
+Two of my conclusions were wrong, and the repo's own records confirm your version. Let me check the payload before I rewrite.
+
+You're right on both counts, and your own repo's records confirm it. Let me verify the tooltip point precisely, because it kills my main conclusion.
+
+You're right on both points, and your own repo confirms it. Let me verify the decisive detail.
+
+Confirmed — you're right on both, and your own repo records prove it. I had two conclusions wrong:
+
+Confirmed — I got two things wrong, and your own repo proves you right:
+
+    C17 in CASES_AND_FINDINGS.md: "Gauntlet tooltip still says challenges won't work — PARTIAL cosmetic, stale account text; play works". So "Challenges: Disabled" is a known stale tooltip, not a real gate. My §1 conclusion was wrong.
+    C08: "Continue button greyed / 'Continue failed'" — both symptoms were already recorded together. Nothing changed; the launcher button and the in-game dialog are separate surfaces of one unsolved case.
+
+Let me correct the record and fix the tooling.
+WriteALL-MY-LOGS-SO-FAR/03_analysis/LATEST_LOGS_ANALYSIS_2026-08-26.md+278
+
+Now let me add the user_id comparison to the preflight and create the double-click launcher you asked for.
+Edit+69−21
+
+Now let me fix the verdict text (it repeated my retracted claim) and create the double-click launcher.
+Edit+20−11
+
+Now the double-click launcher — no PowerShell knowledge or typing needed.
+WriteALL-MY-LOGS-SO-FAR/05_patches_and_scripts/RUN_PREFLIGHT.bat+60
+
+Let me verify the cache-detection and identity logic against the real archived files.
+
+Logic verified against both real cache files. Now let me correct STATUS.md, which still carries my retracted claim.
+Edit+25−22
+
+Now let me fix the debug guide, which still contains my retracted claims and the wrong x64dbg advice.
+Edit+12−3
+
+The exception fix clearly didn't take, so let me lead with attach mode instead.
+Edit+32−21
+
+Now let me add the launcher-specific breakpoints, since the grey launcher button is a code path never yet investigated.
+Edit+24−12
+
+Now the step-by-step preflight instructions you asked for:
+WriteALL-MY-LOGS-SO-FAR/05_patches_and_scripts/README_PREFLIGHT.md+133
+
+Layout verified. Let me ensure the .bat has Windows line endings, since a Unix-LF batch file can misbehave.
+
+Confirmed — my .bat has Unix line endings while the repo's working .bat files use CRLF. Let me fix that.
+
+CRLF fixed. Let me check for a setlocal/delayed-expansion pitfall in the .bat and verify the whole set.
+
+The %ROOT% is read outside the block, so no delayed-expansion bug. Let me do a final review and commit.
+
+The workspace was re-cloned between turns, so my local branch has diverged from what I pushed. Let me check carefully before pushing.
+
+Both commits exist but diverged (workspace was re-cloned). Let me rebase so the correction sits on top of the original — preserving the audit trail this repo values.
+
+Conflicts are expected — my corrected versions supersede the earlier wrong ones. Let me resolve by taking my corrected files.
+
+History is now linear with the correction on top. Let me verify content survived the rebase intact, then push.
+
+You were right on both counts, and your own repo proves it. I've retracted both claims.
+
+1. The "Challenges: Disabled" tooltip is a red herring. Your CASES_AND_FINDINGS.md already logs it as case C17 — "PARTIAL cosmetic — stale account text; play works", and V6_RUNTIME_RESULTS.md calls it "tooltip-only inaccuracy." Your memory of earning Bronze with that tooltip on screen matches the file exactly. I built my main conclusion on a symptom your own records had already dismissed — that was sloppy, and I should have checked C17 before writing it up.
+
+2. Continue hasn't changed. Case C08 literally reads "Continue button greyed / 'Continue failed'" — both symptoms recorded together from the start. I mistook a longstanding dual symptom for a new development.
+
+One thing that came out of your correction is genuinely useful: those are three different surfaces, and the launcher is a different code path that has never been investigated.
+Surface	State	Code
+Paradox launcher	grey, unclickable	pdx_launcher.lib — 0xDE47C0, 0xDE8BB0, 0x99F540
+Main menu / MJ / SP	"Continue failed!"	frontend — 0x1408145EC
+
+The launcher shows the save name but keeps the button grey — meaning the pre-scan finds a candidate and something later disables the control. Those three launcher symbols have never had a breakpoint on them.
+
+What still stands: the failing run loaded a save (1278.1.8) rather than starting a campaign — no fast-forward Executing History line, and 0 messagehandler lines versus 6 in the working run. Fresh campaign is the only config ever proven to grant Bronze.
+
+New lead on the feats: your two archived cache captures have identical key/id but different user_id and category (453496064/697115649 vs 84696387/-1991027533). If that identity drifts, the game reads a different counter set — which looks exactly like a reset and wouldn't recover on unpause. The preflight now prints those fields and diffs them between runs.
+Running the preflight
+
+Double-click RUN_PREFLIGHT.bat. That's it — read-only, nothing to type.
+
+    Keep RUN_PREFLIGHT.bat and ps1\preflight_ck2_mj.ps1 in their relative positions (easiest: download the whole 05_patches_and_scripts folder).
+    Right-click each file → Properties → tick Unblock if present.
+    Double-click the .bat. SmartScreen → More info → Run anyway.
+    Copy the output to me.
+
+Full walkthrough is in the README_PREFLIGHT.md I've opened. Different install? Drag your game folder onto the .bat. (I set CRLF line endings to match your other working .bats.)
+
+On x64dbg — your new log is identical to the previous 13, so the exception setting didn't take. Don't fight it: use attach mode instead. Start CK2 normally → wait for the menu → x64dbg → File → Attach → pick CK2game.exe → F9. Startup exceptions never arise, and Continue lives in the menu anyway.
+
+Please open a pull request for the changes on this branch.
+
+I'll verify the branch state and then open the pull request.
+
+Two things need checking: uncommitted changes appeared, and the log output looks off. Let me investigate before opening the PR.
+
+The workspace was reset again — my commits are gone locally, but the file changes remain. Let me check what's on the remote.
+
+Both commits are safe on the remote. My local branch pointer was just reset — let me confirm the working tree matches the pushed state before resetting.
+
+All seven files match the pushed commit exactly. Safe to fast-forward my local pointer to the remote.
+
+Branch restored and clean. Let me confirm the diff against main that the PR will contain.
+
+"No merge base" — the branch and main have unrelated histories. Let me investigate, as this affects how the PR displays.
+
+Unrelated root commits — the PR diff could be huge. Let me measure it before creating the PR.
+
+Important find — main has a new new new logs/ folder (including preflight output) that my branch predates. A PR would show those as deletions. Let me look.
+
+The preflight ran successfully and settles the binary question. Let me merge main in so the PR doesn't delete your new logs.
+
+Two conflicts. Let me check whether main's versions differ from mine before resolving.
+
+My versions are strict supersets of main's (pure additions). Safe to take mine.
+
+The diff is now purely additive — your new new logs/ files are preserved. Let me push and open the PR.
+
+Pull request opened: #10 — Analyse latest logs; retract two wrong claims; add preflight tooling
+
+    Base: main ← Head: arena/01a03e8a-ck2-monarch-s-journey-restorat
+    7 files changed, +1,146 / −6 — status MERGEABLE
+
+One thing I had to fix along the way
+
+The branch and main had unrelated root commits, and main had gained a new new logs/ folder after this branch was created. A PR would have shown those three files as deletions. I merged main in first, so the diff is now purely additive and your new logs are preserved.
+
+Resolving that merge surfaced something useful: you already ran the preflight, and its output is on main. It answers the question I flagged last turn:
+
+text
+
+CK2game.exe     sha256 : f5b7dfd6...
+                state  : V6 CURRENT BASELINE (runtime-proven)
+CK2gameV6.exe   sha256 : f5b7dfd6...   (identical)
+
+gfx\monarchs    RESULT : CORRECT
+CK2 user folder : C:\Users\UZWERG\Documents\Paradox Interactive\Crusader Kings II
+
+So the wrong-binary hypothesis is dead — both executables are the correct V6 baseline, and the payload is right. Two further details from that run:
+
+    (no .ck2 saves) and no feat cache in the user folder. Since the failing session clearly loaded a 1278.1.8 save, your saves live somewhere the preflight didn't look — most likely a second CK2 user folder (a OneDrive-redirected Documents, or the game root). Worth pinning down, because the game and the checker may be disagreeing about where user data lives.
+    The feat cache doesn't exist yet, so the user_id drift theory can't be tested until some progress is recorded.
+
+That narrows the remaining leads to the feat-cache identity and the save-scoped explanation — and makes the grey launcher button (0x00DE47C0 / 0x00DE8BB0 / 0x0099F540, never yet breakpointed) the cleanest target for the next debugger session, via attach mode.
+
+Please merge the pull request.
+
+I'll verify the PR is safe to merge, then merge it.
+
+Clean and mergeable, no required checks or reviews, and the diff touches only the 7 intended files — your new new logs/ files aren't affected.
+
+I'll use a merge commit rather than squash: this repo deliberately preserves the audit trail of wrong claims and their corrections (BANNED_ARTIFACTS.md, CONTRADICTIONS.md, ORGANIZATION_HISTORY.md), so keeping the original analysis and its retraction as separate commits fits that convention.
+
+Merged. ✅
+
+PR #10 — state MERGED, merge commit cd7dd1b.
+
+Verified after merging:
+
+    All 7 files are present on main.
+    Your new new logs/ folder (preflight output, watcher log, x64dbg log) is intact — the merge I did beforehand prevented those from being deleted.
+    History preserved both the original analysis (a0ac69b) and its retraction (46ed862) as separate commits, matching how this repo documents corrections.
+
+What's now on main
+
+Analysis — 03_analysis/LATEST_LOGS_ANALYSIS_2026-08-26.md, with the two retracted claims kept visible rather than quietly deleted, and STATUS.md updated to match.
+
+Tooling — RUN_PREFLIGHT.bat (double-click), README_PREFLIGHT.md, preflight_ck2_mj.ps1, watch_ck2_mj_v2.ps1, and the debug guide's new Part 0 (attach mode for x64dbg).
+Where the investigation stands
+
+Your preflight run already killed the wrong-binary theory — CK2game.exe is confirmed V6 (f5b7dfd6…) with the correct payload. Three leads remain, in the order I'd pursue them:
+
+    Find where your saves actually live. The preflight reported (no .ck2 saves) and no feat cache in C:\Users\UZWERG\Documents\Paradox Interactive\Crusader Kings II, yet the failing session clearly loaded a 1278.1.8 save. Something is disagreeing about the user-data location — likely a second/redirected Documents folder. This one is cheap and blocks the others.
+    Feat-cache identity drift — untestable until a cache file exists, so it depends on (1).
+    The grey launcher button — 0x00DE47C0 / 0x00DE8BB0 / 0x0099F540, a code path never yet breakpointed, via attach mode.
