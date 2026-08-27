@@ -26,7 +26,7 @@ Status tags:
 | C05 | Live challenge tracking works in-session | **SOLVED** | v4 core loop | (214) tooltip 1/6 |
 | C06 | Progress lost after save/load (0/6) | **SOLVED** | **V6** five save-list gates + feat globals | (228) before; (256) after |
 | C07 | Manual Load of Bronzeman save | **SOLVED** | V6 | (5) works via SP→Load |
-| C08 | **Continue button greyed / “Continue failed”** | **UNSOLVED** → **V7** | enable predicate, not click handler | (1)(2)(4)(217)(219)(224)(226) |
+| C08 | **Continue button greyed / “Continue failed”** | **SOLVED** | **V7** bypassed retired cloud check at `0x1409E678B` | (1)(2)(4)(217)(219)(224)(226) |
 | C09 | Multiplayer breaks 2nd boot / resign→menu | **UNSOLVED** secondary | frontend refresh | (2,5)(3)(225) |
 | C10 | Grey “only person alive” selection map | **UNSOLVED** secondary | empty history / no ruler-set provinces | (3) + map reference |
 | C11 | Portrait tooltip flicker on small MJ portrait | **UNSOLVED** secondary | tied to grey-map hover hitbox? | (188), `flickering.mp4` |
