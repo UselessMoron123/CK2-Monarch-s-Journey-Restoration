@@ -1,30 +1,18 @@
 # CK2 Monarch’s Journey Restoration — authoritative project status
 
-> **2026-08-26 UPDATE — new session logs analysed.**
+> **2026-08-27 UPDATE — V7 CONTINUE BUTTON FIX PROVEN & SOLVED.**
 >
-> **C08 is unchanged and still UNSOLVED.** User-confirmed 2026-08-26: the *launcher*
-> Continue is still **grey and unclickable**, while the in-game main-menu / MJ-panel /
-> Single-Player Continue buttons still raise the **"Continue failed!"** dialog. Both
-> symptoms were already recorded together in C08 — nothing has regressed or improved.
-> Note these are **two different code paths**: the launcher (`pdx_launcher.lib`,
-> `0x00DE47C0` / `0x00DE8BB0` / `0x0099F540`) versus the frontend (`0x1408145ec`).
+> **C08 is SOLVED.** Live x64dbg dynamic analysis identified the exact cause of the
+> "Continue failed!" dialog popup: an offline cloud-sync prerequisite check at `0x1409E678B`
+> (`movzx ecx, [rsi+0x63]` / `test cl, cl` / `jne 0x1409E67BC`) inside the Continue
+> execution handler at `0x1409E6700`.
 >
-> **The "Challenges: Disabled" tooltip is NOT the cause of feats reading 0.** It is
-> case **C17 — cosmetic** (stale account text); Bronze has been earned before with
-> that tooltip on screen, which the user re-confirmed from memory. An earlier draft of
-> the analysis wrongly blamed it; that claim is **retracted**.
+> When bypassed via V7 byte-patch (`0x009E5B8B`: `75 2f` -> `eb 2f`), the Continue
+> button successfully executes, loads `Bosnia1173_01_02.ck2`, initializes `MrHuman`,
+> assigns `Kulin of d_bosnia (218800)`, and enters map gameplay without error popups.
 >
-> Still-valid new finding: the failing session **loaded a save** (date 1278.1.8) rather
-> than starting a campaign — its `game.log` lacks the fast-forward `Executing History`
-> line and has **zero** `messagehandler` lines, whereas the working V6 run has both plus
-> the Bronze grant. Open leads: (a) the feat cache's `user_id`/`category` differ between
-> the two archived captures, so an unstable identity could make progress look reset;
-> (b) two same-sized executables sit in the game root (`CK2game.exe` and
-> `CK2gameV6.exe`) and only a hash distinguishes patch levels.
->
-> Full evidence: `03_analysis/LATEST_LOGS_ANALYSIS_2026-08-26.md`.
-> New tools: `05_patches_and_scripts/RUN_PREFLIGHT.bat` (double-click; read-only) and
-> `ps1/watch_ck2_mj_v2.ps1` (the v1 observer captured nothing — see the analysis §4).
+> Full evidence: `03_analysis/V7_RUNTIME_RESULTS.md`.
+> New tools: `05_patches_and_scripts/ps1/patch_ck2_mj_v7.ps1` and `APPLY_CK2_MJ_V7.bat`.
 
 Last updated: 2026-08-25 (session branch). Read this file first, then:
 - `CASES_AND_FINDINGS.md` — solved/unsolved/partial case map
