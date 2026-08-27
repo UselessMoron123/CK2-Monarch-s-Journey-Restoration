@@ -160,7 +160,8 @@ for FR-only rulers, (2) whichever **UI branch** chooses FR chrome vs MJ chrome,
 
 ## 8. What “make Featured Rulers work” should mean (future checklist)
 
-Do **not** start this until Continue-V7 is done unless you explicitly reprioritize.
+In-game Continue-V7 is done. Do **not** start FR restore unless you explicitly
+reprioritize it over Phase 3 polish / C25.
 
 1. **Define success:** FR panel chrome + Time Remaining + at least the FR-only
    roster playable offline in Bronzeman, with or without MJ score strip.

@@ -39,6 +39,18 @@
 - GitHub sessions even shorter than chat sessions — handoff-file discipline required.
 - After PR merge, local session closed to remote ops — further work stays local until new session.
 
+## Turn 8 — dump ingest 2026-08-27 (`latest logs` / `latest latest logs` / `new new logs`)
+
+Plan: `00_START_HERE/INGEST_PLAN_DUMP_2026-08-27.md`. Report:
+`00_START_HERE/INGEST_REPORT_DUMP_2026-08-27.md`. Operative prompt is now **v6**.
+
+Accepted: `APPLY_CK2_MJ_V7.bat` (+ CHECK/REVERT V7 bats), Pavao-resume runtime logs,
+preflight two-run transcript, two x64dbg traces, git patches for PRs #10/#11.
+Raw chats torn → `RAWLOG_NETNEW_EXTRACTS.md` §10 then deleted with the dump folders.
+Living docs repaired so STATUS/PLAN/CASES/MASTER/preflight match V7 Continue-working
+`57b18e43…`. New case **C25** = launcher Continue. 15-folder tree unchanged;
+`07_runtime_logs/x64dbg/` is a subfolder only.
+
 ## For restoration project repo migration
 
 - Do NOT copy raw organization transcripts — their info is now in `README.md`, `PLAN.md`, `INDEX.md`, `ORGANIZATION_HISTORY.md`, `DISSECTION_REPORT.md`.

@@ -128,6 +128,29 @@ reproducible from `CK2game333.exe` and need not be preserved verbatim.
 
 ---
 
+## 10. V6-live-debug / V7-Continue chats (torn 2026-08-27)
+
+Sources: dump `latest latest logs/latest latest log1.txt` (572 lines) and
+`latest latest log2.txt` (17,752 lines). Most conclusions already live in
+Part 4, `V7_RUNTIME_RESULTS.md`, `LATEST_LOGS_ANALYSIS_2026-08-26.md`. Residue
+that was only in those exports:
+
+| Fact | Value |
+|---|---|
+| Attach ASLR base A | `0x00007FF75EF20000` — BPs `+9E5500`, `+9E4970`, `+E64E90`, `+8145EC`, `+DE47C0`, `+DE8BB0`, `+99F540` |
+| Attach ASLR base B | `0x00007FF73C980000` — INT3 `+8145EC`, `+9E4970`, `+9E5500`, `+9E678B` (V7 site hit live) |
+| Registers at `+8145EC` / `+9E4970` | `RAX`/`R10`/`R11` = `"checksum"`; `RDX` = `"irst_on_top"` |
+| D3D9 freeze workaround | `settings.txt` `fullScreen=no` / `borderless=yes` |
+| Launch-mode death | `0x406D1388` (`MS_VC_EXCEPTION` / `SetThreadName`) even after ignore range — attach anyway |
+| TLS callback BPs | `inputhost.dll` / `windowmanagementapi.dll` / vorbis/ogg — ignore |
+| Telemetry / RPC | `prod-telemetry.paradox-interactive.com`; `RPC_S_SERVER_UNAVAILABLE` `000006BA` during load — benign |
+| Watcher v2 fail | `CommandNotFoundException` from cwd `C:\Users\UZWERG` + sample `-GameRoot D:\CK2` |
+| Llywelyn saves (not uploaded) | `Bronzeman_llywelyn_gwynedd.ck2` 1195.1.1 3,682,972 B; `Gwynedd1195_01_08.ck2` 1195.1.8 3,836,788 B; no feat cache |
+| Error ledger | first analysis blamed C17 for feats=0 (**wrong**); claimed Continue symptom changed (**wrong**); wrong-binary killed by preflight (both exes = V6 `f5b7dfd6…`); APPLY_V7.bat documented but missing from `bat/` until this ingest |
+| Do not promote | unguarded poke of `0x009e5b8b`; launcher-SQLite as proven |
+
+---
+
 ## How this was verified
 For every raw export, all `0x…` addresses, 6–64-hex-char tokens, and mangled
 symbols were extracted and tested against the combined corpus

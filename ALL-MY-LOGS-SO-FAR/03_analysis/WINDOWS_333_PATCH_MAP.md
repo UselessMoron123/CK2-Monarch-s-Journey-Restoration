@@ -1,9 +1,10 @@
-# Windows May-2020 3.3.3 cumulative patch map (V2 → V6)
+# Windows May-2020 3.3.3 cumulative patch map (V2 → V7)
 
 Target: stock `CK2game.exe`
 SHA-256 `656f4f482ed698958e1108938f7e5baff5b5dd31b3b310a7ea51386faca635d8`,
 24,753,368 bytes. `VA = raw_offset + 0x140000c00`.
-Current applied state: **V6** (`f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0`).
+Current applied state: **V7** (`57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571`).
+V6 (`f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0`) is the revert target.
 
 Every edit is length-preserving. Machine-readable copy: `windows333_patch_map.csv`.
 
@@ -68,7 +69,8 @@ Effective: `save_ok && !ruler_designer && (stock_checksum || !steam_active)`
 - V3: Play reachable, Bronzeman requested, challenges still Disabled, Start blocked.
 - V4: Bronzeman + Challenges Enabled, Start works, live 1/6 progress in-game.
 - V5: Load button unblocked but selection never installed (duplicated gates).
-- **V6: campaign/tier/save/cache pipeline proven (Bronze granted on Pavao); Continue still rejected → V7 target = non-account predicate(s) on Continue callers `0x1407bffa1`, `0x1408145ec`, `0x140a0ba62`.**
+- **V6: campaign/tier/save/cache pipeline proven (Bronze granted on Pavao); in-game Continue still popped “Continue failed!”.**
+- **V7: in-game Continue execution proven (`57b18e43…`). Launcher Continue remains grey (C25).**
 
 ## Known do-not-touch list
 

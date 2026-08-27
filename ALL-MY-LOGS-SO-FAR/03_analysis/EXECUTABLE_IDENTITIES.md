@@ -38,7 +38,8 @@ Windows patch target: PE32+ x86-64, image base `0x140000000`, `.text` VMA
 | V3 | `e91a5f4693ca3b747d7340fda71ed66b3593e2f98af14c37e6086b0d76fb13ca` |
 | V4 | `f2967f6f2c5b8b7d49dec2f7066139ace321cca19480f5c57d3ca8d576259b30` |
 | V5 | `29556549fb5fc657f2966949b6a5b59c9b89b707f954adca4868cfd3d90b1535` |
-| **V6 (current, runtime-proven)** | `f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0` |
+| V6 (previous baseline / V7 revert target) | `f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0` |
+| **V7 Continue (current in-game baseline)** | `57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571` |
 
 ## Ruler payload
 

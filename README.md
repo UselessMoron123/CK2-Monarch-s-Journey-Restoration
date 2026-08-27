@@ -9,6 +9,8 @@ first, then `00_START_HERE/STATUS.md` for current state.
 
 - Organized archive: `ALL-MY-LOGS-SO-FAR/` (15 numbered subfolders + README + PLAN)
 - Audit/history of every organization pass: `RECON_NOTES_2026-08-26.md`
+- Staging dump folders (`latest logs/`, `latest latest logs/`, `new new logs/`)
+  were ingested 2026-08-27 and removed; unique bits live in the archive.
 
 ## Materialized binaries
 All binary material is now sorted under

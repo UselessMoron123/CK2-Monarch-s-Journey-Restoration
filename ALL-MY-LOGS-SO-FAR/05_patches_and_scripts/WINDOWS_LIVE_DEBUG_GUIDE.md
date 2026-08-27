@@ -99,13 +99,12 @@ has drifted between runs.
 
 | Surface | Current state | Code path |
 |---|---|---|
-| **Paradox launcher** Continue | grey, unclickable (save name visible) | `pdx_launcher.lib` — `0x00DE47C0`, `0x00DE8BB0`, `0x0099F540` |
-| **In-game main menu** Continue | clickable → "Continue failed!" | frontend — `0x1408145ec` |
-| **MJ panel / Single Player** Continue | clickable → "Continue failed!" | frontend — `0x1408145ec`, `0x1407bffa1` |
+| **Paradox launcher** Continue | grey, unclickable (C25) | `pdx_launcher.lib` — `0x00DE47C0`, `0x00DE8BB0`, `0x0099F540` |
+| **In-game main menu** Continue | **SOLVED (V7)** — loads save, no popup | execution `0x1409E6700` / patch `0x009E5B8B` |
+| **MJ panel / Single Player** Continue | **SOLVED (V7)** | same engine path |
 
-All three are longstanding (case C08); none of them changed recently. Fixing the
-frontend path will not necessarily un-grey the launcher button, and vice versa.
-**Single Player → Load Game still works** and remains the usable route.
+Do not conflate launcher grey with in-game Continue. Launch `CK2game.exe`
+directly. Attach-mode proof: `07_runtime_logs/x64dbg/`.
 
 ---
 
@@ -146,7 +145,7 @@ Before attaching:
 - keep CK2 offline;
 - use the copied test installation;
 - make sure it is the May 2020 3.3.3 executable;
-- apply the known-good V6 patch only;
+- apply the known-good **V7** patch (V6 is the revert target);
 - never use `wipe_feats`;
 - do not save over your only evidence saves.
 

@@ -6,7 +6,7 @@ It only looks at files and prints a report. It cannot break your game.
 It answers four questions in one go:
 
 1. Which `CK2game*.exe` files exist, and **exactly which patch level each one is**
-   (stock / V1 / V2 / V3 / V4 / V5 / **V6** / banned).
+   (stock / V1…V5 / **V6** / **V7 Continue** / banned trampoline / abandoned feat-V7).
 2. Is the `gfx\monarchs` payload present and correct?
 3. Where are your real save / cache / log folders?
 4. What do your feat counters say right now — and has the cache identity changed?
@@ -92,8 +92,9 @@ reverts the moment you close it. It changes nothing permanently.
 
 ```text
   CK2game.exe   <-- this is the one Windows launches by default
-    sha256  : f5b7dfd6...
-    state   : V6 CURRENT BASELINE (runtime-proven)      <-- green = good
+    sha256  : 57b18e43...
+    state   : V7 CURRENT IN-GAME CONTINUE (runtime-proven)      <-- green = good
+    (V6 is cyan/acceptable — previous baseline / V7 revert target)
 ```
 
 Every patch state is the same 24,753,368 bytes, so **only the hash tells them

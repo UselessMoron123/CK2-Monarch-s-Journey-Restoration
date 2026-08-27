@@ -14,9 +14,10 @@ entry by its SHA-256, not its generation label (labels collide — see Part 3).
 | **"V6" (Part 2 trampoline)** | `a6cb92b8eda36c775751eb2af8c27a2509c5b9cee84872ef9e5fd6afd3cb18ff` | 24,753,368 | Code-injection trampoline at `0x00ff66a2` called `0x1409e8200` during the save-**read** path. That helper is a vector **append** (write direction), not a deserializer — it corrupted archive parsing: `"Unexpected token: fem/dna/properties/culture/government/dynasty"`, crashes on resign/bookmark change, feats not counting. Reverted; V6 patcher files deliberately deleted. See `CK2_MJ_V6_FAILED_ROADCAUSE.md` and Part 2 C2/B3. |
 | **"V7" feat-update candidate** | `0074af707665bb152d3592d8ba9320ea81e79e6f58edc218e22aa069b353aeb8` | 24,753,368 | Two-branch patch on top of V6 targeting "live feat updates after load." Raw offsets `0x00666546: 74 0d → 90 90` and `0x007856e8: 74 0d → 90 90` (duplicated outer gates skipping live feat-update routine). Premise (tracker dead after load) was **disproven** by a fresh Pavao Bronzeman campaign granting Bronze at exact payload threshold and persisting. Built/pushed as `cb1df83` / `c70a453` on `arena/01a02609…` (files `patch_ck2_mj_v7.ps1` + `APPLY_CK2_MJ_V7.bat` + `CHECK_CK2_MJ_V7.bat` + `REVERT_CK2_MJ_V7_TO_V6.bat` + `CK2_MJ_V7_TEST_GUIDE.md` in `things parent AI asked to upload/`) but **never shipped or committed to organized repo**; do not resurrect without reproducible fresh-campaign failure. See Part 3 D1, `logs to dissect.../(5).txt`, and `DISSECTION_REPORT.md`. |
 
-> These are **not** the current V6/V7. Current safe baseline = V6 `f5b7dfd6e23b…`
-> (5 save-selection branches, no injected code). The current V7 *target* is the
-> Continue-enable fix (no patcher yet). See `00_START_HERE/STATUS.md`.
+> These are **not** the current V6/V7. Current in-game Continue baseline = V7
+> `57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571`
+> (`0x009E5B8B` `75 2f→eb 2f`). V6 `f5b7dfd6e23b…` is the exact revert target
+> (5 save-selection branches, no injected code). See `00_START_HERE/STATUS.md`.
 
 ## B2. Helpers that must not be called from a load path
 

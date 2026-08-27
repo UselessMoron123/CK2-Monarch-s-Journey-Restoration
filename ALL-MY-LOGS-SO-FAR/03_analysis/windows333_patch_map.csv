@@ -1,4 +1,4 @@
-target,win333_may2020,stock_sha256,656f4f482ed698958e1108938f7e5baff5b5dd31b3b310a7ea51386faca635d8,v6_sha256,f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0
+target,win333_may2020,stock_sha256,656f4f482ed698958e1108938f7e5baff5b5dd31b3b310a7ea51386faca635d8,v6_sha256,f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0,v7_sha256,57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571
 raw_offset,virtual_address,introduced_in,stock_bytes,patched_bytes_v6,length_preserved,purpose,category
 0x00d73d02,,V2,74 2b,eb 2b,yes,Force local/null GameSpark factory branch,loader
 0x00d73e1a,,V2,ba 23 36 00,21 fc 32 00,yes,LoadLocalCache gfx\test.dds -> gfx\monarchs,loader
@@ -21,3 +21,4 @@ raw_offset,virtual_address,introduced_in,stock_bytes,patched_bytes_v6,length_pre
 0x009e4fc3,0x1409e5bc3,V6,74 0f,eb 0f,yes,Newer-save path accept (target 0x1409e5bd4),save_loading
 0x009e5377,0x1409e5f77,V6,0f 84 63 01 00 00,e9 64 01 00 00 90,yes,Named-save path accept (target 0x1409e60e0),save_loading
 0x009e5452,0x1409e6052,V6,74 0b,eb 0b,yes,Latest-save path accept (target 0x1409e605f),save_loading
+0x009e5b8b,0x1409e678b,V7,75 2f,eb 2f,yes,Bypass retired cloud-sync check on Continue execution,continue_execution

@@ -4,7 +4,8 @@
 **Bring back Monarch's Journey for personal offline Windows use** — panel,
 Bronzeman, live tracking, saves, **Continue**, and as much reward UI as is
 local — without losing research history. **Featured Rulers** is a separate
-follow-on once MJ Continue works (`00_START_HERE/FEATURED_RULERS.md`).
+follow-on (`00_START_HERE/FEATURED_RULERS.md`). In-game Continue is done (V7);
+launcher Continue is C25.
 
 ---
 
@@ -27,26 +28,21 @@ follow-on once MJ Continue works (`00_START_HERE/FEATURED_RULERS.md`).
   reference (2.6.1.1 PDB → win333), contradictions register, 3.3.5.1 port
   assessment (port not feasible).
 
-## PHASE 2 — V7 Continue enable fix ⬅ current
-**Case C08.** Continue greyed = *enable predicate*, not click handler.
-V6 already patched account branch in helper `0x1409e4970`.
-Knowledge base is consolidated: `03_analysis/CONTINUE_SEMANTIC_REFERENCE.md`
-(2.6.1.1 model → win333 anchors, two-helper CFG correction, rejection-path
-breadcrumbs, ordered steps). The old triage/CFG notes were merged into it
-(2026-08-26).
+## PHASE 2 — V7 in-game Continue execution ✅
+**Case C08 SOLVED.** The remaining V6 failure was not the enable predicate.
+Continue *execution* at `0x1409E6700` failed the retired cloud-sync byte
+`[rsi+0x63]` and constructed `CContinueFailedPopup` (`0x140726560`).
+V7: `0x009E5B8B` `75 2f → eb 2f`. Hash
+`57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571`.
+Live Kulin load in `03_analysis/V7_RUNTIME_RESULTS.md` / Part 4.
 
-- [ ] Anchors: Linux `GetContinueSave` ↔ win333 `0x1409e5500` region;
-      callers `0x1407bffa1`, `0x1408145ec`, `0x140a0ba62`
-- [ ] Map `_bIsContinueSaveValid` / `RefreshContinueButton` equivalents
-- [ ] Hypotheses: FR-marker in continue validator; account-bound session flag;
-      cloud/timestamp; widget refresh order
-- [ ] Guarded `patch_ck2_mj_v7.ps1` + bats; hash-guard from exact V6 SHA
-- [ ] Offline test: Continue clickable? Loads Bronzeman with progress?
-- Evidence shots: catalog **A** — (1)(2)(4)(5)(217)(219)(226)
+- [x] Guarded `patch_ck2_mj_v7.ps1` + APPLY/CHECK/REVERT bats
+- [x] Offline test: in-game Continue loads Bronzeman without popup
+- [ ] Paradox launcher Continue (split out as **C25**, not Phase 2)
 
-## PHASE 3 — Secondary polish (after V7)
+## PHASE 3 — Secondary polish ⬅ current
 Cases C09–C12, C13, C17: MP 2nd boot, grey map, flicker mp4, missing arrow,
-random-ruler MJ loss, gauntlet tooltip.
+random-ruler MJ loss, gauntlet tooltip. Optional C25 launcher Continue.
 
 ## PHASE 4 — Separate projects
 - [ ] Local reward gallery (ladder in `FR_MJ_COMPLETE_ROSTER.md` §0; Linux SetupRewards)
@@ -62,5 +58,6 @@ random-ruler MJ loss, gauntlet tooltip.
 ---
 
 ## Suggested next move
-1. You drop **A_v6_continue_*** images into `14_screenshots_and_media/`.
-2. Agent (or you) starts **Phase 2 V7** on May-2020 win333 exe with triage doc.
+1. Play on V7 (`CK2game.exe` launched directly). Optional: drop Continue-success
+   screenshots into `14_screenshots_and_media/` catalog **A**.
+2. Optional Phase 3 polish, or C25 launcher Continue, or Featured Rulers.

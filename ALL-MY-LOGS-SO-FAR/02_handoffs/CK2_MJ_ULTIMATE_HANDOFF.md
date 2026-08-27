@@ -1,14 +1,12 @@
 # Crusader Kings II Monarch's Journey restoration — the single handoff
 
-> **Status banner (2026-08-26):** The core restoration loop is **runtime-proven on
-> Windows May-2020 3.3.3** (V6, SHA-256 `f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0`):
-> payload load, Bronzeman start, live challenge evaluation, Bronze tier grant, save
-> write, manual Load with feat-globals restore (3 March 1173 + Heretical Company 1/6),
-> and persistent local feat cache. **The only remaining functional gap is the greyed-out
-> Continue button** → V7 target (enable predicate, not click handler). Read
-> `00_START_HERE/STATUS.md` first (authoritative state); this file is the deep background:
-> exact identities, patch tables, dead ends, safety rules, and where everything lives in
-> the repo. **All artifacts are already in the connected repository** — do not ask the
+> **Status banner (2026-08-27):** The core restoration loop **and in-game Continue**
+> are runtime-proven on Windows May-2020 3.3.3. Current baseline is **V7**
+> SHA-256 `57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571`
+> (`0x009E5B8B` `75 2f→eb 2f`). V6 `f5b7dfd6…` is the exact revert target.
+> Paradox **launcher** Continue remains grey (case C25) — launch `CK2game.exe`
+> directly. Read `00_START_HERE/STATUS.md` first; this file is deep background.
+> **All artifacts are already in the connected repository** — do not ask the
 > user to upload anything listed in §0.
 
 ## Instructions to the next Arena.ai Agent Mode session
@@ -18,10 +16,8 @@ Do **not** restart the investigation, ask the user to repeat old tests, or reque
 collections of files already stored in this repository. Everything is reachable from
 `ALL-MY-LOGS-SO-FAR/` (§0 maps every artifact class to its folder).
 
-The immediate pending task is **V7: make the Continue button work** on exact May 2020
-Windows 3.3.3 — analysis knowledge base is ready in `03_analysis/CONTINUE_SEMANTIC_REFERENCE.md`
-(2.6.1.1 semantic model → win333 anchors → ordered steps). Finish save/Continue before
-attempting a port to 3.3.5.1 or reconstructing the cosmetic reward gallery.
+In-game Continue is **done** (V7). Optional remaining work: launcher Continue (C25),
+Phase 3 polish (C09–C12), Featured Rulers, local reward gallery. Do not restart V7.
 
 This work is for personal restoration/interoperability of a retired game feature. Do not
 redistribute any complete original or modified CK2 executable. Produce guarded patch
@@ -140,7 +136,8 @@ Exact hashes (also in `MASTER_ARTIFACT_TABLE.md`):
 | V3 | `e91a5f4693ca3b747d7340fda71ed66b3593e2f98af14c37e6086b0d76fb13ca` |
 | V4 | `f2967f6f2c5b8b7d49dec2f7066139ace321cca19480f5c57d3ca8d576259b30` |
 | V5 | `29556549fb5fc657f2966949b6a5b59c9b89b707f954adca4868cfd3d90b1535` |
-| **V6 (current baseline)** | **`f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0`** |
+| V6 (previous baseline / V7 revert target) | **`f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0`** |
+| **V7 Continue (current in-game baseline)** | **`57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571`** |
 | ⛔ "V6" trampoline (Part 2) | `a6cb92b8eda36c775751eb2af8c27a2509c5b9cee84872ef9e5fd6afd3cb18ff` — **BANNED** |
 | ⚠️ "V7" feat-update candidate | `0074af707665bb152d3592d8ba9320ea81e79e6f58edc218e22aa069b353aeb8` — abandoned |
 
@@ -420,6 +417,11 @@ The challenge predicate requires:
 1. Ironman or the real Bronzeman context;
 2. active game rules that permit feats;
 3. service byte `+0x61` true: save is valid;
+4. service byte `+0x63` true: stocge predicate requires:
+
+1. Ironman or the real Bronzeman context;
+2. active game rules that permit feats;
+3. service byte `+0x61` true: save is valid;
 4. service byte `+0x63` true: stock checksum/no user modification;
 5. service byte `+0x62` false: no Ruler Designer;
 6. service byte `+0x65` true: Steam active.
@@ -673,14 +675,12 @@ D: Load works but Continue fails) resolved as **case A, plus more**:
 - Full evidence chain: `03_analysis/V6_RUNTIME_RESULTS.md`; Bronze popup in
   `07_runtime_logs/game_v6sl.log`; screenshots catalogued (catalog **A** section).
 
-**Still broken:** the **Continue button stays grayed out** — from the main menu and from
-the MJ panel. V6 patched the inline account branch inside the Continue candidate-selection
-helper `0x1409e4970`, so a *different, non-account* predicate is rejecting Continue. This
-is the V7 target (next section).
+**At that time still broken:** in-game Continue popped “Continue failed!” (fixed in
+V7, next section). Launcher Continue stayed grey (still C25).
 
 ---
 
-# 12. V7 — the current open task: the greyed-out Continue button
+# 12. V7 — in-game Continue execution (SOLVED)
 
 ## 12.1 State of knowledge (consolidated)
 
@@ -710,15 +710,15 @@ Summary:
   `CONTINUE_SEMANTIC_REFERENCE.md` §C/§D. Do **not** re-patch the V5/V6 branches; do not
   globally force the button enabled or fabricate account state.
 
-## 12.2 What to build next (when the remaining predicate is found)
+## 12.2 What was built (2026-08-27)
 
-1. Guarded `05_patches_and_scripts/ps1/patch_ck2_mj_v7.ps1` + apply/check/revert bats,
-   hash-guarded from exact V6 SHA `f5b7dfd6…` (stock `656f4f48…` accepted too),
-   length-preserving, byte-verified, revertible.
-2. Short test guide; user test offline: boot → main menu / MJ panel → is Continue
-   clickable? → does it load the Bronzeman save with `1/6`+ progress? (Two yes/no results.)
-3. Evidence screenshots: catalog **A** — (1)(2)(4)(5)(217)(219)(226); drop into
-   `14_screenshots_and_media/`.
+Live tracing showed the remaining failure was **execution**, not enable-state:
+`0x1409E6700` reads `[rsi+0x63]` (cloud-sync) and constructs `CContinueFailedPopup`
+(`0x140726560`) when the byte is 0 offline. V7: raw `0x009E5B8B` `75 2f→eb 2f`.
+SHA `57b18e43…`. Guarded `patch_ck2_mj_v7.ps1` + APPLY/CHECK/REVERT bats +
+`CK2_MJ_V7_TEST_GUIDE.md`. Evidence: `V7_RUNTIME_RESULTS.md`, Part 4.
+
+Launcher Continue is **C25**, not this section.
 
 ---
 
@@ -764,7 +764,7 @@ Prior logs consistently contain:
 ```
 
 That is expected and separate from local challenge tracking. Do not start this work
-until V7 Continue is resolved.
+until you explicitly start the reward-gallery project.
 
 ---
 
@@ -825,7 +825,7 @@ high-level component was removed or stripped.
   consistency.
 - An empty GameSparks folder named approximately `E349414h9BDm` was observed in
   AppData/Roaming; it has not provided useful cached property data.
-- Other cosmetic/flow items to revisit after V7: MP button breaks on second boot /
+- Other cosmetic/flow items (Phase 3): MP button breaks on second boot /
   after resign-to-menu; gray map on first boot; MJ arrow absent in some boots; MJ
   interface disappears if a Bronzeman save is entered via the random-ruler path; no
   featured-ruler crown in Bronzeman. (Cases C09–C12/C13/C17 in `CASES_AND_FINDINGS.md`.)
@@ -906,13 +906,12 @@ The user can paste this (everything needed is already in the repo):
 > Read `ALL-MY-LOGS-SO-FAR/00_START_HERE/STATUS.md` first and treat it as the
 > authoritative project state; then read `ALL-MY-LOGS-SO-FAR/02_handoffs/CK2_MJ_ULTIMATE_HANDOFF.md`
 > for deep background, and `ALL-MY-LOGS-SO-FAR/03_analysis/CONTINUE_SEMANTIC_REFERENCE.md`
-> as the V7 Continue knowledge base. All executables, payload, saves, cache, logs, and
-> patch tooling are already in the repo (handoff §0 maps them). Do not restart the
-> investigation, do not ask me to re-upload artifacts, and never tell me to run
-> `wipe_feats`. The immediate task is V7: find the remaining non-account predicate that
-> keeps the Continue button greyed out on the exact May-2020 3.3.3 build, then produce a
-> guarded, hash-verified V7 patcher and a two-question offline test for me. Do not
-> redistribute a modified executable.
+> as the Continue knowledge base (V7 in-game path is solved — see §F). All executables,
+> payload, saves, cache, logs, and patch tooling are already in the repo (handoff §0).
+> Do not restart the investigation, do not ask me to re-upload artifacts, and never
+> tell me to run `wipe_feats`. Current baseline is V7 `57b18e43…`. Optional next:
+> launcher Continue (C25), Phase 3 polish, or Featured Rulers. Launch CK2game.exe
+> directly. Do not redistribute a modified executable.
 
 ---
 
@@ -946,7 +945,7 @@ but kept on record. All other V4/V5 tool hashes were recomputed against the file
 
 # 20. Current bottom line
 
-Already working on exact May Windows 3.3.3 (V6, SHA `f5b7dfd6…`):
+Already working on exact May Windows 3.3.3 (**V7**, SHA `57b18e43…`; V6 `f5b7dfd6…` revert):
 
 - local eleven-ruler payload;
 - Monarch's Journey arrow/panel;
@@ -957,12 +956,12 @@ Already working on exact May Windows 3.3.3 (V6, SHA `f5b7dfd6…`):
 - live in-game challenge evaluation and tier progress (Bronze grant proven);
 - save writing with `bronzeman=yes` + `special_event` + feat globals;
 - manual Load with full deserialization (3 March 1173, Heretical Company 1/6);
-- persistent local feat-progress cache across sessions.
+- persistent local feat-progress cache across sessions;
+- **in-game Continue** (main menu / MJ / Single Player) — no popup; loads Bronzeman.
 
 Not yet working:
 
-- **Continue** (main menu and MJ panel) — the V7 target; enable predicate, not click
-  handler. Knowledge base consolidated in `03_analysis/CONTINUE_SEMANTIC_REFERENCE.md`.
+- **Paradox launcher Continue** (C25) — grey; launch `CK2game.exe` directly.
 
 Later, separate projects are:
 
