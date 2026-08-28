@@ -54,10 +54,16 @@ latest Bronzeman save without the generic failed popup.
 - **C25 — Paradox launcher Continue** still grey. Independent of engine V7.
   Breadcrumbs: `pdx_launcher.lib` `0xDE47C0` / `0xDE8BB0` / `0x99F540`,
   `launcher-v2.sqlite`. Hypothesis until those files are actually inspected.
-- Feat-cache after the Llywelyn session: preflight saw
-  `Bronzeman_llywelyn_gwynedd.ck2` (1195.1.1) and `Gwynedd1195_01_08.ck2`
-  (1195.1.8), both `bronzeman=yes` `special_event=llywelyn_gwynedd`, **no feat
-  cache file**. Saves not uploaded. Identity-drift hypothesis still untested.
+- **Feats reset after a cold quit→relaunch→load** (but survive a warm resign).
+  Re-opened 2026-08-27. Mechanism confirmed: in-game counter is re-hydrated only
+  by `CRulerFeatTracker::UpdateFeatProgress`, gated twice by
+  `IsActiveForPlaythrough()`; the featured-ruler match is lost on cold load.
+  Identity drift **refuted** (preflight `user_id=84696387` stable).
+  **V8 candidate** (two length-preserving edits, untested) — see
+  `03_analysis/FEAT_RESET_QUIT_VS_RESIGN.md` and
+  `04_test_guides_and_reports/CK2_MJ_V8_TEST_GUIDE.md`.
+  Tools: `ps1/patch_ck2_mj_v8.ps1`, `bat/APPLY_CK2_MJ_V8.bat`,
+  `bat/CHECK_CK2_MJ_V8.bat`, `bat/REVERT_CK2_MJ_V8_TO_V7.bat`.
 
 ### Secondary (do not block on these)
 

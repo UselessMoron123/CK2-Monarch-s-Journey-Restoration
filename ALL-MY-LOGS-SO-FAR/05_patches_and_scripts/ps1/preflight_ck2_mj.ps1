@@ -31,11 +31,16 @@ $KnownExe = @{
     'e91a5f4693ca3b747d7340fda71ed66b3593e2f98af14c37e6086b0d76fb13ca' = 'V3 UI gates (superseded)'
     'f2967f6f2c5b8b7d49dec2f7066139ace321cca19480f5c57d3ca8d576259b30' = 'V4 offline challenges (superseded)'
     '29556549fb5fc657f2966949b6a5b59c9b89b707f954adca4868cfd3d90b1535' = 'V5 save validator + tooltip (safe rollback target)'
-    'f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0' = 'V6 CURRENT BASELINE (runtime-proven)'
+    'f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0' = 'V6 save-list baseline (runtime-proven)'
+    '57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571' = 'V7 CURRENT BASELINE (in-game Continue, runtime-proven)'
     'a6cb92b8eda36c775751eb2af8c27a2509c5b9cee84872ef9e5fd6afd3cb18ff' = 'BANNED "V6" trampoline - corrupts saves, DO NOT RUN'
     '0074af707665bb152d3592d8ba9320ea81e79e6f58edc218e22aa069b353aeb8' = 'Abandoned "V7" feat-update candidate (premise disproven)'
 }
-$GoodExe     = 'f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0'
+$GoodExe     = '57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571'
+$AcceptableExe = @(
+    '57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571',
+    'f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0'
+)
 $BannedExe   = @(
     'a6cb92b8eda36c775751eb2af8c27a2509c5b9cee84872ef9e5fd6afd3cb18ff'
 )
