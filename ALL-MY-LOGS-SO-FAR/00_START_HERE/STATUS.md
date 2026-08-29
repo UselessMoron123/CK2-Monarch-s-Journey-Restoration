@@ -64,6 +64,9 @@ latest Bronzeman save without the generic failed popup.
   `04_test_guides_and_reports/CK2_MJ_V8_TEST_GUIDE.md`.
   Tools: `ps1/patch_ck2_mj_v8.ps1`, `bat/APPLY_CK2_MJ_V8.bat`,
   `bat/CHECK_CK2_MJ_V8.bat`, `bat/REVERT_CK2_MJ_V8_TO_V7.bat`.
+  2026-08-29: user tried the V8 files and reported **"still didn't work"** — unresolved
+  (bat flicker again vs. feats still 0 after a confirmed V8 apply; not yet disambiguated).
+  Handoff for the next session: `02_handoffs/NEXT_SESSION_HANDOFF_2026-08-29.md`.
 
 ### Secondary (do not block on these)
 
