@@ -285,6 +285,36 @@ Session branch ids seen in `last log/`: `arena/01a044b2`, `arena/01a04980`,
 `arena/01a044b2` was **rejected by the service** (no branch to push to), which is why
 `arena/01a04980` re-did the landing.
 
+### 11.9 — Second-pass recovery (2026-08-30): what the §11 sweep missed
+
+A re-read of the raw exports looking specifically for **"things that aren't
+needed"** — dead ends, redundant artifacts, abandoned approaches — recovered
+material the original sweep did not capture. All of it now lives in
+`V9_DESIGN_ALTERNATIVES_AND_V8_DEPENDENCY.md` and `11_git_patch/README_GIT_PATCH.md`.
+
+| Item | Source | Was it in the archive? |
+|---|---|---|
+| **V8's `0x007B786B` byte is mandatory in the shipped V9** — reverting it makes the V9 byte unreachable, so the fix silently stops working | `last log (for now).txt:2963` | ❌ No. Archive said only that V9 "keeps V8's bypasses … for the record", never that one of them is load-bearing |
+| **Abandoned alternative V9 design at raw `0x007B785B`** (`74 07`→`90 90`, the flag gate), under which V8's `0x007B786B` byte *would* be dead code | `last log (for now).txt` — **~40 occurrences** (lines 417, 2293, 2778–2809, 3439–3720, 4281, 4415) | ❌ No. `7b785b` had **zero** archive hits despite appearing ~40 times in the source |
+| `0x14080F370` writes singleton `+0x63 = (id == 0x17A36D62)` and `+0x65 = al`; no direct callers (vtable dispatch); **not** the cold gate | `last log (for now).txt:4120` | 🟡 Half. The constant `0x17A36D62` survived in Part 5 §B2, but the **function address existed only inside the scratch script `py/disasm18.py`** and in no document |
+| The four `11_git_patch/*.patch` files are **redundant turn-end captures** whose changes are already committed | `another other raw log.txt:228,242,292,394,429` | ❌ No. Folder had no README; re-verified 2026-08-30, all four fail `git apply --check` |
+| **V8's first edit resurrects a banned patch.** `0x00666546: 74 0d→90 90` is byte-identical to the banned "V7 feat-update" candidate's first edit, whose precondition ("reproducible fresh-campaign failure") was never met | `BANNED_ARTIFACTS.md` §B1 vs V8 patch table | ❌ No cross-reference existed; the ban is vindicated by V8's disproof, not overturned |
+| Region raw `0x665600`+ is data/padding; `call qword ptr [rax+0x388d8d48]` there is mid-instruction junk from a misaligned linear sweep | `last log (for now).txt:1467` | ❌ No. Same failure mode as `CONTRADICTIONS.md` §13 (mis-armed `DAILY_GATE`) |
+
+**Methodology correction for future sweeps.** The §11 "How this was verified"
+note claims every `0x…` token absent from the corpus was listed. That did not
+hold:
+
+- `0x7B785B` appeared ~40 times in the source and was **not** listed — a
+  6-hex-digit address is easy to lose among the per-instruction byte noise the
+  sweep deliberately discarded.
+- `0x14080F370` was suppressed because it "matched" the corpus — but its only
+  match was the scratch script `py/disasm18.py`, not a document.
+
+**Rule going forward:** treat `05_patches_and_scripts/py/disasm*.py` as
+*scratch*, not corpus. A fact that exists only inside a scratch script is
+**unarchived** — scratch scripts get pruned, documents do not.
+
 ---
 
 ## How this was verified

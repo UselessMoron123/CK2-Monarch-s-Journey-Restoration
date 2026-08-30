@@ -19,6 +19,19 @@ entry by its SHA-256, not its generation label (labels collide — see Part 3).
 > (`0x009E5B8B` `75 2f→eb 2f`). V6 `f5b7dfd6e23b…` is the exact revert target
 > (5 save-selection branches, no injected code). See `00_START_HERE/STATUS.md`.
 
+> ⚠️ **The banned "V7 feat-update" was partially resurrected by V8, without the
+> register's precondition being met.** V8's first edit is *byte-identical* to the
+> banned candidate's first edit: `0x00666546: 74 0d → 90 90`. The register said
+> "do not resurrect without reproducible fresh-campaign failure"; that evidence
+> was never produced. V8 was then disproven at runtime (feats 0 in game *and* in
+> the main-menu MJ tab), which **vindicates the ban** rather than overturning it.
+> The banned candidate's *second* edit (`0x007856E8`, the RESTORE gate) was not
+> carried into V8, and the trace independently refuted it
+> (`RESTORE_GATE al=1` — Part 5 §B2 theory 6).
+> Note that the surviving `0x00666546` byte inside V9 is nonetheless
+> **load-bearing**, not optional — see
+> `V9_DESIGN_ALTERNATIVES_AND_V8_DEPENDENCY.md` §3.
+
 ## B2. Helpers that must not be called from a load path
 
 | Address (win333) | Role | Must not be used for |

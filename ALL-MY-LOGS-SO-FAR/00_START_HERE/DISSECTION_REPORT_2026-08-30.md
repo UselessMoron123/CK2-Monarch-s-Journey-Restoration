@@ -122,3 +122,22 @@ folder holds **nine** `.txt` exports (1,827,795 bytes, 23,146 lines); the ninth 
 orchestrating session `arena/01a053d9` that created this very archive and merged
 PR #17. Its findings are not re-archived (they are the archive); it is ledgered
 here for provenance so a future session does not re-dissect it.
+
+**Second-pass correction (2026-08-30).** "Nothing lost" was over-claimed. A
+re-read of `last log (for now).txt` aimed specifically at *dead ends, redundant
+artifacts and abandoned approaches* recovered six items the first pass had not
+archived. The two that matter most:
+
+- V8's `0x007B786B` byte is **mandatory** in the shipped V9 — it sits upstream of
+  the V9 edit in the same function, so reverting it makes the V9 fix
+  unreachable. The first pass recorded only that V9 "keeps V8's bypasses … for
+  the record", which reads as optional. It is not.
+- An **abandoned alternative V9 design at raw `0x007B785B`** (`74 07`→`90 90`)
+  was considered and rejected. Its address appears **~40 times** in the source
+  log yet had **zero** archive hits. Under that design V8's `0x007B786B` byte
+  *would* be dead code — so "is that byte redundant?" has opposite answers
+  depending on which design is in use.
+
+Full list, plus the methodology correction (scratch `disasm*.py` files must not
+be counted as corpus): `03_analysis/RAWLOG_NETNEW_EXTRACTS.md` §11.9 and
+`03_analysis/V9_DESIGN_ALTERNATIVES_AND_V8_DEPENDENCY.md`.
