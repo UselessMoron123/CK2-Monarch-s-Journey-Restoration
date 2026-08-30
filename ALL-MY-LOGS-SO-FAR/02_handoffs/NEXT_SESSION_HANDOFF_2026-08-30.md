@@ -1,5 +1,30 @@
 # Crusader Kings II Monarch's Journey restoration — next-session handoff (2026-08-30)
 
+> ## ⚠️ SUPERSEDED BANNER — added later on 2026-08-30, read this first
+>
+> **The V9 cold rerun happened and V9 WORKS.** User verdict, verbatim: *"the result of
+> v9 — it works, feats are present, don't reset after soft or hard quiting. they go up
+> if i do the right thing."*
+>
+> **In-game baseline is V9**, SHA-256
+> `61e4345ba1395f09d26f84bf030ae0474fce3f0635a3516edea56b46c486d687`. The banner below
+> this one is the pre-verdict state and is kept only to show what was known when.
+>
+> - Canonical account: `03_analysis/V9_RUNTIME_RESULTS.md` and
+>   `01_research_archives/CK2_MJ_RESEARCH_ARCHIVE_PART5.md`.
+> - Test/apply/revert steps: `04_test_guides_and_reports/CK2_MJ_V9_TEST_GUIDE.md`.
+> - Current authoritative status: `00_START_HERE/STATUS.md`.
+> - The user's remaining question (medal stays Bronze on older saves, notification does
+>   not repeat) is **answered and is not a defect**:
+>   `03_analysis/FEAT_CACHE_PEAK_TIER_ICON.md`.
+> - Three corrections were issued against earlier documents — see
+>   `03_analysis/CONTRADICTIONS.md` §12 (identity drift is **not** refuted),
+>   §13 (the `DAILY_GATE` trace breakpoint is `0x1000` off the patched byte),
+>   §14 (V8 did **not** wipe the cache).
+>
+> Nothing is blocking play. Open items are cosmetic/secondary: C25 launcher Continue,
+> C09–C13, C17, and the Phase-4 separate projects.
+
 > **Status banner (2026-08-30):** In-game baseline is **V8** (SHA-256
 > `94d6fb403b4541a53f846b348722ee81bc832b66ac853f6fd532f08e2e8b7e93`). The V8 clean
 > trace (`last log/x64dbg logs.txt`) **disambiguated** the open bug: V8 ran and its

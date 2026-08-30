@@ -151,6 +151,133 @@ that was only in those exports:
 
 ---
 
+## 11. V8-disproof / V9 chats (torn 2026-08-30, from `last log/`)
+
+### 11.1 The playthrough-activation function and its magic id — **net-new**
+
+Found while walking the eligibility chain inside `last log (for now).txt`
+(`arena/01a0534b`, ~line 2150). This address and this constant appear in **no**
+pre-existing document in the repo; the only other occurrence of `0x14080F370`
+anywhere is as an address constant inside `05_patches_and_scripts/py/disasm18.py`.
+
+```text
+VA 0x14080F370 (raw 0x0080E770)   ; reached only through a vtable — no direct E8 callers
+  +0x22  call 0x1400AF050              ; the 0x68-byte singleton (defaults +0x61=1, +0x63=1)
+  +0x27  mov  rdx, [rip+0xED472A]      ; global object
+  +0x2E  mov  rdi, rax
+  +0x31  mov  rcx, [rdx+0x1C0]
+  +0x38  call 0x140DA68F0              ; global,[global+0x1c0] → al
+  +0x3D  cmp  ebx, 0x17A36D62          ; MAGIC ID = 396,936,034
+  +0x43  mov  byte ptr [rdi+0x65], al  ; singleton+0x65 = "tracking enabled"
+  +0x46  mov  rbx, [rsp+0x30]
+  +0x4B  sete cl
+  +0x4E  mov  byte ptr [rdi+0x63], cl  ; singleton+0x63 = (id == 0x17A36D62)
+  +0x51  mov  rax, [rsi+0x30]
+  +0x5A  mov  byte ptr [rax], 1        ; "ran once"
+```
+
+`ebx` = `[[rsi+0x28]+0x18]` — the current playthrough's id. Both `+0x65` (must be
+non-zero for `CalcShouldTrackFeatProgress` to pass its singleton check) and `+0x63`
+(must be non-zero for the final gate `0x1400AF690` to return true) are written **here,
+from one comparison**. `+0x63` defaults to 1, so this function is the only thing that
+can *clear* it. That makes it the strongest remaining candidate for a cold-load
+"special-event match is lost" mechanism — and the reason V9 replaces the gate *call*
+rather than trying to repair the flag.
+
+`0x17A36D62` is unexplained. Not verified as any particular hash — do not assert.
+
+### 11.2 Feat-cache states (net-new rows)
+
+| Capture | `user_id` | `established` | `conquerer_from_bribir` | `category` | Extra |
+|---|---|---|---|---|---|
+| pasted 2026-08-29 (no-repo chat) | `1179784490` | 4 | 1 | `-1991027533` | all other 31 feats 0 |
+| enumerated 29.08 16:19:51 | `84696387` | 3 | 1 | `-852858316` | file SHA-256 `3606E210F48EB16B668B06E24942B545E65B11531F28F28D08FF9FDDE404601F` |
+| enumerated 29.08 20:32:18 | `84696387` | 3 | 1 | `-852858316` | `Length 751` |
+| pasted blocks (other run) | `1148909174` | 4 / 2 | 1 | `-1991027533` / `1474319405` | two states |
+
+All carry `key = id = -2128831035` (FNV-1a 32-bit offset basis). Together with the two
+already-archived captures (`453496064`, `84696387`) that is **four distinct `user_id`
+values for one logical cache file** → `CONTRADICTIONS.md` §12.
+
+Also net-new: the GameSparks `Roaming` folder `E349414h9BDm` did **not** reappear after
+the failed V8 run (so the offline/online identity split is not what moved the cache).
+
+### 11.3 Save inventory (net-new)
+
+Ten Pavao/Croatia saves on the user machine, all with
+`global_conquerer_from_bribir=1.000`; `global_established` = 2.000 (×3), 3.000 (×5),
+4.000 (×2). Full table with sizes and timestamps in Part 5 §C4. Key inference: the
+save stores the **current** value, the cache stores the **peak** — which is why
+`Bronzeman_pavao_croatia.ck2` (day one, `global_established=2.000`) still shows Bronze.
+
+### 11.4 `.bat` flicker — real root cause (net-new)
+
+The earlier explanation (CRLF/LF line endings) is incomplete. `APPLY_CK2_MJ_V8.bat`
+line 34 wraps `powershell.exe -Command "…(…)…"` inside a multi-line
+`if exist (…) ( … ) else ( … )` block; cmd.exe ends the block at the first `)` inside
+the quoted PowerShell string and terminates before `pause`, so the window closes with
+no output. Direct PowerShell works because cmd's parser is out of the path.
+Rule: never nest a parenthesised PowerShell command inside a multi-line batch `if`.
+
+### 11.5 The unpatched restore gate (net-new disassembly)
+
+```text
+VA 0x1407862E1  call 0x1407B8370        ; IsActiveForPlaythrough
+VA 0x1407862E6  test al, al
+VA 0x1407862E8  je   0x1407862F7        ; 74 0D at raw 0x007856E8 — STILL 74 0D in V8 and V9
+VA 0x1407862F2  call 0x1407B8E60        ; UpdateFeatProgress
+```
+
+Byte-pattern xref scan confirms exactly two direct callers of `UpdateFeatProgress`:
+raw `0x666550` (daily) and raw `0x7856F2` (restore). The clean trace showed
+`RESTORE_GATE al=1` on both warm and cold loads, so this gate was **not** the cold-load
+blocker and was correctly left alone.
+
+### 11.6 Debugger facts (net-new)
+
+- Stale saved breakpoints at `CK2game.exe+9E4970`, `+9E5500`, `+9E678B`
+  (`0x7FF7B78C4970` / `…5500` / `…678B` over base `0x7FF7B6EE0000`) produced huge
+  register dumps with `R10 = "hethum_armenia"` / `"pavao_croatia"` — payload ruler
+  keys in memory, not feat-path evidence.
+- x64dbg disabled the `+9E678B` breakpoint with *"bytes do not match — expected
+  `75 2F`, got `EB 2F`"* → **live in-memory proof that the V7 Continue patch was
+  present** in the running process (that site is raw `0x009E5B8B`).
+- x64dbg database: `C:\Users\UZWERG\Desktop\x64 dbg\release\x64\db\CK2game.exe.dd64`,
+  loaded in 1703 ms. `0x406D1388` thread-name exception at launch is benign.
+- **`DAILY_GATE` is armed at `+666146`, i.e. raw `0x665546`, not the patched
+  `je` at raw `0x666546` (`+667146`)** — a `666146`-vs-`667146` typo in the trace
+  script. The bytes at raw `0x665545` are `48 89 BD 48 06 00 00`
+  (`mov qword ptr [rbp+0x648], rdi`, VA `0x140666145`), so the breakpoint is byte 2 of
+  a 7-byte instruction inside a *different* function (region A, VA ≈ `0x140665EF8`)
+  that the xref scan proved does **not** call `UpdateFeatProgress`. The logged
+  `al=A0` / `al=80` are therefore pointer bytes. Consequence: the trace proves
+  `UpdateFeatProgress` was entered, but **not** by the daily caller and **not** via the
+  patched byte. See `CONTRADICTIONS.md` §13. `MJ_V9_CLEAN_TRACE.txt` still has the typo.
+- **`RESTORE_GATE al=1` on the cold burst** (log line 498, `rip=00007FF7B76662E8`,
+  the `je` at raw `0x007856E8` immediately after `test al,al`) ⇒
+  `IsActiveForPlaythrough` returned **true** during the cold load at that site, and
+  `UPDATE_ENTRY` followed. This refutes the pre-trace claim in
+  `another raw log.txt` line 2207 ("Restore gate false and no update entry … the
+  direct cold-load blocker") and removes the last justification for patching
+  raw `0x007856E8`.
+- **`RULER_INFO_CHECK rax=00000222A2B27050 zf=0`** on all four bursts — the same
+  non-null pointer warm and cold, so the ruler-info slot is not the difference.
+
+### 11.7 Repository events (net-new)
+
+| PR | Branch | Commit | Merge | Notes |
+|---|---|---|---|---|
+| #13 | `arena/01a04980-…` | — | `96ba84b` | landed the `01a044b2` patch; hash chain re-verified |
+| #14 | `arena/01a049a4-…` | `ab07419` | `910234875decd988ce55ed95e2401ce0f8c1b02a` | `NEXT_SESSION_HANDOFF_2026-08-29.md` |
+| #15 | `arena/01a04d46-…` | — | `f29287217b300be83a0c6334ccddc9a780bd5092` | **squash** merge; clean-trace helper |
+
+Session branch ids seen in `last log/`: `arena/01a044b2`, `arena/01a04980`,
+`arena/01a049a4`, `arena/01a04d46`, `arena/01a0534b`. The earlier PR request from
+`arena/01a044b2` was **rejected by the service** (no branch to push to), which is why
+`arena/01a04980` re-did the landing.
+
+---
+
 ## How this was verified
 For every raw export, all `0x…` addresses, 6–64-hex-char tokens, and mangled
 symbols were extracted and tested against the combined corpus

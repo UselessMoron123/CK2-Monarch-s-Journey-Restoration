@@ -1,5 +1,24 @@
 # CK2 Monarch’s Journey V8 — cold-launch feat re-hydration test
 
+> ## ⚠️ SUPERSEDED 2026-08-30 — DO NOT APPLY V8 ON ITS OWN
+>
+> This guide was written before V8 was tested. **V8 was applied and its premise was
+> disproven.** The user's result, verbatim: *"feats are 0 in game, and even in main
+> menu (in MJ tab) too now."*
+>
+> The root-cause explanation below — that the two `IsActiveForPlaythrough` gates were
+> the cold-load block — is **wrong**. The clean x64dbg trace logged
+> `RESTORE_GATE al=1` on the cold burst, i.e. `IsActiveForPlaythrough` returned
+> **true**, and `UpdateFeatProgress` was entered anyway. The real failure is the final
+> eligibility gate at raw `0x007B7906`, fixed by **V9**.
+>
+> **Use `CK2_MJ_V9_TEST_GUIDE.md` instead.** Both V8 edits are kept inside V9 (they are
+> harmless and widen the entry conditions), but neither is the fix.
+>
+> Evidence: `03_analysis/V9_RUNTIME_RESULTS.md` §2–§3,
+> `03_analysis/CONTRADICTIONS.md` §13–§14,
+> `01_research_archives/CK2_MJ_RESEARCH_ARCHIVE_PART5.md`.
+
 V8 does **not** replace V7. It keeps every V7 Continue fix and adds two
 length-preserving edits so the in-game feat/challenge counter repopulates from
 the save after a **cold launch → Load/Continue** (the one path that still showed

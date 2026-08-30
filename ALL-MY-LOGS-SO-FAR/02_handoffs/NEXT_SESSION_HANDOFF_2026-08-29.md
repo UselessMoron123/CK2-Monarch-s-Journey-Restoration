@@ -1,5 +1,22 @@
 # Crusader Kings II Monarch's Journey restoration — next-session handoff (2026-08-29)
 
+> ## ⚠️ SUPERSEDED — 2026-08-30
+>
+> Everything below describes the state **before** V8 was tested and before V9 existed.
+> Two of its central claims are now known to be wrong:
+>
+> 1. **"V8 (candidate) — feat re-hydration candidate"** → V8 was applied and its premise
+>    was **disproven**: feats went to 0 in game *and* in the main-menu MJ tab.
+> 2. **"`IsActiveForPlaythrough` gates are the cold-load block"** → the clean trace
+>    logged `RESTORE_GATE al=1` on the cold burst, i.e. that function returned **true**.
+>
+> The open bug described here is **CLOSED**. Baseline is **V9**
+> `61e4345ba1395f09d26f84bf030ae0474fce3f0635a3516edea56b46c486d687`, runtime-proven
+> 2026-08-30. Read `03_analysis/V9_RUNTIME_RESULTS.md`,
+> `01_research_archives/CK2_MJ_RESEARCH_ARCHIVE_PART5.md`, and
+> `00_START_HERE/STATUS.md`. This file is kept as the historical record of what was
+> believed on 2026-08-29 — do not act on it.
+
 > **Status banner (2026-08-29):** In-game baseline is **V7** (SHA-256
 > `57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571`), and the core
 > restoration loop + in-game Continue are runtime-proven. **One bug is open:** feat /

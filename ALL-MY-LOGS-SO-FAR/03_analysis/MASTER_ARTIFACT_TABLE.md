@@ -35,7 +35,9 @@ Materialized paths:
 | V4 (offline challenges) | `f2967f6f2c5b8b7d49dec2f7066139ace321cca19480f5c57d3ca8d576259b30` | superseded |
 | V5 (save validator + tooltip) | `29556549fb5fc657f2966949b6a5b59c9b89b707f954adca4868cfd3d90b1535` | superseded (safe rollback target) |
 | V6 (previous baseline / V7 revert target) | `f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0` | ✅ runtime-proven |
-| **V7 Continue (current in-game baseline)** | `57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571` | ✅ in-game Continue proven (`0x009E5B8B` `75 2f→eb 2f`) |
+| V7 Continue | `57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571` | ✅ in-game Continue proven (`0x009E5B8B` `75 2f→eb 2f`); useful revert target |
+| V8 feat-rehydration bypasses | `94d6fb403b4541a53f846b348722ee81bc832b66ac853f6fd532f08e2e8b7e93` | ❌ applied on the user machine 2026-08-29, **premise disproven** (feats 0 in game *and* main-menu MJ tab). Both edits kept in V9; neither is the fix |
+| **V9 cold-load feat fix (current baseline)** | `61e4345ba1395f09d26f84bf030ae0474fce3f0635a3516edea56b46c486d687` | ✅ **runtime-proven 2026-08-30** (`0x007B7906` `e8 85 71 8f ff → b0 01 90 90 90`). See `V9_RUNTIME_RESULTS.md` |
 | ⛔ "V6" trampoline (Part 2) | `a6cb92b8eda36c775751eb2af8c27a2509c5b9cee84872ef9e5fd6afd3cb18ff` | **BANNED** — see `BANNED_ARTIFACTS.md` |
 | ⚠️ "V7" feat-update candidate | `0074af707665bb152d3592d8ba9320ea81e79e6f58edc218e22aa069b353aeb8` | abandoned (premise disproven) |
 
@@ -61,9 +63,26 @@ Materialized paths:
 
 | File | Detail | Path |
 |---|---|---|
-| `q847rsja8ndx` | `feat_progress_storage.cpp` plaintext key=value; `user_id=84696387`; 33 counters, nonzero `established=4` (Bronze peak), `conquerer_from_bribir=1` | `13_save_and_cache/` |
+| `q847rsja8ndx.txt` | `feat_progress_storage.cpp` plaintext key=value; `user=152991562`, `user_id=453496064`, `category=697115649`; 33 counters, only `heretical_company=1` | `13_save_and_cache/` |
+| `q847rsja8ndx_v6_secondlook.txt` | `user_id=84696387`, `category=-1991027533`; `established=4` (Bronze peak), `conquerer_from_bribir=1` | `13_save_and_cache/` |
 
-## 6. Patcher toolchain (V2–V7; V4–V6 hashes 2026-08-26, V7 hashes 2026-08-27)
+Live path on the user machine: `C:\Users\UZWERG\Documents\Paradox Interactive\Crusader
+Kings II\cache\q847rsja8ndx`. One snapshot of it hashes to
+`3606E210F48EB16B668B06E24942B545E65B11531F28F28D08FF9FDDE404601F` (751 bytes,
+`user_id=84696387`, `established=3`).
+
+⚠️ **Four distinct `user_id` values** are on record for this one file —
+`453496064`, `84696387`, `1148909174`, `1179784490` — several with identical feat
+vectors. The full table and the withdrawal of the "identity drift is refuted"
+conclusion are in `CONTRADICTIONS.md` §12.
+
+**Semantics (see `FEAT_CACHE_PEAK_TIER_ICON.md`):** this cache stores the **lifetime
+peak** per feat for the whole Windows profile — *not* per save. It is what drives the
+medal and the "Best Result" figure; the save's `global_<featkey>` variables drive
+"Current Progress". It applies to every save and every campaign until the file is
+removed.
+
+## 6. Patcher toolchain (V2–V9; V4–V6 hashes 2026-08-26, V7 hashes 2026-08-27, V8/V9 hashes 2026-08-30)
 
 | File | SHA-256 |
 |---|---|
@@ -83,10 +102,41 @@ Materialized paths:
 | `APPLY_CK2_MJ_V7.bat` | `1c06cc833438f0745d7b9db15eea56b24e1adc00fbfcfc59f3380fc1e07a6834` |
 | `CHECK_CK2_MJ_V7.bat` | `438c6f36e1aa98429bd33b4c06374a7015d4254ad1908e3b2c6846bbc96adab9` |
 | `REVERT_CK2_MJ_V7_TO_V6.bat` | `a4cc34a50e2b106f5ed7e03e7e2f7f5489fb8eeb130beed2ecaef4526732ad32` |
+| `patch_ck2_mj_v8.ps1` | `66697afc71910b99de56c2b648125801b2357bb6eeeef579d87f5d3dfc437504` |
+| `APPLY_CK2_MJ_V8.bat` | `1bd9651c8664f2ea4a2c2b8ada4da957a03a30b7f6e9bb1ae9f2ae4856073cc5` |
+| `CHECK_CK2_MJ_V8.bat` | `aaa558aea85047f6557729caea11efa47b9d3d6cb658166f61572ad0aa054339` |
+| `REVERT_CK2_MJ_V8_TO_V7.bat` | `f93108776860db3ffd7ec477c42034e19222034b326e3bdd652d971b89d1e2a2` |
+| `patch_ck2_mj_v9.ps1` | `2a3a716acfc2eed2cc54b5eeaaf18a68f8593aed6f989a9a4d1bbe233317ecb0` |
+| `APPLY_CK2_MJ_V9.bat` | `a6897de45cd0707b817425aaacf6db51bfca49781aaeeb7637feb0710bb9c791` |
+| `CHECK_CK2_MJ_V9.bat` | `ad57654c8f28c620dcc1798a86646cc5045b3007002de12e0c68126cb916db0b` |
+| `REVERT_CK2_MJ_V9_TO_V8.bat` | `1408084d615338a3e4e64edcb8c1ca713bd15a51a7d000845c295d0d3d60e7a2` |
+| `RUN_APPLY_CK2_MJ_V9_INLINE.ps1` | `02ce982e02081c9dc76e3a3b10a8475c7584c6d71066d6a00f4de0f9b028a634` — **reconstructed 2026-08-30**; the V9 session claimed to have saved this file but never did. Body is verbatim from the chat; the hash covers the file *including* its provenance header, so it has no prior value to compare against |
+| `py/build_v9_chain.py` | `77232f1150558303ba218c997ee666256e1d693bf4522e6fd9c5bb0b07176e28` — replays V2→V9 from the patcher sources asserting every hash; **re-run clean on 2026-08-30**, output `v9 61e4345b…` |
+
+Debugger helpers (`05_patches_and_scripts/x64dbg/`):
+
+| File | Size | SHA-256 |
+|---|---:|---|
+| `MJ_V8_CLEAN_TRACE.txt` | 1,665 | `49c4a60263d3b2f569875cc7f1687121c1891597380d0e4903be673578f37ec4` |
+| `RUN_MJ_V8_CLEAN_TRACE.bat` | 3,088 | `5b2e79de8f1554bb7e14b18f2badb2532aa9714ec72b8ebeb867cc6a03d092e5` |
+| `README_MJ_V8_CLEAN_TRACE.md` | 4,233 | `3394fafcbbe9193bc5a05776b25193ab30b61a607e496ce8bc6725e30016b27a` |
+| `MJ_V9_CLEAN_TRACE.txt` | 2,115 | `06e0c5d6234142a697b7e4f84133ae3869e06a437a5853b251224aae3b91d77d` — ⚠️ still arms `DAILY_GATE` at `+666146`; see `CONTRADICTIONS.md` §13. Fixing it invalidates this hash and `README_MJ_V9_CLEAN_TRACE.md` |
+| `RUN_MJ_V9_CLEAN_TRACE.bat` | 3,088 | `a3e5cfdb4fdbb833072567f16336ab42224debc05100fdd3af38cda71e7fb821` |
+| `README_MJ_V9_CLEAN_TRACE.md` | 4,697 | `446d008eb73ce03d814de6b67a6ef01227a46e9d6ae2753b00aaa4437f7c4d0d` |
+
+The three byte-identical copies of `MJ_V8_CLEAN_TRACE.txt`, `RUN_MJ_V8_CLEAN_TRACE.bat`
+and the `01a044b2` patch that were sitting in `last log/` were removed during the
+2026-08-30 ingest; the canonical copies above and in `11_git_patch/` were verified
+identical with `cmp` first.
 
 Test guides: `CK2_MJ_V5_load_test_guide.md` = `ef3c4335733dc516991ffa997fb1cac04bae020332098aad24d84ca8cb65a086`;
 `CK2_MJ_V6_TEST_GUIDE.md` = `0d4d3d21f0f000210cbfaa1a30b5afb2f89311babee6e2996a2985ecded8ab87`;
 `CK2_MJ_V7_TEST_GUIDE.md` = `e0e182c2180cf19a27cb35285a3c1867953cc151ad765a7ef705a962b1d87b5d`;
+`CK2_MJ_V8_TEST_GUIDE.md` = `7cd3916caccea01bd68a5a8ed2f333a6f92a4ea43578ab16b0d7b3a8d4916880`
+(⚠️ carries a 2026-08-30 SUPERSEDED banner; the pre-banner hash was `3ea0a08a…`.
+V8's premise was disproven — read `V9_RUNTIME_RESULTS.md` §2 first);
+`CK2_MJ_V9_TEST_GUIDE.md` = `ac93f8b81db65861c880e93fd2df39e362e2f217909d1a0ab13c9481b4f7e42a`
+(current);
 `CK2_MJ_windows_v4_test_guide.md` (now under `04_test_guides_and_reports/`) = `9e7664a52b18dba919dd939ff11da4f6cb65e13212c6010b1096a3a858d062cd`
 — ⚠️ the old handoff recorded `3177eaef5298482de564278b1d79006a28f73ea9bb64ce84c5483505947c3234`
 for the V4 guide; the current file hashes to `9e7664a5…` (edited after that hash was

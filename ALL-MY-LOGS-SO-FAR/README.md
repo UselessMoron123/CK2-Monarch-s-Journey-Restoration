@@ -7,8 +7,14 @@ duplicates have been deleted.** Unique content only.
 Restore the retired **Monarch's Journey / Featured Rulers / Bronzeman** mode of
 Crusader Kings II for **personal, fully offline use on Windows**, via payload
 re-activation, version archaeology, and hash-guarded executable patches
-(v1→v7 done; **V7 = in-game Continue** proven; launcher Continue is C25). Featured Rulers is a planned
+(v1→v9 done; **V9 = cold-load feats fixed**, runtime-proven 2026-08-30; V7 =
+in-game Continue; launcher Continue is C25). Featured Rulers is a planned
 follow-on (see `00_START_HERE/FEATURED_RULERS.md`).
+
+**Current baseline: V9** — SHA-256
+`61e4345ba1395f09d26f84bf030ae0474fce3f0635a3516edea56b46c486d687`
+(Windows May-2020 3.3.3, 24,753,368 bytes). Revert ladder V8 `94d6fb40…` →
+V7 `57b18e43…` → V6 `f5b7dfd6…` → V5 `29556549…` → stock `656f4f48…`.
 
 ## Read in this order
 1. **`00_START_HERE/`**
@@ -17,8 +23,11 @@ follow-on (see `00_START_HERE/FEATURED_RULERS.md`).
    - **`FR_MJ_COMPLETE_ROSTER.md`** — every FR+MJ ruler, bio, B/S/G challenge (text-only)
    - **`FEATURED_RULERS.md`** — FR UI/timeline/assets/restore checklist
    - **`SCREENSHOTS_CATALOG.md`** — image intents (optional; roster is complete without pics)
-   - original prompt + organize-prompt templates (**v6** is the operative one; v1–v5 kept as history)
-2. **`01_research_archives/`** — Parts 1–3 structured archives
+   - original prompt + organize-prompt templates (**v7** is the operative one;
+     v1–v6 kept as history — v7 consolidates v4 §1–§10 + v5 §4–§7 + v6 §8–§13 into one
+     continuous rulebook)
+2. **`01_research_archives/`** — Parts 1–5 structured archives (Part 5 = V8 disproof →
+   clean trace → V9 fix and verdict, 2026-08-30)
 3. **`02_handoffs/`** — **one** handoff (`CK2_MJ_ULTIMATE_HANDOFF.md`, deep background; older handoffs merged into it 2026-08-26) + completed PDB-investigation mission brief
 4. **`03_analysis/`** — binary analysis, patch maps, banned artifacts, Continue semantics
 5. **`04_test_guides_and_reports/`** — in-game click paths

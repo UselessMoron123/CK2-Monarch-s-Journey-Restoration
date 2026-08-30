@@ -136,8 +136,16 @@ Exact hashes (also in `MASTER_ARTIFACT_TABLE.md`):
 | V3 | `e91a5f4693ca3b747d7340fda71ed66b3593e2f98af14c37e6086b0d76fb13ca` |
 | V4 | `f2967f6f2c5b8b7d49dec2f7066139ace321cca19480f5c57d3ca8d576259b30` |
 | V5 | `29556549fb5fc657f2966949b6a5b59c9b89b707f954adca4868cfd3d90b1535` |
-| V6 (previous baseline / V7 revert target) | **`f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0`** |
-| **V7 Continue (current in-game baseline)** | **`57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571`** |
+| V6 | `f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0` |
+| V7 Continue | `57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571` |
+| V8 feat-rehydration bypasses | `94d6fb403b4541a53f846b348722ee81bc832b66ac853f6fd532f08e2e8b7e93` — ❌ premise disproven |
+| **V9 cold-load feat fix (current in-game baseline, 2026-08-30)** | **`61e4345ba1395f09d26f84bf030ae0474fce3f0635a3516edea56b46c486d687`** |
+
+> **2026-08-30 update:** the rows above were extended when V8/V9 landed. The deep
+> binary background in this document is still valid, but its "current baseline" claims
+> predate V9. For the live state read `00_START_HERE/STATUS.md`; for the cold-load feat
+> work read `03_analysis/V9_RUNTIME_RESULTS.md` and
+> `01_research_archives/CK2_MJ_RESEARCH_ARCHIVE_PART5.md`.
 | ⛔ "V6" trampoline (Part 2) | `a6cb92b8eda36c775751eb2af8c27a2509c5b9cee84872ef9e5fd6afd3cb18ff` — **BANNED** |
 | ⚠️ "V7" feat-update candidate | `0074af707665bb152d3592d8ba9320ea81e79e6f58edc218e22aa069b353aeb8` — abandoned |
 

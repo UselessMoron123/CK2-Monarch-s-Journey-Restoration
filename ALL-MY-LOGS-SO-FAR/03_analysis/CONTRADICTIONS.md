@@ -128,3 +128,65 @@ questions or trust a later-retracted claim. Entries are grouped by topic.
 - **Fact:** Native Linux CK2 was **never executed** (user is Windows-only); all
   Linux findings are static disassembly used as a symbol map.
 - **Verdict:** Linux is a reference, not a runtime-tested platform.
+
+## 12. Feat-cache `user_id` — "identity drift is refuted" is withdrawn
+
+- **Claim (canonical):** `FEAT_RESET_QUIT_VS_RESIGN.md` line 22 states
+  "**Identity drift is refuted.** `user_id=84696387` is identical to the archived
+  value," on the strength of one capture.
+- **Conflict:** four distinct `user_id` values are now on record for the *same* cache
+  file (`…\cache\q847rsja8ndx`), several with **identical** feat vectors:
+
+| `user_id` | `established` | `conquerer_from_bribir` | `category` | Source |
+|---|---|---|---|---|
+| `453496064` | 0 | 0 | `697115649` | `13_save_and_cache/q847rsja8ndx.txt` (archived) |
+| `84696387` | 4 → 3 → 3 | 1 | `-1991027533` / `-852858316` | `13_save_and_cache/q847rsja8ndx_v6_secondlook.txt`; enumerated 29.08 16:19:51 and 20:32:18 |
+| `1179784490` | 4 | 1 | `-1991027533` | pasted by the user 2026-08-29 (`another raw log.txt`) |
+| `1148909174` | 4 / 2 | 1 | `-1991027533` / `1474319405` | pasted blocks, same log |
+
+- **Verdict:** the single-capture refutation does not hold. What *is* still true is
+  that `user_id` was stable **within** the session that produced it, and that the
+  preflight's identity check agreed at that time. What is not established is that
+  `user_id` is stable across boots/installs. **Do not assert either way.**
+  Practical rule: if the medal or "Best Result" ever reads as if progress vanished,
+  read `user_id` from the cache first. Tracked as an open item, not a resolved case.
+
+## 13. The `DAILY_GATE` trace breakpoint is not at the patched byte
+
+- **Claim:** `V9_COLD_LOAD_FEATS_FIX.md` says the trace's `DAILY_GATE`
+  (raw `0x666546`) executed, and the V9 session claimed the offset had been corrected.
+- **Fact:** the script arms `bp CK2game.exe+666146` → VA `0x140666146` → **raw
+  `0x665546`**. The V8/V9-patched `je` is at raw `0x666546` = `+667146`. That is a
+  `666146`-vs-`667146` typo, off by `0x1000`.
+- Raw `0x665546` is the **second byte** of a 7-byte `mov qword ptr [rbp+0x648], rdi`
+  (VA `0x140666145`, bytes `48 89 BD 48 06 00 00`) inside a *different* function
+  (VA ≈ `0x140665EF8`) which the xref scan proved does **not** call
+  `UpdateFeatProgress`. An INT3 there still fires, with `rip` reported at the INT3
+  byte — which is why the log shows `al=A0` and `al=80` (pointer bytes, not a flag).
+- **Still true:** the trace proves `UpdateFeatProgress` was entered, and the four
+  breakpoints that matter (`UPDATE_ENTRY`, `RULER_INFO_CHECK`, `CALC_FAIL_PATH`,
+  `CALC_RETURN_PATH`, `CALC_RESULT`) are all correctly placed and unaffected. The V9
+  conclusion stands on those, not on `DAILY_GATE`.
+- **Not true:** that the V8 byte at raw `0x666546` was exercised, or which caller
+  entered `UpdateFeatProgress`.
+- `MJ_V9_CLEAN_TRACE.txt` **still carries the typo** (verified 2026-08-30).
+  Fixing it changes the file's SHA-256, which `README_MJ_V9_CLEAN_TRACE.md`
+  publishes — fix and re-hash together, never silently.
+
+## 14. What V8 did to the display, and what it did to the cache
+
+- **Claim (written at the time):** V8 "calculated 0 progress for all 33 challenges and
+  pushed those 0s into the local feat cache (`cache/q847rsja8ndx`), **wiping out**
+  the main-menu display."
+- **Fact:** the very next message in the same log is the user's paste of that cache
+  file, and it still reads `conquerer_from_bribir=1` / `established=4`
+  (`user_id=1179784490`). The cache was **not** wiped.
+- **Verdict:** V8 pushed zeroes **to the display**, not to the cache. The corrected
+  wording from the same session ("pushed those 0s to the display") is canonical.
+- **Related, weaker claim:** that the whole cold-load defect was caused by
+  `special_event` being blank at `gameState+0x598`. The clean trace showed the
+  ruler-info check passing (`rax=00000222A2B27050`, `zf=0`) and
+  `IsActiveForPlaythrough` returning **true** at the restore caller
+  (`RESTORE_GATE al=1` on the cold burst). It remains a reasonable description of why
+  the *display* went blank under V8; it is **not** what was measured for the tracking
+  failure. The measured failure is the final gate at raw `0x007b7906`.
