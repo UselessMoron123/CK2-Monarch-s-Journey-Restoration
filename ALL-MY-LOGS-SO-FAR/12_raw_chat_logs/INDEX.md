@@ -88,6 +88,7 @@ Narrative: `01_research_archives/CK2_MJ_RESEARCH_ARCHIVE_PART5.md`.
 | `another other raw log.txt` | 91,454 | 1,142 | `67c78a63` | `arena/01a049a4` — `NEXT_SESSION_HANDOFF_2026-08-29.md`, **PR #14** | `02_handoffs/`; §11.7 |
 | `one more raw log.txt` | 20,982 | 426 | `3d2267be` | *no repo* — V8 applied by hand | ⚠️ **identical to lines 8–433 of `another raw log.txt`**, but it uniquely carries the verbatim cache dump and the `.bat` flicker root cause → preserved in §11.2 and §11.4. Safe to delete |
 | `first raw log.txt` | 41,694 | 497 | `5179eb08` | `arena/01a04980` — hash chain re-verified, **PR #13** | Part 5 §A3; §11.7 |
+| `organisation log.txt` | 148,984 | 1,757 | `79d6007f` | `arena/01a053d9` — **the orchestrating session** (wrote this report, v7 rulebook, Part 5, V9 docs; created + merged **PR #17**) | **Ledgered here (omitted in the first pass).** It is the meta-narrative that produced this whole archive; all facts it cites (V9 `61e4345b…`, gate `0x1400AF690`, bronze-cache answer) already live in Part 5 / V9 docs. Treat as *do not re-archive* | 
 
 Removed during this ingest (byte-identical duplicates, verified with `cmp`):
 
