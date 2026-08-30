@@ -5,7 +5,8 @@
 Bronzeman, live tracking, saves, **Continue**, and as much reward UI as is
 local — without losing research history. **Featured Rulers** is a separate
 follow-on (`00_START_HERE/FEATURED_RULERS.md`). In-game Continue is done (V7);
-launcher Continue is C25.
+cold-load feats are done (V9, 2026-08-30); launcher Continue is C25.
+**Current baseline: V9** `61e4345ba1395f09d26f84bf030ae0474fce3f0635a3516edea56b46c486d687`.
 
 ---
 
@@ -39,6 +40,27 @@ Live Kulin load in `03_analysis/V7_RUNTIME_RESULTS.md` / Part 4.
 - [x] Guarded `patch_ck2_mj_v7.ps1` + APPLY/CHECK/REVERT bats
 - [x] Offline test: in-game Continue loads Bronzeman without popup
 - [ ] Paradox launcher Continue (split out as **C25**, not Phase 2)
+
+## PHASE 2b — V8 disproven, V9 cold-load feat fix ✅ (2026-08-30)
+**Case C26 SOLVED.** V8 bypassed the two `IsActiveForPlaythrough` gates
+(raw `0x00666546`, `0x007B786B`) and made things **worse** — feats 0 in game *and* in
+the main-menu MJ tab. A clean attach-mode x64dbg trace then isolated the real failure:
+`CalcShouldTrackFeatProgress` returns 0 at its **final** gate, raw `0x007B7906`
+(`call 0x1400AF690`), while every earlier check passes on a cold load.
+
+V9 replaces that one 5-byte call with `mov al,1; nop; nop; nop`. Hash
+`61e4345ba1395f09d26f84bf030ae0474fce3f0635a3516edea56b46c486d687`.
+
+- [x] Guarded `patch_ck2_mj_v9.ps1` + APPLY/CHECK/REVERT bats
+- [x] `py/build_v9_chain.py` — replays V2→V9 asserting every hash (re-run clean 2026-08-30)
+- [x] `RUN_APPLY_CK2_MJ_V9_INLINE.ps1` — paste-into-PowerShell route (reconstructed 2026-08-30)
+- [x] Clean-trace helper `x64dbg/MJ_V9_CLEAN_TRACE.*`
+- [x] Offline test: feats survive soft resign **and** hard quit, and increase during play
+- [x] **C27 answered:** medal / “Word has spread…” behaviour is by design —
+      `FEAT_CACHE_PEAK_TIER_ICON.md`
+- [ ] Fix the `DAILY_GATE` typo in `MJ_V9_CLEAN_TRACE.txt` (`+666146` → `+667146`)
+      and re-publish its hash — `CONTRADICTIONS.md` §13
+- [ ] Optional: run the V9 clean trace for machine proof of `V9_GATE_FORCE`
 
 ## PHASE 3 — Secondary polish ⬅ current
 Cases C09–C12, C13, C17: MP 2nd boot, grey map, flicker mp4, missing arrow,

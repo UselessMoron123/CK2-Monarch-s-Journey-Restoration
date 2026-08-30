@@ -1,4 +1,4 @@
-target,win333_may2020,stock_sha256,656f4f482ed698958e1108938f7e5baff5b5dd31b3b310a7ea51386faca635d8,v6_sha256,f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0,v7_sha256,57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571
+target,win333_may2020,stock_sha256,656f4f482ed698958e1108938f7e5baff5b5dd31b3b310a7ea51386faca635d8,v6_sha256,f5b7dfd6e23b63f6353bb74f89493af0bd3db909e2d09961a543c773668530b0,v7_sha256,57b18e4392d03f0a3a67bc2c8c8d643302a9c44a141d90000219051adc521571,v8_sha256,94d6fb403b4541a53f846b348722ee81bc832b66ac853f6fd532f08e2e8b7e93,v9_sha256,61e4345ba1395f09d26f84bf030ae0474fce3f0635a3516edea56b46c486d687
 raw_offset,virtual_address,introduced_in,stock_bytes,patched_bytes_v6,length_preserved,purpose,category
 0x00d73d02,,V2,74 2b,eb 2b,yes,Force local/null GameSpark factory branch,loader
 0x00d73e1a,,V2,ba 23 36 00,21 fc 32 00,yes,LoadLocalCache gfx\test.dds -> gfx\monarchs,loader
@@ -22,3 +22,7 @@ raw_offset,virtual_address,introduced_in,stock_bytes,patched_bytes_v6,length_pre
 0x009e5377,0x1409e5f77,V6,0f 84 63 01 00 00,e9 64 01 00 00 90,yes,Named-save path accept (target 0x1409e60e0),save_loading
 0x009e5452,0x1409e6052,V6,74 0b,eb 0b,yes,Latest-save path accept (target 0x1409e605f),save_loading
 0x009e5b8b,0x1409e678b,V7,75 2f,eb 2f,yes,Bypass retired cloud-sync check on Continue execution,continue_execution
+0x00666546,0x140667146,V8,74 0d,90 90,yes,DailyUpdate always calls UpdateFeatProgress (premise disproven; kept in V9),feat_tracking
+0x007b786b,0x1407b846b,V8,75 05,eb 05,yes,CalcShouldTrackFeatProgress ignores IsActiveForPlaythrough (premise disproven; kept in V9),feat_tracking
+0x007856e8,0x1407862e8,never,74 0d,74 0d,yes,Restore-path gate - NOT patched; trace showed RESTORE_GATE al=1 on cold load,do_not_touch
+0x007b7906,0x1407b8506,V9,e8 85 71 8f ff,b0 01 90 90 90,yes,Force final eligibility gate (call 0x1400af690) to true - the cold-load feat fix,feat_tracking

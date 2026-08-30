@@ -2,7 +2,7 @@
 
 Last updated from the user’s full image catalog (text descriptions of every
 shot gathered so far). **Image binaries were removed 2026-08-26** — the
-descriptions here (Cases C01–C24, Findings F1–F10, Peculiarities P1–P8) are the
+descriptions here (Cases C01–C27, Findings F1–F11, Peculiarities P1–P8) are the
 canonical record and cite screenshots by name. Cross-ref:
 `SCREENSHOTS_CATALOG.md`, `FEATURED_RULERS.md`.
 
@@ -44,6 +44,8 @@ Status tags:
 | C22 | Bronze tier grant popup | **SOLVED** | V6 live eval (Pavao `established`) | (256) |
 | C23 | Character history tooltips in panel | **INFO** | embedded in payload localisation | (198)(229) |
 | C24 | Pirated/emu DLL folder listing | **INFO** env only | not a game bug | (215) |
+| C26 | **Feats 0 after cold quit→relaunch→load** (fine after warm resign) | **SOLVED** 2026-08-30 | **V9** `0x007B7906` `e8 85 71 8f ff`→`b0 01 90 90 90`. V8's two `IsActiveForPlaythrough` bypasses were **not** the fix | user reports 2026-08-29/30; `last log/x64dbg logs.txt` |
+| C27 | Medal stays Bronze on older saves; “Word has spread…” never repeats | **INFO** by design | `cache\q847rsja8ndx` = lifetime peak per profile, not per save | `FEAT_CACHE_PEAK_TIER_ICON.md` |
 
 ---
 
@@ -128,6 +130,37 @@ Pavao campaign: Bronze on `Established` at threshold — (256). Cache
 `q847rsja8ndx` stores peaks. Old fear “feats don’t go up” was mostly
 loaded-old-save / abandoned feat-V7 noise.
 
+> **2026-08-30 correction.** “Feats don’t go up” was *not* only noise. On V7 and V8
+> a **cold**-loaded save really did freeze live progress: the user’s words were
+> *“it picks up feats from game previously loaded. but when i do something that
+> should give scores in them, it stays in place.”* That is case **C26**, fixed by V9.
+
+### F11 — Two persistence layers, two meanings (2026-08-30)
+
+The single most useful mental model in this project, and the one that caused the most
+confusion:
+
+| Layer | Where | Holds | Scope |
+|---|---|---|---|
+| Save variables | `global_<featkey>` inside the `.ck2` | **current** value at save time | per save |
+| Feat cache | `Documents\Paradox Interactive\Crusader Kings II\cache\q847rsja8ndx` | **highest value ever reached** | per Windows profile — *every* save, *every* campaign |
+
+The engine says it in one symbol: `CFeatProgressStorage::SetCachedProgressIfHigher`.
+The UI shows both side by side — `FEAT_CURRENT_TT` = “Current Progress: $SCORE|Y$”
+(save) vs `FEAT_HIGHSCORE_TT` = “Best Result: $HIGH_SCORE|G$” (cache). The medal is
+driven by the **best result**, which is why a day-one save whose
+`global_established=2.000` still shows Bronze (peak 4).
+
+The “Word has spread far and wide…” popup is a **level-grant event**
+(`FEAT_LEVEL_n_COMPLETE_LOG` + `FEAT_LEVEL_n_COMPLETE_SETUP`), so it fires only the
+first time a tier is crossed — never again for a tier the cache already records.
+
+Reset, if ever wanted: back the file up, rename it, relaunch. **Never** `wipe_feats`.
+Full write-up: `03_analysis/FEAT_CACHE_PEAK_TIER_ICON.md`.
+
+⚠️ Four distinct `user_id` values are on record for this one file — see
+`CONTRADICTIONS.md` §12.
+
 ### F10 — Asset packs still on disk in stock installs
 `gfx/interface/featured_ruler/*` and `gfx/interface/highlighted_*` file lists
 in `Снимок.PNG` / `Снимок2.PNG` — textures exist; controller is code + payload.
@@ -156,4 +189,9 @@ in `Снимок.PNG` / `Снимок2.PNG` — textures exist; controller is co
 3. Separate project: **Featured Rulers** full roster + FR UI (`FEATURED_RULERS.md`).
 4. Separate project: local reward gallery (C21) using ladder in F2 + Linux reward table.
 
-Do **not** re-open C01–C08, C18, C22 without new contradictory evidence.
+Do **not** re-open C01–C08, C18, C22, C26 without new contradictory evidence.
+C27 is not a defect — do not "fix" it.
+
+Last updated 2026-08-30: added C26 (cold-load feats, SOLVED by V9) and C27 (medal /
+repeat-notification behaviour, INFO by design), plus F11 (the two persistence layers)
+and a correction to F9.

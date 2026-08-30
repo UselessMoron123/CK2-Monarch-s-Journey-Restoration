@@ -103,3 +103,42 @@ to re-hydrate the in-game feat counter on the cold path.
 If the feats still read 0, the residual cause is downstream of
 `CalcShouldTrackFeatProgress` inside `UpdateFeatProgress` itself — the log must
 then include the full `[MJ]` burst plus the executable hash line.
+
+---
+
+## ADDENDUM 2026-08-30 — two corrections to this document
+
+Added during the `last log/` ingest, after re-reading the trace and the trace script
+byte by byte. **The V9 conclusion is unchanged**; two supporting claims were wrong.
+
+### 1. The `DAILY_GATE` breakpoint is not at raw `0x666546`
+
+This document says "`DAILY_GATE` (raw 0x666546 `74 0d`→`90 90`) executed". It did not
+measure that.
+
+The script arms `bp CK2game.exe+666146`, which is VA `0x140666146` = **raw
+`0x665546`** — the second byte of a 7-byte `mov qword ptr [rbp+0x648], rdi`
+(VA `0x140666145`) in a *different* function (VA ≈ `0x140665EF8`) that the xref scan
+proved does **not** call `UpdateFeatProgress`. The patched `je` is at raw `0x666546`
+= `+667146`. It is a `666146`-vs-`667146` typo, off by `0x1000`.
+
+What survives: `UPDATE_ENTRY` fired on the cold path, so `UpdateFeatProgress` *was*
+entered — that is what rules out a BAT-delivery problem, and it rests on
+`UPDATE_ENTRY` (`CK2game.exe+7b8e60` = VA `0x1407b8e60` = raw `0x7b8260`, the
+function entry, correctly placed), not on `DAILY_GATE`. What does not survive: any
+claim about which caller entered it, or that the V8 byte at raw `0x666546` was
+executed.
+
+### 2. `RESTORE_GATE` also passed, which is a stronger result
+
+This document did not mention `RESTORE_GATE`. The cold burst logs it as
+`rip=00007FF7B76662E8 al=1` — the `je` at raw `0x007856E8`, immediately after
+`test al,al` on `IsActiveForPlaythrough`. `al=1` means that function returned **true**
+during the cold load, and `UPDATE_ENTRY` followed it. That removes the last argument
+for patching raw `0x007856E8`, and it is independent confirmation that
+`IsActiveForPlaythrough` was not the cold-load blocker.
+
+Both corrections are tracked in `CONTRADICTIONS.md` §13 and in
+`RAWLOG_NETNEW_EXTRACTS.md` §11.6. The full corrected trace, all four bursts
+verbatim, is in `V9_RUNTIME_RESULTS.md` §3 and in
+`01_research_archives/CK2_MJ_RESEARCH_ARCHIVE_PART5.md` §B1.

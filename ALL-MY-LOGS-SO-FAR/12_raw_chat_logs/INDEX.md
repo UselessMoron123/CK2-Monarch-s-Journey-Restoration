@@ -65,3 +65,41 @@
 - Everything is preserved **by content** (archives + extraction doc), not by
   raw retention. If you need raw chat wording, it is recoverable from git
   history (files were deleted via `git rm`, so prior commits still hold them).
+
+---
+
+# 2026-08-30 — `last log/` staging folder (KEPT on disk, dissected)
+
+Unlike the 2026-08-26/27 passes, the raw exports from this ingest were **not
+deleted**. They remain in `last log/` at the repo root. This ledger exists so a future
+session knows they have already been torn apart and does not re-archive them.
+
+Full report: `00_START_HERE/DISSECTION_REPORT_2026-08-30.md`.
+Net-new facts: `03_analysis/RAWLOG_NETNEW_EXTRACTS.md` §11.
+Narrative: `01_research_archives/CK2_MJ_RESEARCH_ARCHIVE_PART5.md`.
+
+| File | Bytes | Lines | SHA-256 (short) | Session | Where the content lives |
+|---|---:|---:|---|---|---|
+| `last log (for now).txt` | 702,755 | 6,373 | `728924ac` | `arena/01a0534b` — trace analysis → stock-exe disassembly → **V9 built** | Part 5 §B/§C; `V9_RUNTIME_RESULTS.md`; §11.1; inline patcher reconstructed to `ps1/RUN_APPLY_CK2_MJ_V9_INLINE.ps1` |
+| `x64dbg logs.txt` | 44,641 | 504 | `cbca3154` | V8 clean trace output | `V9_RUNTIME_RESULTS.md` §3 (all four bursts verbatim); §11.6 |
+| `first first raw log.txt` | 312,285 | 4,358 | `f6d231e5` | `arena/01a044b2` — V8 built, preflight + CRLF fixes, PR request rejected by the service | Part 5 §A3/§B1; §11.6 |
+| `raw chat.txt` | 311,875 | 4,346 | `823eceb3` | same session | ⚠️ **strict prefix of `first first raw log.txt`** (first 4,346 lines identical; the other has 12 extra trailing lines). Do not quote separately |
+| `another raw log.txt` | 153,125 | 3,743 | `d80e225a` | `arena/01a04d46` — V8 confirmed installed, cache/save forensics, restore gate, clean-trace helper, **PR #15** | Part 5 §B1/§C4; §11.2, §11.3, §11.5, §11.7 |
+| `another other raw log.txt` | 91,454 | 1,142 | `67c78a63` | `arena/01a049a4` — `NEXT_SESSION_HANDOFF_2026-08-29.md`, **PR #14** | `02_handoffs/`; §11.7 |
+| `one more raw log.txt` | 20,982 | 426 | `3d2267be` | *no repo* — V8 applied by hand | ⚠️ **identical to lines 8–433 of `another raw log.txt`**, but it uniquely carries the verbatim cache dump and the `.bat` flicker root cause → preserved in §11.2 and §11.4. Safe to delete |
+| `first raw log.txt` | 41,694 | 497 | `5179eb08` | `arena/01a04980` — hash chain re-verified, **PR #13** | Part 5 §A3; §11.7 |
+
+Removed during this ingest (byte-identical duplicates, verified with `cmp`):
+
+| Removed from `last log/` | Canonical copy |
+|---|---|
+| `01a044b2-855a-71fb-8d40-d584a0ce8e2a.patch` (28,583 B, `9e6d7545`) | `11_git_patch/01a044b2-855a-71fb-8d40-d584a0ce8e2a.patch` |
+| `MJ_V8_CLEAN_TRACE.txt` (1,665 B, `49c4a602`) | `05_patches_and_scripts/x64dbg/MJ_V8_CLEAN_TRACE.txt` |
+| `RUN_MJ_V8_CLEAN_TRACE.bat` (3,088 B, `5b2e79de`) | `05_patches_and_scripts/x64dbg/RUN_MJ_V8_CLEAN_TRACE.bat` |
+
+## Method note (rule 12)
+
+Two of these duplicates are **invisible to SHA-256**: `raw chat.txt` is a truncated
+prefix of a longer export, and `one more raw log.txt` is a line-range slice of another.
+Hashing all 11 files reported 11 unique values. Only `diff`/`cmp` found them. Dedup in
+this repo must be content-based, never hash-only.
