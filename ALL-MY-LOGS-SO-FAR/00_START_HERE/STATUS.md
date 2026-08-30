@@ -11,6 +11,15 @@
 > One length-preserving edit on top of V8: raw `0x007B7906`
 > `e8 85 71 8f ff` (`call 0x1400AF690`) → `b0 01 90 90 90` (`mov al,1; nop×3`).
 >
+> ⚠️ **Do not remove V8's `0x007B786B` byte while "cleaning up" V9.** It sits
+> *upstream* of the V9 edit in the same function, and
+> `CalcShouldTrackFeatProgress` has only one caller — so if
+> `IsActiveForPlaythrough` returns 0 the function exits at raw `0x7B7871` before
+> the V9 byte is ever reached. "Neither V8 edit is the fix" is true; "both are
+> removable" is **false** for the shipped design. Full reasoning, plus the
+> abandoned alternative V9 design at `0x007B785B` where the same byte *would* be
+> dead code: `03_analysis/V9_DESIGN_ALTERNATIVES_AND_V8_DEPENDENCY.md`.
+>
 > **V8 is recorded as applied-and-disproven.** It bypassed the two
 > `IsActiveForPlaythrough` gates and made things worse (feats 0 in game *and* in the
 > main-menu MJ tab). The clean x64dbg trace then showed `RESTORE_GATE al=1` on the
@@ -157,6 +166,7 @@ until 2026-08-30. Its Continue fix is still present and still working in V9.
 | `03_analysis/BANNED_ARTIFACTS.md` | Banned trampoline V6 + abandoned feat-V7 |
 | `03_analysis/CONTINUE_SEMANTIC_REFERENCE.md` | 2.6.1.1 model + win333 + **§F V7 execution** |
 | `03_analysis/CONTRADICTIONS.md` | Disagreement register |
+| `03_analysis/V9_DESIGN_ALTERNATIVES_AND_V8_DEPENDENCY.md` | Why V8's bytes can't be dropped from V9 + the abandoned `0x007B785B` design |
 | `02_handoffs/CK2_MJ_ULTIMATE_HANDOFF.md` | Deep background (banner must match this file) |
 
 ## Environment constants (unchanged)
