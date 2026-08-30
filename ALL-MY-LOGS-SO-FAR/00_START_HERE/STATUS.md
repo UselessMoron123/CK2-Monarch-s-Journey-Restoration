@@ -59,14 +59,21 @@ latest Bronzeman save without the generic failed popup.
   by `CRulerFeatTracker::UpdateFeatProgress`, gated twice by
   `IsActiveForPlaythrough()`; the featured-ruler match is lost on cold load.
   Identity drift **refuted** (preflight `user_id=84696387` stable).
-  **V8 candidate** (two length-preserving edits, untested) — see
-  `03_analysis/FEAT_RESET_QUIT_VS_RESIGN.md` and
-  `04_test_guides_and_reports/CK2_MJ_V8_TEST_GUIDE.md`.
   Tools: `ps1/patch_ck2_mj_v8.ps1`, `bat/APPLY_CK2_MJ_V8.bat`,
   `bat/CHECK_CK2_MJ_V8.bat`, `bat/REVERT_CK2_MJ_V8_TO_V7.bat`.
-  2026-08-29: user tried the V8 files and reported **"still didn't work"** — unresolved
-  (bat flicker again vs. feats still 0 after a confirmed V8 apply; not yet disambiguated).
-  Handoff for the next session: `02_handoffs/NEXT_SESSION_HANDOFF_2026-08-29.md`.
+  2026-08-29: user tried the V8 files and reported **"still didn't work"**.
+  2026-08-30: the V8 clean trace (`last log/x64dbg logs.txt`) **disambiguated it**:
+  V8 ran and its bypasses executed, yet `CalcShouldTrackFeatProgress` still
+  returned 0 on the cold path — the remaining failure is the final
+  feature-eligibility gate `0x1400af690` at raw `0x7b7906` (all earlier gates
+  passed: ruler-info, date, mode bytes, singleton `+0x60==0`/`+0x65!=0`).
+  **V9 ready** — single length-preserving edit at raw `0x007b7906`
+  (`e8 85 71 8f ff` → `b0 01 90 90 90`), SHA-256
+  `61e4345ba1395f09d26f84bf030ae0474fce3f0635a3516edea56b46c486d687`.
+  Tools: `ps1/patch_ck2_mj_v9.ps1`, `bat/APPLY_CK2_MJ_V9.bat`,
+  `bat/CHECK_CK2_MJ_V9.bat`, `bat/REVERT_CK2_MJ_V9_TO_V8.bat`,
+  plus clean trace `x64dbg/MJ_V9_CLEAN_TRACE.*` for the cold rerun.
+  Handoff: `02_handoffs/NEXT_SESSION_HANDOFF_2026-08-29.md` (V9 result pending).
 
 ### Secondary (do not block on these)
 
