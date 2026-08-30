@@ -263,6 +263,15 @@ blocker and was correctly left alone.
 - **`RULER_INFO_CHECK rax=00000222A2B27050 zf=0`** on all four bursts — the same
   non-null pointer warm and cold, so the ruler-info slot is not the difference.
 
+### 11.0 The orchestrating session (`organisation log.txt`, `79d6007f`) — session transcript
+
+`organisation log.txt` is the transcript of the **orchestrating session**
+`arena/01a053d9` that created the v7 rulebook, Part 5, the V9 docs and merged
+PR #17. It carries no hard facts that are not already in the archive (it *is*
+the source of them), so nothing here is extracted as net-new; it is ledgered for
+provenance in `12_raw_chat_logs/INDEX.md` and `DISSECTION_REPORT_2026-08-30.md`
+and should not be re-archived.
+
 ### 11.7 Repository events (net-new)
 
 | PR | Branch | Commit | Merge | Notes |

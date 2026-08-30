@@ -1,7 +1,8 @@
 # DISSECTION REPORT — 2026-08-30
 
-Source material: the staging folder `last log/` (11 files, 1,716,243 bytes,
-21,437 lines of text across the nine `.txt` exports).
+Source material: the staging folder `last log/` (9 `.txt` exports,
+1,827,795 bytes, 23,146 lines — plus the three byte-identical artifact copies
+listed in §1 that were removed to their canonical homes).
 Instructions applied: `00_START_HERE/PROMPT_organize_research_log_v7.md`
 (consolidation of v4 §1–§10 + v5 §4–§7 + v6 §8–§13), rules 2, 3, 6, 7, 8, 11, 12.
 Companion ledger: `12_raw_chat_logs/INDEX.md`.
@@ -10,8 +11,12 @@ Prior reports of this kind: `DISSECTION_REPORT_2026-08-26.md`,
 (there is no 2026-08-29 ingest report — that session produced
 `02_handoffs/NEXT_SESSION_HANDOFF_2026-08-29.md` instead).
 
-**This folder holds six distinct work sessions plus two artifact copies.**
-All were read in full; nothing is left unexamined.
+**This folder holds seven distinct work/new sessions plus two artifact copies.**
+Of the nine `.txt` exports, eight are the source sessions below; the ninth,
+`organisation log.txt`, is the **orchestrating session itself** (the pass that
+wrote this report, the v7 rulebook, Part 5, and merged PR #17). It was
+overlooked in the first pass and is ledgered here as that session's own
+transcript. All were read in full; nothing is left unexamined.
 
 ---
 
@@ -27,6 +32,7 @@ All were read in full; nothing is left unexamined.
 | 6 | `another other raw log.txt` | 1,142 ln / `67c78a63` | `arena/01a049a4` — `NEXT_SESSION_HANDOFF_2026-08-29.md`, **PR #14** | **KEPT**; facts → `02_handoffs/` + §11.7 |
 | 7 | `one more raw log.txt` | 426 ln / `3d2267be` | *no repo* — user applied V8 by hand | **DUPLICATE by content**: identical to lines 8–433 of #5 (verified by `diff`), but it carries the **verbatim cache dump** and the **`.bat` flicker root cause** that are not in the archived docs. Net-new residue preserved in §11.2/§11.4, so it is safe to delete |
 | 8 | `first raw log.txt` | 497 ln / `5179eb08` | `arena/01a04980` — hash chain re-verified, **PR #13** | **KEPT**; facts → §11.7, Part 5 §A3 |
+| 8b | `organisation log.txt` | 1,757 ln / `79d6007f` | `arena/01a053d9` — **the orchestrating session** (wrote this report, v7 rulebook, Part 5, V9 docs; created + merged **PR #17**) | **LEDGERED HERE** (was omitted in the first pass). Its content is the very meta-narrative that produced the rest of this archive, so it is net-new as a *session transcript* rather than as extra hard facts; the facts it uses (V9 hash `61e4345b…`, gate `0x1400AF690`, bronze-cache answer) are all in Part 5 / V9 docs. Flagged as *do not re-archive* |
 | 9 | `01a044b2-855a-71fb-8d40-d584a0ce8e2a.patch` | 28,583 B / `9e6d7545` | artifact | **BYTE-IDENTICAL DUPLICATE** of `11_git_patch/01a044b2-….patch` (`cmp` clean) — the archived copy is canonical |
 | 10 | `MJ_V8_CLEAN_TRACE.txt` | 1,665 B / `49c4a602` | artifact | **BYTE-IDENTICAL DUPLICATE** of `05_patches_and_scripts/x64dbg/MJ_V8_CLEAN_TRACE.txt` |
 | 11 | `RUN_MJ_V8_CLEAN_TRACE.bat` | 3,088 B / `5b2e79de` | artifact | **BYTE-IDENTICAL DUPLICATE** of `05_patches_and_scripts/x64dbg/RUN_MJ_V8_CLEAN_TRACE.bat` |
@@ -102,7 +108,17 @@ requirement to check by content, not just by hash.
 
 ## 6. Nothing lost
 
-Every raw export in `last log/` remains on disk with a ledger entry; the three
+Every raw export in `last log/` remains on disk with a ledger entry (see
+`12_raw_chat_logs/INDEX.md`), including `organisation log.txt` — the *one* file
+the first pass overlooked, now ledgered here and added to the ledger. The three
 byte-identical artifact copies were removed from `last log/` because identical
 canonical copies exist at `11_git_patch/` and `05_patches_and_scripts/x64dbg/`
 (verified by `cmp`, hashes above). No raw chat export was deleted.
+
+**Correction (2026-08-30):** the original inventory line said "11 files,
+1,716,243 bytes, 21,437 lines" and listed only eight `.txt` exports. The actual
+folder holds **nine** `.txt` exports (1,827,795 bytes, 23,146 lines); the ninth is
+`organisation log.txt` (`79d6007f`, 1,757 lines), the transcript of the
+orchestrating session `arena/01a053d9` that created this very archive and merged
+PR #17. Its findings are not re-archived (they are the archive); it is ledgered
+here for provenance so a future session does not re-dissect it.
