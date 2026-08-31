@@ -112,3 +112,8 @@ deleted under the dedup rule — canonical copies live in `11_git_patch/` and
 ledger entries (a deliberate departure from the 2026-08-26/27 practice of deleting raw
 exports after dissection; recorded here so a future session does not treat them as
 un-dissected). 15-folder tree unchanged.
+
+**2026-08-31 addendum:** a verification pass (address/hash/PR sweep of the nine
+exports vs. the archive) found one gap — **PR #16** (the V9 PR, merge `d2f61bb9…`)
+was missing from §11.7 / Part 5 §A3; fixed. With that, the `last log/` folder was
+deleted per user request; all nine files remain in git history (tracked at `fdefa19`).

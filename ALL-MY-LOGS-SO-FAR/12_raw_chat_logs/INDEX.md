@@ -74,6 +74,16 @@ Unlike the 2026-08-26/27 passes, the raw exports from this ingest were **not
 deleted**. They remain in `last log/` at the repo root. This ledger exists so a future
 session knows they have already been torn apart and does not re-archive them.
 
+> **UPDATE 2026-08-31 — folder verified and deleted.** A full verification pass
+> (address/hash/PR sweep of all nine exports against the archive) found exactly one
+> gap, now fixed: **PR #16** (the V9 PR, merge `d2f61bb9…`) was missing from
+> `03_analysis/RAWLOG_NETNEW_EXTRACTS.md` §11.7 and from Part 5 §A3; both were
+> updated. All other content checks passed (V9 patch/hash/verification, clean-trace
+> evidence, cache/save forensics, inline-patcher reconstruction, corrections,
+> planned-but-never-delivered files identified as plans). The folder `last log/` was
+> then **deleted per user request** — all nine `.txt` files remain recoverable in git
+> history (tracked at commit `fdefa19`, deleted in the 2026-08-31 session commit).
+
 Full report: `00_START_HERE/DISSECTION_REPORT_2026-08-30.md`.
 Net-new facts: `03_analysis/RAWLOG_NETNEW_EXTRACTS.md` §11.
 Narrative: `01_research_archives/CK2_MJ_RESEARCH_ARCHIVE_PART5.md`.
