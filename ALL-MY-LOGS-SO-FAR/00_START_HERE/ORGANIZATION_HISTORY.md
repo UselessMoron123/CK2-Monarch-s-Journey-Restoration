@@ -117,3 +117,21 @@ un-dissected). 15-folder tree unchanged.
 exports vs. the archive) found one gap — **PR #16** (the V9 PR, merge `d2f61bb9…`)
 was missing from §11.7 / Part 5 §A3; fixed. With that, the `last log/` folder was
 deleted per user request; all nine files remain in git history (tracked at `fdefa19`).
+
+## Turn 10 — direct-session catalogue and rulebook v8 (2026-08-31)
+
+No raw-chat export existed for this live Arena session. Its chronology was distilled
+directly into `01_research_archives/CK2_MJ_RESEARCH_ARCHIVE_PART6.md` from user runtime
+reports, repository changes, diffs, hashes, and reproducible static analysis. Part 6
+preserves the V9 trace correction, deferred polish, guarded DLC payload experiment and
+runtime verdict, GameSparks-role correction, and both 3.3.5.1 native-reuse passes,
+including dead ends and confidence boundaries.
+
+`PROMPT_organize_research_log_v8.md` is now operative. It preserves v7 and adds five
+controls learned from this session: direct-session/no-export archival, explicit
+evidence classes, direction-change decision records, reproducible scratch-output
+teardown, and navigation audits. It also permits future AIs to improve the rules only
+through a new version: old prompts remain provenance, authoritative factual dashboards
+outrank prompt prose, safety rules cannot be weakened, and the fixed 15-folder tree is
+not to be reorganized without a demonstrated need. README, STATUS, PLAN, and the raw
+source ledger were updated together.

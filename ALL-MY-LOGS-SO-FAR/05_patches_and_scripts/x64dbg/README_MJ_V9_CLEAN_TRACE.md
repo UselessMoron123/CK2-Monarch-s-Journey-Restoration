@@ -36,7 +36,9 @@ Everything else from V8 is kept. Expected V9 SHA-256:
   already-running CK2 process, starts x64dbg in attach mode, and copies the
   script command to the clipboard.
 - `MJ_V9_CLEAN_TRACE.txt` — x64dbg script that clears old breakpoints and arms
-  the focused logging points (the eight `[MJ]` lines).
+  the focused logging points (the eight `[MJ]` lines). SHA-256 after the
+  2026-08-31 `DAILY_GATE` correction:
+  `9bd5fc652eae425b3becd5508a806203c2ef2ab8d150f46a09ee16da58a24bfa`.
 
 ## Exact Windows procedure
 

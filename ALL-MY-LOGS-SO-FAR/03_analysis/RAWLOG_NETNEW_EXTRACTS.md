@@ -252,7 +252,9 @@ blocker and was correctly left alone.
   that the xref scan proved does **not** call `UpdateFeatProgress`. The logged
   `al=A0` / `al=80` are therefore pointer bytes. Consequence: the trace proves
   `UpdateFeatProgress` was entered, but **not** by the daily caller and **not** via the
-  patched byte. See `CONTRADICTIONS.md` §13. `MJ_V9_CLEAN_TRACE.txt` still has the typo.
+  patched byte. See `CONTRADICTIONS.md` §13. The canonical
+  `MJ_V9_CLEAN_TRACE.txt` was corrected and re-hashed on 2026-08-31; historical
+  traces remain evidence of the typo.
 - **`RESTORE_GATE al=1` on the cold burst** (log line 498, `rip=00007FF7B76662E8`,
   the `je` at raw `0x007856E8` immediately after `test al,al`) ⇒
   `IsActiveForPlaythrough` returned **true** during the cold load at that site, and

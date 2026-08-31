@@ -114,3 +114,18 @@ Two of these duplicates are **invisible to SHA-256**: `raw chat.txt` is a trunca
 prefix of a longer export, and `one more raw log.txt` is a line-range slice of another.
 Hashing all 11 files reported 11 unique values. Only `diff`/`cmp` found them. Dedup in
 this repo must be content-based, never hash-only.
+
+---
+
+# 2026-08-31 — live Arena session (no raw export)
+
+No separate raw-chat file was uploaded or created. This is intentional, not a missing
+artifact. The session was catalogued directly from the live conversation, tool record,
+repository artifacts, runtime reports, and reproducible analysis.
+
+Canonical narrative: `01_research_archives/CK2_MJ_RESEARCH_ARCHIVE_PART6.md`.
+Owned evidence: `03_analysis/DLC_TEST_UNLOCK_RUNTIME_RESULTS.md` and
+`03_analysis/WINDOWS_3351_NATIVE_REUSE_AUDIT.md`. Organization decision:
+`00_START_HERE/PROMPT_organize_research_log_v8.md` and
+`00_START_HERE/ORGANIZATION_HISTORY.md` Turn 10. Do not search for, invent, or claim a
+deleted transcript for this entry.

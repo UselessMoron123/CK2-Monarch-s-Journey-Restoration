@@ -135,8 +135,9 @@ that does **not** call `UpdateFeatProgress`. So:
 - it does **not** prove the V8 byte at raw `0x666546` was ever executed.
 
 This does not weaken the V9 conclusion (the four lines that matter are all inside
-`UpdateFeatProgress` / `CalcShouldTrackFeatProgress`), but it is recorded in
-`CONTRADICTIONS.md` §13 and `MJ_V9_CLEAN_TRACE.txt` still carries the typo.
+`UpdateFeatProgress` / `CalcShouldTrackFeatProgress`). It is recorded in
+`CONTRADICTIONS.md` §13. The helper carried the typo when this trace was captured;
+the canonical `MJ_V9_CLEAN_TRACE.txt` was corrected and re-hashed on 2026-08-31.
 
 ---
 
@@ -252,8 +253,9 @@ soft or hard quiting. they go up if i do the right thing."*
 1. **Optional** confirmatory trace: `MJ_V9_CLEAN_TRACE` should log
    `V9_GATE_FORCE` at `CK2game.exe+7B8506` and `CALC_RETURN_PATH al=1` on a cold load.
    The playtest already settles the functional question.
-2. Fix the `DAILY_GATE` typo (`+666146` → `+667146`) in the trace script **and
-   re-publish its hash** — see `CONTRADICTIONS.md` §13.
+2. ~~Fix the `DAILY_GATE` typo (`+666146` → `+667146`) and re-publish its hash.~~
+   **Done 2026-08-31:** corrected helper SHA-256 `9bd5fc652eae425b3becd5508a806203c2ef2ab8d150f46a09ee16da58a24bfa`;
+   see `CONTRADICTIONS.md` §13.
 3. `user_id` instability: four distinct values for one logical cache
    (`CONTRADICTIONS.md` §12).
 4. A cleaner-than-V9 fix would require identifying `0x17A36D62` and the vtable that

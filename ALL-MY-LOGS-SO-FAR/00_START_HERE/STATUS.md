@@ -1,6 +1,18 @@
 # CK2 Monarch’s Journey Restoration — authoritative project status
 
-> **2026-08-30 — V9 cold-load feat fix proven. The last functional defect is closed.**
+> **2026-08-31 — latest-version direction and evidence status.** V9 remains the
+> runtime-proven 3.3.3 baseline. The DLC payload-only experiment succeeded for the
+> Christian `dlc024` ruler but the three `dlc007` Muslim rulers immediately game-over
+> without the required gameplay DLC; payload declarations are not a general unlock.
+> On 3.3.5.1, static matching proves that update callers, tracker/database consumers,
+> low-level parser, VFS helper, and `CReader` machinery survive, while GameSparks-facing
+> orchestration wrappers and the main-menu controller do not. A small native data
+> adapter plus normal mod UI/setup is now the strongest high-fidelity direction; a
+> fully scripted mod remains the safest fallback. Exact adapter feasibility is not yet
+> runtime-proven. Evidence: `03_analysis/DLC_TEST_UNLOCK_RUNTIME_RESULTS.md`,
+> `03_analysis/WINDOWS_3351_NATIVE_REUSE_AUDIT.md`, and research archive Part 6.
+>
+> **2026-08-30 — V9 cold-load feat fix proven. The last V9 functional defect is closed.**
 >
 > **Current baseline is V9**, SHA-256
 > `61e4345ba1395f09d26f84bf030ae0474fce3f0635a3516edea56b46c486d687`
@@ -64,9 +76,10 @@
 > **Not solved:** Paradox *launcher* Continue (case **C25**) — separate
 > `pdx_launcher.lib` / `launcher-v2.sqlite` path. Launch `CK2game.exe` directly.
 
-Last updated: 2026-08-30 (ingest and dissection of `last log/` — six sessions,
-PRs #13/#14/#15, V8 disproof, V9 fix and verdict). Previous update 2026-08-27
-(`latest logs/` / `latest latest logs/` / `new new logs/`). Read this file first, then:
+Last updated: 2026-08-31 (Part 6 direct-session archive, DLC runtime verdict,
+3.3.5.1 two-pass native-reuse audit, and operative organization prompt v8). Previous
+major ingest: 2026-08-30 (`last log/`, V8 disproof and V9 verdict). Read this file first,
+then:
 
 - `CASES_AND_FINDINGS.md` — solved/unsolved/partial case map
 - `FR_MJ_COMPLETE_ROSTER.md` — all FR+MJ rulers, bios, challenge tiers
@@ -146,6 +159,11 @@ until 2026-08-30. Its Continue fix is still present and still working in V9.
 
 ### Secondary (do not block on these)
 
+- **DLC-marked ruler experiment tested 2026-08-31:** the optional payload toggle
+  removes the initial DLC gate. The `dlc024` Aquitaine/French ruler starts and tracks;
+  the three `dlc007` Muslim rulers immediately game-over without Muslim gameplay
+  support, although initial feat values calculate first. This does not install or
+  unlock official DLC. See `03_analysis/DLC_TEST_UNLOCK_RUNTIME_RESULTS.md`.
 - Multiplayer button breaks on second boot / after resign-to-menu; grey map on first boot.
 - MJ arrow absent in some boots.
 - Portrait-tooltip flicker.

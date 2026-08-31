@@ -97,9 +97,10 @@ requirement to check by content, not just by hash.
 1. `V9_COLD_LOAD_FEATS_FIX.md` claimed the `DAILY_GATE` breakpoint (raw `0x666546`)
    executed. The breakpoint offset `+666146` resolves to raw **`0x665546`**. An
    addendum has been appended there; see `CONTRADICTIONS.md` §13.
-2. `MJ_V9_CLEAN_TRACE.txt` still arms `+666146` even though the V9 session claimed
-   the fix. Left as-is on disk (it is the file whose hash is published in
-   `README_MJ_V9_CLEAN_TRACE.md`), documented instead.
+2. `MJ_V9_CLEAN_TRACE.txt` still armed `+666146` at the time of this dissection,
+   even though the V9 session claimed the fix. It was left as-is here to avoid a
+   silent hash change. **Later resolution (2026-08-31):** corrected to `+667146`
+   and re-published as SHA-256 `9bd5fc65…`; see `CONTRADICTIONS.md` §13.
 3. The V9 session's claim that the inline patcher was "also saved as
    `ps1/RUN_APPLY_CK2_MJ_V9_INLINE.ps1`" was false. The file now exists,
    reconstructed verbatim from `last log (for now).txt`.

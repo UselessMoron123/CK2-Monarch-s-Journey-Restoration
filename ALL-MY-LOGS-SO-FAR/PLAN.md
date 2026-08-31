@@ -14,7 +14,9 @@ cold-load feats are done (V9, 2026-08-30); launcher Continue is C25.
 - [x] Sort dump into labeled subfolders
 - [x] MD5-delete all perfect duplicates (`99_duplicates/` gone; outside clones removed)
 - [x] Rescue unique `system2.log` into `07_runtime_logs/`
-- [x] Research Archive Parts 1–3 + chat `INDEX.md`
+- [x] Research Archive Parts 1–6 + source-session `INDEX.md`
+- [x] Operative archival rulebook v8: versioned self-improvement, direct-session
+      capture, evidence labels, decisions, scratch reproducibility, navigation audit
 - [x] **Cases / findings index** → `00_START_HERE/CASES_AND_FINDINGS.md`
 - [x] **Screenshot catalog** (user descriptions + intent) → `SCREENSHOTS_CATALOG.md`
 - [x] **Featured Rulers notes** → `FEATURED_RULERS.md`
@@ -58,15 +60,30 @@ V9 replaces that one 5-byte call with `mov al,1; nop; nop; nop`. Hash
 - [x] Offline test: feats survive soft resign **and** hard quit, and increase during play
 - [x] **C27 answered:** medal / “Word has spread…” behaviour is by design —
       `FEAT_CACHE_PEAK_TIER_ICON.md`
-- [ ] Fix the `DAILY_GATE` typo in `MJ_V9_CLEAN_TRACE.txt` (`+666146` → `+667146`)
-      and re-publish its hash — `CONTRADICTIONS.md` §13
+- [x] Fix the `DAILY_GATE` typo in `MJ_V9_CLEAN_TRACE.txt` (`+666146` → `+667146`)
+      and re-publish its hash — completed 2026-08-31; `CONTRADICTIONS.md` §13
 - [ ] Optional: run the V9 clean trace for machine proof of `V9_GATE_FORCE`
 
 ## PHASE 3 — Secondary polish ⬅ current
 Cases C09–C12, C13, C17: MP 2nd boot, grey map, flicker mp4, missing arrow,
 random-ruler MJ loss, gauntlet tooltip. Optional C25 launcher Continue.
 
+- [x] **V9 payload DLC-declaration experiment:** guarded apply/revert tooling built
+      and tested 2026-08-31. The `dlc024` Aquitaine/French ruler starts and tracks;
+      the three `dlc007` Muslim rulers pass the payload gate but immediately game-over
+      without Muslim gameplay support. Initial feat values can calculate before the
+      game-over. Results: `03_analysis/DLC_TEST_UNLOCK_RUNTIME_RESULTS.md`; guide:
+      `04_test_guides_and_reports/MJ_PAYLOAD_DLC_TEST_UNLOCK_GUIDE.md`.
+
 ## PHASE 4 — Separate projects
+- [ ] **3.3.5.1 port/native-reuse investigation — ACTIVE:** pure directory drop is
+      ruled out, but function matching now proves both update callers, tracker,
+      database consumers, low-level feat parser, virtual-input helper, and CReader
+      constructor/destructor survive (0.990–1.000 matches). The two GameSparks-facing
+      orchestration wrappers and main-menu controller are removed. Next: settle the
+      loader template/vtables and ownership contract, then choose a small native data
+      adapter plus mod UI versus fully scripted mod. See
+      `03_analysis/WINDOWS_3351_NATIVE_REUSE_AUDIT.md`.
 - [ ] Local reward gallery (ladder in `FR_MJ_COMPLETE_ROSTER.md` §0; Linux SetupRewards)
 - [ ] Recover missing rulers / full late payload — content specs already in
       `FR_MJ_COMPLETE_ROSTER.md` §2.12–2.16 + §3 (need DNA/scripts from a late dump)
@@ -80,6 +97,9 @@ random-ruler MJ loss, gauntlet tooltip. Optional C25 launcher Continue.
 ---
 
 ## Suggested next move
-1. Play on V7 (`CK2game.exe` launched directly). Optional: drop Continue-success
-   screenshots into `14_screenshots_and_media/` catalog **A**.
-2. Optional Phase 3 polish, or C25 launcher Continue, or Featured Rulers.
+1. Continue the 3.3.5.1 audit: identify the candidate loader template/vtables and
+   prove `CReader` ownership/destruction plus database-singleton construction.
+2. If those contracts close cleanly, specify the smallest guarded native-adapter
+   experiment; otherwise advance the fully scripted mod fallback.
+3. Keep V9 as the proven playable baseline; optional Phase 3 polish, C25, Featured
+   Rulers, and screenshot uploads remain deferred rather than abandoned.
