@@ -122,7 +122,143 @@ why GameSparks matters architecturally even though no network service is needed.
 5. If no definition loader survives, stop pursuing a byte-only hybrid and build the
    one-ruler scripted-mod prototype before considering a DLL adapter.
 
+## Second pass — function matching and call graph
+
+### 6. `UpdateFeatProgress` survives almost intact
+
+Instruction-normalized function matching found an unambiguous pair:
+
+| Build | Function | Size | Normalized match |
+|---|---:|---:|---:|
+| May 3.3.3 | `0x1407B8E60–0x1407B933F` | `0x4DF` | reference |
+| 3.3.5.1 | `0x1407BB600–0x1407BBACF` | `0x4CF` | **0.990** |
+
+The missing 16 bytes are meaningful. May starts by calling
+`CalcShouldTrackFeatProgress`; 3.3.5.1 instead checks one global feature-enabled byte
+at `0x141666C03` and returns when it is zero. The remaining update body is effectively
+the same and still walks the feat databases, runs script updates, records current
+values, and reaches feat-progress storage.
+
+Both engine update sites also survive:
+
+- daily caller `0x1406675A6`: check global byte → tracker accessor
+  `0x1407BABD0` → `UpdateFeatProgress`;
+- restore/load caller `0x140789AA8`: the same sequence.
+
+The tracker accessor itself matches exactly:
+
+| May 3.3.3 | 3.3.5.1 | Size | Match |
+|---:|---:|---:|---:|
+| `0x1407B8270` | `0x1407BABD0` | `0x68` | **1.000** |
+
+This proves 3.3.5.1 retains a callable native tracker and both normal scheduling
+paths. It is not merely dead storage code.
+
+### 7. The three native feat-database consumers survive
+
+The matched update bodies expose corresponding singleton/database globals:
+
+| Role in update | May 3.3.3 | 3.3.5.1 |
+|---|---:|---:|
+| primary feat-definition database | `0x1418D6C78` | `0x14185A770` |
+| secondary/complete database | `0x1418D6CB0` | `0x14185A798` |
+| current/level database helper | `0x1418D6C00` | `0x14185A6F0` |
+
+The 3.3.5.1 update function dereferences all three in the same positions as May. The
+problem is therefore population and activation, not absence of consumers.
+
+### 8. The low-level `CReader` feat parser survives; its data-source wrappers do not
+
+May's two `gs_virtual/feat_script` references are inside:
+
+| May function | Size | Meaning |
+|---|---:|---|
+| `0x1407B7950–0x1407B7C3C` | `0x2EC` | initialize one highlighted-ruler feat database from the current ruler's embedded script |
+| `0x1407B7C40–0x1407B808C` | `0x44C` | initialize the complete database by iterating ruler scripts |
+
+Function matching found no credible 3.3.5.1 equivalents (best normalized scores
+`0.707` and `0.560`, in unrelated regions). These are the removed GameSparks-facing
+wrappers.
+
+However, the second wrapper constructs an in-memory/VFS `CReader` and calls May
+`0x1407B9850`. That low-level reader/database function has a same-size, instruction-
+identical neighborhood counterpart in 3.3.5.1:
+
+| May 3.3.3 | 3.3.5.1 | Size | Match |
+|---:|---:|---:|---:|
+| `0x1407B9850–0x1407B9CB3` | `0x1407BBF70–0x1407BC3D3` | `0x463` | **1.000** |
+
+Several template instantiations share this normalized shape, so the exact C++ template
+type still needs confirmation from vtables/call context. The neighborhood and field
+usage make `0x1407BBF70` the strongest corresponding feat-database reader candidate.
+
+This changes the port outlook: we probably do **not** need to reimplement feat-script
+parsing. We need a small replacement for the removed wrapper which creates a `CReader`
+from a local script and invokes the surviving database loader, then enables the global
+feature byte.
+
+### 9. Reader/VFS support also survives exactly
+
+The May wrapper's helper calls were function-matched independently:
+
+| Purpose in May wrapper | May 3.3.3 | 3.3.5.1 | Size | Match |
+|---|---:|---:|---:|---:|
+| construct reader wrapper (`CReader` path/object form) | `0x140C38080` | `0x140C32650` | `0xD8` | **1.000** |
+| destroy/close reader wrapper | `0x140C38310` | `0x140C328E0` | `0xEB` | **1.000** |
+| build/register the virtual in-memory input used before reader construction | `0x140C5CD70` | `0x140C57320` | `0x400` | **1.000** |
+
+The corresponding May cleanup family around `0x140C5D170` is in the same surviving
+3.3.5.1 subsystem neighborhood. This strongly suggests the engine still has all generic
+VFS/reader primitives needed to parse a PDX feat script; what was removed is the
+highlighted-ruler-specific orchestration and its source payload.
+
+A proof of concept no longer needs to implement JSON, a parser, or a new file reader.
+It can convert the existing JSON to one plain feat script externally, then use the
+surviving VFS/reader and database calls. Exact argument ownership and destructor order
+must be recovered before any runtime invocation.
+
+### 10. Exact limits of a prospective native adapter
+
+A minimum adapter would still have to:
+
+1. select or receive a ruler identity;
+2. read that ruler's plain PDX feat script from the mod directory;
+3. construct the game-compatible `CReader` and target database instance;
+4. call the surviving loader around `0x1407BBF70`;
+5. populate both current and complete definitions as required;
+6. set the feature-enabled state used at `0x141666C03`;
+7. establish `special_event`/Bronzeman identity, probably with a scripted setup plus
+   surviving `extend_featured_ruler` flow.
+
+It would not by itself recreate the removed main-menu MJ panel. A practical hybrid
+would use a normal mod for ruler selection and presentation, with the adapter only for
+native challenge evaluation, cache, tiers, and notifications.
+
+## Revised interim verdict
+
+| Port idea | Second-pass result |
+|---|---|
+| Pure file drop with no hook | **Rejected:** directory registration has no feat-loader xref |
+| Byte-only offset port | **Rejected:** the two data-source wrappers are removed |
+| Small native data adapter + mod UI/setup | **More promising:** scheduler, tracker, databases, progress storage, and low-level reader survive |
+| Entirely scripted mod | **Still safest and most maintainable fallback** |
+| Exact original frontend | **Separate high-difficulty reconstruction** |
+
+## Next static work
+
+1. Confirm which of the identical `0x463` template instances is the exact feat target;
+   `0x1407BBF70` is the neighborhood match but vtable identity must settle it.
+2. Recover the exact ownership/argument contract across surviving virtual-input helper
+   `0x140C57320`, reader constructor `0x140C32650`, loader candidate, and destructor
+   `0x140C328E0`.
+3. Identify construction/reset routines for globals `0x14185A770`, `0x14185A798`,
+   and `0x14185A6F0`.
+4. Trace `extend_featured_ruler` writes to determine whether it can establish
+   `special_event` and Bronzeman mode without the old frontend.
+5. Then choose between a minimal proof-of-concept adapter and the one-ruler scripted
+   mod prototype.
+
 ## User input needed
 
-None for static analysis. A 3.3.5.1 runtime test will be requested only if a concrete
-file path, hook, or observable native initialization point is found.
+None for static analysis. A 3.3.5.1 runtime test will be requested only after a
+concrete loader invocation or mod-file experiment is ready.

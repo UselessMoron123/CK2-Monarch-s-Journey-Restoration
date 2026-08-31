@@ -74,12 +74,13 @@ random-ruler MJ loss, gauntlet tooltip. Optional C25 launcher Continue.
       `04_test_guides_and_reports/MJ_PAYLOAD_DLC_TEST_UNLOCK_GUIDE.md`.
 
 ## PHASE 4 — Separate projects
-- [ ] **3.3.5.1 port/native-reuse investigation — ACTIVE:** first static pass found
-      that `red_king/ruler_feats` and `common/monarchs_journey` are referenced only
-      by `CDirectorySettings`; no direct native feat-file loader is exposed by those
-      names. Downstream feat/storage code survives, but exact main-menu controller and
-      payload bridge do not. Continue function/call-graph matching before choosing
-      scripted mod versus native adapter. See
+- [ ] **3.3.5.1 port/native-reuse investigation — ACTIVE:** pure directory drop is
+      ruled out, but function matching now proves both update callers, tracker,
+      database consumers, low-level feat parser, virtual-input helper, and CReader
+      constructor/destructor survive (0.990–1.000 matches). The two GameSparks-facing
+      orchestration wrappers and main-menu controller are removed. Next: settle the
+      loader template/vtables and ownership contract, then choose a small native data
+      adapter plus mod UI versus fully scripted mod. See
       `03_analysis/WINDOWS_3351_NATIVE_REUSE_AUDIT.md`.
 - [ ] Local reward gallery (ladder in `FR_MJ_COMPLETE_ROSTER.md` §0; Linux SetupRewards)
 - [ ] Recover missing rulers / full late payload — content specs already in
