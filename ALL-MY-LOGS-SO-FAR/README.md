@@ -23,11 +23,12 @@ V7 `57b18e43…` → V6 `f5b7dfd6…` → V5 `29556549…` → stock `656f4f48�
    - **`FR_MJ_COMPLETE_ROSTER.md`** — every FR+MJ ruler, bio, B/S/G challenge (text-only)
    - **`FEATURED_RULERS.md`** — FR UI/timeline/assets/restore checklist
    - **`SCREENSHOTS_CATALOG.md`** — image intents (optional; roster is complete without pics)
-   - original prompt + organize-prompt templates (**v7** is the operative one;
-     v1–v6 kept as history — v7 consolidates v4 §1–§10 + v5 §4–§7 + v6 §8–§13 into one
-     continuous rulebook)
-2. **`01_research_archives/`** — Parts 1–5 structured archives (Part 5 = V8 disproof →
-   clean trace → V9 fix and verdict, 2026-08-30)
+   - original prompt + organize-prompt templates (**v8** is operative; v1–v7 remain
+     as provenance — v8 adds direct-session capture, evidence labels, decision records,
+     reproducible-scratch rules, and navigation audits)
+2. **`01_research_archives/`** — Parts 1–6 structured archives (Part 6 = V9 trace
+   correction/polish → DLC runtime experiment → 3.3.5.1 native-reuse investigation,
+   2026-08-31)
 3. **`02_handoffs/`** — **one** handoff (`CK2_MJ_ULTIMATE_HANDOFF.md`, deep background; older handoffs merged into it 2026-08-26) + completed PDB-investigation mission brief
 4. **`03_analysis/`** — binary analysis, patch maps, banned artifacts, Continue semantics
 5. **`04_test_guides_and_reports/`** — in-game click paths
@@ -40,7 +41,9 @@ V7 `57b18e43…` → V6 `f5b7dfd6…` → V5 `29556549…` → stock `656f4f48�
     2.6.1.1 debug drop, extracted PDBs, retained RAR volumes, manifests, and
     `test_versioned.dds`
 12. **`11_git_patch/`** — Arena branch patch
-13. **`12_raw_chat_logs/`** — `INDEX.md` only (all raw exports were torn apart & deleted; their info lives in Parts 1–3 + `03_analysis/RAWLOG_NETNEW_EXTRACTS.md`)
+13. **`12_raw_chat_logs/`** — source ledger: historical exports were dissected/deleted;
+    direct sessions with no export are explicitly recorded (content lives in Parts 1–6
+    and `03_analysis/RAWLOG_NETNEW_EXTRACTS.md`)
 14. **`13_save_and_cache/`** — `*.meta` + feat cache `q847rsja8ndx`
 15. **`14_screenshots_and_media/`** — **drop zone for image binaries** (catalog is text-only until you upload)
 

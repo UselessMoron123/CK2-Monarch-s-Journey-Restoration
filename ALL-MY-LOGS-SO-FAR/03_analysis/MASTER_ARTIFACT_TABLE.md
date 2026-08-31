@@ -116,6 +116,7 @@ removed.
 | `toggle_ck2_mj_payload_dlc_unlock.ps1` | `c623f68ffe527496898935a80f38de20b87cc02099642b3929a3489bbfd83167` — guarded payload-only Apply/Verify/Revert experiment |
 | `APPLY_MJ_PAYLOAD_DLC_TEST_UNLOCK.bat` | `2cd025815a42244e41c6e73f91a75a8c4f3d6876c7d56bd69927b812acb9afe0` |
 | `REVERT_MJ_PAYLOAD_DLC_TEST_UNLOCK.bat` | `0953882a117a0897d0be1508e54fb5c88a798e7abcfdc134835d7b7bffbd4f13` |
+| `MJ_PAYLOAD_DLC_TEST_UNLOCK_GUIDE.md` | `5c052db9ebefdd2ee55d59a0f7b65af38ac9735283ae322925ac0e1e2e747fbf` — experiment procedure; read runtime-results report for the verdict |
 
 Debugger helpers (`05_patches_and_scripts/x64dbg/`):
 

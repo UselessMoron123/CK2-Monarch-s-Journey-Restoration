@@ -17,9 +17,10 @@ questions or trust a later-retracted claim. Entries are grouped by topic.
   (`a0cc8e92…`). Claim B conflates the May-2020 3.3.3 patch target with the
   2020-09-02 *retirement update* and overlooks later patches. Canonical:
   `EXECUTABLE_IDENTITIES.md`, Part 1 C2.
-- **Related:** 3.3.5.1 is nonetheless **not** a viable byte-patch target — the
-  GameSparks/payload-parser/`gs_virtual/feat_script` loader was removed there.
-  That is a separate conclusion from its existence.
+- **Related:** 3.3.5.1 is not a viable **direct offset/byte port**. The original
+  GameSparks-facing orchestration and main-menu controller were removed, but later
+  static analysis found that the low-level feat parser and much of the tracker/database
+  pipeline survive. See §15 and `WINDOWS_3351_NATIVE_REUSE_AUDIT.md`.
 
 ## 2. Where does the Windows local loader read the payload?
 
@@ -192,3 +193,16 @@ questions or trust a later-retracted claim. Entries are grouped by topic.
   (`RESTORE_GATE al=1` on the cold burst). It remains a reasonable description of why
   the *display* went blank under V8; it is **not** what was measured for the tracking
   failure. The measured failure is the final gate at raw `0x007b7906`.
+
+## 15. 3.3.5.1 removed orchestration, not every feat primitive
+
+- **Earlier conclusion:** the payload parser / `gs_virtual/feat_script` loader and MJ
+  feature pipeline were removed, so only a ground-up scripted recreation remained.
+- **Static evidence (two-pass audit, 2026-08-31):** the two update callers,
+  `CFeatTracker`, database consumers, low-level feat parser, virtual-input helper, and
+  `CReader` constructor/destructor have 0.990–1.000 function matches in 3.3.5.1.
+  GameSparks-facing orchestration wrappers and the original main-menu controller do not.
+- **Verdict:** a direct 3.3.3 byte-offset port remains rejected, but “the parser was
+  removed” is too broad. A small native data adapter feeding surviving machinery is a
+  **strong design candidate**, not yet runtime proof. A fully scripted mod remains the
+  safest fallback. Canonical: `WINDOWS_3351_NATIVE_REUSE_AUDIT.md` and Part 6 C5.
