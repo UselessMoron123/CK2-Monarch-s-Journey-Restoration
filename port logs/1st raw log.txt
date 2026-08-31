@@ -1,0 +1,1241 @@
+read where "restoration project" stopped. think which problem we could solve next
+
+I read the current status, latest handoff, case map, plan, and V9 results.
+Where the restoration stopped
+
+The main restoration is effectively complete at V9:
+
+    Monarch’s Journey panel and local 11-ruler payload work.
+    Bronzeman starts and tracks challenges offline.
+    Save/load and in-game Continue work.
+    Progress survives resigning and full quit/relaunch.
+    Progress continues increasing after a cold load.
+    V9 is the proven baseline: 61e4345b…
+
+Nothing currently blocks normal play if CK2game.exe is launched directly.
+Best next problem
+
+I recommend fixing the V9 trace-script defect first:
+
+text
+
+MJ_V9_CLEAN_TRACE.txt
++666146 → +667146
+
+The existing DAILY_GATE breakpoint is off by 0x1000 and lands in the middle of an unrelated instruction. This is already acknowledged in the plan and contradiction register, but the actual script remains wrong.
+
+Why this should be next:
+
+    It is clearly understood and locally solvable.
+    It requires no speculative binary patch.
+    It prevents future debugging from generating misleading evidence.
+    We can update the script, README, hash registry, plan, and related documentation together.
+    It leaves the repository in a clean “V9 finalized” state before opening another reverse-engineering investigation.
+
+A Windows runtime trace afterward would be useful confirmation, but is optional; correcting the breakpoint itself can be done now.
+Best actual feature problem after that
+
+I would choose C17: the stale “Challenges Disabled” gauntlet tooltip.
+
+It is probably a narrow frontend/account-localization condition, while the underlying Play and challenge systems already work. That makes it:
+
+    visible and easy to verify;
+    lower risk than changing initialization behavior;
+    more tightly related to the restored feature than launcher integration;
+    likely approachable using the existing string dumps, executable references, and known account-gate patches.
+
+Problems I would defer
+
+    C25 launcher Continue: separate launcher/database system, probably needing real launcher-v2.sqlite inspection. High effort for little benefit because direct launch works.
+    C09 multiplayer: unrelated to the single-player restoration and could involve broader frontend state.
+    C10 grey map / C11 flicker / C12 missing arrow: intermittent initialization issues with weak reproduction evidence.
+    C13 random-ruler path: not the intended Monarch’s Journey entry route.
+    Missing rulers / Featured Rulers / reward gallery: worthwhile, but these are larger content projects rather than the next contained defect.
+
+So my proposed order is:
+
+    Repair and finalize the V9 trace tooling.
+    Investigate C17’s stale tooltip.
+    Then consider missing rulers or Featured Rulers as the next major expansion.
+
+yes, let's start with polishing v9. say if anything needed from me. if there's nothing - start working
+ReadMJ_V9_CLEAN_TRACE.txt
+ReadREADME_MJ_V9_CLEAN_TRACE.md
+Edit+3−3
+Edit+1−1
+
+V9 polishing is complete. Nothing was needed from you.
+Changes made
+
+    Corrected MJ_V9_CLEAN_TRACE.txt:
+        Wrong: CK2game.exe+666146
+        Correct: CK2game.exe+667146
+    Updated all three breakpoint commands: bp, bplog, and bpcond.
+    Documented what the corrected DAILY_GATE proves.
+    Republished artifact hashes and file sizes.
+    Updated the plan, runtime results, contradiction register, archive, and dissection report.
+    Preserved the old V8 trace and historical logs unchanged as evidence.
+
+New identities
+
+    MJ_V9_CLEAN_TRACE.txt
+    SHA-256: 9bd5fc652eae425b3becd5508a806203c2ef2ab8d150f46a09ee16da58a24bfa
+    README_MJ_V9_CLEAN_TRACE.md
+    SHA-256: 03bd75798024774c3a8b4c5e84dcd4a1437bc471b66ed4b52a5434a4f8994d45
+
+Validation passed, the working tree is clean, and the work is committed as:
+
+text
+
+9cdc164 Polish V9 trace tooling
+
+The optional V9 confirmation trace can still be run on your Windows machine someday, but it is not required—the V9 playtest already proved the fix works.
+
+now what can be done with gauntlet and multiplayer button
+
+Both can be investigated, but they are very different problems.
+Gauntlet tooltip — good next target
+
+The gauntlet’s “Challenges: Disabled” message is cosmetic. V9 proves that challenges remain enabled and progress counts despite the warning.
+
+The displayed text comes from:
+
+text
+
+RULES_FEATS_DISABLED = Challenges: Disabled
+
+Nearby localization keys include:
+
+text
+
+RULES_FEATS_REQUIRE_RULES
+RULE_FEATS_WARNINGS
+
+This suggests the tooltip is produced by the game-rule/feat eligibility presentation layer. It is probably still reading one retired account, Steam, checksum, or availability predicate that the functional V4–V9 path no longer depends on.
+What we can do
+
+    Find every Windows 3.3.3 reference to RULES_FEATS_DISABLED.
+    Identify the function constructing the gauntlet tooltip.
+    Compare its checks with the already-understood V4 eligibility function.
+    Produce a narrow V10 candidate that changes only the tooltip result.
+    Keep all V9 behavior untouched.
+
+A safe outcome would be either:
+
+    make the tooltip say Challenges: Enabled, if that localization already exists; or
+    suppress only the erroneous disabled line.
+
+I would not merely overwrite the localization text globally, because that could lie in genuinely disabled non-MJ games. We should patch the stale condition instead.
+
+I need nothing from you to begin the static investigation. Later, I may need one screenshot or a quick test of a candidate patch.
+Multiplayer button — probably not an MJ defect
+
+The evidence says:
+
+    it may work on the first boot;
+    it becomes grey after resigning to the menu or on another boot;
+    hovering shows “Game State is corrupted. Please restart”;
+    this was reproduced after an ordinary non-Bronzeman campaign too.
+
+That means C09 is likely a stock CK2 dirty frontend session/state-reset bug, not a Monarch’s Journey or account-gate problem. The relevant code area is likely:
+
+    CFrontEndState::MultiPlayer
+    CFrontendMultiplayerView::{Show, Update, ResetSession, OnSessionChange}
+    frontend validation/state cleanup after leaving a campaign.
+
+Possible goals
+
+There are two distinct interpretations:
+
+    Restore the button visually
+    Force-enable it even while the frontend considers the state dirty. Easy in principle, but unsafe—the multiplayer screen may open with invalid state.
+
+    Repair the state transition
+    Find why resign-to-menu fails to reset the session, then invoke or reproduce the proper cleanup. Harder, but correct.
+
+The second is the only patch I would recommend. It will likely require runtime tracing because an intermittent state-transition bug is difficult to settle from static disassembly alone.
+
+Also, restoring the button does not guarantee that modern Steam networking or CK2 matchmaking still works. We can repair the frontend button without necessarily restoring online multiplayer infrastructure.
+Recommended order
+
+    Gauntlet tooltip first — narrow, directly connected to MJ, low risk.
+    Multiplayer diagnosis second — determine whether the disabled state is intentional protection or a missed cleanup.
+    Only patch multiplayer after identifying the stale state flag; do not blindly force-enable it.
+
+I can start the gauntlet static investigation without anything from you.
+
+actually no. let's think how to port restored MJ to latest version (it also be easier to see if other rulers work, since i can't play them on this DLC-less version, play button is gray, dlc icon drawn on it)
+ReadWINDOWS_3351_PORT_ASSESSMENT.md
+
+That changes the best strategy.
+Important finding
+
+The grey DLC-marked Play button is driven directly by the local payload’s required_dlcs field. Four of the current 11 rulers declare DLC requirements:
+Ruler	Required ID
+Mordechai al-Dawla	dlc007
+Louise of Aquitaine	dlc024
+Shajar al-Durr	dlc007
+Arwa of Yemen	dlc007
+
+Before attempting a difficult 3.3.5.1 port, we should make a DLC-unlocked test payload for V9 by removing those four required_dlcs declarations.
+
+That should make the MJ Play button clickable. It will tell us whether:
+
+    the ruler and required government/religion data already exist and the campaign works;
+    the campaign starts but some DLC mechanics are unavailable;
+    the executable independently rejects the ruler later;
+    required character/title/history data are genuinely absent.
+
+This is much faster and safer than porting the complete restoration.
+Limits of payload unlocking
+
+Removing required_dlcs bypasses only MJ’s upfront DLC declaration. It does not manufacture DLC content or ownership.
+
+Possible outcomes include:
+
+    Best case: CK2 has all necessary historical and gameplay data, and the ruler works with reduced mechanics.
+    Partial case: the ruler loads, but government or religion mechanics are restricted.
+    Failure case: CK2 changes the government, makes the ruler unplayable, or refuses during campaign setup.
+
+All outcomes would be useful evidence.
+Porting to 3.3.5.1
+
+The previous assessment is still valid: 3.3.5.1 removed:
+
+    the GameSparks/local payload parser;
+    the virtual feat_script loader;
+    most of the Monarch’s Journey main-menu controller.
+
+The downstream Bronzeman, feat storage, tracking, save fields, reward machinery, and some highlighted-ruler controls survive.
+
+Therefore this is not a V2–V9 offset port. A real latest-version restoration would require a new data injection mechanism, likely one of:
+
+    Native plugin/DLL injection that reconstructs ruler and feat objects.
+    Executable code-cave injection containing a replacement local loader.
+    Reusing surviving database loaders and redirecting them to ordinary local files, if further analysis finds a callable path.
+    Porting missing 3.3.3 routines into 3.3.5.1—not attractive because it would involve relocations, object-layout compatibility, and many dependencies.
+
+Option 3 is the only relatively clean possibility and deserves another investigation, but it remains a major project.
+Recommended plan
+
+    Create a guarded V9 DLC-unlocked payload variant without changing the executable.
+    Test those four rulers individually.
+    Record exactly what fails after Play becomes available.
+    If the latest installation genuinely contains usable DLC that the May installation lacks, begin a fresh 3.3.5.1 loader feasibility study.
+    Attempt injection only if no surviving local database input can be repurposed.
+
+I need nothing from you to build the DLC-unlocked payload and a safe apply/revert tool. Afterward, I would need you to test the four newly unlocked rulers on Windows.
+
+possible to make mj in form of dlc or something mod-like?
+
+Yes—but only partly.
+Short answer
+
+    On 3.3.3, much of Monarch’s Journey can be packaged in a mod-like installer: payload, localization, interface assets, and scripts. The executable patches still need a guarded patcher because the feature is disabled inside native code.
+    On 3.3.5.1, a normal CK2 mod or ordinary DLC package cannot restore the complete feature by itself. The latest executable removed the payload parser, virtual feat-script loader, and much of the MJ frontend controller.
+    A hybrid mod plus native loader/plugin is technically possible and is the most realistic route to a latest-version restoration.
+
+What a normal CK2 mod can provide
+
+A mod can likely contain:
+
+    all ruler definitions;
+    challenge scripts;
+    localization;
+    portraits and interface graphics;
+    event and decision logic;
+    score variables;
+    custom notifications;
+    an approximation of Bronzeman restrictions;
+    an independent menu or in-game window, using CK2’s moddable UI where possible.
+
+This could reproduce the gameplay concept of Monarch’s Journey on 3.3.5.1 without restoring Paradox’s exact internal implementation.
+
+It could also avoid the original required_dlcs payload gate. However, it cannot grant access to mechanics or content belonging to DLC the user does not own.
+What a normal mod cannot restore
+
+A conventional CK2 mod cannot ordinarily:
+
+    add arbitrary native C++ controllers to the main menu;
+    reconstruct removed CHighlightedRuler objects;
+    invoke the removed GameSparks JSON parser;
+    feed feats_script into the removed gs_virtual/feat_script path;
+    reconnect the original main-menu MJ panel when its controlling code is absent;
+    change hardcoded executable checks;
+    perfectly reproduce the native feat cache and Bronzeman integration.
+
+A fake .dlc descriptor would not help. CK2 DLC packages are recognized through Steam ownership and native DLC-manager logic; creating an unofficial DLC entry would neither restore removed code nor legitimately unlock official DLC.
+Three possible products
+1. V9 “restoration mod package”
+
+Target: May 2020 Windows 3.3.3.
+
+Package together:
+
+    normal CK2 mod files where possible;
+    gfx\monarchs;
+    localization/assets;
+    guarded V9 executable patcher;
+    apply/check/revert launcher.
+
+This would be easiest to install, but technically remains a mod plus binary patch.
+2. Reimplemented MJ mod for 3.3.5.1
+
+Target: latest CK2.
+
+Rebuild the experience using ordinary CK2 scripting:
+
+    select a ruler through decisions, events, or a custom bookmark;
+    initialize three challenge variables;
+    calculate progress using events and scripted triggers;
+    show progress through decisions, character modifiers, events, or a custom in-game window;
+    grant Bronze/Silver/Gold through flags and notifications;
+    store progress in saves;
+    optionally enforce restart/character-switch restrictions through scripting.
+
+Advantages:
+
+    no code injection;
+    latest CK2 compatibility;
+    easier to add every known ruler;
+    maintainable and distributable as an ordinary mod;
+    does not depend on dead Paradox services.
+
+Disadvantages:
+
+    not the exact original main-menu panel;
+    limited UI and persistence compared with the native implementation;
+    some challenges may require approximations;
+    unavailable official DLC mechanics remain unavailable.
+
+This is probably the best long-term solution.
+3. Native 3.3.5.1 restoration
+
+Target: latest CK2 with the original UI/engine systems.
+
+Build a DLL/native loader that injects replacement data and possibly restores missing controller behavior.
+
+Advantages:
+
+    potentially closest to the original feature;
+    can reuse surviving feat, Bronzeman, save, and reward systems.
+
+Disadvantages:
+
+    substantially harder and riskier;
+    executable-version-specific;
+    needs runtime hooks and careful object-layout reconstruction;
+    more difficult to distribute and troubleshoot;
+    no longer an ordinary CK2 mod.
+
+My recommendation
+
+Use two tracks:
+
+    Immediately create the DLC-unlocked V9 payload so you can test the four currently blocked rulers.
+    Begin designing a scripted MJ recreation for 3.3.5.1 as a standard CK2 mod.
+
+The mod recreation should preserve the parts users care about—featured ruler, three challenges, tier thresholds, progress, and completion messages—rather than trying to resurrect the removed GameSparks architecture.
+
+The first useful prototype would be one ruler, probably Kulin or Pavao, with:
+
+    a start/bookmark path;
+    three challenge trackers;
+    Bronze/Silver/Gold thresholds;
+    a progress-view decision;
+    save-persistent variables.
+
+If that works cleanly on 3.3.5.1, the existing 11-ruler payload and complete roster can be converted systematically. No additional files are needed from you to start examining that design.
+
+fine. do dlc unlock
+ReadAPPLY_CK2_MJ_V9.bat
+Readpatch_ck2_mj_v9.ps1
+Edit+7−5×2
+
+DLC test unlock is ready and committed as cdf2914.
+What it does
+
+It removes the payload-level DLC requirements for:
+
+    Mordechai al-Dawla
+    Louise of Aquitaine
+    Shajar al-Durr
+    Arwa of Yemen
+
+It does not install or emulate DLC. It should make the Play button available so we can see whether the installed game data can run each ruler.
+How to apply
+
+    Close CK2.
+    Keep the repository folder structure intact.
+    Find your extensionless payload:
+
+text
+
+C:\Users\UZWERG\Desktop\SteamCrusader\gfx\monarchs
+
+    Drag monarchs onto:
+
+text
+
+ALL-MY-LOGS-SO-FAR\05_patches_and_scripts\bat\
+APPLY_MJ_PAYLOAD_DLC_TEST_UNLOCK.bat
+
+    Look for:
+
+text
+
+RESULT: DLC TEST PAYLOAD APPLIED AND VERIFIED
+SHA-256: 1216a9eda59e35779171a616e489d6b1f823e6d4b62909a4924fafe8330e982b
+
+    Start the V9 CK2game.exe directly while offline.
+    Try the four rulers.
+
+Please report for each ruler:
+
+    whether Play becomes clickable;
+    whether the map opens;
+    whether it selects the correct character;
+    whether the three challenges appear;
+    any changed government, religion, or error.
+
+To undo it, drag gfx\monarchs onto:
+
+text
+
+REVERT_MJ_PAYLOAD_DLC_TEST_UNLOCK.bat
+
+The tool makes a verified backup and refuses unknown payloads.
+
+choosing muslims leads to immediate game over, but some scores are gained even like that, cause they have provincies or castles from the start and they get counted (but still some conditions are still unclear. for example, to have mongols like you - bribed some burger, had 62 opinion - didn't count. or to have your kids married to english girls - married son, who was historical, didn't count). but french king did start, got duke to like me - did count
+
+These results are very useful and confirm the payload unlock works.
+Results
+Muslim rulers
+
+Mordechai, Shajar, and Arwa pass the MJ Play-button gate, but CK2 immediately ends their campaigns because this installation lacks Muslim ruler gameplay support.
+
+The scores seen before Game Over are legitimate initialization calculations. The feat scripts run early enough to count existing:
+
+    provinces and holdings;
+    temples and castles;
+    titles;
+    dynasty members;
+    other starting conditions.
+
+But these campaigns cannot continue without the relevant official DLC support. The payload unlock cannot replace that game functionality.
+French/Aquitaine ruler
+
+This is the successful result:
+
+    campaign starts;
+    the duke-opinion challenge updates;
+    live challenge tracking works.
+
+Therefore dlc024 was apparently only an unnecessary payload-level restriction for the available game data, while dlc007 corresponds to an actual ruler-playability restriction.
+Why the other tests did not count
+“Have Mongols like you”
+
+Mordechai has no challenge requiring Mongols to like him.
+
+His opinion challenge counts a character only if that character is:
+
+    your direct vassal;
+    not imprisoned;
+    at 60 or higher opinion;
+    openly following a religion different from yours.
+
+Therefore, the burgher at 62 would not count if he:
+
+    followed your public religion;
+    was somebody else’s vassal rather than your direct vassal;
+    was imprisoned;
+    or never reached an update because the campaign immediately ended.
+
+Mongols belong to Mordechai’s kill challenge, not the opinion challenge:
+
+    killing a Mongol-culture character: one point;
+    killing a Muslim character: one point;
+    killing a Mongol Muslim: potentially two points;
+    concealed involvement can add another point.
+
+Llywelyn’s children and English spouses
+
+The actual script is stricter than “marry a child to an English girl.”
+
+It requires:
+
+    Llywelyn is alive;
+    the character is Llywelyn’s child;
+    the child’s spouse has English culture;
+    that English spouse personally has at least:
+        one title, or
+        one claim.
+
+Being historical, noble-born, or simply English is insufficient. Check the spouse’s culture and claims/title tooltip. The spouse’s gender is not checked.
+Conclusion
+
+The experiment produced a useful split:
+
+    Aquitaine/French ruler: playable without the declared payload DLC requirement.
+    Muslim rulers: payload can be unlocked, but the executable still enforces the genuine DLC-dependent ruler restriction.
+
+I recorded these runtime results and the exact challenge conditions in:
+
+text
+
+03_analysis/DLC_TEST_UNLOCK_RUNTIME_RESULTS.md
+
+The repository is clean, with the results committed as ecff804.
+
+You may leave the unlocked payload installed if you want access to the French ruler. It does not appear to harm the other rulers. The next meaningful direction is investigating a latest-version/mod recreation, where your normal DLC-capable installation may permit the Muslim campaigns.
+
+what do we do with "porting"? why gamesparks even so important? your top ideas about porting(by difficulty)?
+Why GameSparks mattered
+
+GameSparks itself is not inherently necessary for offline Monarch’s Journey. It was merely Paradox’s delivery system.
+
+In 3.3.3, the chain is approximately:
+
+text
+
+GameSparks interface
+  ↓
+load local JSON payload
+  ↓
+parse scheduled_rulers / highlighted_ruler
+  ↓
+construct native ruler objects
+  ↓
+extract each ruler's feats_script string
+  ↓
+load that script as gs_virtual/feat_script
+  ↓
+build the feat database
+  ↓
+main-menu MJ panel + Bronzeman + challenge tracking
+
+V9 does not contact GameSparks. However, it reuses the surviving GameSparks-shaped architecture to ingest the local payload.
+
+The important pieces are not networking. They are:
+
+    the JSON parser;
+    the native highlighted-ruler object builder;
+    the feats_script extractor;
+    the virtual-script loader;
+    the main-menu MJ controller.
+
+Paradox removed most of those in 3.3.5.1 along with GameSparks. The later executable retains much of the machinery after data ingestion:
+
+    feat tracker;
+    feat progress cache;
+    Bronzeman fields and autosaving;
+    score/reward classes;
+    some highlighted-ruler controls;
+    special_event save serialization.
+
+The problem is that these surviving systems have little or no data entering them.
+
+So we do not need to resurrect GameSparks networking. We need to replace the useful local-loading work formerly performed by that subsystem.
+Porting ideas, ranked by difficulty
+1. Scripted MJ recreation as a normal mod
+
+Difficulty: moderate
+Risk: low
+Chance of success: high
+
+Reimplement the experience using CK2’s normal mod features rather than the removed native MJ system.
+Structure
+
+    one decision or event used to choose/start each journey;
+    scripted challenge checks;
+    persistent character/global variables;
+    periodic or on-action updates;
+    Bronze/Silver/Gold flags;
+    completion events;
+    an in-game decision/event window displaying progress;
+    custom bookmark entries where useful.
+
+Advantages
+
+    targets 3.3.5.1 normally;
+    no executable patching;
+    easiest way to add all known rulers;
+    distributable as an ordinary mod;
+    challenge logic already exists in the payload and can be translated;
+    benefits from whatever official DLC the latest installation actually has.
+
+Disadvantages
+
+    no exact original main-menu panel;
+    progress UI would probably be an event, decision, modifier, or ledger-like screen;
+    no exact native feat cache behavior;
+    Bronzeman restrictions would need scripted approximations;
+    starting a specifically configured historical ruler from the main menu may require bookmarks or a setup event.
+
+Best first prototype
+
+Use Louis/Aquitaine because we have already confirmed his logic:
+
+    start in 867;
+    display three challenges;
+    count vassal dukes with 65 opinion;
+    store the value;
+    show tier progress.
+
+This would test the mod architecture before converting all 33 challenge definitions.
+2. Hybrid mod using the surviving native feat system
+
+Difficulty: medium–high
+Risk: medium
+Chance of success: uncertain but worth investigating
+
+The 3.3.5.1 executable still registers:
+
+text
+
+red_king/ruler_feats
+common/monarchs_journey
+
+It also retains feat tracker and cache code.
+
+The prior assessment found that 3.3.3 did not normally load feat definitions from red_king/ruler_feats; it loaded the embedded feats_script through gs_virtual/feat_script. But we should investigate whether 3.3.5.1 contains another surviving database-load entry point that can be redirected to a real mod file.
+
+Potential design:
+
+text
+
+mod/common/monarchs_journey/rulers.txt
+mod/red_king/ruler_feats/challenges.txt
+        ↓
+small executable redirect
+        ↓
+surviving database reader
+        ↓
+native CRulerFeatTracker
+
+Advantages
+
+    could preserve native challenge tracking, cache, tier logic, and completion messages;
+    much less code than rebuilding the parser;
+    mod would hold nearly all content;
+    executable patch might be only a small loader redirect.
+
+Disadvantages
+
+    no known working input path yet;
+    retained directory registrations may be dead remnants;
+    native database initialization may still expect highlighted-ruler objects;
+    main-menu panel controller is mostly gone;
+    could result in native tracking but still require a custom mod UI.
+
+This should be the first static port investigation, because success would substantially reduce the work.
+3. External payload converter plus generated ordinary CK2 files
+
+Difficulty: medium–high
+Risk: low–medium
+Chance of success: high for a recreation
+
+Write a converter that reads the existing JSON payload and generates a standard CK2 mod:
+
+text
+
+monarchs JSON
+  ↓ converter
+events/
+decisions/
+common/
+localisation/
+interface/
+
+Rather than manually translating every ruler and challenge, the tool would:
+
+    extract ruler metadata;
+    extract localization;
+    convert or embed feats_script;
+    generate initialization events;
+    generate progress-display events;
+    generate tier-completion events;
+    build a .mod descriptor.
+
+Advantages
+
+    preserves the payload as the canonical source;
+    scalable to missing rulers once authored;
+    prevents transcription mistakes;
+    maintainable;
+    avoids native injection.
+
+Disadvantages
+
+    embedded feat scripts are not all uniform;
+    some use hardcoded character IDs;
+    some use happened, others update;
+    UI generation remains constrained by CK2 modding;
+    event scheduling and progress display need a common wrapper.
+
+This is probably the best implementation method for option 1.
+4. Restore only a custom main-menu/start interface
+
+Difficulty: high
+Risk: medium
+Chance of success: uncertain
+
+Attempt to add or repurpose GUI definitions so the latest version presents ruler selection before starting.
+
+The visible panel could be recreated, but GUI scripting alone cannot necessarily execute all required campaign setup operations. It might need to route into:
+
+    a custom bookmark;
+    a preconfigured save;
+    console-like commands;
+    a startup event after selecting a ruler normally.
+
+Advantages
+
+    visually closer to MJ;
+    content can remain in a standard mod.
+
+Disadvantages
+
+    CK2’s main-menu GUI behavior is heavily native;
+    removed controller callbacks cannot be recreated in .gui files;
+    buttons may display but have no suitable native command;
+    likely to become an elaborate facade over option 1.
+
+I would attempt this only after the underlying scripted challenge system works.
+5. Small native hook that feeds the surviving feat database
+
+Difficulty: high
+Risk: high
+Chance of success: plausible
+
+Inject a DLL into 3.3.5.1 and hook a surviving initialization function such as:
+
+    feat tracker initialization/reload;
+    highlighted-ruler extension flow;
+    database load;
+    frontend initialization.
+
+The DLL would read local files and call existing 3.3.5.1 constructors/readers.
+Advantages
+
+    could reuse native tracking, caching, score tiers, and messages;
+    no GameSparks networking required;
+    content can live in external JSON or mod directories;
+    potentially much smaller than copying the removed parser.
+
+Major challenges
+
+    determine 3.3.5.1 class layouts;
+    determine calling conventions and constructors;
+    allocate objects with the game’s allocator;
+    construct its native string/vector types safely;
+    locate functions under ASLR;
+    avoid initialization-order bugs;
+    update hooks whenever the executable changes.
+
+This is the most realistic route to a true native port, but not the easiest route to a playable feature.
+6. Reimplement the removed JSON and virtual-script loader
+
+Difficulty: very high
+Risk: high
+Chance of success: possible
+
+Create injected code that reproduces:
+
+text
+
+LoadLocalCache
+ParseGameSparksData
+ParsePropertySetKeyData
+HighlightedRuler object creation
+feats_script virtual-file loading
+
+We have 3.3.3 as a behavioral reference and Linux symbols for many functions.
+Advantages
+
+    can retain the existing JSON almost unchanged;
+    closest to V9’s architecture;
+    potentially restores native objects needed by surviving systems.
+
+Disadvantages
+
+    large dependency graph;
+    native strings, arrays, maps, allocators, and GUI ownership must match;
+    3.3.5.1 object layouts may differ;
+    virtual-file loader itself was removed;
+    main-menu controller was also removed, so fixing ingestion may still not restore the panel;
+    substantially more fragile than a scripted mod.
+
+This is where GameSparks appears important: not because we need its servers, but because rebuilding this path means recreating several useful functions that were removed together with it.
+7. Copy removed machine code from 3.3.3 into 3.3.5.1
+
+Difficulty: extreme
+Risk: extreme
+Chance of success: low
+
+Copy the old functions into code caves or an injected module and rewrite all their references.
+
+This would require relocating:
+
+    calls;
+    global pointers;
+    RTTI/vtables;
+    strings;
+    imported functions;
+    constructors;
+    exception/unwind data;
+    object offsets.
+
+The two builds differ by more than address movement. Code and data structures were removed and other code shifted or changed.
+
+This is not a sensible starting point.
+8. Emulate the original GameSparks service
+
+Difficulty: extreme and mostly useless for 3.3.5.1
+Chance of solving 3.3.5.1: near zero
+
+A local server emulator could theoretically help 3.3.2, where the GameSparks client and parser still exist. It does not help 3.3.5.1 because its GameSparks client and parser were removed.
+
+For 3.3.2 it would still require:
+
+    TLS/domain redirection;
+    understanding request/response formats;
+    certificate handling;
+    recreating property-set responses.
+
+The 3.3.3 local loader already gives us a much better solution than this.
+Recommended path
+Stage 1 — investigate the hybrid opportunity
+
+Before committing to a full recreation, inspect 3.3.5.1 for:
+
+    every caller of the surviving feat database loaders;
+    every reference to red_king/ruler_feats;
+    surviving CReader-based challenge parsers;
+    CRulerFeatTracker::ReloadFeatsDatabase equivalents;
+    whether a normal disk file can be substituted for the removed virtual file;
+    whether the retained extend_featured_ruler flow constructs usable ruler objects.
+
+Possible result:
+
+    A usable loader survives: create a small guarded patch plus content mod.
+    Only tracker/storage survive: proceed with a fully scripted recreation.
+    Native system is nearly intact but uninitialized: consider a small DLL hook.
+
+Stage 2 — build a one-ruler ordinary-mod prototype
+
+In parallel or after static analysis:
+
+    use Louis/Aquitaine;
+    implement the duke-opinion challenge first;
+    show current value and thresholds;
+    persist it through save/load;
+    add one completion notification.
+
+That gives us a guaranteed fallback even if native reuse fails.
+Stage 3 — choose fidelity level
+
+After the prototype and loader investigation, choose between:
+
+    practical recreation: ordinary mod, custom in-game presentation;
+    hybrid: mod content plus a small native loader;
+    full native restoration: injected loader and reconstructed frontend.
+
+My ranking by value versus effort is:
+
+    Normal scripted mod generated from the payload
+    Hybrid use of any surviving native database loader
+    Small DLL hook
+    Reimplemented parser/virtual loader
+    Copied 3.3.3 code
+    GameSparks emulation
+
+The immediate next technical task should be a fresh static audit of the surviving 3.3.5.1 feat database—not attempting to port V9’s byte offsets.
+
+start investigating (say if anything needed)
+WriteALL-MY-LOGS-SO-FAR/05_patches_and_scripts/py/audit_3351_native_loader.py+97
+Edit+3−1
+Edit+28−20×2
+
+continue where stopped
+Writetmp_port_scan.py+52
+Edit+2−2
+Writetmp_port_scan.py+44
+
+Investigation has started. Nothing is needed from you yet.
+First findings
+
+I performed a fresh static audit of the verified Windows 3.3.5.1 executable.
+The apparent mod directories are not loaders
+
+These promising strings survive:
+
+text
+
+red_king/ruler_feats
+common/monarchs_journey
+
+However, each has only one direct code reference, both inside CDirectorySettings. The code merely registers directory-name strings alongside other game directories.
+
+There is currently no evidence that placing files in either directory causes 3.3.5.1 to load feat definitions. This weakens the easiest “drop some files into a mod” approach.
+Native feat machinery really does survive
+
+RULER_FEAT_LEVEL_ is referenced by active code at:
+
+text
+
+0x1407BA3C0–0x1407BA53D
+
+The function constructs and resolves a localized feat-level name. Other surviving components include:
+
+    feat progress storage;
+    Bronzeman save fields and autosaving;
+    score/reward progression;
+    extend_featured_ruler functions;
+    part of the highlighted-ruler toggle UI.
+
+Therefore, native tracking and storage may still be reusable if we can supply definitions through another route.
+extend_featured_ruler is not obviously the loader
+
+I confirmed its four 3.3.5.1 function regions and five string references. They appear to implement ruler/bookmark extension flow, not JSON parsing or feat-database loading.
+
+They may eventually help establish the selected ruler and special_event, but they do not replace the missing data bridge.
+The original bridge remains absent
+
+Still missing from 3.3.5.1:
+
+    scheduled_rulers;
+    feats_script;
+    gs_virtual/feat_script;
+    GameSparks parser/client strings;
+    most of the original main-menu MJ controller.
+
+So even if we feed native challenge definitions, restoring the exact main-menu panel is a second problem.
+Current ranking
+
+    Ordinary scripted MJ mod: highest confidence.
+    Small native adapter feeding surviving tracking/storage: plausible.
+    Redirect to a surviving native database loader: still under investigation.
+    Exact native main-menu restoration: substantially harder.
+    Rebuilding or copying the removed GameSparks parser: poor option.
+
+The next static step is call-graph and function matching around the surviving tracker, storage, Bronzeman, and database code. The objective is to determine whether any generic CReader or TGameDatabase::LoadFile path remains usable.
+
+The first-pass report is saved in:
+
+text
+
+03_analysis/WINDOWS_3351_NATIVE_REUSE_AUDIT.md
+
+Working tree is clean; committed as 2394c5b.
+
+read thoroughly through current session and catalogue everything into repo (following instructions/prompt). also, the idea about you improving these instructions yourself, is it good? like, the main direction if to keep all info well sorted, so you (and me) can navigate it easier, even keeping dead ends just in case (you probably remember my original prompt and core ideas)
+Writetmp_match.py+34
+Edit+119−5
+
+Continued the 3.3.5.1 investigation. Nothing is needed from you yet.
+Major finding: most of the useful native pipeline survives
+
+Function matching produced very strong results.
+UpdateFeatProgress survives
+Version	Address	Match
+3.3.3	0x1407B8E60	Reference
+3.3.5.1	0x1407BB600	99%
+
+Both normal callers also survive:
+
+    daily update at 0x1406675A6;
+    save/load restoration at 0x140789AA8.
+
+The tracker accessor survived with a 100% normalized match:
+
+text
+
+3.3.3:   0x1407B8270
+3.3.5.1: 0x1407BABD0
+
+This proves the latest version contains a functioning native tracker and normal scheduling—not merely abandoned cache code.
+What changed in the tracker
+
+In 3.3.3, UpdateFeatProgress begins by calling:
+
+text
+
+CalcShouldTrackFeatProgress
+
+In 3.3.5.1, that was replaced with a check of one global feature-enabled byte:
+
+text
+
+0x141666C03
+
+When zero, tracking returns immediately. If definitions are loaded and this state is enabled, the rest of the update pipeline remains almost identical.
+Native database consumers survive
+
+The update routine still uses all three corresponding native database objects:
+Role	3.3.3	3.3.5.1
+Primary definitions	0x1418D6C78	0x14185A770
+Complete/secondary definitions	0x1418D6CB0	0x14185A798
+Current-level helper	0x1418D6C00	0x14185A6F0
+
+Therefore, the missing part is populating and activating these databases.
+The most important discovery
+
+The low-level feat database reader appears to survive:
+
+text
+
+3.3.3:   0x1407B9850–0x1407B9CB3
+3.3.5.1: 0x1407BBF70–0x1407BC3D3
+Size:    0x463
+Match:   100%
+
+Several template instances share this shape, so its exact vtable identity still needs confirmation. But the corresponding neighborhood is extremely strong.
+
+Even better, the supporting reader machinery survived exactly:
+Purpose	3.3.3	3.3.5.1	Match
+Virtual in-memory input helper	0x140C5CD70	0x140C57320	100%
+CReader constructor/wrapper	0x140C38080	0x140C32650	100%
+Reader close/destructor	0x140C38310	0x140C328E0	100%
+What was actually removed
+
+The two highlighted-ruler-specific wrappers are gone:
+
+text
+
+0x1407B7950–0x1407B7C3C
+0x1407B7C40–0x1407B808C
+
+Those functions:
+
+    obtained feats_script from GameSparks-created ruler objects;
+    registered it as gs_virtual/feat_script;
+    constructed a reader;
+    invoked the feat database loader.
+
+The generic VFS, reader, parser, tracker, update scheduling, and storage remain.
+Revised port outlook
+
+A native hybrid is now more plausible than it appeared initially.
+
+We probably do not need to rebuild:
+
+    GameSparks;
+    JSON parsing inside CK2;
+    the PDX feat-script parser;
+    feat evaluation;
+    progress storage;
+    tier logic.
+
+A small adapter could instead:
+
+    convert our JSON payload into plain ruler feat-script files externally;
+    let a normal mod select and initialize the ruler;
+    register the selected script using the surviving virtual-input helper;
+    construct the surviving CReader;
+    invoke the surviving feat database loader;
+    enable the global feature state;
+    use the native tracker, cache, tiers, and notifications.
+
+The exact original main-menu panel would still be missing. A practical first port would use mod UI for selection and native code only for challenge evaluation.
+Next investigation
+
+The remaining static questions are:
+
+    which identical loader template instance belongs to highlighted-ruler feats;
+    exact vtable identities;
+    reader ownership and destructor order;
+    construction/reset of the three database globals;
+    whether extend_featured_ruler can establish special_event and Bronzeman mode.
+
+Findings were added to:
+
+text
+
+03_analysis/WINDOWS_3351_NATIVE_REUSE_AUDIT.md
+
+Committed as 895f944.
+Writetmp_match.py+34
+Edit+119−5
+
+Continued the 3.3.5.1 investigation. Nothing is needed from you yet.
+Major finding: most of the useful native pipeline survives
+
+Function matching produced very strong results.
+UpdateFeatProgress survives
+Version	Address	Match
+3.3.3	0x1407B8E60	Reference
+3.3.5.1	0x1407BB600	99%
+
+Both normal callers also survive:
+
+    daily update at 0x1406675A6;
+    save/load restoration at 0x140789AA8.
+
+The tracker accessor survived with a 100% normalized match:
+
+text
+
+3.3.3:   0x1407B8270
+3.3.5.1: 0x1407BABD0
+
+This proves the latest version contains a functioning native tracker and normal scheduling—not merely abandoned cache code.
+What changed in the tracker
+
+In 3.3.3, UpdateFeatProgress begins by calling:
+
+text
+
+CalcShouldTrackFeatProgress
+
+In 3.3.5.1, that was replaced with a check of one global feature-enabled byte:
+
+text
+
+0x141666C03
+
+When zero, tracking returns immediately. If definitions are loaded and this state is enabled, the rest of the update pipeline remains almost identical.
+Native database consumers survive
+
+The update routine still uses all three corresponding native database objects:
+Role	3.3.3	3.3.5.1
+Primary definitions	0x1418D6C78	0x14185A770
+Complete/secondary definitions	0x1418D6CB0	0x14185A798
+Current-level helper	0x1418D6C00	0x14185A6F0
+
+Therefore, the missing part is populating and activating these databases.
+The most important discovery
+
+The low-level feat database reader appears to survive:
+
+text
+
+3.3.3:   0x1407B9850–0x1407B9CB3
+3.3.5.1: 0x1407BBF70–0x1407BC3D3
+Size:    0x463
+Match:   100%
+
+Several template instances share this shape, so its exact vtable identity still needs confirmation. But the corresponding neighborhood is extremely strong.
+
+Even better, the supporting reader machinery survived exactly:
+Purpose	3.3.3	3.3.5.1	Match
+Virtual in-memory input helper	0x140C5CD70	0x140C57320	100%
+CReader constructor/wrapper	0x140C38080	0x140C32650	100%
+Reader close/destructor	0x140C38310	0x140C328E0	100%
+What was actually removed
+
+The two highlighted-ruler-specific wrappers are gone:
+
+text
+
+0x1407B7950–0x1407B7C3C
+0x1407B7C40–0x1407B808C
+
+Those functions:
+
+    obtained feats_script from GameSparks-created ruler objects;
+    registered it as gs_virtual/feat_script;
+    constructed a reader;
+    invoked the feat database loader.
+
+The generic VFS, reader, parser, tracker, update scheduling, and storage remain.
+Revised port outlook
+
+A native hybrid is now more plausible than it appeared initially.
+
+We probably do not need to rebuild:
+
+    GameSparks;
+    JSON parsing inside CK2;
+    the PDX feat-script parser;
+    feat evaluation;
+    progress storage;
+    tier logic.
+
+A small adapter could instead:
+
+    convert our JSON payload into plain ruler feat-script files externally;
+    let a normal mod select and initialize the ruler;
+    register the selected script using the surviving virtual-input helper;
+    construct the surviving CReader;
+    invoke the surviving feat database loader;
+    enable the global feature state;
+    use the native tracker, cache, tiers, and notifications.
+
+The exact original main-menu panel would still be missing. A practical first port would use mod UI for selection and native code only for challenge evaluation.
+Next investigation
+
+The remaining static questions are:
+
+    which identical loader template instance belongs to highlighted-ruler feats;
+    exact vtable identities;
+    reader ownership and destructor order;
+    construction/reset of the three database globals;
+    whether extend_featured_ruler can establish special_event and Bronzeman mode.
+
+Findings were added to:
+
+text
+
+03_analysis/WINDOWS_3351_NATIVE_REUSE_AUDIT.md
+
+Committed as 895f944.
+Read11first111myoriginal prompt.txt
+ReadPROMPT_organize_research_log_v7.md
+ReadREADME.md
+ReadORGANIZATION_HISTORY.md
+WriteALL-MY-LOGS-SO-FAR/01_research_archives/CK2_MJ_RESEARCH_ARCHIVE_PART6.md+346
+Edit+71−12×3
+Edit+2−1
+
+Completed and committed the full session catalogue.
+Added
+
+    01_research_archives/CK2_MJ_RESEARCH_ARCHIVE_PART6.md
+        Covers V9 corrections, DLC testing, 3.3.5.1 native-reuse research, dead ends, technical findings, confidence levels, and future directions.
+    00_START_HERE/PROMPT_organize_research_log_v8.md
+        Adds controlled instruction self-improvement.
+        Adds direct-session archival when no raw export exists.
+        Defines evidence-confidence labels.
+        Requires direction-change decision records.
+        Clarifies scratch-output and dead-end preservation.
+        Requires navigation audits.
+
+Updated
+
+    README.md
+    STATUS.md
+    PLAN.md
+    ORGANIZATION_HISTORY.md
+    12_raw_chat_logs/INDEX.md
+    03_analysis/CONTRADICTIONS.md
+    03_analysis/MASTER_ARTIFACT_TABLE.md
+
+The contradictions register now corrects the overly broad claim that the 3.3.5.1 feat parser was removed: orchestration was removed, but significant parser/tracker/database machinery survives.
+Verification
+
+    Confirmed all newly referenced canonical documents exist.
+    Recomputed and verified all four DLC experiment artifact hashes.
+    Ran git diff --check successfully.
+    Working tree is clean.
+
+Commit:
+
+text
+
+ae399e7 Catalogue DLC and 3.3.5.1 research session
+
+And yes—the idea of allowing future AIs to improve the organization instructions is beneficial. V8 implements it safely through versioned, provenance-preserving changes subordinate to the factual dashboards and existing safety rules.
+
+Create PR, then Merge
+
+PR created and merged successfully.
+
+    PR: #21 — Catalogue DLC and CK2 3.3.5.1 restoration research
+    Status: Merged
+    Merge commit: 0e0017a5eae388709be84af1d7fa23f4667220bc
+
+
+CK2-Monarch-s-Journey-Restoration
+arena/01a0578f-ck2-monarch-s-journey-restorat
+Merged
