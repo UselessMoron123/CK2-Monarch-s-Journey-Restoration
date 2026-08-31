@@ -279,11 +279,15 @@ and should not be re-archived.
 | #13 | `arena/01a04980-…` | — | `96ba84b` | landed the `01a044b2` patch; hash chain re-verified |
 | #14 | `arena/01a049a4-…` | `ab07419` | `910234875decd988ce55ed95e2401ce0f8c1b02a` | `NEXT_SESSION_HANDOFF_2026-08-29.md` |
 | #15 | `arena/01a04d46-…` | — | `f29287217b300be83a0c6334ccddc9a780bd5092` | **squash** merge; clean-trace helper |
+| #16 | `arena/01a0534b-…` | — | `d2f61bb9b6a57abc724a8b27c53861f730324031` | **the V9 PR** — "V9: fix cold-load feat reset via feature-eligibility gate force"; 41 files, +2016/−6; patch chain (`patch_ck2_mj_v9.ps1`, APPLY/CHECK/REVERT bats), `MJ_V9_CLEAN_TRACE` x64dbg helper, `build_v9_chain.py`, `V9_COLD_LOAD_FEATS_FIX.md`, handoff, STATUS→V9; merged 2026-08-30 16:38 UTC by the V9 session itself (verified from `last log (for now).txt` + GitHub, 2026-08-31) |
+| #17 | `arena/01a053d9-…` | — | `1fd74b558b8949ea99e7ebd918bf4f1b71f2f9c4` | "Consolidate organizing prompts to v7, dissect `last log/`, record V9 as proven baseline"; 26 files, +2426/−773; merged 2026-08-30 19:01 UTC |
 
 Session branch ids seen in `last log/`: `arena/01a044b2`, `arena/01a04980`,
-`arena/01a049a4`, `arena/01a04d46`, `arena/01a0534b`. The earlier PR request from
+`arena/01a049a4`, `arena/01a04d46`, `arena/01a0534b` (+ the orchestrating
+`arena/01a053d9`). The earlier PR request from
 `arena/01a044b2` was **rejected by the service** (no branch to push to), which is why
-`arena/01a04980` re-did the landing.
+`arena/01a04980` re-did the landing. (PR #16 was missing from the first pass of this
+table and was added 2026-08-31 during the `last log/` pre-deletion verification.)
 
 ### 11.9 — Second-pass recovery (2026-08-30): what the §11 sweep missed
 

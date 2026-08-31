@@ -115,6 +115,17 @@ byte-identical artifact copies were removed from `last log/` because identical
 canonical copies exist at `11_git_patch/` and `05_patches_and_scripts/x64dbg/`
 (verified by `cmp`, hashes above). No raw chat export was deleted.
 
+> **2026-08-31 addendum — verification pass and deletion.** The nine exports were
+> re-verified against the archive (hex-address sweep with VA/RVA normalization,
+> full-SHA sweep, filename/PR sweep). Exactly one gap was found and fixed:
+> **PR #16** (the V9 PR, `d2f61bb9…`, merged 2026-08-30 16:38 UTC) was absent from
+> `RAWLOG_NETNEW_EXTRACTS.md` §11.7 and Part 5 §A3 — added to both. Planned-but-
+> never-delivered filenames (`V8_CLEAN_TRACE_VERDICT_2026-08-30.md`,
+> `MJ_V9_GATE_TRACE.*`) were confirmed to be session plans only; their content
+> lives in `V9_RUNTIME_RESULTS.md` / the delivered `MJ_V9_CLEAN_TRACE.*` helpers.
+> Per user request, the `last log/` folder was then deleted; all nine files stay
+> recoverable in git history (tracked at `fdefa19`).
+
 **Correction (2026-08-30):** the original inventory line said "11 files,
 1,716,243 bytes, 21,437 lines" and listed only eight `.txt` exports. The actual
 folder holds **nine** `.txt` exports (1,827,795 bytes, 23,146 lines); the ninth is

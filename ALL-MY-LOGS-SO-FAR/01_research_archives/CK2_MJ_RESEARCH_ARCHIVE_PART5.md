@@ -72,7 +72,7 @@ Six distinct sessions, in Arena-branch UUID order (all after PR #12):
 | 3 | `arena/01a049a4-…` | `another other raw log.txt` (1,142 ln) | "still didn't work" → wrote `NEXT_SESSION_HANDOFF_2026-08-29.md`, **PR #14** (commit `ab07419`, merge `910234875decd988ce55ed95e2401ce0f8c1b02a`) |
 | 4 | *(no repo — pasted chat)* | `one more raw log.txt` (426 ln) | user applied V8 by hand from PowerShell; result **feats 0 in game *and* in the main-menu MJ tab**; cache pasted; `.bat` flicker root-caused |
 | 5 | `arena/01a04d46-…` | `another raw log.txt` (3,743 ln) | evidence session: V8 confirmed installed, cache + save forensics, `RestoreDeviceObjects` gate found unpatched, clean-trace helper built, **PR #15** (squash, `f29287217b300be83a0c6334ccddc9a780bd5092`) |
-| 6 | `arena/01a0534b-…` | `last log (for now).txt` (6,373 ln) + `x64dbg logs.txt` (the V8 clean trace) | trace analysis → stock-exe disassembly → **V9** built and delivered |
+| 6 | `arena/01a0534b-…` | `last log (for now).txt` (6,373 ln) + `x64dbg logs.txt` (the V8 clean trace) | trace analysis → stock-exe disassembly → **V9** built and delivered (**PR #16**, merge `d2f61bb9…`, merged 2026-08-30 16:38 UTC — added to §A3/§11.7 on 2026-08-31, was omitted in the first pass) |
 
 Note the wrap-around: session 4 has no repo access (the user pasted the handoff and
 renamed the patchers to `.txt`), so its facts arrive only as quoted transcript.
