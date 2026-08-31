@@ -169,9 +169,11 @@ questions or trust a later-retracted claim. Entries are grouped by topic.
   conclusion stands on those, not on `DAILY_GATE`.
 - **Not true:** that the V8 byte at raw `0x666546` was exercised, or which caller
   entered `UpdateFeatProgress`.
-- `MJ_V9_CLEAN_TRACE.txt` **still carries the typo** (verified 2026-08-30).
-  Fixing it changes the file's SHA-256, which `README_MJ_V9_CLEAN_TRACE.md`
-  publishes — fix and re-hash together, never silently.
+- **Resolved 2026-08-31:** `MJ_V9_CLEAN_TRACE.txt` now consistently arms and logs
+  `CK2game.exe+667146`. Its new SHA-256 is
+  `9bd5fc652eae425b3becd5508a806203c2ef2ab8d150f46a09ee16da58a24bfa`;
+  the artifact table and helper README were updated in the same change. The old
+  V8 trace and historical V8 logs remain unchanged as evidence of the original error.
 
 ## 14. What V8 did to the display, and what it did to the cache
 

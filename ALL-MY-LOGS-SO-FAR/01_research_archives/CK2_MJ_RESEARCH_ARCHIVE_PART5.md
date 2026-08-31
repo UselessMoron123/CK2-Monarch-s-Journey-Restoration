@@ -511,7 +511,7 @@ V8-alone (disproof: this part, B3).
 2. **`user_id` instability re-opened.** Four values, identical feat vectors
    (`CONTRADICTIONS.md` §12). If the medal/best-result display ever behaves as if
    progress vanished, check `user_id` in the cache first.
-3. **`MJ_V9_CLEAN_TRACE.txt` still arms `DAILY_GATE` at `+666146`.** The V9 session
+3. **At ingest, `MJ_V9_CLEAN_TRACE.txt` still armed `DAILY_GATE` at `+666146`.** The V9 session
    intended `+667146`. Harmless (same function) but it should be corrected before
    the trace is used to prove anything about raw `0x666546`
    (`CONTRADICTIONS.md` §13).
@@ -569,7 +569,7 @@ exception on launch.
 |---|---|---|
 | "Identity drift is refuted" (STATUS, 2026-08-27) | four distinct `user_id` values exist for the same logical cache | cross-reading two raw logs from different sessions |
 | `V9_COLD_LOAD_FEATS_FIX.md`: "`DAILY_GATE` (raw `0x666546`) executed" | the breakpoint was at raw `0x665546`; it proves the *function* ran, not the patched byte | VA↔raw conversion of the breakpoint offset |
-| V9 session: "the `DAILY_GATE` offset was fixed in V9" | `MJ_V9_CLEAN_TRACE.txt` still says `+666146` | reading the delivered file |
+| V9 session: "the `DAILY_GATE` offset was fixed in V9" | Delivered file still said `+666146`; canonical helper corrected to `+667146` and re-hashed 2026-08-31 | reading the delivered file; later repository repair |
 | V9 session: "saved as `RUN_APPLY_CK2_MJ_V9_INLINE.ps1`" | no such file existed | tooling-integrity check (rule 11) |
 | Earlier: "the `.bat` flicker is only a line-ending problem" | it is also cmd.exe mis-parsing PowerShell parentheses inside `if ( … )` | reading `APPLY_CK2_MJ_V8.bat` line 34 |
 | Earlier: V8 would restore the main-menu display | V8 zeroed it | the user's own report |

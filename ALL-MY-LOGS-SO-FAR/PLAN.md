@@ -58,15 +58,29 @@ V9 replaces that one 5-byte call with `mov al,1; nop; nop; nop`. Hash
 - [x] Offline test: feats survive soft resign **and** hard quit, and increase during play
 - [x] **C27 answered:** medal / “Word has spread…” behaviour is by design —
       `FEAT_CACHE_PEAK_TIER_ICON.md`
-- [ ] Fix the `DAILY_GATE` typo in `MJ_V9_CLEAN_TRACE.txt` (`+666146` → `+667146`)
-      and re-publish its hash — `CONTRADICTIONS.md` §13
+- [x] Fix the `DAILY_GATE` typo in `MJ_V9_CLEAN_TRACE.txt` (`+666146` → `+667146`)
+      and re-publish its hash — completed 2026-08-31; `CONTRADICTIONS.md` §13
 - [ ] Optional: run the V9 clean trace for machine proof of `V9_GATE_FORCE`
 
 ## PHASE 3 — Secondary polish ⬅ current
 Cases C09–C12, C13, C17: MP 2nd boot, grey map, flicker mp4, missing arrow,
 random-ruler MJ loss, gauntlet tooltip. Optional C25 launcher Continue.
 
+- [x] **V9 payload DLC-declaration experiment:** guarded apply/revert tooling built
+      and tested 2026-08-31. The `dlc024` Aquitaine/French ruler starts and tracks;
+      the three `dlc007` Muslim rulers pass the payload gate but immediately game-over
+      without Muslim gameplay support. Initial feat values can calculate before the
+      game-over. Results: `03_analysis/DLC_TEST_UNLOCK_RUNTIME_RESULTS.md`; guide:
+      `04_test_guides_and_reports/MJ_PAYLOAD_DLC_TEST_UNLOCK_GUIDE.md`.
+
 ## PHASE 4 — Separate projects
+- [ ] **3.3.5.1 port/native-reuse investigation — ACTIVE:** first static pass found
+      that `red_king/ruler_feats` and `common/monarchs_journey` are referenced only
+      by `CDirectorySettings`; no direct native feat-file loader is exposed by those
+      names. Downstream feat/storage code survives, but exact main-menu controller and
+      payload bridge do not. Continue function/call-graph matching before choosing
+      scripted mod versus native adapter. See
+      `03_analysis/WINDOWS_3351_NATIVE_REUSE_AUDIT.md`.
 - [ ] Local reward gallery (ladder in `FR_MJ_COMPLETE_ROSTER.md` §0; Linux SetupRewards)
 - [ ] Recover missing rulers / full late payload — content specs already in
       `FR_MJ_COMPLETE_ROSTER.md` §2.12–2.16 + §3 (need DNA/scripts from a late dump)

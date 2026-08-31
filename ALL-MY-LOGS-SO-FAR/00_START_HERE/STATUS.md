@@ -146,6 +146,11 @@ until 2026-08-30. Its Continue fix is still present and still working in V9.
 
 ### Secondary (do not block on these)
 
+- **DLC-marked ruler experiment tested 2026-08-31:** the optional payload toggle
+  removes the initial DLC gate. The `dlc024` Aquitaine/French ruler starts and tracks;
+  the three `dlc007` Muslim rulers immediately game-over without Muslim gameplay
+  support, although initial feat values calculate first. This does not install or
+  unlock official DLC. See `03_analysis/DLC_TEST_UNLOCK_RUNTIME_RESULTS.md`.
 - Multiplayer button breaks on second boot / after resign-to-menu; grey map on first boot.
 - MJ arrow absent in some boots.
 - Portrait-tooltip flicker.

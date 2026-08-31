@@ -46,6 +46,7 @@ Materialized paths:
 | Artifact | Size | SHA-256 | Path in archive | Role |
 |---|---:|---|---|---|
 | Ruler payload `monarchs` / `gfx\monarchs` | 101,949 | `fc6ec025b782c811636a0efb65a7b3f192f09fffd0ff6ca8051ef8bc6113db4e` | `06_game_data/monarchs` (+ variants) | 11 rulers / 33 challenges; 2030 timestamps; the active payload |
+| Generated DLC-test payload state | 101,761 | `1216a9eda59e35779171a616e489d6b1f823e6d4b62909a4924fafe8330e982b` | Produced in place by guarded toggle; not stored separately | Experimental V9 state: removes only four `required_dlcs` declarations; does not provide or unlock official DLC |
 
 ## 4. Evidence saves (all ZIP `.ck2`, `bronzeman=yes`, version 3.3.3.0)
 
@@ -112,6 +113,9 @@ removed.
 | `REVERT_CK2_MJ_V9_TO_V8.bat` | `1408084d615338a3e4e64edcb8c1ca713bd15a51a7d000845c295d0d3d60e7a2` |
 | `RUN_APPLY_CK2_MJ_V9_INLINE.ps1` | `02ce982e02081c9dc76e3a3b10a8475c7584c6d71066d6a00f4de0f9b028a634` — **reconstructed 2026-08-30**; the V9 session claimed to have saved this file but never did. Body is verbatim from the chat; the hash covers the file *including* its provenance header, so it has no prior value to compare against |
 | `py/build_v9_chain.py` | `77232f1150558303ba218c997ee666256e1d693bf4522e6fd9c5bb0b07176e28` — replays V2→V9 from the patcher sources asserting every hash; **re-run clean on 2026-08-30**, output `v9 61e4345b…` |
+| `toggle_ck2_mj_payload_dlc_unlock.ps1` | `c623f68ffe527496898935a80f38de20b87cc02099642b3929a3489bbfd83167` — guarded payload-only Apply/Verify/Revert experiment |
+| `APPLY_MJ_PAYLOAD_DLC_TEST_UNLOCK.bat` | `2cd025815a42244e41c6e73f91a75a8c4f3d6876c7d56bd69927b812acb9afe0` |
+| `REVERT_MJ_PAYLOAD_DLC_TEST_UNLOCK.bat` | `0953882a117a0897d0be1508e54fb5c88a798e7abcfdc134835d7b7bffbd4f13` |
 
 Debugger helpers (`05_patches_and_scripts/x64dbg/`):
 
@@ -120,9 +124,9 @@ Debugger helpers (`05_patches_and_scripts/x64dbg/`):
 | `MJ_V8_CLEAN_TRACE.txt` | 1,665 | `49c4a60263d3b2f569875cc7f1687121c1891597380d0e4903be673578f37ec4` |
 | `RUN_MJ_V8_CLEAN_TRACE.bat` | 3,088 | `5b2e79de8f1554bb7e14b18f2badb2532aa9714ec72b8ebeb867cc6a03d092e5` |
 | `README_MJ_V8_CLEAN_TRACE.md` | 4,233 | `3394fafcbbe9193bc5a05776b25193ab30b61a607e496ce8bc6725e30016b27a` |
-| `MJ_V9_CLEAN_TRACE.txt` | 2,115 | `06e0c5d6234142a697b7e4f84133ae3869e06a437a5853b251224aae3b91d77d` — ⚠️ still arms `DAILY_GATE` at `+666146`; see `CONTRADICTIONS.md` §13. Fixing it invalidates this hash and `README_MJ_V9_CLEAN_TRACE.md` |
+| `MJ_V9_CLEAN_TRACE.txt` | 2,115 | `9bd5fc652eae425b3becd5508a806203c2ef2ab8d150f46a09ee16da58a24bfa` — `DAILY_GATE` corrected `+666146` → `+667146` on 2026-08-31; supersedes erroneous hash `06e0c5d6…`; see `CONTRADICTIONS.md` §13 |
 | `RUN_MJ_V9_CLEAN_TRACE.bat` | 3,088 | `a3e5cfdb4fdbb833072567f16336ab42224debc05100fdd3af38cda71e7fb821` |
-| `README_MJ_V9_CLEAN_TRACE.md` | 4,697 | `446d008eb73ce03d814de6b67a6ef01227a46e9d6ae2753b00aaa4437f7c4d0d` |
+| `README_MJ_V9_CLEAN_TRACE.md` | 4,823 | `03bd75798024774c3a8b4c5e84dcd4a1437bc471b66ed4b52a5434a4f8994d45` — updated with the corrected `DAILY_GATE` address and trace hash on 2026-08-31 |
 
 The three byte-identical copies of `MJ_V8_CLEAN_TRACE.txt`, `RUN_MJ_V8_CLEAN_TRACE.bat`
 and the `01a044b2` patch that were sitting in `last log/` were removed during the

@@ -25,9 +25,9 @@ bp CK2game.exe+7862e8
 bplog CK2game.exe+7862e8, "[MJ] RESTORE_GATE rip={p:cip} rax={p:rax} al={al} zf={_zf} tf={_tf}"
 bpcond CK2game.exe+7862e8, 0
 
-bp CK2game.exe+666146
-bplog CK2game.exe+666146, "[MJ] DAILY_GATE rip={p:cip} rax={p:rax} al={al} zf={_zf} tf={_tf}"
-bpcond CK2game.exe+666146, 0
+bp CK2game.exe+667146
+bplog CK2game.exe+667146, "[MJ] DAILY_GATE rip={p:cip} rax={p:rax} al={al} zf={_zf} tf={_tf}"
+bpcond CK2game.exe+667146, 0
 
 bp CK2game.exe+7b8e60
 bplog CK2game.exe+7b8e60, "[MJ] UPDATE_ENTRY rip={p:cip} rcx={p:rcx} rdx={p:rdx} r8={p:r8} r9={p:r9}"
